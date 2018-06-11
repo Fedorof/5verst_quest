@@ -1,10 +1,8 @@
-import {MDLocations} from "./base";
+import {MDQuest} from "./base";
 
-export class Locations extends MDLocations {
-    curLoc = 'start';
-
+export class Quest extends MDQuest {
     start = () => `
-Start
+Start ${this.rnd(['1', '2'])}
 
 [Next](#loc1)
 `;
