@@ -22,4 +22,13 @@ export class Quest extends QuestWord {
             ending: new Ending(this.store, 'ending')
         };
     }
+
+    getToolbar() {
+        return `${
+            this.startQuestName !== this.store.get('__cur_quest', this.startQuestName)
+                ? "[На головну](#__main)"
+                : ""
+            }
+        [Скинути](#__reset)`;
+    }
 }

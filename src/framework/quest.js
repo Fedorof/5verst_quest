@@ -65,6 +65,11 @@ export class QuestWord extends QuestInterface {
         let quest = this.getQuest();
         let curQuest = this.store.get('__cur_quest', this.startQuestName);
         let prevLocQuest = this.store.get('__prev_loc_quest', '');
+        let toolbar = this.getToolbar();
+
+        if (typeof toolbar === "string") {
+            toolbar = <ReactMarkdown source={ dedent(toolbar) } />
+        }
 
         if (quest === undefined) {
             loc = this.err404()
@@ -79,7 +84,7 @@ export class QuestWord extends QuestInterface {
         return (
             <div className={`contents ${curQuest} prev-${prevLocQuest}`}>
                 <div className="toolbar">
-                    <ReactMarkdown source={ dedent(this.getToolbar()) } />
+                    { toolbar }
                 </div>
                 <div className="location">
                     { loc }
