@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dedent": "^0.7.0",
     "es6-store": "1.0.0",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
     "react-markdown": "^3.3.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
@@ -14,7 +15,10 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
+    "test": "react-scripts test --env=jsdom --transformIgnorePatterns='<rootDir>/node_modules/(?!es6-store).*\\.jsx?' --setupFiles='jest-localstorage-mock'",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "jest-localstorage-mock": "^2.2.0"
   }
 }

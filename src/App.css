@@ -1,3 +1,123 @@
-.App {
+@keyframes title-to-intro {
+  from {background-color: #6c5c7c;}
+  to {background-color: #27384e;}
+}
+
+@keyframes intro-to-yard {
+  from {background-color: #27384e;}
+  to {background-color: #345d7e;}
+}
+
+@keyframes to-end {
+  from {background-color: #345d7e;}
+  to {background-color: #6c5c7c;}
+}
+
+@keyframes title-to-intro-toolbar {
+  from {background-color: #c06c85;}
+  to {background-color: #6c5c7c;}
+}
+@keyframes to-end-toolbar {
+  from {background-color: #6c5c7c;}
+  to {background-color: #c06c85;}
+}
+
+a:hover {
+  border: dotted;
+  border-radius: 0.5em;
+}
+
+a:active {
+  border: dashed;
+  border-radius: 0.5em;
+}
+
+
+.contents {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  color: #f8b195;
+  background-color: #6c5c7c;
+}
+
+.toolbar {
+  font-size: 11pt;
+  background: #c06c85;
+  padding: 5px 5px 0;
+}
+
+.toolbar p {
+  padding-bottom: 5px
+}
+
+.location {
+  margin: auto;
   text-align: center;
+  max-width: 40em;
+  font-size: 21pt;
+}
+
+
+.location a {
+  color: #f27280;
+  border-color: #f27280;
+}
+
+
+.contents:not(.title) {
+  background-color: #345d7e;
+}
+.contents:not(.title) .toolbar {
+  background-color: #6c5c7c;
+}
+
+.contents:not(.title) .toolbar a {
+  color: #f27280;
+  border: 2px #f27280;
+}
+
+.contents.intro {
+  background-color: #27384e;
+}
+
+.contents.ending {
+  background-color: #6c5c7c;
+}
+.contents.ending .toolbar {
+  background-color: #c06c85;
+}
+.contents.ending .toolbar a {
+  color: #f8b195;
+  border-color: #f8b195;
+}
+
+
+.contents.yard.prev-intro {
+  animation-name: intro-to-yard;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+
+}
+.contents.intro.prev-title .toolbar {
+  animation-name: title-to-intro-toolbar;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+
+.contents.intro.prev-title {
+  animation-name: title-to-intro;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+
+.contents.ending {
+  animation-name: to-end;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+.contents.ending .toolbar {
+  animation-name: to-end-toolbar;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
 }

@@ -1,68 +1,29 @@
 import React, { Component } from 'react';
-import {Route, HashRouter, Switch, Redirect, Link} from 'react-router-dom';
+import {Route, HashRouter, Switch} from 'react-router-dom';
+import {Quest} from './pages/main';
+import {Controller} from "./framework/controller";
 import './App.css';
-import {Quest} from './pages/intro';
 
 const questPath = '/';
 
 
-class Main extends Component {
-    quest = new Quest();
+class Main extends Controller {
+    questPath = questPath;
 
-    render() {
-        if (this.props.match.params.location !== undefined) {
-            return this.resetPath()
-        }
-        this.updateLocName();
-        return (
-            <div>
-                {this.getToolbar()}
-                {this.getLoc()}
-            </div>
-        );
-    }
-
-    getToolbar() {
-        return <Link to={`${questPath}/__reset`}>Reset</Link>;
-    }
-
-    resetPath() {
-        return <Redirect
-            to={{
-                pathname: questPath,
-                state: {locName: this.props.match.params.location}
-            }}
-        />;
-    }
-
-    getLoc() {
-        return this.quest.getLocation();
-    };
-
-    updateLocName() {
-        if (this.props.location.state !== undefined) {
-            let locName = this.props.location.state.locName;
-            if (locName === '__reset') {
-                this.quest.reset();
-            } else {
-                this.quest.goTo(locName);
-            }
-        }
+    getQuest() {
+        return new Quest();
     }
 }
-
 
 class App extends Component {
     render() {
         return (
-            <div className="App">
-                <HashRouter hashType={'noslash'}>
-                    <Switch>
-                        <Route exact path={ questPath } component={Main} />
-                        <Route path='/:location' component={Main} />
-                    </Switch>
-                </HashRouter>
-            </div>
+            <HashRouter hashType={'noslash'}>
+                <Switch>
+                    <Route exact path={ questPath } component={Main} />
+                    <Route path='/:location' component={Main} />
+                </Switch>
+            </HashRouter>
         );
     }
 }
