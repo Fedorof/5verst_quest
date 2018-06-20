@@ -1,31 +1,52 @@
+import React from "react";
 import {MDQuest} from "../framework/quest";
 
 
 export class Title extends MDQuest {
     startLoc = 'main';
 
-    main = () => `
-        Александр Фёдоров
-        
-        
-        Пять вёрст
-        
-        Лицензия Creative Commons
-        
-        «Attribution» («Атрибуция») 3.0
-        
-        Непортированная.
-        
-        [Играть](#intro:вступление)
-        
-        [Советы](#советы)
-        
-        [Примечания (спойлеры!)](#примечания)
-    `;
+    main = () => {
+        let resumeLink = "";
+        let resumeLoc = this.gget('__resume_loc', null);
+        if (resumeLoc !== null) {
+            resumeLink = (<div>
+                <a href={"#"+resumeLoc}>Продовжити</a>
+            </div>)
+        }
+
+        return (
+            <div className="main-title">
+                <div className="author">Олександр Федоров</div>
+                <div className="title-name">П’ять верст</div>
+                <div className="buttons">
+                    <div>
+                        <a href="#intro:вступ">Почати</a>
+                    </div>
+                    { resumeLink }
+                    <div>
+                        <a href="#поради">Поради</a>
+                    </div>
+                    <div>
+                        <a href="#примітки">Примітки (Спойлери!)</a>
+                    </div>
+                </div>
+                <div className="license">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                        <img alt="Ліцензія Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+                    </a>
+                    <br />
+                    Цей твір ліцензовано на умовах&nbsp;
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                        Ліцензії Creative Commons Із Зазначенням Авторства — Поширення На Тих Самих Умовах 4.0 Міжнародна
+                    </a>.
+                </div>
+            </div>)
+        ;
+    };
 
 
 
-    советы = () => `
+    поради = () => `
         Несколько советов к игре:
         
         1. Чтобы сохраниться, выберите пункт "Сохранить" в
@@ -46,7 +67,7 @@ export class Title extends MDQuest {
 
 
 
-    примечания = () => `
+    примітки = () => `
         Осторожно! В этом тексте есть спойлеры! Если Вы еще
         не прошли игру, дальше лучше не читать.
         

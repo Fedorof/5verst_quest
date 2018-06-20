@@ -21,16 +21,6 @@ class QuestInterface {
     }
 
     goTo(name) {
-        let [first, location] = name.split(/:(.+)/, 2);
-        if (location === undefined) {
-            location = first;
-        }
-
-        if (location === '__reset') {
-            this.reset();
-            return
-        }
-
         let countVar = 'count_' + name;
         this.store.set(
             '__prev_location',
@@ -99,7 +89,12 @@ export class QuestWord extends QuestInterface {
     }
 
     getToolbar() {
-        return "[Reset](#__reset)";
+        return `${
+            this.startQuestName !== this.store.get('__cur_quest', this.startQuestName)
+                ? "[Main](#__main)"
+                : ""
+        }
+        [Reset](#__reset)`;
     }
 
     reset() {
@@ -118,6 +113,15 @@ export class QuestWord extends QuestInterface {
     }
 
     goTo(name) {
+        if (name === '__reset') {
+            this.reset();
+            return
+        }
+        if (name === '__main') {
+            this.goToMain();
+            return
+        }
+
         let quest;
         let [questName, location] = name.split(/:(.+)/, 2);
         let curQuest = this.store.get('__cur_quest', '');
@@ -133,6 +137,15 @@ export class QuestWord extends QuestInterface {
         quest = this.getQuest();
         quest.goTo(location);
         super.goTo(this.store.get('__cur_quest')+':'+location);
+    }
+
+    goToMain() {
+        let curLoc = this.store.get('__location');
+        this.store.set('__resume_loc', curLoc);
+
+        if (curLoc !== undefined) {
+            this.goToStart();
+        }
     }
 
     err404() {
@@ -168,7 +181,11 @@ export class MDQuest extends QuestInterface {
 
         let loc = this[locName]();
 
-        return <ReactMarkdown source={dedent(loc)}/>
+        if (typeof loc === "string") {
+            return <ReactMarkdown source={dedent(loc)}/>
+        } else {
+            return loc
+        }
     }
 
     carousel(name, choices) {

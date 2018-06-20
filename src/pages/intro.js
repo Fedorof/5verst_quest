@@ -2,10 +2,10 @@ import {MDQuest} from "../framework/quest";
 
 
 export class Intro extends MDQuest {
-    startLoc = 'вступление';
+    startLoc = 'вступ';
 
 
-    вступление = () => `
+    вступ = () => `
         — А вот ещё была история, — говорит старый казак.
         
         Он подносит люльку к зубам и его обветренное лицо скрывается
