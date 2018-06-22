@@ -37,12 +37,16 @@ a:active {
   padding-bottom: 1em;
 }
 
+.title-name {
+  font-size: 42pt;
+}
+
 .buttons div {
   margin-bottom: 0.1em;
 }
 
 .buttons {
-  min-height: calc(100vh - 9em);
+  min-height: calc(100vh - 11em);
 }
 
 .license {
