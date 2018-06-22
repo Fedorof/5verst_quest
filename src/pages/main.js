@@ -28,7 +28,7 @@ export class Quest extends QuestWord {
             this.startQuestName !== this.store.get('__cur_quest', this.startQuestName)
                 ? "[На головну](#__main)"
                 : ""
-            }
+            } &nbsp;
         [Скинути](#__reset)`;
     }
 }
