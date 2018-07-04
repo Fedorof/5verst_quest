@@ -20,15 +20,18 @@ class QuestInterface {
     getLocation() {
     }
 
-    goTo(name) {
-        let countVar = 'count_' + name;
+    goTo(name, skipCount) {
         this.store.set(
             '__prev_location',
             this.store.get('__location'));
         this.store.set('__location', name);
-        this.store.set(
-            countVar,
-            this.store.get(countVar, 0)+1);
+
+        if (!skipCount) {
+          let countVar = 'count_' + name;
+          this.store.set(
+              countVar,
+              this.store.get(countVar, 0)+1);
+        }
     }
 }
 
@@ -117,7 +120,11 @@ export class QuestWord extends QuestInterface {
         this.store.set('__prev_loc_quest', '');
     }
 
-    goTo(name) {
+    goTo(name, skipCount) {
+        if (this.store.get('__cur_quest') === this.startQuestName && name === this.store.get('__resume_loc')) {
+            skipCount = true;
+        }
+
         if (name === '__reset') {
             this.reset();
             return
@@ -140,8 +147,8 @@ export class QuestWord extends QuestInterface {
         }
 
         quest = this.getQuest();
-        quest.goTo(location);
-        super.goTo(this.store.get('__cur_quest')+':'+location);
+        quest.goTo(location, skipCount);
+        super.goTo(this.store.get('__cur_quest')+':'+location, skipCount);
     }
 
     goToMain() {
@@ -193,9 +200,9 @@ export class MDQuest extends QuestInterface {
         }
     }
 
-    carousel(name, choices) {
-        let num = (this.store.get(name, 0)+1) % choices.length;
-        this.store.set(name, num);
+    carousel(choices) {
+        let name = this.store.get('__location', '');
+        let num = (this.store.get("count_"+name, 0)+1) % choices.length;
         return choices[num];
     }
 
