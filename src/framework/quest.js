@@ -121,7 +121,9 @@ export class QuestWord extends QuestInterface {
     }
 
     goTo(name, skipCount) {
-        if (this.store.get('__cur_quest') === this.startQuestName && name === this.store.get('__resume_loc')) {
+        if (skipCount === undefined
+                && this.store.get('__cur_quest') === this.startQuestName
+                && name === this.store.get('__resume_loc')) {
             skipCount = true;
         }
 
