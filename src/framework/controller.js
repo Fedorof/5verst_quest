@@ -1,14 +1,10 @@
-import React, { Component } from 'react';
-import {Redirect} from 'react-router-dom';
+import { Component } from 'react';
 
 
 export class Controller extends Component {
-    questPath = '/';
-
     /** @abstract
      * @returns QuestInterface*/
     getQuest() {
-
     };
 
     constructor() {
@@ -17,20 +13,8 @@ export class Controller extends Component {
     }
 
     render() {
-        if (this.props.match.params.location !== undefined) {
-            return this.resetPath()
-        }
         this.updateLocName();
         return this.getLocation();
-    }
-
-    resetPath() {
-        return <Redirect
-            to={{
-                pathname: this.questPath,
-                state: {locName: this.props.match.params.location}
-            }}
-        />;
     }
 
     getLocation() {

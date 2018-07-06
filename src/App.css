@@ -17,6 +17,10 @@ p {
   margin-bottom: 1em;
 }
 
+.buttons p {
+  margin-bottom: 0;
+}
+
 body, a {
   background-color: lightgray;
   color: black;

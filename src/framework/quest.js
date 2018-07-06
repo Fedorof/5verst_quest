@@ -1,15 +1,14 @@
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import Store from "es6-store/src/Store";
-import dedent from 'dedent';
+import dedent from "dedent";
+import {Link} from "react-router-dom";
 
 
 class QuestInterface {
-    constructor(storeName) {
-        if (storeName === undefined) {
-            storeName = "__global"
-        }
+    constructor(basePath = "", storeName = "__global") {
         this.store = new Store(storeName);
+        this.basePath = basePath
     }
 
     /** @abstract */
@@ -33,6 +32,19 @@ class QuestInterface {
               this.store.get(countVar, 0)+1);
         }
     }
+
+    linkRenderer(props) {
+        return <Link to={{
+            pathname: this.basePath,
+            state: {locName: props.href.slice(1)}
+        }}>{ props.children[0] }</Link>
+    }
+
+
+    md(source) {
+        return <ReactMarkdown source={ dedent(source) } renderers={{ link: this.linkRenderer.bind(this) }}/>
+    }
+
 }
 
 
@@ -47,8 +59,8 @@ export class QuestWord extends QuestInterface {
     getQuests() {
     };
 
-    constructor() {
-        super();
+    constructor(basePath = "", storeName = "__global") {
+        super(basePath, storeName);
         this.quests = this.getQuests();
     }
 
@@ -71,7 +83,7 @@ export class QuestWord extends QuestInterface {
         let toolbar = this.getToolbar();
 
         if (typeof toolbar === "string") {
-            toolbar = <ReactMarkdown source={ dedent(toolbar) } />
+            toolbar = this.md(toolbar)
         }
 
         if (quest === undefined) {
@@ -163,12 +175,12 @@ export class QuestWord extends QuestInterface {
     }
 
     err404() {
-        return <ReactMarkdown source={ dedent`
+        return this.md(`
             ${this.store.get('__location')} is missing.
 
             [Go Back](#${this.store.get('__prev_location')})
 
-        ` } />
+        `)
     }
 
 }
@@ -177,9 +189,13 @@ export class QuestWord extends QuestInterface {
 export class MDQuest extends QuestInterface {
     startLoc = 'start';
 
-    constructor(globalStore, storeName) {
-        super(storeName);
-        this.globalStore = globalStore;
+    constructor(basePath = "", storeName = "__global", globalStore = null) {
+        super(basePath, storeName);
+        if (globalStore === null) {
+            this.globalStore = this.store;
+        } else {
+            this.globalStore = globalStore;
+        }
     }
 
     reset() {
@@ -196,7 +212,7 @@ export class MDQuest extends QuestInterface {
         let loc = this[locName]();
 
         if (typeof loc === "string") {
-            return <ReactMarkdown source={dedent(loc)}/>
+            return this.md(loc)
         } else {
             return loc
         }

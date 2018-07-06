@@ -10,7 +10,7 @@ export class Title extends MDQuest {
         let resumeLoc = this.gget('__resume_loc', null);
         if (resumeLoc !== null) {
             resumeLink = (<div>
-                <a href={"#"+resumeLoc}>Продовжити</a>
+                { this.md( `[Продовжити](#${resumeLoc})` ) }
             </div>)
         }
 
@@ -20,14 +20,14 @@ export class Title extends MDQuest {
                 <div className="title-name"><b>П’ять верст</b></div>
                 <div className="buttons">
                     <div>
-                        <a href="#intro:вступ">Почати</a>
+                        { this.md( "[Почати](#intro:вступ)" ) }
                     </div>
                     { resumeLink }
                     <div>
-                        <a href="#поради">Поради</a>
+                        { this.md( "[Поради](#поради)" ) }
                     </div>
                     <div>
-                        <a href="#примітки">Примітки (Спойлери!)</a>
+                        { this.md( "[Примітки (Спойлери!)](#примітки)" ) }
                     </div>
                 </div>
                 <div className="license">
