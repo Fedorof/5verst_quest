@@ -34,10 +34,14 @@ class QuestInterface {
     }
 
     linkRenderer(props) {
-        return <Link to={{
-            pathname: this.basePath,
-            state: {locName: props.href.slice(1)}
-        }}>{ props.children[0] }</Link>
+        if (props.href[0] === '#') {
+            return <Link to={{
+                pathname: this.basePath,
+                state: {locName: props.href.slice(1)}
+            }}>{ props.children[0] }</Link>
+        } else {
+            return <a href={ props.href }>{ props.children[0] }</a>
+        }
     }
 
 
@@ -218,9 +222,23 @@ export class MDQuest extends QuestInterface {
         }
     }
 
+    switch(locations) {
+        let locName;
+        let name = this.store.get('__location', '');
+        let num = this.store.get("count_"+name, 1) - 1;
+
+        if (num < locations.length) {
+            locName = locations[num];
+        } else {
+            locName = locations[locations.length-1]
+        }
+
+        return this[locName]();
+    }
+
     carousel(choices) {
         let name = this.store.get('__location', '');
-        let num = (this.store.get("count_"+name, 0)+1) % choices.length;
+        let num = (this.store.get("count_"+name, 0)) % choices.length;
         return choices[num];
     }
 

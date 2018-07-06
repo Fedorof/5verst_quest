@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, MemoryRouter, Switch} from 'react-router-dom';
+import {Route, MemoryRouter} from 'react-router-dom';
 import {Quest} from './pages/main';
 import {Controller} from "./framework/controller";
 import './App.css';

@@ -213,7 +213,7 @@ export class Road extends MDQuest {
             : "[До дівчат](#берегині0)"
         }
 
-        [До броду](#forest:брід${ this.gget("статус_брід", 0) })
+        [До броду](#ford:брід${ this.gget("статус_брід", 0) })
     `;
 
 
