@@ -10,7 +10,7 @@ import {Ford} from "./ford";
 
 export class Quest extends QuestWord {
     get startQuestName() {
-        return "title"
+        return "ford"
     };
 
     getQuests() {
