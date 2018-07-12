@@ -44,11 +44,17 @@ class QuestInterface {
         }
     }
 
-
     md(source) {
         return <ReactMarkdown source={ dedent(source) } renderers={{ link: this.linkRenderer.bind(this) }}/>
     }
 
+    safeMd(source) {
+        if (typeof source === "string") {
+            return this.md(source)
+        } else {
+            return source;
+        }
+    }
 }
 
 
@@ -86,10 +92,6 @@ export class QuestWord extends QuestInterface {
         let prevLocQuest = this.store.get('__prev_loc_quest', '');
         let toolbar = this.getToolbar();
 
-        if (typeof toolbar === "string") {
-            toolbar = this.md(toolbar)
-        }
-
         if (quest === undefined) {
             loc = this.err404()
         } else {
@@ -103,10 +105,10 @@ export class QuestWord extends QuestInterface {
         return (
             <div className={`contents ${curQuest} prev-${prevLocQuest}`}>
                 <div className="toolbar">
-                    { toolbar }
+                    { this.safeMd(toolbar) }
                 </div>
                 <div className="location">
-                    { loc }
+                    { this.safeMd(loc) }
                 </div>
             </div>
         )
@@ -214,12 +216,7 @@ export class MDQuest extends QuestInterface {
         }
 
         let loc = this[locName]();
-
-        if (typeof loc === "string") {
-            return this.md(loc)
-        } else {
-            return loc
-        }
+        return this.safeMd(loc);
     }
 
     switch(locations) {
