@@ -43,28 +43,38 @@ export class Ford extends MDQuest {
         return questions[questionNum]
     };
 
-    getLocation = () => {
-        let location = super.getLocation();
-        if (location !== undefined) {
-            return location;
+    goTo(name, skipCount) {
+        if (this[name] === undefined) {
+            this.set('answer', name);
+            super.goTo('checkAnswer', skipCount)
+        } else {
+            super.goTo(name, skipCount)
         }
+    };
 
-        let answer = this.get('__location');
-        let [, correctAnswer] = this.getQuestion();
+    checkAnswer = () => {
+        let answer = this.get('answer');
+
         this.set(
             "номер_загадки",
-            this.get('count_вірно')+this.get('count_невірно')+1);
+            this.get('count_checkAnswer')-1);
 
-        if (answer === correctAnswer) {
-            return this['вірно'](answer);
-        } else {
-            return this['невірно'](answer);
-        }
+        let [, correctAnswer] = this.getQuestion();
+
+        this.set(
+            "номер_загадки",
+            this.get('count_checkAnswer'));
+
+        let locName = (answer === correctAnswer)? 'вірно': 'невірно';
+        let countName = 'count_'+locName;
+
+        this.set(countName, this.get(countName)+1);
+        return this[locName](answer);
     };
 
 
     брід0 = () => {
-        let questions = shuffleArray(QUESTIONS);
+        let questions = shuffleArray(shuffleArray(QUESTIONS));
 
         this.set('questions', questions);
         this.gset("статус_брід", 1);
@@ -109,8 +119,8 @@ export class Ford extends MDQuest {
         this.gset("загадка", question);
 
         return `
-            — Слухай мою ${QUESTION_NUM_NAME[this.get('номер_загадки')]} загадку, — 
-            говорить водяник. "${question}"
+            — Слухай мою ${QUESTION_NUM_NAME[this.get('номер_загадки')]} 
+            загадку, — говорить водяник. — "${question}"
             
             Повів джура поглядом довкола. Над головою [дерева](#дерево)
             шумлять, у [річці](#річка) [жаби](#жаба) кумкають, плескають 
@@ -149,9 +159,7 @@ export class Ford extends MDQuest {
     невірно = (answer) => `
         — Моя відповідь: ${answer}, — говорить джура.
         
-        — Невірно!
-        
-        [Далі](#загадка)
+        ${ this.switch(['невірно1', 'невірно2', 'невірно3']) }
     `;
 
 }
