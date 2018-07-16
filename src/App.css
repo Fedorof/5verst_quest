@@ -50,11 +50,11 @@ a:active {
 }
 
 .buttons {
-  min-height: calc(100vh - 11em);
+  min-height: calc(100vh - 12em);
 }
 
 .license {
-  font-size: 11pt;
+  font-size: 10pt;
   height: 4em;
 }
 
