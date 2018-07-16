@@ -40,7 +40,7 @@ class QuestInterface {
                 state: {locName: props.href.slice(1)}
             }}>{ props.children[0] }</Link>
         } else {
-            return <a href={ props.href }>{ props.children[0] }</a>
+            return <a href={ props.href } target="_blank">{ props.children[0] }</a>
         }
     }
 
