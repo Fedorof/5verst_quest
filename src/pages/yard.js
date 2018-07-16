@@ -185,8 +185,6 @@ export class Yard extends MDQuest {
     хлів2 = () => `
         ${ this["хлів"]() }
 
-        ${ this["хлів_кнопки"]() }
-
         [Вийти](#двір)
     `;
 

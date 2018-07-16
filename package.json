@@ -2,9 +2,11 @@
   "name": "quest",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://fedorof.github.io/hardway",
   "dependencies": {
     "dedent": "^0.7.0",
     "es6-store": "1.0.0",
+    "gh-pages": "^1.2.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-markdown": "^3.3.2",
@@ -16,7 +18,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --transformIgnorePatterns='<rootDir>/node_modules/(?!es6-store).*\\.jsx?' --setupFiles='jest-localstorage-mock'",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "jest-localstorage-mock": "^2.2.0"
