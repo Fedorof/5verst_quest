@@ -113,8 +113,8 @@ export class Title extends MDQuest {
         або [пригостити кавою](https://libera.store/uk/author/book/34).
 
         ● Підтримати на [Patreon](https://www.patreon.com/ofedorov).
-        
 
+        ● Вихідний текст гри на [GitHub](https://github.com/Fedorof/hardway).
         
         [Назад](#main)
     `;
