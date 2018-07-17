@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "/hardway/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 44);
+/******/ 	return __webpack_require__(__webpack_require__.s = 46);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,7 +71,7 @@
 
 
 if (true) {
-  module.exports = __webpack_require__(52);
+  module.exports = __webpack_require__(54);
 } else {
   module.exports = require('./cjs/react.development.js');
 }
@@ -107,7 +107,7 @@ if (false) {
 } else {
   // By explicitly using `prop-types` you are opting into new production behavior.
   // http://fb.me/prop-types-in-prod
-  module.exports = __webpack_require__(64)();
+  module.exports = __webpack_require__(66)();
 }
 
 
@@ -293,26 +293,34 @@ module.exports = warning;
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MDQuest; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_markdown__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_markdown__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_markdown___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_markdown__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_es6_store_src_Store__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_dedent__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_es6_store_src_Store__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_dedent__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_dedent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_dedent__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router_dom__ = __webpack_require__(28);
-var _slicedToArray=function(){function sliceIterator(arr,i){var _arr=[];var _n=true;var _d=false;var _e=undefined;try{for(var _i=arr[Symbol.iterator](),_s;!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"])_i["return"]();}finally{if(_d)throw _e;}}return _arr;}return function(arr,i){if(Array.isArray(arr)){return arr;}else if(Symbol.iterator in Object(arr)){return sliceIterator(arr,i);}else{throw new TypeError("Invalid attempt to destructure non-iterable instance");}};}();var _get=function get(object,property,receiver){if(object===null)object=Function.prototype;var desc=Object.getOwnPropertyDescriptor(object,property);if(desc===undefined){var parent=Object.getPrototypeOf(object);if(parent===null){return undefined;}else{return get(parent,property,receiver);}}else if("value"in desc){return desc.value;}else{var getter=desc.get;if(getter===undefined){return undefined;}return getter.call(receiver);}};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var QuestInterface=function(){function QuestInterface(){var basePath=arguments.length>0&&arguments[0]!==undefined?arguments[0]:"";var storeName=arguments.length>1&&arguments[1]!==undefined?arguments[1]:"__global";_classCallCheck(this,QuestInterface);this.store=new __WEBPACK_IMPORTED_MODULE_2_es6_store_src_Store__["a" /* default */](storeName);this.basePath=basePath;}/** @abstract */_createClass(QuestInterface,[{key:'reset',value:function reset(){}/** @abstract */},{key:'getLocation',value:function getLocation(){}},{key:'goTo',value:function goTo(name,skipCount){this.store.set('__prev_location',this.store.get('__location'));this.store.set('__location',name);if(!skipCount){var countVar='count_'+name;this.store.set(countVar,this.store.get(countVar,0)+1);}}},{key:'linkRenderer',value:function linkRenderer(props){if(props.href[0]==='#'){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_react_router_dom__["a" /* Link */],{to:{pathname:this.basePath,state:{locName:props.href.slice(1)}}},props.children[0]);}else{return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{href:props.href,target:'_blank'},props.children[0]);}}},{key:'md',value:function md(source){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_markdown___default.a,{source:__WEBPACK_IMPORTED_MODULE_3_dedent___default()(source),renderers:{link:this.linkRenderer.bind(this)}});}},{key:'safeMd',value:function safeMd(source){if(typeof source==="string"){return this.md(source);}else{return source;}}}]);return QuestInterface;}();var QuestWord=function(_QuestInterface){_inherits(QuestWord,_QuestInterface);_createClass(QuestWord,[{key:'getQuests',/** @abstract
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_react_router_dom__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_icons_lib_io_home__ = __webpack_require__(168);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_react_icons_lib_io_home___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_react_icons_lib_io_home__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_icons_lib_io_refresh__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_react_icons_lib_io_refresh___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_react_icons_lib_io_refresh__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_icons_lib_io_plus_circled__ = __webpack_require__(169);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_react_icons_lib_io_plus_circled___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_react_icons_lib_io_plus_circled__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_icons_lib_io_minus_circled__ = __webpack_require__(170);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8_react_icons_lib_io_minus_circled___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_8_react_icons_lib_io_minus_circled__);
+var _slicedToArray=function(){function sliceIterator(arr,i){var _arr=[];var _n=true;var _d=false;var _e=undefined;try{for(var _i=arr[Symbol.iterator](),_s;!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"])_i["return"]();}finally{if(_d)throw _e;}}return _arr;}return function(arr,i){if(Array.isArray(arr)){return arr;}else if(Symbol.iterator in Object(arr)){return sliceIterator(arr,i);}else{throw new TypeError("Invalid attempt to destructure non-iterable instance");}};}();var _get=function get(object,property,receiver){if(object===null)object=Function.prototype;var desc=Object.getOwnPropertyDescriptor(object,property);if(desc===undefined){var parent=Object.getPrototypeOf(object);if(parent===null){return undefined;}else{return get(parent,property,receiver);}}else if("value"in desc){return desc.value;}else{var getter=desc.get;if(getter===undefined){return undefined;}return getter.call(receiver);}};var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}var QuestInterface=function(){function QuestInterface(){var basePath=arguments.length>0&&arguments[0]!==undefined?arguments[0]:"";var storeName=arguments.length>1&&arguments[1]!==undefined?arguments[1]:"__global";_classCallCheck(this,QuestInterface);this.store=new __WEBPACK_IMPORTED_MODULE_2_es6_store_src_Store__["a" /* default */](storeName);this.basePath=basePath;}/** @abstract */_createClass(QuestInterface,[{key:'reset',value:function reset(){}/** @abstract */},{key:'getLocation',value:function getLocation(){}},{key:'goTo',value:function goTo(name,skipCount){this.store.set('__prev_location',this.store.get('__location'));this.store.set('__location',name);if(!skipCount){var countVar='count_'+name;this.store.set(countVar,this.store.get(countVar,0)+1);}}},{key:'link',value:function link(props){if(props.href[0]==='#'){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_react_router_dom__["a" /* Link */],{to:{pathname:this.basePath,state:{locName:props.href.slice(1)},title:props.title}},props.children[0]);}else{return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('a',{href:props.href,target:'_blank'},props.children[0]);}}},{key:'md',value:function md(source){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_markdown___default.a,{source:__WEBPACK_IMPORTED_MODULE_3_dedent___default()(source),renderers:{link:this.link.bind(this)}});}},{key:'safeMd',value:function safeMd(source){if(typeof source==="string"){return this.md(source);}else{return source;}}}]);return QuestInterface;}();var QuestWord=function(_QuestInterface){_inherits(QuestWord,_QuestInterface);_createClass(QuestWord,[{key:'getQuests',/** @abstract
      * @returns Object */value:function getQuests(){}},{key:'startQuestName',/** @abstract
-     * @returns string */get:function get(){}}]);function QuestWord(){var basePath=arguments.length>0&&arguments[0]!==undefined?arguments[0]:"";var storeName=arguments.length>1&&arguments[1]!==undefined?arguments[1]:"__global";_classCallCheck(this,QuestWord);var _this=_possibleConstructorReturn(this,(QuestWord.__proto__||Object.getPrototypeOf(QuestWord)).call(this,basePath,storeName));_this.quests=_this.getQuests();return _this;}_createClass(QuestWord,[{key:'getQuest',value:function getQuest(){var questName=this.store.get('__cur_quest');if(questName===undefined){questName=this.startQuestName;this.goToStart();}return this.quests[questName];}},{key:'getLocation',value:function getLocation(){var loc=void 0;var quest=this.getQuest();var curQuest=this.store.get('__cur_quest',this.startQuestName);var prevLocQuest=this.store.get('__prev_loc_quest','');var toolbar=this.getToolbar();if(quest===undefined){loc=this.err404();}else{loc=quest.getLocation();}if(loc===undefined){loc=this.err404();}return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'contents '+curQuest+' prev-'+prevLocQuest},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'toolbar'},this.safeMd(toolbar)),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'location'},this.safeMd(loc)));}},{key:'getToolbar',value:function getToolbar(){return(this.startQuestName!==this.store.get('__cur_quest',this.startQuestName)?"[Main](#__main)":"")+'\n        [Reset](#__reset)';}},{key:'reset',value:function reset(){var _iteratorNormalCompletion=true;var _didIteratorError=false;var _iteratorError=undefined;try{for(var _iterator=Object.values(this.quests)[Symbol.iterator](),_step;!(_iteratorNormalCompletion=(_step=_iterator.next()).done);_iteratorNormalCompletion=true){var quest=_step.value;quest.reset();}}catch(err){_didIteratorError=true;_iteratorError=err;}finally{try{if(!_iteratorNormalCompletion&&_iterator.return){_iterator.return();}}finally{if(_didIteratorError){throw _iteratorError;}}}this.store.clear();this.goToStart();}},{key:'goToStart',value:function goToStart(){var startQuestName=this.startQuestName;this.store.set('__cur_quest',startQuestName);this.store.set('__prev_quest','');this.store.set('__prev_loc_quest','');}},{key:'goTo',value:function goTo(name,skipCount){if(skipCount===undefined&&this.store.get('__cur_quest')===this.startQuestName&&name===this.store.get('__resume_loc')){skipCount=true;}if(name==='__reset'){this.reset();return;}if(name==='__main'){this.goToMain();return;}var quest=void 0;var _name$split=name.split(/:(.+)/,2),_name$split2=_slicedToArray(_name$split,2),questName=_name$split2[0],location=_name$split2[1];var curQuest=this.store.get('__cur_quest','');this.store.set('__prev_loc_quest',curQuest);if(location===undefined){location=questName;}else{this.store.set('__prev_quest',curQuest);this.store.set('__cur_quest',questName);}quest=this.getQuest();quest.goTo(location,skipCount);_get(QuestWord.prototype.__proto__||Object.getPrototypeOf(QuestWord.prototype),'goTo',this).call(this,this.store.get('__cur_quest')+':'+location,skipCount);}},{key:'goToMain',value:function goToMain(){var curLoc=this.store.get('__location');this.store.set('__resume_loc',curLoc);if(curLoc!==undefined){this.goToStart();}}},{key:'err404',value:function err404(){return this.md('\n            '+this.store.get('__location')+' is missing.\n\n            [Go Back](#'+this.store.get('__prev_location')+')\n\n        ');}}]);return QuestWord;}(QuestInterface);var MDQuest=function(_QuestInterface2){_inherits(MDQuest,_QuestInterface2);function MDQuest(){var basePath=arguments.length>0&&arguments[0]!==undefined?arguments[0]:"";var storeName=arguments.length>1&&arguments[1]!==undefined?arguments[1]:"__global";var globalStore=arguments.length>2&&arguments[2]!==undefined?arguments[2]:null;_classCallCheck(this,MDQuest);var _this2=_possibleConstructorReturn(this,(MDQuest.__proto__||Object.getPrototypeOf(MDQuest)).call(this,basePath,storeName));_this2.startLoc='start';if(globalStore===null){_this2.globalStore=_this2.store;}else{_this2.globalStore=globalStore;}return _this2;}_createClass(MDQuest,[{key:'reset',value:function reset(){this.store.clear();}},{key:'getLocation',value:function getLocation(){var locName=this.store.get('__location',this.startLoc);if(this[locName]===undefined){return undefined;}var loc=this[locName]();return this.safeMd(loc);}},{key:'switch',value:function _switch(locations){var locName=void 0;var name=this.store.get('__location','');var num=this.store.get("count_"+name,1)-1;if(num<locations.length){locName=locations[num];}else{locName=locations[locations.length-1];}return this[locName]();}},{key:'carousel',value:function carousel(choices){var name=this.store.get('__location','');var num=this.store.get("count_"+name,0)%choices.length;return choices[num];}},{key:'rnd',value:function rnd(choices){return choices[Math.floor(Math.random()*choices.length)];}},{key:'get',value:function get(name){var defaultValue=arguments.length>1&&arguments[1]!==undefined?arguments[1]:0;return this.store.get(name,defaultValue);}},{key:'set',value:function set(name,value){this.store.set(name,value);return"";}},{key:'gget',value:function gget(name){var defaultValue=arguments.length>1&&arguments[1]!==undefined?arguments[1]:0;return this.globalStore.get(name,defaultValue);}},{key:'gset',value:function gset(name,value){this.globalStore.set(name,value);return"";}}]);return MDQuest;}(QuestInterface);
+     * @returns string */get:function get(){}}]);function QuestWord(){var basePath=arguments.length>0&&arguments[0]!==undefined?arguments[0]:"";var storeName=arguments.length>1&&arguments[1]!==undefined?arguments[1]:"__global";_classCallCheck(this,QuestWord);var _this=_possibleConstructorReturn(this,(QuestWord.__proto__||Object.getPrototypeOf(QuestWord)).call(this,basePath,storeName));_this.maxZoom=1.5;_this.minZoom=0.3;_this.zoomStep=0.1;_this.quests=_this.getQuests();return _this;}_createClass(QuestWord,[{key:'getQuest',value:function getQuest(){var questName=this.store.get('__cur_quest');if(questName===undefined){questName=this.startQuestName;this.goToStart();}return this.quests[questName];}},{key:'getLocation',value:function getLocation(){var loc=void 0;var quest=this.getQuest();var curQuest=this.store.get('__cur_quest',this.startQuestName);var prevLocQuest=this.store.get('__prev_loc_quest','');var toolbar=this.getToolbar();if(quest===undefined){loc=this.err404();}else{loc=quest.getLocation();}if(loc===undefined){loc=this.err404();}var zoom=this.store.get('__zoom',1);var rootStyle=document.getElementById('root').style;rootStyle.transform='scale('+zoom+')';rootStyle.width=(100/zoom).toString()+'%';return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'contents '+curQuest+' prev-'+prevLocQuest},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'toolbar'},this.safeMd(toolbar)),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('div',{className:'location'},this.safeMd(loc)));}},{key:'getToolbar',value:function getToolbar(){var main=arguments.length>0&&arguments[0]!==undefined?arguments[0]:'Main';var reset=arguments.length>1&&arguments[1]!==undefined?arguments[1]:'Reset';var zoomUp=arguments.length>2&&arguments[2]!==undefined?arguments[2]:'Zoom Up';var zoomDown=arguments.length>3&&arguments[3]!==undefined?arguments[3]:'Zoom Down';var homeLink=void 0;var resetLink=this.link({'href':'#__reset','title':reset,'children':[__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_6_react_icons_lib_io_refresh___default.a,null)]});var zoomUpLink=this.link({'href':'#__font_up','title':zoomUp,'children':[__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_7_react_icons_lib_io_plus_circled___default.a,null)]});var zoomDownLink=this.link({'href':'#__font_down','title':zoomDown,'children':[__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_8_react_icons_lib_io_minus_circled___default.a,null)]});if(this.startQuestName===this.store.get('__cur_quest',this.startQuestName)){homeLink='';}else{homeLink=this.link({'href':'#__main','title':main,'children':[__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5_react_icons_lib_io_home___default.a,null)]});}return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement('span',null,homeLink,' ',zoomUpLink,' ',zoomDownLink,' ',resetLink);}},{key:'reset',value:function reset(){var _iteratorNormalCompletion=true;var _didIteratorError=false;var _iteratorError=undefined;try{for(var _iterator=Object.values(this.quests)[Symbol.iterator](),_step;!(_iteratorNormalCompletion=(_step=_iterator.next()).done);_iteratorNormalCompletion=true){var quest=_step.value;quest.reset();}}catch(err){_didIteratorError=true;_iteratorError=err;}finally{try{if(!_iteratorNormalCompletion&&_iterator.return){_iterator.return();}}finally{if(_didIteratorError){throw _iteratorError;}}}this.store.clear();this.goToStart();}},{key:'goToStart',value:function goToStart(){var startQuestName=this.startQuestName;this.store.set('__cur_quest',startQuestName);this.store.set('__prev_quest','');this.store.set('__prev_loc_quest','');}},{key:'goTo',value:function goTo(name,skipCount){if(skipCount===undefined&&this.store.get('__cur_quest')===this.startQuestName&&name===this.store.get('__resume_loc')){skipCount=true;}if(name==='__reset'){this.reset();return;}if(name==='__main'){this.goToMain();return;}if(name==='__font_up'){this.changeFont();return;}if(name==='__font_down'){this.changeFont(false);return;}var quest=void 0;var _name$split=name.split(/:(.+)/,2),_name$split2=_slicedToArray(_name$split,2),questName=_name$split2[0],location=_name$split2[1];var curQuest=this.store.get('__cur_quest','');this.store.set('__prev_loc_quest',curQuest);if(location===undefined){location=questName;}else{this.store.set('__prev_quest',curQuest);this.store.set('__cur_quest',questName);}quest=this.getQuest();quest.goTo(location,skipCount);_get(QuestWord.prototype.__proto__||Object.getPrototypeOf(QuestWord.prototype),'goTo',this).call(this,this.store.get('__cur_quest')+':'+location,skipCount);}},{key:'goToMain',value:function goToMain(){var curLoc=this.store.get('__location');this.store.set('__resume_loc',curLoc);if(curLoc!==undefined){this.goToStart();}}},{key:'err404',value:function err404(){return this.md('\n            '+this.store.get('__location')+' is missing.\n\n            [Go Back](#'+this.store.get('__prev_location')+')\n\n        ');}},{key:'changeFont',value:function changeFont(){var up=arguments.length>0&&arguments[0]!==undefined?arguments[0]:true;var zoom=this.store.get('__zoom',1);zoom=zoom+(up?this.zoomStep:-this.zoomStep);this.store.set('__zoom',Math.max(this.minZoom,Math.min(zoom,this.maxZoom)));}}]);return QuestWord;}(QuestInterface);var MDQuest=function(_QuestInterface2){_inherits(MDQuest,_QuestInterface2);function MDQuest(){var basePath=arguments.length>0&&arguments[0]!==undefined?arguments[0]:"";var storeName=arguments.length>1&&arguments[1]!==undefined?arguments[1]:"__global";var globalStore=arguments.length>2&&arguments[2]!==undefined?arguments[2]:null;_classCallCheck(this,MDQuest);var _this2=_possibleConstructorReturn(this,(MDQuest.__proto__||Object.getPrototypeOf(MDQuest)).call(this,basePath,storeName));_this2.startLoc='start';if(globalStore===null){_this2.globalStore=_this2.store;}else{_this2.globalStore=globalStore;}return _this2;}_createClass(MDQuest,[{key:'reset',value:function reset(){this.store.clear();}},{key:'getLocation',value:function getLocation(){var locName=this.store.get('__location',this.startLoc);if(this[locName]===undefined){return undefined;}var loc=this[locName]();return this.safeMd(loc);}},{key:'switch',value:function _switch(locations){var locName=void 0;var name=this.store.get('__location','');var num=this.store.get("count_"+name,1)-1;if(num<locations.length){locName=locations[num];}else{locName=locations[locations.length-1];}return this[locName]();}},{key:'carousel',value:function carousel(choices){var name=this.store.get('__location','');var num=this.store.get("count_"+name,0)%choices.length;return choices[num];}},{key:'rnd',value:function rnd(choices){return choices[Math.floor(Math.random()*choices.length)];}},{key:'get',value:function get(name){var defaultValue=arguments.length>1&&arguments[1]!==undefined?arguments[1]:0;return this.store.get(name,defaultValue);}},{key:'set',value:function set(name,value){this.store.set(name,value);return"";}},{key:'gget',value:function gget(name){var defaultValue=arguments.length>1&&arguments[1]!==undefined?arguments[1]:0;return this.globalStore.get(name,defaultValue);}},{key:'gset',value:function gset(name,value){this.globalStore.set(name,value);return"";}}]);return MDQuest;}(QuestInterface);
 
 /***/ }),
 /* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(66);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__ = __webpack_require__(68);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__createBrowserHistory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__createHashHistory__ = __webpack_require__(71);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__createHashHistory__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__ = __webpack_require__(72);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_2__createMemoryHistory__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__LocationUtils__ = __webpack_require__(11);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_3__LocationUtils__["a"]; });
@@ -495,8 +503,8 @@ module.exports = warning;
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createLocation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return locationsAreEqual; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(68);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_resolve_pathname__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_value_equal__ = __webpack_require__(70);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__PathUtils__ = __webpack_require__(9);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -591,7 +599,7 @@ function decimal(character) {
 
 module.exports = visit
 
-var is = __webpack_require__(122)
+var is = __webpack_require__(124)
 
 var CONTINUE = true
 var SKIP = 'skip'
@@ -656,6 +664,74 @@ function visit(tree, test, visitor, reverse) {
 
 /***/ }),
 /* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _propTypes = __webpack_require__(1);
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+var IconBase = function IconBase(_ref, _ref2) {
+  var children = _ref.children;
+  var color = _ref.color;
+  var size = _ref.size;
+  var style = _ref.style;
+  var width = _ref.width;
+  var height = _ref.height;
+
+  var props = _objectWithoutProperties(_ref, ['children', 'color', 'size', 'style', 'width', 'height']);
+
+  var _ref2$reactIconBase = _ref2.reactIconBase;
+  var reactIconBase = _ref2$reactIconBase === undefined ? {} : _ref2$reactIconBase;
+
+  var computedSize = size || reactIconBase.size || '1em';
+  return _react2.default.createElement('svg', _extends({
+    children: children,
+    fill: 'currentColor',
+    preserveAspectRatio: 'xMidYMid meet',
+    height: height || computedSize,
+    width: width || computedSize
+  }, reactIconBase, props, {
+    style: _extends({
+      verticalAlign: 'middle',
+      color: color || reactIconBase.color
+    }, reactIconBase.style || {}, style)
+  }));
+};
+
+IconBase.propTypes = {
+  color: _propTypes2.default.string,
+  size: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  width: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  height: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+  style: _propTypes2.default.object
+};
+
+IconBase.contextTypes = {
+  reactIconBase: _propTypes2.default.shape(IconBase.propTypes)
+};
+
+exports.default = IconBase;
+module.exports = exports['default'];
+
+/***/ }),
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -752,7 +828,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -811,7 +887,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -853,7 +929,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 module.exports = emptyFunction;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -938,18 +1014,18 @@ var createTransitionManager = function createTransitionManager() {
 /* harmony default export */ __webpack_exports__["a"] = (createTransitionManager);
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__ = __webpack_require__(20);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Router__["a" /* default */]);
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1068,11 +1144,11 @@ Router.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Router);
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -1148,18 +1224,18 @@ var matchPath = function matchPath(pathname) {
 /* harmony default export */ __webpack_exports__["a"] = (matchPath);
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var characterEntities = __webpack_require__(111)
-var legacy = __webpack_require__(112)
-var invalid = __webpack_require__(113)
+var characterEntities = __webpack_require__(113)
+var legacy = __webpack_require__(114)
+var invalid = __webpack_require__(115)
 var decimal = __webpack_require__(12)
-var hexadecimal = __webpack_require__(114)
-var alphanumerical = __webpack_require__(115)
+var hexadecimal = __webpack_require__(116)
+var alphanumerical = __webpack_require__(117)
 
 module.exports = parseEntities
 
@@ -1599,7 +1675,7 @@ function disallowed(code) {
 
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1676,7 +1752,7 @@ function repeat(str, num) {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1700,7 +1776,7 @@ function trimTrailingLines(value) {
 
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1750,13 +1826,13 @@ function interrupt(interruptors, tokenizers, ctx, params) {
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var collapseWhiteSpace = __webpack_require__(134);
+var collapseWhiteSpace = __webpack_require__(136);
 
 module.exports = normalize;
 
@@ -1768,13 +1844,13 @@ function normalize(value) {
 
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var asap = __webpack_require__(47);
+var asap = __webpack_require__(49);
 
 function noop() {}
 
@@ -1988,7 +2064,7 @@ function doResolve(fn, promise) {
 
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2011,37 +2087,37 @@ if (false) {
 module.exports = emptyObject;
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(63);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__BrowserRouter__ = __webpack_require__(65);
 /* unused harmony reexport BrowserRouter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__HashRouter__ = __webpack_require__(73);
 /* unused harmony reexport HashRouter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Link__ = __webpack_require__(31);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_2__Link__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__ = __webpack_require__(74);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_3__MemoryRouter__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__NavLink__ = __webpack_require__(76);
 /* unused harmony reexport NavLink */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Prompt__ = __webpack_require__(78);
 /* unused harmony reexport Prompt */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(78);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Redirect__ = __webpack_require__(80);
 /* unused harmony reexport Redirect */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Route__ = __webpack_require__(32);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_7__Route__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__Router__ = __webpack_require__(19);
 /* unused harmony reexport Router */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__StaticRouter__ = __webpack_require__(82);
 /* unused harmony reexport StaticRouter */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(82);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__Switch__ = __webpack_require__(84);
 /* unused harmony reexport Switch */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(84);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__generatePath__ = __webpack_require__(86);
 /* unused harmony reexport generatePath */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(85);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matchPath__ = __webpack_require__(87);
 /* unused harmony reexport matchPath */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(86);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__withRouter__ = __webpack_require__(88);
 /* unused harmony reexport withRouter */
 
 
@@ -2073,7 +2149,7 @@ module.exports = emptyObject;
 
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2139,7 +2215,7 @@ var isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
 };
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2256,18 +2332,18 @@ Link.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Link);
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__ = __webpack_require__(33);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Route__["a" /* default */]);
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2279,7 +2355,7 @@ Link.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(21);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -2421,10 +2497,10 @@ Route.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Route);
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isarray = __webpack_require__(75)
+var isarray = __webpack_require__(77)
 
 /**
  * Expose `pathToRegexp`.
@@ -2853,11 +2929,11 @@ function pathToRegexp (path, keys, options) {
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_path_to_regexp___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_path_to_regexp__);
 
 
@@ -2898,7 +2974,7 @@ var generatePath = function generatePath() {
 /* harmony default export */ __webpack_exports__["a"] = (generatePath);
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -3088,7 +3164,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -3316,10 +3392,10 @@ var substr = 'ab'.substr(-1) === 'b'
     }
 ;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(35)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36)))
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3340,7 +3416,7 @@ function alphabetical(character) {
 
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3352,12 +3428,12 @@ module.exports = {
   commonmark: false,
   footnotes: false,
   pedantic: false,
-  blocks: __webpack_require__(119)
+  blocks: __webpack_require__(121)
 };
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3396,7 +3472,7 @@ function indentation(value) {
 
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3428,7 +3504,7 @@ exports.tag = new RegExp('^(?:' +
 
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3442,7 +3518,7 @@ function locate(value, fromIndex) {
 
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3465,7 +3541,7 @@ function locate(value, fromIndex) {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3531,15 +3607,53 @@ if (true) {
 
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(45);
-module.exports = __webpack_require__(51);
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactIconBase = __webpack_require__(14);
+
+var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IoRefresh = function IoRefresh(props) {
+    return _react2.default.createElement(
+        _reactIconBase2.default,
+        _extends({ viewBox: '0 0 40 40' }, props),
+        _react2.default.createElement(
+            'g',
+            null,
+            _react2.default.createElement('path', { d: 'm27.5 27.5l-8.1-8.7h5.8c-0.6-5.1-5-8.8-10.2-8.8-5.5 0-10 4.5-10 10s4.5 10 10 10c2.2 0 4.1-0.6 5.9-1.9l0.4-0.4 3.4 3.6-0.6 0.5c-2.6 2-5.7 3.2-9.1 3.2-7.1 0-13.1-5-14.6-11.6 0-0.1-0.1-0.2-0.1-0.3v-0.2s-0.1-0.2-0.1-0.2v-0.1c0-0.1 0-0.3 0-0.3-0.1-0.5-0.2-1-0.2-1.5v-1.6c0-0.4 0.1-1 0.2-1.5 0 0 0-0.2 0-0.3v-0.1c0 0 0.1 0 0.1-0.1v-0.3c0-0.1 0.1-0.2 0.1-0.3 1.6-6.6 7.5-11.6 14.6-11.6 0.9 0 1.6 0.1 2.4 0.2h0.3c4.5 0.8 8.3 3.7 10.4 7.5 1 1.8 1.7 3.9 1.8 6.1h5.1z' })
+        )
+    );
+};
+
+exports.default = IoRefresh;
+module.exports = exports['default'];
+
+/***/ }),
+/* 46 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(47);
+module.exports = __webpack_require__(53);
 
 
 /***/ }),
-/* 45 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3557,16 +3671,16 @@ if (typeof Promise === 'undefined') {
   // Rejection tracking prevents a common issue where React gets into an
   // inconsistent state due to an error, but it gets swallowed by a Promise,
   // and the user has no idea what causes React's erratic future behavior.
-  __webpack_require__(46).enable();
-  window.Promise = __webpack_require__(49);
+  __webpack_require__(48).enable();
+  window.Promise = __webpack_require__(51);
 }
 
 // fetch() polyfill for making API calls.
-__webpack_require__(50);
+__webpack_require__(52);
 
 // Object.assign() is commonly used with React.
 // It will use the native implementation if it's present and isn't buggy.
-Object.assign = __webpack_require__(14);
+Object.assign = __webpack_require__(15);
 
 // In tests, polyfill requestAnimationFrame since jsdom doesn't provide it yet.
 // We don't polyfill it in the browser--this is user's responsibility.
@@ -3576,13 +3690,13 @@ if (false) {
 
 
 /***/ }),
-/* 46 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var Promise = __webpack_require__(26);
+var Promise = __webpack_require__(27);
 
 var DEFAULT_WHITELIST = [
   ReferenceError,
@@ -3695,7 +3809,7 @@ function matchWhitelist(error, list) {
 }
 
 /***/ }),
-/* 47 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3923,10 +4037,10 @@ rawAsap.makeRequestCallFromTimer = makeRequestCallFromTimer;
 // back into ASAP proper.
 // https://github.com/tildeio/rsvp.js/blob/cddf7232546a9cf858524b75cde6f9edf72620a7/lib/rsvp/asap.js
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(48)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(50)))
 
 /***/ }),
-/* 48 */
+/* 50 */
 /***/ (function(module, exports) {
 
 var g;
@@ -3953,7 +4067,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 49 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3961,7 +4075,7 @@ module.exports = g;
 
 //This file contains the ES6 extensions to the core Promises/A+ API
 
-var Promise = __webpack_require__(26);
+var Promise = __webpack_require__(27);
 
 module.exports = Promise;
 
@@ -4067,7 +4181,7 @@ Promise.prototype['catch'] = function (onRejected) {
 
 
 /***/ }),
-/* 50 */
+/* 52 */
 /***/ (function(module, exports) {
 
 (function(self) {
@@ -4534,23 +4648,23 @@ Promise.prototype['catch'] = function (onRejected) {
 
 
 /***/ }),
-/* 51 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(55);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__index_css__ = __webpack_require__(61);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__index_css__ = __webpack_require__(63);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__index_css__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__App__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__registerServiceWorker__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__App__ = __webpack_require__(64);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__registerServiceWorker__ = __webpack_require__(180);
 __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__App__["a" /* default */],null),document.getElementById('root'));Object(__WEBPACK_IMPORTED_MODULE_4__registerServiceWorker__["a" /* default */])();
 
 /***/ }),
-/* 52 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4563,7 +4677,7 @@ __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODU
  * LICENSE file in the root directory of this source tree.
  */
 
-var k=__webpack_require__(14),n=__webpack_require__(15),p=__webpack_require__(27),q=__webpack_require__(16),r="function"===typeof Symbol&&Symbol.for,t=r?Symbol.for("react.element"):60103,u=r?Symbol.for("react.portal"):60106,v=r?Symbol.for("react.fragment"):60107,w=r?Symbol.for("react.strict_mode"):60108,x=r?Symbol.for("react.profiler"):60114,y=r?Symbol.for("react.provider"):60109,z=r?Symbol.for("react.context"):60110,A=r?Symbol.for("react.async_mode"):60111,B=
+var k=__webpack_require__(15),n=__webpack_require__(16),p=__webpack_require__(28),q=__webpack_require__(17),r="function"===typeof Symbol&&Symbol.for,t=r?Symbol.for("react.element"):60103,u=r?Symbol.for("react.portal"):60106,v=r?Symbol.for("react.fragment"):60107,w=r?Symbol.for("react.strict_mode"):60108,x=r?Symbol.for("react.profiler"):60114,y=r?Symbol.for("react.provider"):60109,z=r?Symbol.for("react.context"):60110,A=r?Symbol.for("react.async_mode"):60111,B=
 r?Symbol.for("react.forward_ref"):60112;r&&Symbol.for("react.timeout");var C="function"===typeof Symbol&&Symbol.iterator;function D(a){for(var b=arguments.length-1,e="https://reactjs.org/docs/error-decoder.html?invariant="+a,c=0;c<b;c++)e+="&args[]="+encodeURIComponent(arguments[c+1]);n(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",e)}
 var E={isMounted:function(){return!1},enqueueForceUpdate:function(){},enqueueReplaceState:function(){},enqueueSetState:function(){}};function F(a,b,e){this.props=a;this.context=b;this.refs=p;this.updater=e||E}F.prototype.isReactComponent={};F.prototype.setState=function(a,b){"object"!==typeof a&&"function"!==typeof a&&null!=a?D("85"):void 0;this.updater.enqueueSetState(this,a,b,"setState")};F.prototype.forceUpdate=function(a){this.updater.enqueueForceUpdate(this,a,"forceUpdate")};function G(){}
 G.prototype=F.prototype;function H(a,b,e){this.props=a;this.context=b;this.refs=p;this.updater=e||E}var I=H.prototype=new G;I.constructor=H;k(I,F.prototype);I.isPureReactComponent=!0;var J={current:null},K=Object.prototype.hasOwnProperty,L={key:!0,ref:!0,__self:!0,__source:!0};
@@ -4579,7 +4693,7 @@ assign:k}},Y={default:X},Z=Y&&X||Y;module.exports=Z.default?Z.default:Z;
 
 
 /***/ }),
-/* 53 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4617,14 +4731,14 @@ if (true) {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(54);
+  module.exports = __webpack_require__(56);
 } else {
   module.exports = require('./cjs/react-dom.development.js');
 }
 
 
 /***/ }),
-/* 54 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4640,7 +4754,7 @@ if (true) {
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(15),ba=__webpack_require__(0),m=__webpack_require__(55),p=__webpack_require__(14),v=__webpack_require__(16),da=__webpack_require__(56),ea=__webpack_require__(57),fa=__webpack_require__(58),ha=__webpack_require__(27);
+var aa=__webpack_require__(16),ba=__webpack_require__(0),m=__webpack_require__(57),p=__webpack_require__(15),v=__webpack_require__(17),da=__webpack_require__(58),ea=__webpack_require__(59),fa=__webpack_require__(60),ha=__webpack_require__(28);
 function A(a){for(var b=arguments.length-1,c="https://reactjs.org/docs/error-decoder.html?invariant="+a,d=0;d<b;d++)c+="&args[]="+encodeURIComponent(arguments[d+1]);aa(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}ba?void 0:A("227");
 function ia(a,b,c,d,e,f,g,h,k){this._hasCaughtError=!1;this._caughtError=null;var n=Array.prototype.slice.call(arguments,3);try{b.apply(c,n)}catch(r){this._caughtError=r,this._hasCaughtError=!0}}
 var B={_caughtError:null,_hasCaughtError:!1,_rethrowError:null,_hasRethrowError:!1,invokeGuardedCallback:function(a,b,c,d,e,f,g,h,k){ia.apply(B,arguments)},invokeGuardedCallbackAndCatchFirstError:function(a,b,c,d,e,f,g,h,k){B.invokeGuardedCallback.apply(this,arguments);if(B.hasCaughtError()){var n=B.clearCaughtError();B._hasRethrowError||(B._hasRethrowError=!0,B._rethrowError=n)}},rethrowCaughtError:function(){return ka.apply(B,arguments)},hasCaughtError:function(){return B._hasCaughtError},clearCaughtError:function(){if(B._hasCaughtError){var a=
@@ -4871,7 +4985,7 @@ var Ai={default:vi},Bi=Ai&&vi||Ai;module.exports=Bi.default?Bi.default:Bi;
 
 
 /***/ }),
-/* 55 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4910,7 +5024,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 56 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -4952,7 +5066,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 57 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5023,7 +5137,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 58 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5038,7 +5152,7 @@ module.exports = shallowEqual;
  * 
  */
 
-var isTextNode = __webpack_require__(59);
+var isTextNode = __webpack_require__(61);
 
 /*eslint-disable no-bitwise */
 
@@ -5066,7 +5180,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 59 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5081,7 +5195,7 @@ module.exports = containsNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(60);
+var isNode = __webpack_require__(62);
 
 /**
  * @param {*} object The object to check.
@@ -5094,7 +5208,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 60 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5122,27 +5236,27 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 61 */
+/* 63 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 62 */
+/* 64 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_main__ = __webpack_require__(89);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__framework_controller__ = __webpack_require__(173);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__App_css__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pages_main__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__framework_controller__ = __webpack_require__(178);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__App_css__ = __webpack_require__(179);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__App_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__App_css__);
 var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var questPath='/';var Main=function(_Controller){_inherits(Main,_Controller);function Main(){_classCallCheck(this,Main);return _possibleConstructorReturn(this,(Main.__proto__||Object.getPrototypeOf(Main)).apply(this,arguments));}_createClass(Main,[{key:'getQuest',value:function getQuest(){return new __WEBPACK_IMPORTED_MODULE_2__pages_main__["a" /* Quest */](questPath);}}]);return Main;}(__WEBPACK_IMPORTED_MODULE_3__framework_controller__["a" /* Controller */]);var App=function(_Component){_inherits(App,_Component);function App(){_classCallCheck(this,App);return _possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).apply(this,arguments));}_createClass(App,[{key:'render',value:function render(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["b" /* MemoryRouter */],null,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__["c" /* Route */],{exact:true,path:questPath,component:Main}));}}]);return App;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);/* harmony default export */ __webpack_exports__["a"] = (App);
 
 /***/ }),
-/* 63 */
+/* 65 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5153,7 +5267,7 @@ var _createClass=function(){function defineProperties(target,props){for(var i=0;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(19);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -5208,7 +5322,7 @@ BrowserRouter.propTypes = {
 /* unused harmony default export */ var _unused_webpack_default_export = (BrowserRouter);
 
 /***/ }),
-/* 64 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5221,9 +5335,9 @@ BrowserRouter.propTypes = {
 
 
 
-var emptyFunction = __webpack_require__(16);
-var invariant = __webpack_require__(15);
-var ReactPropTypesSecret = __webpack_require__(65);
+var emptyFunction = __webpack_require__(17);
+var invariant = __webpack_require__(16);
+var ReactPropTypesSecret = __webpack_require__(67);
 
 module.exports = function() {
   function shim(props, propName, componentName, location, propFullName, secret) {
@@ -5273,7 +5387,7 @@ module.exports = function() {
 
 
 /***/ }),
-/* 65 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -5292,7 +5406,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5302,8 +5416,8 @@ module.exports = ReactPropTypesSecret;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(30);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -5596,7 +5710,7 @@ var createBrowserHistory = function createBrowserHistory() {
 /* harmony default export */ __webpack_exports__["a"] = (createBrowserHistory);
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5672,7 +5786,7 @@ function resolvePathname(to) {
 /* harmony default export */ __webpack_exports__["a"] = (resolvePathname);
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5716,7 +5830,7 @@ function valueEqual(a, b) {
 /* harmony default export */ __webpack_exports__["a"] = (valueEqual);
 
 /***/ }),
-/* 69 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5726,8 +5840,8 @@ function valueEqual(a, b) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(11);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__PathUtils__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__createTransitionManager__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__DOMUtils__ = __webpack_require__(30);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 
@@ -6037,7 +6151,7 @@ var createHashHistory = function createHashHistory() {
 /* harmony default export */ __webpack_exports__["a"] = (createHashHistory);
 
 /***/ }),
-/* 70 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6045,7 +6159,7 @@ var createHashHistory = function createHashHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__PathUtils__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__LocationUtils__ = __webpack_require__(11);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__createTransitionManager__ = __webpack_require__(18);
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -6205,7 +6319,7 @@ var createMemoryHistory = function createMemoryHistory() {
 /* harmony default export */ __webpack_exports__["a"] = (createMemoryHistory);
 
 /***/ }),
-/* 71 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6216,7 +6330,7 @@ var createMemoryHistory = function createMemoryHistory() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(19);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -6270,18 +6384,18 @@ HashRouter.propTypes = {
 /* unused harmony default export */ var _unused_webpack_default_export = (HashRouter);
 
 /***/ }),
-/* 72 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(73);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__ = __webpack_require__(75);
 // Written in this round about way for babel-transform-imports
 
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_MemoryRouter__["a" /* default */]);
 
 /***/ }),
-/* 73 */
+/* 75 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6292,7 +6406,7 @@ HashRouter.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_history__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__Router__ = __webpack_require__(20);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -6347,7 +6461,7 @@ MemoryRouter.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (MemoryRouter);
 
 /***/ }),
-/* 74 */
+/* 76 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6355,8 +6469,8 @@ MemoryRouter.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(30);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Route__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Link__ = __webpack_require__(31);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
@@ -6433,7 +6547,7 @@ NavLink.defaultProps = {
 /* unused harmony default export */ var _unused_webpack_default_export = (NavLink);
 
 /***/ }),
-/* 75 */
+/* 77 */
 /***/ (function(module, exports) {
 
 module.exports = Array.isArray || function (arr) {
@@ -6442,18 +6556,18 @@ module.exports = Array.isArray || function (arr) {
 
 
 /***/ }),
-/* 76 */
+/* 78 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__ = __webpack_require__(79);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Prompt__["a" /* default */]);
 
 /***/ }),
-/* 77 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6544,18 +6658,18 @@ Prompt.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Prompt);
 
 /***/ }),
-/* 78 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__ = __webpack_require__(81);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Redirect__["a" /* default */]);
 
 /***/ }),
-/* 79 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6568,7 +6682,7 @@ Prompt.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__generatePath__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__generatePath__ = __webpack_require__(35);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -6684,18 +6798,18 @@ Redirect.contextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Redirect);
 
 /***/ }),
-/* 80 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__ = __webpack_require__(83);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_StaticRouter__["a" /* default */]);
 
 /***/ }),
-/* 81 */
+/* 83 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6708,7 +6822,7 @@ Redirect.contextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_prop_types__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_history__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__Router__ = __webpack_require__(20);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -6861,18 +6975,18 @@ StaticRouter.childContextTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (StaticRouter);
 
 /***/ }),
-/* 82 */
+/* 84 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(83);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__ = __webpack_require__(85);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_Switch__["a" /* default */]);
 
 /***/ }),
-/* 83 */
+/* 85 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -6884,7 +6998,7 @@ StaticRouter.childContextTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_warning___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_warning__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_invariant___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_invariant__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__matchPath__ = __webpack_require__(21);
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -6964,40 +7078,40 @@ Switch.propTypes = {
 /* harmony default export */ __webpack_exports__["a"] = (Switch);
 
 /***/ }),
-/* 84 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_generatePath__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_generatePath__ = __webpack_require__(35);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_generatePath__["a" /* default */]);
 
 /***/ }),
-/* 85 */
+/* 87 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__ = __webpack_require__(21);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_matchPath__["a" /* default */]);
 
 /***/ }),
-/* 86 */
+/* 88 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(87);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__ = __webpack_require__(89);
 // Written in this round about way for babel-transform-imports
 
 
 /* unused harmony default export */ var _unused_webpack_default_export = (__WEBPACK_IMPORTED_MODULE_0_react_router_es_withRouter__["a" /* default */]);
 
 /***/ }),
-/* 87 */
+/* 89 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -7005,9 +7119,9 @@ Switch.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_prop_types___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_prop_types__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__ = __webpack_require__(90);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_hoist_non_react_statics__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__Route__ = __webpack_require__(33);
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
@@ -7046,7 +7160,7 @@ var withRouter = function withRouter(Component) {
 /* harmony default export */ __webpack_exports__["a"] = (withRouter);
 
 /***/ }),
-/* 88 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -7124,23 +7238,23 @@ var withRouter = function withRouter(Component) {
 
 
 /***/ }),
-/* 89 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Quest; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__framework_quest__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__title__ = __webpack_require__(166);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__intro__ = __webpack_require__(167);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__yard__ = __webpack_require__(168);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__road__ = __webpack_require__(169);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__forest__ = __webpack_require__(170);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ending__ = __webpack_require__(171);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ford__ = __webpack_require__(172);
-var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Quest=function(_QuestWord){_inherits(Quest,_QuestWord);function Quest(){_classCallCheck(this,Quest);return _possibleConstructorReturn(this,(Quest.__proto__||Object.getPrototypeOf(Quest)).apply(this,arguments));}_createClass(Quest,[{key:"getQuests",value:function getQuests(){return{title:new __WEBPACK_IMPORTED_MODULE_1__title__["a" /* Title */](this.basePath,'title',this.store),intro:new __WEBPACK_IMPORTED_MODULE_2__intro__["a" /* Intro */](this.basePath,'intro',this.store),yard:new __WEBPACK_IMPORTED_MODULE_3__yard__["a" /* Yard */](this.basePath,'yard',this.store),road:new __WEBPACK_IMPORTED_MODULE_4__road__["a" /* Road */](this.basePath,'road',this.store),forest:new __WEBPACK_IMPORTED_MODULE_5__forest__["a" /* Forest */](this.basePath,'forest',this.store),ford:new __WEBPACK_IMPORTED_MODULE_7__ford__["a" /* Ford */](this.basePath,'ford',this.store),ending:new __WEBPACK_IMPORTED_MODULE_6__ending__["a" /* Ending */](this.basePath,'ending',this.store)};}},{key:"getToolbar",value:function getToolbar(){return(this.startQuestName!==this.store.get('__cur_quest',this.startQuestName)?"[На головну](#__main)":"")+" &nbsp;\n        [\u0421\u043A\u0438\u043D\u0443\u0442\u0438](#__reset)";}},{key:"startQuestName",get:function get(){return"title";}}]);return Quest;}(__WEBPACK_IMPORTED_MODULE_0__framework_quest__["b" /* QuestWord */]);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__title__ = __webpack_require__(171);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__intro__ = __webpack_require__(172);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__yard__ = __webpack_require__(173);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__road__ = __webpack_require__(174);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__forest__ = __webpack_require__(175);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ending__ = __webpack_require__(176);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ford__ = __webpack_require__(177);
+var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _get=function get(object,property,receiver){if(object===null)object=Function.prototype;var desc=Object.getOwnPropertyDescriptor(object,property);if(desc===undefined){var parent=Object.getPrototypeOf(object);if(parent===null){return undefined;}else{return get(parent,property,receiver);}}else if("value"in desc){return desc.value;}else{var getter=desc.get;if(getter===undefined){return undefined;}return getter.call(receiver);}};function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Quest=function(_QuestWord){_inherits(Quest,_QuestWord);function Quest(){_classCallCheck(this,Quest);return _possibleConstructorReturn(this,(Quest.__proto__||Object.getPrototypeOf(Quest)).apply(this,arguments));}_createClass(Quest,[{key:"getQuests",value:function getQuests(){return{title:new __WEBPACK_IMPORTED_MODULE_1__title__["a" /* Title */](this.basePath,'title',this.store),intro:new __WEBPACK_IMPORTED_MODULE_2__intro__["a" /* Intro */](this.basePath,'intro',this.store),yard:new __WEBPACK_IMPORTED_MODULE_3__yard__["a" /* Yard */](this.basePath,'yard',this.store),road:new __WEBPACK_IMPORTED_MODULE_4__road__["a" /* Road */](this.basePath,'road',this.store),forest:new __WEBPACK_IMPORTED_MODULE_5__forest__["a" /* Forest */](this.basePath,'forest',this.store),ford:new __WEBPACK_IMPORTED_MODULE_7__ford__["a" /* Ford */](this.basePath,'ford',this.store),ending:new __WEBPACK_IMPORTED_MODULE_6__ending__["a" /* Ending */](this.basePath,'ending',this.store)};}},{key:"getToolbar",value:function getToolbar(){return _get(Quest.prototype.__proto__||Object.getPrototypeOf(Quest.prototype),"getToolbar",this).call(this,"На головну","Скинути");}},{key:"startQuestName",get:function get(){return"title";}}]);return Quest;}(__WEBPACK_IMPORTED_MODULE_0__framework_quest__["b" /* QuestWord */]);
 
 /***/ }),
-/* 90 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7149,16 +7263,16 @@ var _createClass=function(){function defineProperties(target,props){for(var i=0;
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 var xtend = __webpack_require__(4);
-var unified = __webpack_require__(91);
-var parse = __webpack_require__(103);
+var unified = __webpack_require__(93);
+var parse = __webpack_require__(105);
 var PropTypes = __webpack_require__(1);
-var naiveHtml = __webpack_require__(158);
-var disallowNode = __webpack_require__(159);
-var astToReact = __webpack_require__(160);
-var wrapTableRows = __webpack_require__(161);
-var getDefinitions = __webpack_require__(162);
-var uriTransformer = __webpack_require__(163);
-var defaultRenderers = __webpack_require__(164);
+var naiveHtml = __webpack_require__(160);
+var disallowNode = __webpack_require__(161);
+var astToReact = __webpack_require__(162);
+var wrapTableRows = __webpack_require__(163);
+var getDefinitions = __webpack_require__(164);
+var uriTransformer = __webpack_require__(165);
+var defaultRenderers = __webpack_require__(166);
 
 var allTypes = Object.keys(defaultRenderers);
 
@@ -7256,19 +7370,19 @@ ReactMarkdown.uriTransformer = uriTransformer;
 module.exports = ReactMarkdown;
 
 /***/ }),
-/* 91 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 /* Dependencies. */
-var extend = __webpack_require__(92)
-var bail = __webpack_require__(93)
-var vfile = __webpack_require__(94)
-var trough = __webpack_require__(100)
-var string = __webpack_require__(101)
-var plain = __webpack_require__(102)
+var extend = __webpack_require__(94)
+var bail = __webpack_require__(95)
+var vfile = __webpack_require__(96)
+var trough = __webpack_require__(102)
+var string = __webpack_require__(103)
+var plain = __webpack_require__(104)
 
 /* Expose a frozen processor. */
 module.exports = unified().freeze()
@@ -7729,7 +7843,7 @@ function assertDone(name, asyncName, complete) {
 
 
 /***/ }),
-/* 92 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7822,7 +7936,7 @@ module.exports = function extend() {
 
 
 /***/ }),
-/* 93 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -7838,14 +7952,14 @@ function bail(err) {
 
 
 /***/ }),
-/* 94 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var VMessage = __webpack_require__(95);
-var VFile = __webpack_require__(97);
+var VMessage = __webpack_require__(97);
+var VFile = __webpack_require__(99);
 
 module.exports = VFile;
 
@@ -7898,13 +8012,13 @@ function info() {
 
 
 /***/ }),
-/* 95 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var stringify = __webpack_require__(96)
+var stringify = __webpack_require__(98)
 
 module.exports = VMessage
 
@@ -7999,7 +8113,7 @@ function parseOrigin(origin) {
 
 
 /***/ }),
-/* 96 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8056,15 +8170,15 @@ function index(value) {
 
 
 /***/ }),
-/* 97 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(process) {
 
-var path = __webpack_require__(36);
-var replace = __webpack_require__(98);
-var buffer = __webpack_require__(99);
+var path = __webpack_require__(37);
+var replace = __webpack_require__(100);
+var buffer = __webpack_require__(101);
 
 module.exports = VFile;
 
@@ -8230,16 +8344,16 @@ function assertPath(path, name) {
   }
 }
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(35)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(36)))
 
 /***/ }),
-/* 98 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var path = __webpack_require__(36);
+var path = __webpack_require__(37);
 
 function replaceExt(npath, ext) {
   if (typeof npath !== 'string') {
@@ -8258,7 +8372,7 @@ module.exports = replaceExt;
 
 
 /***/ }),
-/* 99 */
+/* 101 */
 /***/ (function(module, exports) {
 
 /*!
@@ -8285,7 +8399,7 @@ function isSlowBuffer (obj) {
 
 
 /***/ }),
-/* 100 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8425,7 +8539,7 @@ function wrap(fn, next) {
 
 
 /***/ }),
-/* 101 */
+/* 103 */
 /***/ (function(module, exports) {
 
 var toString = Object.prototype.toString
@@ -8438,7 +8552,7 @@ function isString(obj) {
 
 
 /***/ }),
-/* 102 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8452,15 +8566,15 @@ module.exports = function (x) {
 
 
 /***/ }),
-/* 103 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var unherit = __webpack_require__(104);
+var unherit = __webpack_require__(106);
 var xtend = __webpack_require__(4);
-var Parser = __webpack_require__(106);
+var Parser = __webpack_require__(108);
 
 module.exports = parse;
 parse.Parser = Parser;
@@ -8473,14 +8587,14 @@ function parse(options) {
 
 
 /***/ }),
-/* 104 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var xtend = __webpack_require__(4)
-var inherits = __webpack_require__(105)
+var inherits = __webpack_require__(107)
 
 module.exports = unherit
 
@@ -8525,7 +8639,7 @@ function unherit(Super) {
 
 
 /***/ }),
-/* 105 */
+/* 107 */
 /***/ (function(module, exports) {
 
 if (typeof Object.create === 'function') {
@@ -8554,18 +8668,18 @@ if (typeof Object.create === 'function') {
 
 
 /***/ }),
-/* 106 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var xtend = __webpack_require__(4);
-var toggle = __webpack_require__(107);
-var vfileLocation = __webpack_require__(108);
-var unescape = __webpack_require__(109);
-var decode = __webpack_require__(110);
-var tokenizer = __webpack_require__(116);
+var toggle = __webpack_require__(109);
+var vfileLocation = __webpack_require__(110);
+var unescape = __webpack_require__(111);
+var decode = __webpack_require__(112);
+var tokenizer = __webpack_require__(118);
 
 module.exports = Parser;
 
@@ -8588,11 +8702,11 @@ function Parser(doc, file) {
 var proto = Parser.prototype;
 
 /* Expose core. */
-proto.setOptions = __webpack_require__(117);
-proto.parse = __webpack_require__(120);
+proto.setOptions = __webpack_require__(119);
+proto.parse = __webpack_require__(122);
 
 /* Expose `defaults`. */
-proto.options = __webpack_require__(38);
+proto.options = __webpack_require__(39);
 
 /* Enter and exit helpers. */
 proto.exitStart = toggle('atStart', true);
@@ -8660,34 +8774,34 @@ proto.interruptBlockquote = [
 
 /* Handlers. */
 proto.blockTokenizers = {
-  newline: __webpack_require__(123),
-  indentedCode: __webpack_require__(124),
-  fencedCode: __webpack_require__(125),
-  blockquote: __webpack_require__(126),
-  atxHeading: __webpack_require__(127),
-  thematicBreak: __webpack_require__(128),
-  list: __webpack_require__(129),
-  setextHeading: __webpack_require__(131),
-  html: __webpack_require__(132),
-  footnote: __webpack_require__(133),
-  definition: __webpack_require__(135),
-  table: __webpack_require__(136),
-  paragraph: __webpack_require__(137)
+  newline: __webpack_require__(125),
+  indentedCode: __webpack_require__(126),
+  fencedCode: __webpack_require__(127),
+  blockquote: __webpack_require__(128),
+  atxHeading: __webpack_require__(129),
+  thematicBreak: __webpack_require__(130),
+  list: __webpack_require__(131),
+  setextHeading: __webpack_require__(133),
+  html: __webpack_require__(134),
+  footnote: __webpack_require__(135),
+  definition: __webpack_require__(137),
+  table: __webpack_require__(138),
+  paragraph: __webpack_require__(139)
 };
 
 proto.inlineTokenizers = {
-  escape: __webpack_require__(138),
-  autoLink: __webpack_require__(140),
-  url: __webpack_require__(141),
-  html: __webpack_require__(143),
-  link: __webpack_require__(144),
-  reference: __webpack_require__(145),
-  strong: __webpack_require__(146),
-  emphasis: __webpack_require__(148),
-  deletion: __webpack_require__(151),
-  code: __webpack_require__(153),
-  break: __webpack_require__(155),
-  text: __webpack_require__(157)
+  escape: __webpack_require__(140),
+  autoLink: __webpack_require__(142),
+  url: __webpack_require__(143),
+  html: __webpack_require__(145),
+  link: __webpack_require__(146),
+  reference: __webpack_require__(147),
+  strong: __webpack_require__(148),
+  emphasis: __webpack_require__(150),
+  deletion: __webpack_require__(153),
+  code: __webpack_require__(155),
+  break: __webpack_require__(157),
+  text: __webpack_require__(159)
 };
 
 /* Expose precedence. */
@@ -8713,7 +8827,7 @@ function keys(value) {
 
 
 /***/ }),
-/* 107 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8743,7 +8857,7 @@ function factory(key, state, ctx) {
 
 
 /***/ }),
-/* 108 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8827,7 +8941,7 @@ function indices(value) {
 
 
 /***/ }),
-/* 109 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8871,14 +8985,14 @@ function factory(ctx, key) {
 
 
 /***/ }),
-/* 110 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var xtend = __webpack_require__(4);
-var entities = __webpack_require__(21);
+var entities = __webpack_require__(22);
 
 module.exports = factory;
 
@@ -8942,25 +9056,25 @@ function factory(ctx) {
 
 
 /***/ }),
-/* 111 */
+/* 113 */
 /***/ (function(module, exports) {
 
 module.exports = {"AEli":"Æ","AElig":"Æ","AM":"&","AMP":"&","Aacut":"Á","Aacute":"Á","Abreve":"Ă","Acir":"Â","Acirc":"Â","Acy":"А","Afr":"𝔄","Agrav":"À","Agrave":"À","Alpha":"Α","Amacr":"Ā","And":"⩓","Aogon":"Ą","Aopf":"𝔸","ApplyFunction":"⁡","Arin":"Å","Aring":"Å","Ascr":"𝒜","Assign":"≔","Atild":"Ã","Atilde":"Ã","Aum":"Ä","Auml":"Ä","Backslash":"∖","Barv":"⫧","Barwed":"⌆","Bcy":"Б","Because":"∵","Bernoullis":"ℬ","Beta":"Β","Bfr":"𝔅","Bopf":"𝔹","Breve":"˘","Bscr":"ℬ","Bumpeq":"≎","CHcy":"Ч","COP":"©","COPY":"©","Cacute":"Ć","Cap":"⋒","CapitalDifferentialD":"ⅅ","Cayleys":"ℭ","Ccaron":"Č","Ccedi":"Ç","Ccedil":"Ç","Ccirc":"Ĉ","Cconint":"∰","Cdot":"Ċ","Cedilla":"¸","CenterDot":"·","Cfr":"ℭ","Chi":"Χ","CircleDot":"⊙","CircleMinus":"⊖","CirclePlus":"⊕","CircleTimes":"⊗","ClockwiseContourIntegral":"∲","CloseCurlyDoubleQuote":"”","CloseCurlyQuote":"’","Colon":"∷","Colone":"⩴","Congruent":"≡","Conint":"∯","ContourIntegral":"∮","Copf":"ℂ","Coproduct":"∐","CounterClockwiseContourIntegral":"∳","Cross":"⨯","Cscr":"𝒞","Cup":"⋓","CupCap":"≍","DD":"ⅅ","DDotrahd":"⤑","DJcy":"Ђ","DScy":"Ѕ","DZcy":"Џ","Dagger":"‡","Darr":"↡","Dashv":"⫤","Dcaron":"Ď","Dcy":"Д","Del":"∇","Delta":"Δ","Dfr":"𝔇","DiacriticalAcute":"´","DiacriticalDot":"˙","DiacriticalDoubleAcute":"˝","DiacriticalGrave":"`","DiacriticalTilde":"˜","Diamond":"⋄","DifferentialD":"ⅆ","Dopf":"𝔻","Dot":"¨","DotDot":"⃜","DotEqual":"≐","DoubleContourIntegral":"∯","DoubleDot":"¨","DoubleDownArrow":"⇓","DoubleLeftArrow":"⇐","DoubleLeftRightArrow":"⇔","DoubleLeftTee":"⫤","DoubleLongLeftArrow":"⟸","DoubleLongLeftRightArrow":"⟺","DoubleLongRightArrow":"⟹","DoubleRightArrow":"⇒","DoubleRightTee":"⊨","DoubleUpArrow":"⇑","DoubleUpDownArrow":"⇕","DoubleVerticalBar":"∥","DownArrow":"↓","DownArrowBar":"⤓","DownArrowUpArrow":"⇵","DownBreve":"̑","DownLeftRightVector":"⥐","DownLeftTeeVector":"⥞","DownLeftVector":"↽","DownLeftVectorBar":"⥖","DownRightTeeVector":"⥟","DownRightVector":"⇁","DownRightVectorBar":"⥗","DownTee":"⊤","DownTeeArrow":"↧","Downarrow":"⇓","Dscr":"𝒟","Dstrok":"Đ","ENG":"Ŋ","ET":"Ð","ETH":"Ð","Eacut":"É","Eacute":"É","Ecaron":"Ě","Ecir":"Ê","Ecirc":"Ê","Ecy":"Э","Edot":"Ė","Efr":"𝔈","Egrav":"È","Egrave":"È","Element":"∈","Emacr":"Ē","EmptySmallSquare":"◻","EmptyVerySmallSquare":"▫","Eogon":"Ę","Eopf":"𝔼","Epsilon":"Ε","Equal":"⩵","EqualTilde":"≂","Equilibrium":"⇌","Escr":"ℰ","Esim":"⩳","Eta":"Η","Eum":"Ë","Euml":"Ë","Exists":"∃","ExponentialE":"ⅇ","Fcy":"Ф","Ffr":"𝔉","FilledSmallSquare":"◼","FilledVerySmallSquare":"▪","Fopf":"𝔽","ForAll":"∀","Fouriertrf":"ℱ","Fscr":"ℱ","GJcy":"Ѓ","G":">","GT":">","Gamma":"Γ","Gammad":"Ϝ","Gbreve":"Ğ","Gcedil":"Ģ","Gcirc":"Ĝ","Gcy":"Г","Gdot":"Ġ","Gfr":"𝔊","Gg":"⋙","Gopf":"𝔾","GreaterEqual":"≥","GreaterEqualLess":"⋛","GreaterFullEqual":"≧","GreaterGreater":"⪢","GreaterLess":"≷","GreaterSlantEqual":"⩾","GreaterTilde":"≳","Gscr":"𝒢","Gt":"≫","HARDcy":"Ъ","Hacek":"ˇ","Hat":"^","Hcirc":"Ĥ","Hfr":"ℌ","HilbertSpace":"ℋ","Hopf":"ℍ","HorizontalLine":"─","Hscr":"ℋ","Hstrok":"Ħ","HumpDownHump":"≎","HumpEqual":"≏","IEcy":"Е","IJlig":"Ĳ","IOcy":"Ё","Iacut":"Í","Iacute":"Í","Icir":"Î","Icirc":"Î","Icy":"И","Idot":"İ","Ifr":"ℑ","Igrav":"Ì","Igrave":"Ì","Im":"ℑ","Imacr":"Ī","ImaginaryI":"ⅈ","Implies":"⇒","Int":"∬","Integral":"∫","Intersection":"⋂","InvisibleComma":"⁣","InvisibleTimes":"⁢","Iogon":"Į","Iopf":"𝕀","Iota":"Ι","Iscr":"ℐ","Itilde":"Ĩ","Iukcy":"І","Ium":"Ï","Iuml":"Ï","Jcirc":"Ĵ","Jcy":"Й","Jfr":"𝔍","Jopf":"𝕁","Jscr":"𝒥","Jsercy":"Ј","Jukcy":"Є","KHcy":"Х","KJcy":"Ќ","Kappa":"Κ","Kcedil":"Ķ","Kcy":"К","Kfr":"𝔎","Kopf":"𝕂","Kscr":"𝒦","LJcy":"Љ","L":"<","LT":"<","Lacute":"Ĺ","Lambda":"Λ","Lang":"⟪","Laplacetrf":"ℒ","Larr":"↞","Lcaron":"Ľ","Lcedil":"Ļ","Lcy":"Л","LeftAngleBracket":"⟨","LeftArrow":"←","LeftArrowBar":"⇤","LeftArrowRightArrow":"⇆","LeftCeiling":"⌈","LeftDoubleBracket":"⟦","LeftDownTeeVector":"⥡","LeftDownVector":"⇃","LeftDownVectorBar":"⥙","LeftFloor":"⌊","LeftRightArrow":"↔","LeftRightVector":"⥎","LeftTee":"⊣","LeftTeeArrow":"↤","LeftTeeVector":"⥚","LeftTriangle":"⊲","LeftTriangleBar":"⧏","LeftTriangleEqual":"⊴","LeftUpDownVector":"⥑","LeftUpTeeVector":"⥠","LeftUpVector":"↿","LeftUpVectorBar":"⥘","LeftVector":"↼","LeftVectorBar":"⥒","Leftarrow":"⇐","Leftrightarrow":"⇔","LessEqualGreater":"⋚","LessFullEqual":"≦","LessGreater":"≶","LessLess":"⪡","LessSlantEqual":"⩽","LessTilde":"≲","Lfr":"𝔏","Ll":"⋘","Lleftarrow":"⇚","Lmidot":"Ŀ","LongLeftArrow":"⟵","LongLeftRightArrow":"⟷","LongRightArrow":"⟶","Longleftarrow":"⟸","Longleftrightarrow":"⟺","Longrightarrow":"⟹","Lopf":"𝕃","LowerLeftArrow":"↙","LowerRightArrow":"↘","Lscr":"ℒ","Lsh":"↰","Lstrok":"Ł","Lt":"≪","Map":"⤅","Mcy":"М","MediumSpace":" ","Mellintrf":"ℳ","Mfr":"𝔐","MinusPlus":"∓","Mopf":"𝕄","Mscr":"ℳ","Mu":"Μ","NJcy":"Њ","Nacute":"Ń","Ncaron":"Ň","Ncedil":"Ņ","Ncy":"Н","NegativeMediumSpace":"​","NegativeThickSpace":"​","NegativeThinSpace":"​","NegativeVeryThinSpace":"​","NestedGreaterGreater":"≫","NestedLessLess":"≪","NewLine":"\n","Nfr":"𝔑","NoBreak":"⁠","NonBreakingSpace":" ","Nopf":"ℕ","Not":"⫬","NotCongruent":"≢","NotCupCap":"≭","NotDoubleVerticalBar":"∦","NotElement":"∉","NotEqual":"≠","NotEqualTilde":"≂̸","NotExists":"∄","NotGreater":"≯","NotGreaterEqual":"≱","NotGreaterFullEqual":"≧̸","NotGreaterGreater":"≫̸","NotGreaterLess":"≹","NotGreaterSlantEqual":"⩾̸","NotGreaterTilde":"≵","NotHumpDownHump":"≎̸","NotHumpEqual":"≏̸","NotLeftTriangle":"⋪","NotLeftTriangleBar":"⧏̸","NotLeftTriangleEqual":"⋬","NotLess":"≮","NotLessEqual":"≰","NotLessGreater":"≸","NotLessLess":"≪̸","NotLessSlantEqual":"⩽̸","NotLessTilde":"≴","NotNestedGreaterGreater":"⪢̸","NotNestedLessLess":"⪡̸","NotPrecedes":"⊀","NotPrecedesEqual":"⪯̸","NotPrecedesSlantEqual":"⋠","NotReverseElement":"∌","NotRightTriangle":"⋫","NotRightTriangleBar":"⧐̸","NotRightTriangleEqual":"⋭","NotSquareSubset":"⊏̸","NotSquareSubsetEqual":"⋢","NotSquareSuperset":"⊐̸","NotSquareSupersetEqual":"⋣","NotSubset":"⊂⃒","NotSubsetEqual":"⊈","NotSucceeds":"⊁","NotSucceedsEqual":"⪰̸","NotSucceedsSlantEqual":"⋡","NotSucceedsTilde":"≿̸","NotSuperset":"⊃⃒","NotSupersetEqual":"⊉","NotTilde":"≁","NotTildeEqual":"≄","NotTildeFullEqual":"≇","NotTildeTilde":"≉","NotVerticalBar":"∤","Nscr":"𝒩","Ntild":"Ñ","Ntilde":"Ñ","Nu":"Ν","OElig":"Œ","Oacut":"Ó","Oacute":"Ó","Ocir":"Ô","Ocirc":"Ô","Ocy":"О","Odblac":"Ő","Ofr":"𝔒","Ograv":"Ò","Ograve":"Ò","Omacr":"Ō","Omega":"Ω","Omicron":"Ο","Oopf":"𝕆","OpenCurlyDoubleQuote":"“","OpenCurlyQuote":"‘","Or":"⩔","Oscr":"𝒪","Oslas":"Ø","Oslash":"Ø","Otild":"Õ","Otilde":"Õ","Otimes":"⨷","Oum":"Ö","Ouml":"Ö","OverBar":"‾","OverBrace":"⏞","OverBracket":"⎴","OverParenthesis":"⏜","PartialD":"∂","Pcy":"П","Pfr":"𝔓","Phi":"Φ","Pi":"Π","PlusMinus":"±","Poincareplane":"ℌ","Popf":"ℙ","Pr":"⪻","Precedes":"≺","PrecedesEqual":"⪯","PrecedesSlantEqual":"≼","PrecedesTilde":"≾","Prime":"″","Product":"∏","Proportion":"∷","Proportional":"∝","Pscr":"𝒫","Psi":"Ψ","QUO":"\"","QUOT":"\"","Qfr":"𝔔","Qopf":"ℚ","Qscr":"𝒬","RBarr":"⤐","RE":"®","REG":"®","Racute":"Ŕ","Rang":"⟫","Rarr":"↠","Rarrtl":"⤖","Rcaron":"Ř","Rcedil":"Ŗ","Rcy":"Р","Re":"ℜ","ReverseElement":"∋","ReverseEquilibrium":"⇋","ReverseUpEquilibrium":"⥯","Rfr":"ℜ","Rho":"Ρ","RightAngleBracket":"⟩","RightArrow":"→","RightArrowBar":"⇥","RightArrowLeftArrow":"⇄","RightCeiling":"⌉","RightDoubleBracket":"⟧","RightDownTeeVector":"⥝","RightDownVector":"⇂","RightDownVectorBar":"⥕","RightFloor":"⌋","RightTee":"⊢","RightTeeArrow":"↦","RightTeeVector":"⥛","RightTriangle":"⊳","RightTriangleBar":"⧐","RightTriangleEqual":"⊵","RightUpDownVector":"⥏","RightUpTeeVector":"⥜","RightUpVector":"↾","RightUpVectorBar":"⥔","RightVector":"⇀","RightVectorBar":"⥓","Rightarrow":"⇒","Ropf":"ℝ","RoundImplies":"⥰","Rrightarrow":"⇛","Rscr":"ℛ","Rsh":"↱","RuleDelayed":"⧴","SHCHcy":"Щ","SHcy":"Ш","SOFTcy":"Ь","Sacute":"Ś","Sc":"⪼","Scaron":"Š","Scedil":"Ş","Scirc":"Ŝ","Scy":"С","Sfr":"𝔖","ShortDownArrow":"↓","ShortLeftArrow":"←","ShortRightArrow":"→","ShortUpArrow":"↑","Sigma":"Σ","SmallCircle":"∘","Sopf":"𝕊","Sqrt":"√","Square":"□","SquareIntersection":"⊓","SquareSubset":"⊏","SquareSubsetEqual":"⊑","SquareSuperset":"⊐","SquareSupersetEqual":"⊒","SquareUnion":"⊔","Sscr":"𝒮","Star":"⋆","Sub":"⋐","Subset":"⋐","SubsetEqual":"⊆","Succeeds":"≻","SucceedsEqual":"⪰","SucceedsSlantEqual":"≽","SucceedsTilde":"≿","SuchThat":"∋","Sum":"∑","Sup":"⋑","Superset":"⊃","SupersetEqual":"⊇","Supset":"⋑","THOR":"Þ","THORN":"Þ","TRADE":"™","TSHcy":"Ћ","TScy":"Ц","Tab":"\t","Tau":"Τ","Tcaron":"Ť","Tcedil":"Ţ","Tcy":"Т","Tfr":"𝔗","Therefore":"∴","Theta":"Θ","ThickSpace":"  ","ThinSpace":" ","Tilde":"∼","TildeEqual":"≃","TildeFullEqual":"≅","TildeTilde":"≈","Topf":"𝕋","TripleDot":"⃛","Tscr":"𝒯","Tstrok":"Ŧ","Uacut":"Ú","Uacute":"Ú","Uarr":"↟","Uarrocir":"⥉","Ubrcy":"Ў","Ubreve":"Ŭ","Ucir":"Û","Ucirc":"Û","Ucy":"У","Udblac":"Ű","Ufr":"𝔘","Ugrav":"Ù","Ugrave":"Ù","Umacr":"Ū","UnderBar":"_","UnderBrace":"⏟","UnderBracket":"⎵","UnderParenthesis":"⏝","Union":"⋃","UnionPlus":"⊎","Uogon":"Ų","Uopf":"𝕌","UpArrow":"↑","UpArrowBar":"⤒","UpArrowDownArrow":"⇅","UpDownArrow":"↕","UpEquilibrium":"⥮","UpTee":"⊥","UpTeeArrow":"↥","Uparrow":"⇑","Updownarrow":"⇕","UpperLeftArrow":"↖","UpperRightArrow":"↗","Upsi":"ϒ","Upsilon":"Υ","Uring":"Ů","Uscr":"𝒰","Utilde":"Ũ","Uum":"Ü","Uuml":"Ü","VDash":"⊫","Vbar":"⫫","Vcy":"В","Vdash":"⊩","Vdashl":"⫦","Vee":"⋁","Verbar":"‖","Vert":"‖","VerticalBar":"∣","VerticalLine":"|","VerticalSeparator":"❘","VerticalTilde":"≀","VeryThinSpace":" ","Vfr":"𝔙","Vopf":"𝕍","Vscr":"𝒱","Vvdash":"⊪","Wcirc":"Ŵ","Wedge":"⋀","Wfr":"𝔚","Wopf":"𝕎","Wscr":"𝒲","Xfr":"𝔛","Xi":"Ξ","Xopf":"𝕏","Xscr":"𝒳","YAcy":"Я","YIcy":"Ї","YUcy":"Ю","Yacut":"Ý","Yacute":"Ý","Ycirc":"Ŷ","Ycy":"Ы","Yfr":"𝔜","Yopf":"𝕐","Yscr":"𝒴","Yuml":"Ÿ","ZHcy":"Ж","Zacute":"Ź","Zcaron":"Ž","Zcy":"З","Zdot":"Ż","ZeroWidthSpace":"​","Zeta":"Ζ","Zfr":"ℨ","Zopf":"ℤ","Zscr":"𝒵","aacut":"á","aacute":"á","abreve":"ă","ac":"∾","acE":"∾̳","acd":"∿","acir":"â","acirc":"â","acut":"´","acute":"´","acy":"а","aeli":"æ","aelig":"æ","af":"⁡","afr":"𝔞","agrav":"à","agrave":"à","alefsym":"ℵ","aleph":"ℵ","alpha":"α","amacr":"ā","amalg":"⨿","am":"&","amp":"&","and":"∧","andand":"⩕","andd":"⩜","andslope":"⩘","andv":"⩚","ang":"∠","ange":"⦤","angle":"∠","angmsd":"∡","angmsdaa":"⦨","angmsdab":"⦩","angmsdac":"⦪","angmsdad":"⦫","angmsdae":"⦬","angmsdaf":"⦭","angmsdag":"⦮","angmsdah":"⦯","angrt":"∟","angrtvb":"⊾","angrtvbd":"⦝","angsph":"∢","angst":"Å","angzarr":"⍼","aogon":"ą","aopf":"𝕒","ap":"≈","apE":"⩰","apacir":"⩯","ape":"≊","apid":"≋","apos":"'","approx":"≈","approxeq":"≊","arin":"å","aring":"å","ascr":"𝒶","ast":"*","asymp":"≈","asympeq":"≍","atild":"ã","atilde":"ã","aum":"ä","auml":"ä","awconint":"∳","awint":"⨑","bNot":"⫭","backcong":"≌","backepsilon":"϶","backprime":"‵","backsim":"∽","backsimeq":"⋍","barvee":"⊽","barwed":"⌅","barwedge":"⌅","bbrk":"⎵","bbrktbrk":"⎶","bcong":"≌","bcy":"б","bdquo":"„","becaus":"∵","because":"∵","bemptyv":"⦰","bepsi":"϶","bernou":"ℬ","beta":"β","beth":"ℶ","between":"≬","bfr":"𝔟","bigcap":"⋂","bigcirc":"◯","bigcup":"⋃","bigodot":"⨀","bigoplus":"⨁","bigotimes":"⨂","bigsqcup":"⨆","bigstar":"★","bigtriangledown":"▽","bigtriangleup":"△","biguplus":"⨄","bigvee":"⋁","bigwedge":"⋀","bkarow":"⤍","blacklozenge":"⧫","blacksquare":"▪","blacktriangle":"▴","blacktriangledown":"▾","blacktriangleleft":"◂","blacktriangleright":"▸","blank":"␣","blk12":"▒","blk14":"░","blk34":"▓","block":"█","bne":"=⃥","bnequiv":"≡⃥","bnot":"⌐","bopf":"𝕓","bot":"⊥","bottom":"⊥","bowtie":"⋈","boxDL":"╗","boxDR":"╔","boxDl":"╖","boxDr":"╓","boxH":"═","boxHD":"╦","boxHU":"╩","boxHd":"╤","boxHu":"╧","boxUL":"╝","boxUR":"╚","boxUl":"╜","boxUr":"╙","boxV":"║","boxVH":"╬","boxVL":"╣","boxVR":"╠","boxVh":"╫","boxVl":"╢","boxVr":"╟","boxbox":"⧉","boxdL":"╕","boxdR":"╒","boxdl":"┐","boxdr":"┌","boxh":"─","boxhD":"╥","boxhU":"╨","boxhd":"┬","boxhu":"┴","boxminus":"⊟","boxplus":"⊞","boxtimes":"⊠","boxuL":"╛","boxuR":"╘","boxul":"┘","boxur":"└","boxv":"│","boxvH":"╪","boxvL":"╡","boxvR":"╞","boxvh":"┼","boxvl":"┤","boxvr":"├","bprime":"‵","breve":"˘","brvba":"¦","brvbar":"¦","bscr":"𝒷","bsemi":"⁏","bsim":"∽","bsime":"⋍","bsol":"\\","bsolb":"⧅","bsolhsub":"⟈","bull":"•","bullet":"•","bump":"≎","bumpE":"⪮","bumpe":"≏","bumpeq":"≏","cacute":"ć","cap":"∩","capand":"⩄","capbrcup":"⩉","capcap":"⩋","capcup":"⩇","capdot":"⩀","caps":"∩︀","caret":"⁁","caron":"ˇ","ccaps":"⩍","ccaron":"č","ccedi":"ç","ccedil":"ç","ccirc":"ĉ","ccups":"⩌","ccupssm":"⩐","cdot":"ċ","cedi":"¸","cedil":"¸","cemptyv":"⦲","cen":"¢","cent":"¢","centerdot":"·","cfr":"𝔠","chcy":"ч","check":"✓","checkmark":"✓","chi":"χ","cir":"○","cirE":"⧃","circ":"ˆ","circeq":"≗","circlearrowleft":"↺","circlearrowright":"↻","circledR":"®","circledS":"Ⓢ","circledast":"⊛","circledcirc":"⊚","circleddash":"⊝","cire":"≗","cirfnint":"⨐","cirmid":"⫯","cirscir":"⧂","clubs":"♣","clubsuit":"♣","colon":":","colone":"≔","coloneq":"≔","comma":",","commat":"@","comp":"∁","compfn":"∘","complement":"∁","complexes":"ℂ","cong":"≅","congdot":"⩭","conint":"∮","copf":"𝕔","coprod":"∐","cop":"©","copy":"©","copysr":"℗","crarr":"↵","cross":"✗","cscr":"𝒸","csub":"⫏","csube":"⫑","csup":"⫐","csupe":"⫒","ctdot":"⋯","cudarrl":"⤸","cudarrr":"⤵","cuepr":"⋞","cuesc":"⋟","cularr":"↶","cularrp":"⤽","cup":"∪","cupbrcap":"⩈","cupcap":"⩆","cupcup":"⩊","cupdot":"⊍","cupor":"⩅","cups":"∪︀","curarr":"↷","curarrm":"⤼","curlyeqprec":"⋞","curlyeqsucc":"⋟","curlyvee":"⋎","curlywedge":"⋏","curre":"¤","curren":"¤","curvearrowleft":"↶","curvearrowright":"↷","cuvee":"⋎","cuwed":"⋏","cwconint":"∲","cwint":"∱","cylcty":"⌭","dArr":"⇓","dHar":"⥥","dagger":"†","daleth":"ℸ","darr":"↓","dash":"‐","dashv":"⊣","dbkarow":"⤏","dblac":"˝","dcaron":"ď","dcy":"д","dd":"ⅆ","ddagger":"‡","ddarr":"⇊","ddotseq":"⩷","de":"°","deg":"°","delta":"δ","demptyv":"⦱","dfisht":"⥿","dfr":"𝔡","dharl":"⇃","dharr":"⇂","diam":"⋄","diamond":"⋄","diamondsuit":"♦","diams":"♦","die":"¨","digamma":"ϝ","disin":"⋲","div":"÷","divid":"÷","divide":"÷","divideontimes":"⋇","divonx":"⋇","djcy":"ђ","dlcorn":"⌞","dlcrop":"⌍","dollar":"$","dopf":"𝕕","dot":"˙","doteq":"≐","doteqdot":"≑","dotminus":"∸","dotplus":"∔","dotsquare":"⊡","doublebarwedge":"⌆","downarrow":"↓","downdownarrows":"⇊","downharpoonleft":"⇃","downharpoonright":"⇂","drbkarow":"⤐","drcorn":"⌟","drcrop":"⌌","dscr":"𝒹","dscy":"ѕ","dsol":"⧶","dstrok":"đ","dtdot":"⋱","dtri":"▿","dtrif":"▾","duarr":"⇵","duhar":"⥯","dwangle":"⦦","dzcy":"џ","dzigrarr":"⟿","eDDot":"⩷","eDot":"≑","eacut":"é","eacute":"é","easter":"⩮","ecaron":"ě","ecir":"ê","ecirc":"ê","ecolon":"≕","ecy":"э","edot":"ė","ee":"ⅇ","efDot":"≒","efr":"𝔢","eg":"⪚","egrav":"è","egrave":"è","egs":"⪖","egsdot":"⪘","el":"⪙","elinters":"⏧","ell":"ℓ","els":"⪕","elsdot":"⪗","emacr":"ē","empty":"∅","emptyset":"∅","emptyv":"∅","emsp13":" ","emsp14":" ","emsp":" ","eng":"ŋ","ensp":" ","eogon":"ę","eopf":"𝕖","epar":"⋕","eparsl":"⧣","eplus":"⩱","epsi":"ε","epsilon":"ε","epsiv":"ϵ","eqcirc":"≖","eqcolon":"≕","eqsim":"≂","eqslantgtr":"⪖","eqslantless":"⪕","equals":"=","equest":"≟","equiv":"≡","equivDD":"⩸","eqvparsl":"⧥","erDot":"≓","erarr":"⥱","escr":"ℯ","esdot":"≐","esim":"≂","eta":"η","et":"ð","eth":"ð","eum":"ë","euml":"ë","euro":"€","excl":"!","exist":"∃","expectation":"ℰ","exponentiale":"ⅇ","fallingdotseq":"≒","fcy":"ф","female":"♀","ffilig":"ﬃ","fflig":"ﬀ","ffllig":"ﬄ","ffr":"𝔣","filig":"ﬁ","fjlig":"fj","flat":"♭","fllig":"ﬂ","fltns":"▱","fnof":"ƒ","fopf":"𝕗","forall":"∀","fork":"⋔","forkv":"⫙","fpartint":"⨍","frac1":"¼","frac12":"½","frac13":"⅓","frac14":"¼","frac15":"⅕","frac16":"⅙","frac18":"⅛","frac23":"⅔","frac25":"⅖","frac3":"¾","frac34":"¾","frac35":"⅗","frac38":"⅜","frac45":"⅘","frac56":"⅚","frac58":"⅝","frac78":"⅞","frasl":"⁄","frown":"⌢","fscr":"𝒻","gE":"≧","gEl":"⪌","gacute":"ǵ","gamma":"γ","gammad":"ϝ","gap":"⪆","gbreve":"ğ","gcirc":"ĝ","gcy":"г","gdot":"ġ","ge":"≥","gel":"⋛","geq":"≥","geqq":"≧","geqslant":"⩾","ges":"⩾","gescc":"⪩","gesdot":"⪀","gesdoto":"⪂","gesdotol":"⪄","gesl":"⋛︀","gesles":"⪔","gfr":"𝔤","gg":"≫","ggg":"⋙","gimel":"ℷ","gjcy":"ѓ","gl":"≷","glE":"⪒","gla":"⪥","glj":"⪤","gnE":"≩","gnap":"⪊","gnapprox":"⪊","gne":"⪈","gneq":"⪈","gneqq":"≩","gnsim":"⋧","gopf":"𝕘","grave":"`","gscr":"ℊ","gsim":"≳","gsime":"⪎","gsiml":"⪐","g":">","gt":">","gtcc":"⪧","gtcir":"⩺","gtdot":"⋗","gtlPar":"⦕","gtquest":"⩼","gtrapprox":"⪆","gtrarr":"⥸","gtrdot":"⋗","gtreqless":"⋛","gtreqqless":"⪌","gtrless":"≷","gtrsim":"≳","gvertneqq":"≩︀","gvnE":"≩︀","hArr":"⇔","hairsp":" ","half":"½","hamilt":"ℋ","hardcy":"ъ","harr":"↔","harrcir":"⥈","harrw":"↭","hbar":"ℏ","hcirc":"ĥ","hearts":"♥","heartsuit":"♥","hellip":"…","hercon":"⊹","hfr":"𝔥","hksearow":"⤥","hkswarow":"⤦","hoarr":"⇿","homtht":"∻","hookleftarrow":"↩","hookrightarrow":"↪","hopf":"𝕙","horbar":"―","hscr":"𝒽","hslash":"ℏ","hstrok":"ħ","hybull":"⁃","hyphen":"‐","iacut":"í","iacute":"í","ic":"⁣","icir":"î","icirc":"î","icy":"и","iecy":"е","iexc":"¡","iexcl":"¡","iff":"⇔","ifr":"𝔦","igrav":"ì","igrave":"ì","ii":"ⅈ","iiiint":"⨌","iiint":"∭","iinfin":"⧜","iiota":"℩","ijlig":"ĳ","imacr":"ī","image":"ℑ","imagline":"ℐ","imagpart":"ℑ","imath":"ı","imof":"⊷","imped":"Ƶ","in":"∈","incare":"℅","infin":"∞","infintie":"⧝","inodot":"ı","int":"∫","intcal":"⊺","integers":"ℤ","intercal":"⊺","intlarhk":"⨗","intprod":"⨼","iocy":"ё","iogon":"į","iopf":"𝕚","iota":"ι","iprod":"⨼","iques":"¿","iquest":"¿","iscr":"𝒾","isin":"∈","isinE":"⋹","isindot":"⋵","isins":"⋴","isinsv":"⋳","isinv":"∈","it":"⁢","itilde":"ĩ","iukcy":"і","ium":"ï","iuml":"ï","jcirc":"ĵ","jcy":"й","jfr":"𝔧","jmath":"ȷ","jopf":"𝕛","jscr":"𝒿","jsercy":"ј","jukcy":"є","kappa":"κ","kappav":"ϰ","kcedil":"ķ","kcy":"к","kfr":"𝔨","kgreen":"ĸ","khcy":"х","kjcy":"ќ","kopf":"𝕜","kscr":"𝓀","lAarr":"⇚","lArr":"⇐","lAtail":"⤛","lBarr":"⤎","lE":"≦","lEg":"⪋","lHar":"⥢","lacute":"ĺ","laemptyv":"⦴","lagran":"ℒ","lambda":"λ","lang":"⟨","langd":"⦑","langle":"⟨","lap":"⪅","laqu":"«","laquo":"«","larr":"←","larrb":"⇤","larrbfs":"⤟","larrfs":"⤝","larrhk":"↩","larrlp":"↫","larrpl":"⤹","larrsim":"⥳","larrtl":"↢","lat":"⪫","latail":"⤙","late":"⪭","lates":"⪭︀","lbarr":"⤌","lbbrk":"❲","lbrace":"{","lbrack":"[","lbrke":"⦋","lbrksld":"⦏","lbrkslu":"⦍","lcaron":"ľ","lcedil":"ļ","lceil":"⌈","lcub":"{","lcy":"л","ldca":"⤶","ldquo":"“","ldquor":"„","ldrdhar":"⥧","ldrushar":"⥋","ldsh":"↲","le":"≤","leftarrow":"←","leftarrowtail":"↢","leftharpoondown":"↽","leftharpoonup":"↼","leftleftarrows":"⇇","leftrightarrow":"↔","leftrightarrows":"⇆","leftrightharpoons":"⇋","leftrightsquigarrow":"↭","leftthreetimes":"⋋","leg":"⋚","leq":"≤","leqq":"≦","leqslant":"⩽","les":"⩽","lescc":"⪨","lesdot":"⩿","lesdoto":"⪁","lesdotor":"⪃","lesg":"⋚︀","lesges":"⪓","lessapprox":"⪅","lessdot":"⋖","lesseqgtr":"⋚","lesseqqgtr":"⪋","lessgtr":"≶","lesssim":"≲","lfisht":"⥼","lfloor":"⌊","lfr":"𝔩","lg":"≶","lgE":"⪑","lhard":"↽","lharu":"↼","lharul":"⥪","lhblk":"▄","ljcy":"љ","ll":"≪","llarr":"⇇","llcorner":"⌞","llhard":"⥫","lltri":"◺","lmidot":"ŀ","lmoust":"⎰","lmoustache":"⎰","lnE":"≨","lnap":"⪉","lnapprox":"⪉","lne":"⪇","lneq":"⪇","lneqq":"≨","lnsim":"⋦","loang":"⟬","loarr":"⇽","lobrk":"⟦","longleftarrow":"⟵","longleftrightarrow":"⟷","longmapsto":"⟼","longrightarrow":"⟶","looparrowleft":"↫","looparrowright":"↬","lopar":"⦅","lopf":"𝕝","loplus":"⨭","lotimes":"⨴","lowast":"∗","lowbar":"_","loz":"◊","lozenge":"◊","lozf":"⧫","lpar":"(","lparlt":"⦓","lrarr":"⇆","lrcorner":"⌟","lrhar":"⇋","lrhard":"⥭","lrm":"‎","lrtri":"⊿","lsaquo":"‹","lscr":"𝓁","lsh":"↰","lsim":"≲","lsime":"⪍","lsimg":"⪏","lsqb":"[","lsquo":"‘","lsquor":"‚","lstrok":"ł","l":"<","lt":"<","ltcc":"⪦","ltcir":"⩹","ltdot":"⋖","lthree":"⋋","ltimes":"⋉","ltlarr":"⥶","ltquest":"⩻","ltrPar":"⦖","ltri":"◃","ltrie":"⊴","ltrif":"◂","lurdshar":"⥊","luruhar":"⥦","lvertneqq":"≨︀","lvnE":"≨︀","mDDot":"∺","mac":"¯","macr":"¯","male":"♂","malt":"✠","maltese":"✠","map":"↦","mapsto":"↦","mapstodown":"↧","mapstoleft":"↤","mapstoup":"↥","marker":"▮","mcomma":"⨩","mcy":"м","mdash":"—","measuredangle":"∡","mfr":"𝔪","mho":"℧","micr":"µ","micro":"µ","mid":"∣","midast":"*","midcir":"⫰","middo":"·","middot":"·","minus":"−","minusb":"⊟","minusd":"∸","minusdu":"⨪","mlcp":"⫛","mldr":"…","mnplus":"∓","models":"⊧","mopf":"𝕞","mp":"∓","mscr":"𝓂","mstpos":"∾","mu":"μ","multimap":"⊸","mumap":"⊸","nGg":"⋙̸","nGt":"≫⃒","nGtv":"≫̸","nLeftarrow":"⇍","nLeftrightarrow":"⇎","nLl":"⋘̸","nLt":"≪⃒","nLtv":"≪̸","nRightarrow":"⇏","nVDash":"⊯","nVdash":"⊮","nabla":"∇","nacute":"ń","nang":"∠⃒","nap":"≉","napE":"⩰̸","napid":"≋̸","napos":"ŉ","napprox":"≉","natur":"♮","natural":"♮","naturals":"ℕ","nbs":" ","nbsp":" ","nbump":"≎̸","nbumpe":"≏̸","ncap":"⩃","ncaron":"ň","ncedil":"ņ","ncong":"≇","ncongdot":"⩭̸","ncup":"⩂","ncy":"н","ndash":"–","ne":"≠","neArr":"⇗","nearhk":"⤤","nearr":"↗","nearrow":"↗","nedot":"≐̸","nequiv":"≢","nesear":"⤨","nesim":"≂̸","nexist":"∄","nexists":"∄","nfr":"𝔫","ngE":"≧̸","nge":"≱","ngeq":"≱","ngeqq":"≧̸","ngeqslant":"⩾̸","nges":"⩾̸","ngsim":"≵","ngt":"≯","ngtr":"≯","nhArr":"⇎","nharr":"↮","nhpar":"⫲","ni":"∋","nis":"⋼","nisd":"⋺","niv":"∋","njcy":"њ","nlArr":"⇍","nlE":"≦̸","nlarr":"↚","nldr":"‥","nle":"≰","nleftarrow":"↚","nleftrightarrow":"↮","nleq":"≰","nleqq":"≦̸","nleqslant":"⩽̸","nles":"⩽̸","nless":"≮","nlsim":"≴","nlt":"≮","nltri":"⋪","nltrie":"⋬","nmid":"∤","nopf":"𝕟","no":"¬","not":"¬","notin":"∉","notinE":"⋹̸","notindot":"⋵̸","notinva":"∉","notinvb":"⋷","notinvc":"⋶","notni":"∌","notniva":"∌","notnivb":"⋾","notnivc":"⋽","npar":"∦","nparallel":"∦","nparsl":"⫽⃥","npart":"∂̸","npolint":"⨔","npr":"⊀","nprcue":"⋠","npre":"⪯̸","nprec":"⊀","npreceq":"⪯̸","nrArr":"⇏","nrarr":"↛","nrarrc":"⤳̸","nrarrw":"↝̸","nrightarrow":"↛","nrtri":"⋫","nrtrie":"⋭","nsc":"⊁","nsccue":"⋡","nsce":"⪰̸","nscr":"𝓃","nshortmid":"∤","nshortparallel":"∦","nsim":"≁","nsime":"≄","nsimeq":"≄","nsmid":"∤","nspar":"∦","nsqsube":"⋢","nsqsupe":"⋣","nsub":"⊄","nsubE":"⫅̸","nsube":"⊈","nsubset":"⊂⃒","nsubseteq":"⊈","nsubseteqq":"⫅̸","nsucc":"⊁","nsucceq":"⪰̸","nsup":"⊅","nsupE":"⫆̸","nsupe":"⊉","nsupset":"⊃⃒","nsupseteq":"⊉","nsupseteqq":"⫆̸","ntgl":"≹","ntild":"ñ","ntilde":"ñ","ntlg":"≸","ntriangleleft":"⋪","ntrianglelefteq":"⋬","ntriangleright":"⋫","ntrianglerighteq":"⋭","nu":"ν","num":"#","numero":"№","numsp":" ","nvDash":"⊭","nvHarr":"⤄","nvap":"≍⃒","nvdash":"⊬","nvge":"≥⃒","nvgt":">⃒","nvinfin":"⧞","nvlArr":"⤂","nvle":"≤⃒","nvlt":"<⃒","nvltrie":"⊴⃒","nvrArr":"⤃","nvrtrie":"⊵⃒","nvsim":"∼⃒","nwArr":"⇖","nwarhk":"⤣","nwarr":"↖","nwarrow":"↖","nwnear":"⤧","oS":"Ⓢ","oacut":"ó","oacute":"ó","oast":"⊛","ocir":"ô","ocirc":"ô","ocy":"о","odash":"⊝","odblac":"ő","odiv":"⨸","odot":"⊙","odsold":"⦼","oelig":"œ","ofcir":"⦿","ofr":"𝔬","ogon":"˛","ograv":"ò","ograve":"ò","ogt":"⧁","ohbar":"⦵","ohm":"Ω","oint":"∮","olarr":"↺","olcir":"⦾","olcross":"⦻","oline":"‾","olt":"⧀","omacr":"ō","omega":"ω","omicron":"ο","omid":"⦶","ominus":"⊖","oopf":"𝕠","opar":"⦷","operp":"⦹","oplus":"⊕","or":"∨","orarr":"↻","ord":"º","order":"ℴ","orderof":"ℴ","ordf":"ª","ordm":"º","origof":"⊶","oror":"⩖","orslope":"⩗","orv":"⩛","oscr":"ℴ","oslas":"ø","oslash":"ø","osol":"⊘","otild":"õ","otilde":"õ","otimes":"⊗","otimesas":"⨶","oum":"ö","ouml":"ö","ovbar":"⌽","par":"¶","para":"¶","parallel":"∥","parsim":"⫳","parsl":"⫽","part":"∂","pcy":"п","percnt":"%","period":".","permil":"‰","perp":"⊥","pertenk":"‱","pfr":"𝔭","phi":"φ","phiv":"ϕ","phmmat":"ℳ","phone":"☎","pi":"π","pitchfork":"⋔","piv":"ϖ","planck":"ℏ","planckh":"ℎ","plankv":"ℏ","plus":"+","plusacir":"⨣","plusb":"⊞","pluscir":"⨢","plusdo":"∔","plusdu":"⨥","pluse":"⩲","plusm":"±","plusmn":"±","plussim":"⨦","plustwo":"⨧","pm":"±","pointint":"⨕","popf":"𝕡","poun":"£","pound":"£","pr":"≺","prE":"⪳","prap":"⪷","prcue":"≼","pre":"⪯","prec":"≺","precapprox":"⪷","preccurlyeq":"≼","preceq":"⪯","precnapprox":"⪹","precneqq":"⪵","precnsim":"⋨","precsim":"≾","prime":"′","primes":"ℙ","prnE":"⪵","prnap":"⪹","prnsim":"⋨","prod":"∏","profalar":"⌮","profline":"⌒","profsurf":"⌓","prop":"∝","propto":"∝","prsim":"≾","prurel":"⊰","pscr":"𝓅","psi":"ψ","puncsp":" ","qfr":"𝔮","qint":"⨌","qopf":"𝕢","qprime":"⁗","qscr":"𝓆","quaternions":"ℍ","quatint":"⨖","quest":"?","questeq":"≟","quo":"\"","quot":"\"","rAarr":"⇛","rArr":"⇒","rAtail":"⤜","rBarr":"⤏","rHar":"⥤","race":"∽̱","racute":"ŕ","radic":"√","raemptyv":"⦳","rang":"⟩","rangd":"⦒","range":"⦥","rangle":"⟩","raqu":"»","raquo":"»","rarr":"→","rarrap":"⥵","rarrb":"⇥","rarrbfs":"⤠","rarrc":"⤳","rarrfs":"⤞","rarrhk":"↪","rarrlp":"↬","rarrpl":"⥅","rarrsim":"⥴","rarrtl":"↣","rarrw":"↝","ratail":"⤚","ratio":"∶","rationals":"ℚ","rbarr":"⤍","rbbrk":"❳","rbrace":"}","rbrack":"]","rbrke":"⦌","rbrksld":"⦎","rbrkslu":"⦐","rcaron":"ř","rcedil":"ŗ","rceil":"⌉","rcub":"}","rcy":"р","rdca":"⤷","rdldhar":"⥩","rdquo":"”","rdquor":"”","rdsh":"↳","real":"ℜ","realine":"ℛ","realpart":"ℜ","reals":"ℝ","rect":"▭","re":"®","reg":"®","rfisht":"⥽","rfloor":"⌋","rfr":"𝔯","rhard":"⇁","rharu":"⇀","rharul":"⥬","rho":"ρ","rhov":"ϱ","rightarrow":"→","rightarrowtail":"↣","rightharpoondown":"⇁","rightharpoonup":"⇀","rightleftarrows":"⇄","rightleftharpoons":"⇌","rightrightarrows":"⇉","rightsquigarrow":"↝","rightthreetimes":"⋌","ring":"˚","risingdotseq":"≓","rlarr":"⇄","rlhar":"⇌","rlm":"‏","rmoust":"⎱","rmoustache":"⎱","rnmid":"⫮","roang":"⟭","roarr":"⇾","robrk":"⟧","ropar":"⦆","ropf":"𝕣","roplus":"⨮","rotimes":"⨵","rpar":")","rpargt":"⦔","rppolint":"⨒","rrarr":"⇉","rsaquo":"›","rscr":"𝓇","rsh":"↱","rsqb":"]","rsquo":"’","rsquor":"’","rthree":"⋌","rtimes":"⋊","rtri":"▹","rtrie":"⊵","rtrif":"▸","rtriltri":"⧎","ruluhar":"⥨","rx":"℞","sacute":"ś","sbquo":"‚","sc":"≻","scE":"⪴","scap":"⪸","scaron":"š","sccue":"≽","sce":"⪰","scedil":"ş","scirc":"ŝ","scnE":"⪶","scnap":"⪺","scnsim":"⋩","scpolint":"⨓","scsim":"≿","scy":"с","sdot":"⋅","sdotb":"⊡","sdote":"⩦","seArr":"⇘","searhk":"⤥","searr":"↘","searrow":"↘","sec":"§","sect":"§","semi":";","seswar":"⤩","setminus":"∖","setmn":"∖","sext":"✶","sfr":"𝔰","sfrown":"⌢","sharp":"♯","shchcy":"щ","shcy":"ш","shortmid":"∣","shortparallel":"∥","sh":"­","shy":"­","sigma":"σ","sigmaf":"ς","sigmav":"ς","sim":"∼","simdot":"⩪","sime":"≃","simeq":"≃","simg":"⪞","simgE":"⪠","siml":"⪝","simlE":"⪟","simne":"≆","simplus":"⨤","simrarr":"⥲","slarr":"←","smallsetminus":"∖","smashp":"⨳","smeparsl":"⧤","smid":"∣","smile":"⌣","smt":"⪪","smte":"⪬","smtes":"⪬︀","softcy":"ь","sol":"/","solb":"⧄","solbar":"⌿","sopf":"𝕤","spades":"♠","spadesuit":"♠","spar":"∥","sqcap":"⊓","sqcaps":"⊓︀","sqcup":"⊔","sqcups":"⊔︀","sqsub":"⊏","sqsube":"⊑","sqsubset":"⊏","sqsubseteq":"⊑","sqsup":"⊐","sqsupe":"⊒","sqsupset":"⊐","sqsupseteq":"⊒","squ":"□","square":"□","squarf":"▪","squf":"▪","srarr":"→","sscr":"𝓈","ssetmn":"∖","ssmile":"⌣","sstarf":"⋆","star":"☆","starf":"★","straightepsilon":"ϵ","straightphi":"ϕ","strns":"¯","sub":"⊂","subE":"⫅","subdot":"⪽","sube":"⊆","subedot":"⫃","submult":"⫁","subnE":"⫋","subne":"⊊","subplus":"⪿","subrarr":"⥹","subset":"⊂","subseteq":"⊆","subseteqq":"⫅","subsetneq":"⊊","subsetneqq":"⫋","subsim":"⫇","subsub":"⫕","subsup":"⫓","succ":"≻","succapprox":"⪸","succcurlyeq":"≽","succeq":"⪰","succnapprox":"⪺","succneqq":"⪶","succnsim":"⋩","succsim":"≿","sum":"∑","sung":"♪","sup":"⊃","sup1":"¹","sup2":"²","sup3":"³","supE":"⫆","supdot":"⪾","supdsub":"⫘","supe":"⊇","supedot":"⫄","suphsol":"⟉","suphsub":"⫗","suplarr":"⥻","supmult":"⫂","supnE":"⫌","supne":"⊋","supplus":"⫀","supset":"⊃","supseteq":"⊇","supseteqq":"⫆","supsetneq":"⊋","supsetneqq":"⫌","supsim":"⫈","supsub":"⫔","supsup":"⫖","swArr":"⇙","swarhk":"⤦","swarr":"↙","swarrow":"↙","swnwar":"⤪","szli":"ß","szlig":"ß","target":"⌖","tau":"τ","tbrk":"⎴","tcaron":"ť","tcedil":"ţ","tcy":"т","tdot":"⃛","telrec":"⌕","tfr":"𝔱","there4":"∴","therefore":"∴","theta":"θ","thetasym":"ϑ","thetav":"ϑ","thickapprox":"≈","thicksim":"∼","thinsp":" ","thkap":"≈","thksim":"∼","thor":"þ","thorn":"þ","tilde":"˜","time":"×","times":"×","timesb":"⊠","timesbar":"⨱","timesd":"⨰","tint":"∭","toea":"⤨","top":"⊤","topbot":"⌶","topcir":"⫱","topf":"𝕥","topfork":"⫚","tosa":"⤩","tprime":"‴","trade":"™","triangle":"▵","triangledown":"▿","triangleleft":"◃","trianglelefteq":"⊴","triangleq":"≜","triangleright":"▹","trianglerighteq":"⊵","tridot":"◬","trie":"≜","triminus":"⨺","triplus":"⨹","trisb":"⧍","tritime":"⨻","trpezium":"⏢","tscr":"𝓉","tscy":"ц","tshcy":"ћ","tstrok":"ŧ","twixt":"≬","twoheadleftarrow":"↞","twoheadrightarrow":"↠","uArr":"⇑","uHar":"⥣","uacut":"ú","uacute":"ú","uarr":"↑","ubrcy":"ў","ubreve":"ŭ","ucir":"û","ucirc":"û","ucy":"у","udarr":"⇅","udblac":"ű","udhar":"⥮","ufisht":"⥾","ufr":"𝔲","ugrav":"ù","ugrave":"ù","uharl":"↿","uharr":"↾","uhblk":"▀","ulcorn":"⌜","ulcorner":"⌜","ulcrop":"⌏","ultri":"◸","umacr":"ū","um":"¨","uml":"¨","uogon":"ų","uopf":"𝕦","uparrow":"↑","updownarrow":"↕","upharpoonleft":"↿","upharpoonright":"↾","uplus":"⊎","upsi":"υ","upsih":"ϒ","upsilon":"υ","upuparrows":"⇈","urcorn":"⌝","urcorner":"⌝","urcrop":"⌎","uring":"ů","urtri":"◹","uscr":"𝓊","utdot":"⋰","utilde":"ũ","utri":"▵","utrif":"▴","uuarr":"⇈","uum":"ü","uuml":"ü","uwangle":"⦧","vArr":"⇕","vBar":"⫨","vBarv":"⫩","vDash":"⊨","vangrt":"⦜","varepsilon":"ϵ","varkappa":"ϰ","varnothing":"∅","varphi":"ϕ","varpi":"ϖ","varpropto":"∝","varr":"↕","varrho":"ϱ","varsigma":"ς","varsubsetneq":"⊊︀","varsubsetneqq":"⫋︀","varsupsetneq":"⊋︀","varsupsetneqq":"⫌︀","vartheta":"ϑ","vartriangleleft":"⊲","vartriangleright":"⊳","vcy":"в","vdash":"⊢","vee":"∨","veebar":"⊻","veeeq":"≚","vellip":"⋮","verbar":"|","vert":"|","vfr":"𝔳","vltri":"⊲","vnsub":"⊂⃒","vnsup":"⊃⃒","vopf":"𝕧","vprop":"∝","vrtri":"⊳","vscr":"𝓋","vsubnE":"⫋︀","vsubne":"⊊︀","vsupnE":"⫌︀","vsupne":"⊋︀","vzigzag":"⦚","wcirc":"ŵ","wedbar":"⩟","wedge":"∧","wedgeq":"≙","weierp":"℘","wfr":"𝔴","wopf":"𝕨","wp":"℘","wr":"≀","wreath":"≀","wscr":"𝓌","xcap":"⋂","xcirc":"◯","xcup":"⋃","xdtri":"▽","xfr":"𝔵","xhArr":"⟺","xharr":"⟷","xi":"ξ","xlArr":"⟸","xlarr":"⟵","xmap":"⟼","xnis":"⋻","xodot":"⨀","xopf":"𝕩","xoplus":"⨁","xotime":"⨂","xrArr":"⟹","xrarr":"⟶","xscr":"𝓍","xsqcup":"⨆","xuplus":"⨄","xutri":"△","xvee":"⋁","xwedge":"⋀","yacut":"ý","yacute":"ý","yacy":"я","ycirc":"ŷ","ycy":"ы","ye":"¥","yen":"¥","yfr":"𝔶","yicy":"ї","yopf":"𝕪","yscr":"𝓎","yucy":"ю","yum":"ÿ","yuml":"ÿ","zacute":"ź","zcaron":"ž","zcy":"з","zdot":"ż","zeetrf":"ℨ","zeta":"ζ","zfr":"𝔷","zhcy":"ж","zigrarr":"⇝","zopf":"𝕫","zscr":"𝓏","zwj":"‍","zwnj":"‌"}
 
 /***/ }),
-/* 112 */
+/* 114 */
 /***/ (function(module, exports) {
 
 module.exports = {"AElig":"Æ","AMP":"&","Aacute":"Á","Acirc":"Â","Agrave":"À","Aring":"Å","Atilde":"Ã","Auml":"Ä","COPY":"©","Ccedil":"Ç","ETH":"Ð","Eacute":"É","Ecirc":"Ê","Egrave":"È","Euml":"Ë","GT":">","Iacute":"Í","Icirc":"Î","Igrave":"Ì","Iuml":"Ï","LT":"<","Ntilde":"Ñ","Oacute":"Ó","Ocirc":"Ô","Ograve":"Ò","Oslash":"Ø","Otilde":"Õ","Ouml":"Ö","QUOT":"\"","REG":"®","THORN":"Þ","Uacute":"Ú","Ucirc":"Û","Ugrave":"Ù","Uuml":"Ü","Yacute":"Ý","aacute":"á","acirc":"â","acute":"´","aelig":"æ","agrave":"à","amp":"&","aring":"å","atilde":"ã","auml":"ä","brvbar":"¦","ccedil":"ç","cedil":"¸","cent":"¢","copy":"©","curren":"¤","deg":"°","divide":"÷","eacute":"é","ecirc":"ê","egrave":"è","eth":"ð","euml":"ë","frac12":"½","frac14":"¼","frac34":"¾","gt":">","iacute":"í","icirc":"î","iexcl":"¡","igrave":"ì","iquest":"¿","iuml":"ï","laquo":"«","lt":"<","macr":"¯","micro":"µ","middot":"·","nbsp":" ","not":"¬","ntilde":"ñ","oacute":"ó","ocirc":"ô","ograve":"ò","ordf":"ª","ordm":"º","oslash":"ø","otilde":"õ","ouml":"ö","para":"¶","plusmn":"±","pound":"£","quot":"\"","raquo":"»","reg":"®","sect":"§","shy":"­","sup1":"¹","sup2":"²","sup3":"³","szlig":"ß","thorn":"þ","times":"×","uacute":"ú","ucirc":"û","ugrave":"ù","uml":"¨","uuml":"ü","yacute":"ý","yen":"¥","yuml":"ÿ"}
 
 /***/ }),
-/* 113 */
+/* 115 */
 /***/ (function(module, exports) {
 
 module.exports = {"0":"�","128":"€","130":"‚","131":"ƒ","132":"„","133":"…","134":"†","135":"‡","136":"ˆ","137":"‰","138":"Š","139":"‹","140":"Œ","142":"Ž","145":"‘","146":"’","147":"“","148":"”","149":"•","150":"–","151":"—","152":"˜","153":"™","154":"š","155":"›","156":"œ","158":"ž","159":"Ÿ"}
 
 /***/ }),
-/* 114 */
+/* 116 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8982,13 +9096,13 @@ function hexadecimal(character) {
 
 
 /***/ }),
-/* 115 */
+/* 117 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var alphabetical = __webpack_require__(37)
+var alphabetical = __webpack_require__(38)
 var decimal = __webpack_require__(12)
 
 module.exports = alphanumerical
@@ -9001,7 +9115,7 @@ function alphanumerical(character) {
 
 
 /***/ }),
-/* 116 */
+/* 118 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9339,15 +9453,15 @@ function factory(type) {
 
 
 /***/ }),
-/* 117 */
+/* 119 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var xtend = __webpack_require__(4);
-var escapes = __webpack_require__(118);
-var defaults = __webpack_require__(38);
+var escapes = __webpack_require__(120);
+var defaults = __webpack_require__(39);
 
 module.exports = setOptions;
 
@@ -9393,7 +9507,7 @@ function setOptions(options) {
 
 
 /***/ }),
-/* 118 */
+/* 120 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9457,20 +9571,20 @@ function escapes(options) {
 
 
 /***/ }),
-/* 119 */
+/* 121 */
 /***/ (function(module, exports) {
 
 module.exports = ["address","article","aside","base","basefont","blockquote","body","caption","center","col","colgroup","dd","details","dialog","dir","div","dl","dt","fieldset","figcaption","figure","footer","form","frame","frameset","h1","h2","h3","h4","h5","h6","head","header","hgroup","hr","html","iframe","legend","li","link","main","menu","menuitem","meta","nav","noframes","ol","optgroup","option","p","param","pre","section","source","title","summary","table","tbody","td","tfoot","th","thead","title","tr","track","ul"]
 
 /***/ }),
-/* 120 */
+/* 122 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var xtend = __webpack_require__(4);
-var removePosition = __webpack_require__(121);
+var removePosition = __webpack_require__(123);
 
 module.exports = parse;
 
@@ -9515,7 +9629,7 @@ function parse() {
 
 
 /***/ }),
-/* 121 */
+/* 123 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9541,7 +9655,7 @@ function soft(node) {
 
 
 /***/ }),
-/* 122 */
+/* 124 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9667,7 +9781,7 @@ function ok() {
 
 
 /***/ }),
-/* 123 */
+/* 125 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9721,14 +9835,14 @@ function newline(eat, value, silent) {
 
 
 /***/ }),
-/* 124 */
+/* 126 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var repeat = __webpack_require__(22);
-var trim = __webpack_require__(23);
+var repeat = __webpack_require__(23);
+var trim = __webpack_require__(24);
 
 module.exports = indentedCode;
 
@@ -9826,13 +9940,13 @@ function indentedCode(eat, value, silent) {
 
 
 /***/ }),
-/* 125 */
+/* 127 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var trim = __webpack_require__(23);
+var trim = __webpack_require__(24);
 
 module.exports = fencedCode;
 
@@ -10069,14 +10183,14 @@ function fencedCode(eat, value, silent) {
 
 
 /***/ }),
-/* 126 */
+/* 128 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var trim = __webpack_require__(8);
-var interrupt = __webpack_require__(24);
+var interrupt = __webpack_require__(25);
 
 module.exports = blockquote;
 
@@ -10205,7 +10319,7 @@ function blockquote(eat, value, silent) {
 
 
 /***/ }),
-/* 127 */
+/* 129 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10353,7 +10467,7 @@ function atxHeading(eat, value, silent) {
 
 
 /***/ }),
-/* 128 */
+/* 130 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10430,7 +10544,7 @@ function thematicBreak(eat, value, silent) {
 
 
 /***/ }),
-/* 129 */
+/* 131 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10439,11 +10553,11 @@ function thematicBreak(eat, value, silent) {
 /* eslint-disable max-params */
 
 var trim = __webpack_require__(8);
-var repeat = __webpack_require__(22);
+var repeat = __webpack_require__(23);
 var decimal = __webpack_require__(12);
-var getIndent = __webpack_require__(39);
-var removeIndent = __webpack_require__(130);
-var interrupt = __webpack_require__(24);
+var getIndent = __webpack_require__(40);
+var removeIndent = __webpack_require__(132);
+var interrupt = __webpack_require__(25);
 
 module.exports = list;
 
@@ -10911,15 +11025,15 @@ function normalListItem(ctx, value, position) {
 
 
 /***/ }),
-/* 130 */
+/* 132 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var trim = __webpack_require__(8);
-var repeat = __webpack_require__(22);
-var getIndent = __webpack_require__(39);
+var repeat = __webpack_require__(23);
+var getIndent = __webpack_require__(40);
 
 module.exports = indentation;
 
@@ -10996,7 +11110,7 @@ function indentation(value, maximum) {
 
 
 /***/ }),
-/* 131 */
+/* 133 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11110,13 +11224,13 @@ function setextHeading(eat, value, silent) {
 
 
 /***/ }),
-/* 132 */
+/* 134 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var openCloseTag = __webpack_require__(40).openCloseTag;
+var openCloseTag = __webpack_require__(41).openCloseTag;
 
 module.exports = blockHTML;
 
@@ -11211,14 +11325,14 @@ function blockHTML(eat, value, silent) {
 
 
 /***/ }),
-/* 133 */
+/* 135 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var whitespace = __webpack_require__(2);
-var normalize = __webpack_require__(25);
+var normalize = __webpack_require__(26);
 
 module.exports = footnoteDefinition;
 footnoteDefinition.notInList = true;
@@ -11403,7 +11517,7 @@ function footnoteDefinition(eat, value, silent) {
 
 
 /***/ }),
-/* 134 */
+/* 136 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11418,14 +11532,14 @@ function collapse(value) {
 
 
 /***/ }),
-/* 135 */
+/* 137 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var whitespace = __webpack_require__(2);
-var normalize = __webpack_require__(25);
+var normalize = __webpack_require__(26);
 
 module.exports = definition;
 definition.notInList = true;
@@ -11703,7 +11817,7 @@ function isUnclosedURLCharacter(character) {
 
 
 /***/ }),
-/* 136 */
+/* 138 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11976,7 +12090,7 @@ function table(eat, value, silent) {
 
 
 /***/ }),
-/* 137 */
+/* 139 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11984,8 +12098,8 @@ function table(eat, value, silent) {
 
 var trim = __webpack_require__(8);
 var decimal = __webpack_require__(12);
-var trimTrailingLines = __webpack_require__(23);
-var interrupt = __webpack_require__(24);
+var trimTrailingLines = __webpack_require__(24);
+var interrupt = __webpack_require__(25);
 
 module.exports = paragraph;
 
@@ -12105,13 +12219,13 @@ function paragraph(eat, value, silent) {
 
 
 /***/ }),
-/* 138 */
+/* 140 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var locate = __webpack_require__(139);
+var locate = __webpack_require__(141);
 
 module.exports = escape;
 escape.locator = locate;
@@ -12146,7 +12260,7 @@ function escape(eat, value, silent) {
 
 
 /***/ }),
-/* 139 */
+/* 141 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12160,15 +12274,15 @@ function locate(value, fromIndex) {
 
 
 /***/ }),
-/* 140 */
+/* 142 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var whitespace = __webpack_require__(2);
-var decode = __webpack_require__(21);
-var locate = __webpack_require__(41);
+var decode = __webpack_require__(22);
+var locate = __webpack_require__(42);
 
 module.exports = autoLink;
 autoLink.locator = locate;
@@ -12312,15 +12426,15 @@ function autoLink(eat, value, silent) {
 
 
 /***/ }),
-/* 141 */
+/* 143 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var decode = __webpack_require__(21);
+var decode = __webpack_require__(22);
 var whitespace = __webpack_require__(2);
-var locate = __webpack_require__(142);
+var locate = __webpack_require__(144);
 
 module.exports = url;
 url.locator = locate;
@@ -12463,7 +12577,7 @@ function url(eat, value, silent) {
 
 
 /***/ }),
-/* 142 */
+/* 144 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -12496,15 +12610,15 @@ function locate(value, fromIndex) {
 
 
 /***/ }),
-/* 143 */
+/* 145 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var alphabetical = __webpack_require__(37);
-var locate = __webpack_require__(41);
-var tag = __webpack_require__(40).tag;
+var alphabetical = __webpack_require__(38);
+var locate = __webpack_require__(42);
+var tag = __webpack_require__(41).tag;
 
 module.exports = inlineHTML;
 inlineHTML.locator = locate;
@@ -12557,14 +12671,14 @@ function inlineHTML(eat, value, silent) {
 
 
 /***/ }),
-/* 144 */
+/* 146 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var whitespace = __webpack_require__(2);
-var locate = __webpack_require__(42);
+var locate = __webpack_require__(43);
 
 module.exports = link;
 link.locator = locate;
@@ -12956,15 +13070,15 @@ function link(eat, value, silent) {
 
 
 /***/ }),
-/* 145 */
+/* 147 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var whitespace = __webpack_require__(2);
-var locate = __webpack_require__(42);
-var normalize = __webpack_require__(25);
+var locate = __webpack_require__(43);
+var normalize = __webpack_require__(26);
 
 module.exports = reference;
 reference.locator = locate;
@@ -13169,7 +13283,7 @@ function reference(eat, value, silent) {
 
 
 /***/ }),
-/* 146 */
+/* 148 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13177,7 +13291,7 @@ function reference(eat, value, silent) {
 
 var trim = __webpack_require__(8);
 var whitespace = __webpack_require__(2);
-var locate = __webpack_require__(147);
+var locate = __webpack_require__(149);
 
 module.exports = strong;
 strong.locator = locate;
@@ -13260,7 +13374,7 @@ function strong(eat, value, silent) {
 
 
 /***/ }),
-/* 147 */
+/* 149 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13285,16 +13399,16 @@ function locate(value, fromIndex) {
 
 
 /***/ }),
-/* 148 */
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var trim = __webpack_require__(8);
-var word = __webpack_require__(149);
+var word = __webpack_require__(151);
 var whitespace = __webpack_require__(2);
-var locate = __webpack_require__(150);
+var locate = __webpack_require__(152);
 
 module.exports = emphasis;
 emphasis.locator = locate;
@@ -13377,7 +13491,7 @@ function emphasis(eat, value, silent) {
 
 
 /***/ }),
-/* 149 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13398,7 +13512,7 @@ function wordCharacter(character) {
 
 
 /***/ }),
-/* 150 */
+/* 152 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13423,14 +13537,14 @@ function locate(value, fromIndex) {
 
 
 /***/ }),
-/* 151 */
+/* 153 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var whitespace = __webpack_require__(2);
-var locate = __webpack_require__(152);
+var locate = __webpack_require__(154);
 
 module.exports = strikethrough;
 strikethrough.locator = locate;
@@ -13490,7 +13604,7 @@ function strikethrough(eat, value, silent) {
 
 
 /***/ }),
-/* 152 */
+/* 154 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13504,14 +13618,14 @@ function locate(value, fromIndex) {
 
 
 /***/ }),
-/* 153 */
+/* 155 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 var whitespace = __webpack_require__(2);
-var locate = __webpack_require__(154);
+var locate = __webpack_require__(156);
 
 module.exports = inlineCode;
 inlineCode.locator = locate;
@@ -13623,7 +13737,7 @@ function inlineCode(eat, value, silent) {
 
 
 /***/ }),
-/* 154 */
+/* 156 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13637,13 +13751,13 @@ function locate(value, fromIndex) {
 
 
 /***/ }),
-/* 155 */
+/* 157 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var locate = __webpack_require__(156);
+var locate = __webpack_require__(158);
 
 module.exports = hardBreak;
 hardBreak.locator = locate;
@@ -13684,7 +13798,7 @@ function hardBreak(eat, value, silent) {
 
 
 /***/ }),
-/* 156 */
+/* 158 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13708,7 +13822,7 @@ function locate(value, fromIndex) {
 
 
 /***/ }),
-/* 157 */
+/* 159 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13773,7 +13887,7 @@ function text(eat, value, silent) {
 
 
 /***/ }),
-/* 158 */
+/* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13869,7 +13983,7 @@ function virtual(fromNode, toNode, parent) {
 }
 
 /***/ }),
-/* 159 */
+/* 161 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -13915,7 +14029,7 @@ function untangle(node, index, parent, mode) {
 }
 
 /***/ }),
-/* 160 */
+/* 162 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14087,7 +14201,7 @@ function unwrapParagraphs(node) {
 module.exports = astToReact;
 
 /***/ }),
-/* 161 */
+/* 163 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14122,7 +14236,7 @@ function wrap(table) {
 }
 
 /***/ }),
-/* 162 */
+/* 164 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14144,7 +14258,7 @@ module.exports = function getDefinitions(node) {
 };
 
 /***/ }),
-/* 163 */
+/* 165 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14191,7 +14305,7 @@ module.exports = function uriTransformer(uri) {
 };
 
 /***/ }),
-/* 164 */
+/* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -14302,7 +14416,7 @@ function getCoreProps(props) {
 }
 
 /***/ }),
-/* 165 */
+/* 167 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14599,7 +14713,121 @@ class Store {
 
 
 /***/ }),
-/* 166 */
+/* 168 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactIconBase = __webpack_require__(14);
+
+var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IoHome = function IoHome(props) {
+    return _react2.default.createElement(
+        _reactIconBase2.default,
+        _extends({ viewBox: '0 0 40 40' }, props),
+        _react2.default.createElement(
+            'g',
+            null,
+            _react2.default.createElement('path', { d: 'm35 22.5h-3.7v12.5h-7.5v-10h-7.5v10h-7.5v-12.5h-3.8l15-17.5z' })
+        )
+    );
+};
+
+exports.default = IoHome;
+module.exports = exports['default'];
+
+/***/ }),
+/* 169 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactIconBase = __webpack_require__(14);
+
+var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IoPlusCircled = function IoPlusCircled(props) {
+    return _react2.default.createElement(
+        _reactIconBase2.default,
+        _extends({ viewBox: '0 0 40 40' }, props),
+        _react2.default.createElement(
+            'g',
+            null,
+            _react2.default.createElement('path', { d: 'm17.5 2.5c9.7 0 17.5 7.8 17.5 17.5s-7.8 17.5-17.5 17.5-17.5-7.8-17.5-17.5 7.8-17.5 17.5-17.5z m10 18.8v-2.5h-8.7v-8.8h-2.5v8.8h-8.8v2.5h8.8v8.7h2.5v-8.7h8.7z' })
+        )
+    );
+};
+
+exports.default = IoPlusCircled;
+module.exports = exports['default'];
+
+/***/ }),
+/* 170 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactIconBase = __webpack_require__(14);
+
+var _reactIconBase2 = _interopRequireDefault(_reactIconBase);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IoMinusCircled = function IoMinusCircled(props) {
+    return _react2.default.createElement(
+        _reactIconBase2.default,
+        _extends({ viewBox: '0 0 40 40' }, props),
+        _react2.default.createElement(
+            'g',
+            null,
+            _react2.default.createElement('path', { d: 'm17.5 2.5c9.7 0 17.5 7.8 17.5 17.5s-7.8 17.5-17.5 17.5-17.5-7.8-17.5-17.5 7.8-17.5 17.5-17.5z m10 18.8v-2.5h-20v2.5h20z' })
+        )
+    );
+};
+
+exports.default = IoMinusCircled;
+module.exports = exports['default'];
+
+/***/ }),
+/* 171 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14607,10 +14835,12 @@ class Store {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__framework_quest__ = __webpack_require__(6);
-function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Title=function(_MDQuest){_inherits(Title,_MDQuest);function Title(){var _ref;var _temp,_this,_ret;_classCallCheck(this,Title);for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return _ret=(_temp=(_this=_possibleConstructorReturn(this,(_ref=Title.__proto__||Object.getPrototypeOf(Title)).call.apply(_ref,[this].concat(args))),_this),_this.startLoc='main',_this.main=function(){var resumeLink="";var resumeLoc=_this.gget('__resume_loc',null);if(resumeLoc!==null){resumeLink=__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[\u041F\u0440\u043E\u0434\u043E\u0432\u0436\u0438\u0442\u0438](#"+resumeLoc+")"));}return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"main-title"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"author"},_this.md("[Олександр Федоров](#автор)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"title-name"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("b",null,"\u041B\u0438\u0445\u0430 \u0413\u043E\u0434\u0438\u043D\u0430")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"buttons"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[Почати](#intro:вступ)")),resumeLink,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[Про автора](#автор)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[Поради](#поради)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[Примітки (Спойлери!)](#примітки)"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"license"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{rel:"license",href:"http://creativecommons.org/licenses/by-sa/4.0/"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"\u041B\u0456\u0446\u0435\u043D\u0437\u0456\u044F Creative Commons",src:"https://i.creativecommons.org/l/by-sa/4.0/88x31.png"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),"\u0426\u0435\u0439 \u0442\u0432\u0456\u0440 \u043B\u0456\u0446\u0435\u043D\u0437\u043E\u0432\u0430\u043D\u043E \u043D\u0430 \u0443\u043C\u043E\u0432\u0430\u0445\xA0",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{rel:"license",href:"http://creativecommons.org/licenses/by-sa/4.0/"},"\u041B\u0456\u0446\u0435\u043D\u0437\u0456\u0457 Creative Commons \u0406\u0437 \u0417\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F\u043C \u0410\u0432\u0442\u043E\u0440\u0441\u0442\u0432\u0430\xA0\u2014 \u041F\u043E\u0448\u0438\u0440\u0435\u043D\u043D\u044F \u041D\u0430 \u0422\u0438\u0445 \u0421\u0430\u043C\u0438\u0445 \u0423\u043C\u043E\u0432\u0430\u0445 4.0 \u041C\u0456\u0436\u043D\u0430\u0440\u043E\u0434\u043D\u0430"),"."));},_this.поради=function(){return"\n        \u041F\u043E\u0440\u0430\u0434\u0438 \u0434\u043E \u0433\u0440\u0438:\n        \n        1. \u0412\u0438 \u043C\u043E\u0436\u0435\u0442\u0435 \u0437\u0430\u043A\u0440\u0438\u0442\u0438 \u0433\u0440\u0443 \u0431\u0443\u0434\u044C-\u044F\u043A\u043E\u0457 \u043C\u0438\u0442\u0456 \u0442\u0430 \u043F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438\u0441\u044F \u0434\u043E \u043D\u0435\u0457 \u043F\u0456\u0437\u043D\u0456\u0448\u0435.\n           \u041A\u043E\u043B\u0438 \u0432\u0438 \u043F\u043E\u0432\u0442\u043E\u0440\u043D\u043E \u0432\u0456\u0434\u043A\u0440\u0438\u0454\u0442\u0435 \u0433\u0440\u0443 \u0432 \u0442\u043E\u043C\u0443 \u0436 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0456, \u0432\u043E\u043D\u0430 \u043F\u043E\u0447\u043D\u0435\u0442\u044C\u0441\u044F\n           \u0437 \u0442\u043E\u0433\u043E \u043C\u0456\u0441\u0446\u044F, \u043D\u0430 \u044F\u043A\u043E\u043C\u0443 \u0432\u0438 \u0437\u0430\u043A\u0456\u043D\u0447\u0438\u043B\u0438.\n           \n        2. \u0429\u043E\u0431 \u043F\u043E\u0447\u0430\u0442\u0438 \u0437\u0430\u043D\u043E\u0432\u043E, \u0430\u0431\u043E \u043D\u0430\u0442\u0438\u0441\u043D\u0456\u0442\u044C \u043D\u0430 \"\u0421\u043A\u0438\u043D\u0443\u0442\u0438\" \u0443\u0433\u043E\u0440\u0456 \u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0438, \n           \u0430\u0431\u043E \u043F\u0435\u0440\u0435\u0439\u0434\u0456\u0442\u044C [\u043D\u0430 \u0433\u043E\u043B\u043E\u0432\u043D\u0443](#main) \u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0443 \u0442\u0430 \u043D\u0430\u0442\u0438\u0441\u043D\u0456\u0442\u044C \"\u041F\u043E\u0447\u0430\u0442\u0438\".\n           \n        3. \u0423 \u0433\u0440\u0438 \u043A\u0456\u043B\u044C\u043A\u0430 \u0437\u0430\u043A\u0456\u043D\u0447\u0435\u043D\u044C, \u0445\u043E\u0447 \u043B\u0438\u0448\u0435 \u0442\u0440\u0438 \u0437 \u043D\u0438\u0445\xA0\u2014 \u0445\u043E\u0440\u043E\u0448\u0456. \u0417\u0432\u0430\u0436\u0430\u0439\u0442\u0435 \u043D\u0430\n           \u043F\u043E\u043F\u0435\u0440\u0435\u0434\u0436\u0435\u043D\u043D\u044F, \u0449\u043E\u0431 \u043D\u0435 \u0437\u0430\u043A\u0456\u043D\u0447\u0438\u0442\u0438 \u043F\u0435\u0440\u0435\u0434\u0447\u0430\u0441\u043D\u043E.\n        \n        [\u041D\u0430\u0437\u0430\u0434](#main)\n    ";},_this.примітки=function(){return"\n        **\u041E\u0431\u0435\u0440\u0435\u0436\u043D\u043E!** \u0412 \u0442\u0435\u043A\u0441\u0442\u0456 \u0454 \u0441\u043F\u043E\u0439\u043B\u0435\u0440\u0438! \u042F\u043A\u0449\u043E \u0432\u0438 \u0449\u0435 \u043D\u0435 \u043F\u0440\u043E\u0439\u0448\u043B\u0438 \u0433\u0440\u0443, \u0434\u0430\u043B\u0456 \u043D\u0435\n        \u0447\u0438\u0442\u0430\u0439\u0442\u0435.\n        \n        \u041C\u0456\u0444\u0456\u0447\u043D\u0456 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0456 \u043E\u043F\u043E\u0432\u0456\u0434\u0430\u043D\u043D\u044F \u043F\u0440\u0438\u0439\u0448\u043B\u0438 \u0437 \u0435\u043D\u0446\u0438\u043A\u043B\u043E\u043F\u0435\u0434\u0456\u0439,\n        \u0456\u0437 \u043F\u043E\u0432\u0456\u0441\u0442\u0456 \u041C. \u041A\u043E\u0446\u044E\u0431\u0438\u043D\u0441\u044C\u043A\u043E\u0433\u043E \"\u0422\u0456\u043D\u0456 \u0437\u0430\u0431\u0443\u0442\u0438\u0445 \u043F\u0440\u0435\u0434\u043A\u0456\u0432\", \u0456 \u0449\u0435 \u0442\u0440\u043E\u0445\u0438 \u0456\u0437\n        \"\u0425\u0440\u043E\u043D\u0456\u043A \u0410\u043C\u0431\u0435\u0440\u0430\" \u0420. \u0416\u0435\u043B\u044F\u0437\u043D\u0438\xA0\u2014 \u0449\u043E, \u0437\u0432\u0456\u0441\u043D\u043E, \u0434\u043E \u0443\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u043E\u0433\u043E \u0444\u043E\u043B\u044C\u043A\u043B\u043E\u0440\u0443 \n        \u043D\u0435 \u043C\u0430\u0454 \u0436\u043E\u0434\u043D\u043E\u0433\u043E \u0441\u0442\u043E\u0441\u0443\u043D\u043A\u0443. \u0422\u0430\u043A\u043E\u0436 \u0437\u0430\u0434\u0456\u044F\u0432 \u043E\u0441\u043E\u0431\u0438\u0441\u0442\u0456 \n        \u0441\u043F\u043E\u0441\u0442\u0435\u0440\u0435\u0436\u0435\u043D\u043D\u044F \u0442\u0430 \u0443\u0437\u0430\u0433\u0430\u043B\u044C\u043D\u0435\u043D\u043D\u044F.\n        \n        \u0422\u043E\u0436 \u0440\u043E\u0437\u0446\u0456\u043D\u044E\u0439\u0442\u0435 \u0446\u0435\u0439 \u0442\u0432\u0456\u0440 \u0431\u0456\u043B\u044C\u0448 \u044F\u043A \u0445\u0443\u0434\u043E\u0436\u043D\u0456\u0439. \u041E\u0441\u044C \u043D\u0430\u0439\u0431\u0456\u043B\u044C\u0448 \n        \u0441\u0443\u0442\u0442\u0454\u0432\u0456 \u043D\u0435\u0442\u043E\u0447\u043D\u043E\u0441\u0442\u0456:\n        \n        1. \u0416\u0430\u0431\u043E\u044E, \u0441\u043A\u043E\u0440\u0456\u0448 \u0437\u0430 \u0432\u0441\u0435, \u043C\u043E\u0433\u043B\u0430 \u0431\u0443\u0442\u0438 \u0432\u0456\u0434\u044C\u043C\u0430, \u0430 \u043D\u0435 \u0431\u0456\u0441\u0438\u0446\u044F. \u0410\u043B\u0435 \u043D\u0430\n        \u0432\u0456\u0434\u044C\u043C\u0443 \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E \u0431 \u043D\u0435 \u043F\u043E\u0434\u0456\u044F\u043B\u043E, \u0431\u043E \u0432\u043E\u043D\u0430 \u043D\u0435 \u043D\u0430\u043B\u0435\u0436\u0438\u0442\u044C \u0434\u043E \u0442\u0430\u043A \u0437\u0432\u0430\u043D\u0438\u0445\n        \"\u043D\u0438\u0437\u044C\u043A\u0438\u0445 \u0434\u0443\u0445\u0456\u0432\".\n        \n        2. \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u043D\u0430\u0432\u0440\u044F\u0434 \u0447\u0438 \u0431\u0443\u0434\u0435 \u0437\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438 \u0437\u0430\u0433\u0430\u0434\u043A\u0438\xA0\u2014 \u0446\u0435 \u0431\u0456\u043B\u044C\u0448 \u043F\u0440\u0438\u0442\u0430\u043C\u0430\u043D\u043D\u0435\n        \u0433\u0440\u0430\u0439\u043B\u0438\u0432\u0438\u043C \u0434\u0443\u0445\u0430\u043C, \u0442\u0430\u043A\u0438\u043C, \u044F\u043A \u043D\u044F\u0432\u043A\u0430 \u0447\u0438 \u043B\u0456\u0441\u043E\u0432\u0438\u043A.\n        \n        [1/2 >](#\u043F\u0440\u0438\u043C\u0456\u0442\u043A\u04381)\n \n        [\u041D\u0430 \u0433\u043E\u043B\u043E\u0432\u043D\u0443](#main)\n    ";},_this.примітки1=function(){return"\n        3. \u0414\u043E\u043C\u043E\u0432\u0438\u043A \u043D\u0435 \u0442\u0430\u043A \u043B\u0435\u0433\u043A\u043E \u0439\u0434\u0435 \u043D\u0430 \u043A\u043E\u043D\u0442\u0430\u043A\u0442 \u0456 \u043D\u0435 \u043D\u0430\u0441\u0442\u0456\u043B\u044C\u043A\u0438 \u0431\u0430\u043B\u0430\u043A\u0443\u0447\u0438\u0439.\n        \n        4. \"\u0417\u043C\u0435\u0442\u0438\u043A\u0443\u0432\u0430\u0442\u0438 \u043D\u0430 \u0442\u0440\u044C\u043E\u0445\"\xA0\u2014 \u0440\u0430\u0434\u044F\u043D\u0441\u044C\u043A\u0430 \u0442\u0440\u0430\u0434\u0438\u0446\u0456\u044F, \u0456 \u0434\u043E \u0443\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u043E\u0457\n        \u043A\u0443\u043B\u044C\u0442\u0443\u0440\u0438 \u0432\u0456\u0434\u043D\u043E\u0441\u0438\u0442\u044C\u0441\u044F \u043E\u043F\u043E\u0441\u0435\u0440\u0435\u0434\u043A\u043E\u0432\u0430\u043D\u043E.\n        \n        \n        \u0406\u0449\u0435, \u0445\u043E\u0442\u0456\u043B\u043E\u0441\u044F \u0431 \u0437\u0430\u0443\u0432\u0430\u0436\u0438\u0442\u0438:\n        \n        1. \u041F\u0440\u043E\u0442\u0438 \u043D\u0435\u0447\u0435\u0441\u0442\u0456 \u0434\u043E\u043F\u043E\u043C\u0430\u0433\u0430\u0454 \u043D\u0435 \u043B\u0438\u0448\u0435 \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E, \u0430 \u0439 \u0456\u043D\u0448\u0456 \u0437\u043D\u0430\u0440\u044F\u0434\u0434\u044F \u043F\u0440\u0430\u0446\u0456:\n        \u0441\u043E\u043A\u0438\u0440\u0430, \u043D\u0456\u0436, \u0431\u0430\u0442\u0456\u0433. \u0414\u043E \u0440\u0435\u0447\u0456, \u0432\u043E\u043D\u0438 \u0434\u0456\u044E\u0442\u044C \u0456 \u043D\u0430 \u0434\u043E\u0431\u0440\u0438\u0445 \u0434\u0443\u0445\u0456\u0432, \u0442\u0430\u043A\u0438\u0445 \u044F\u043A\n        \u0434\u043E\u043C\u043E\u0432\u0438\u043A \u0456 \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440.\n        \n        2. \u041E\u043F\u0438\u0440 = \u0443\u043F\u0438\u0440. \u041D\u0435 \u043F\u043B\u0443\u0442\u0430\u0442\u0438 \u0437 \u0432\u0430\u043C\u043F\u0456\u0440\u0430\u043C\u0438, \u0432\u0443\u0440\u0434\u0430\u043B\u0430\u043A\u0430\u043C\u0438 \u0456 \u0433\u0440\u0430\u0444\u043E\u043C\n        \u0414\u0440\u0430\u043A\u0443\u043B\u043E\u044E.\n\n        [< 2/2](#\u043F\u0440\u0438\u043C\u0456\u0442\u043A\u04381)\n        \n        [\u041D\u0430 \u0433\u043E\u043B\u043E\u0432\u043D\u0443](#main)\n    ";},_this.автор=function(){return"\n        \u25CF \u041F\u0456\u0434\u043F\u0438\u0441\u0430\u0442\u0438\u0441\u044F \u043D\u0430 [Facebook](https://www.facebook.com/FedorovOleksandr) \n        \u0430\u0431\u043E [Instagram](https://www.instagram.com/oleksandrfedorovblog/).\n\n        \u25CF \u0427\u0438\u0442\u0430\u0442\u0438 \u043D\u0430 [libera.store](https://libera.store/uk/author/279)\n        \u0430\u0431\u043E [\u043F\u0440\u0438\u0433\u043E\u0441\u0442\u0438\u0442\u0438 \u043A\u0430\u0432\u043E\u044E](https://libera.store/uk/author/book/34).\n\n        \u25CF \u041F\u0456\u0434\u0442\u0440\u0438\u043C\u0430\u0442\u0438 \u043D\u0430 [Patreon](https://www.patreon.com/ofedorov).\n\n        \u25CF \u0412\u0438\u0445\u0456\u0434\u043D\u0438\u0439 \u0442\u0435\u043A\u0441\u0442 \u0433\u0440\u0438 \u043D\u0430 [GitHub](https://github.com/Fedorof/hardway).\n        \n        [\u041D\u0430\u0437\u0430\u0434](#main)\n    ";},_temp),_possibleConstructorReturn(_this,_ret);}return Title;}(__WEBPACK_IMPORTED_MODULE_1__framework_quest__["a" /* MDQuest */]);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_icons_lib_io_refresh__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_icons_lib_io_refresh___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_icons_lib_io_refresh__);
+function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Title=function(_MDQuest){_inherits(Title,_MDQuest);function Title(){var _ref;var _temp,_this,_ret;_classCallCheck(this,Title);for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return _ret=(_temp=(_this=_possibleConstructorReturn(this,(_ref=Title.__proto__||Object.getPrototypeOf(Title)).call.apply(_ref,[this].concat(args))),_this),_this.startLoc='main',_this.main=function(){var resumeLink="";var resumeLoc=_this.gget('__resume_loc',null);if(resumeLoc!==null){resumeLink=__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[\u041F\u0440\u043E\u0434\u043E\u0432\u0436\u0438\u0442\u0438](#"+resumeLoc+")"));}return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"main-title"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"author"},_this.md("[Олександр Федоров](#автор)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"title-name"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("b",null,"\u041B\u0438\u0445\u0430 \u0413\u043E\u0434\u0438\u043D\u0430")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"buttons"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[Почати](#intro:вступ)")),resumeLink,__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[Про автора](#автор)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[Поради](#поради)")),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[Примітки (Спойлери!)](#примітки)"))),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",{className:"license"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{rel:"license",href:"http://creativecommons.org/licenses/by-sa/4.0/"},__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("img",{alt:"\u041B\u0456\u0446\u0435\u043D\u0437\u0456\u044F Creative Commons",src:"https://i.creativecommons.org/l/by-sa/4.0/88x31.png"})),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("br",null),"\u0426\u0435\u0439 \u0442\u0432\u0456\u0440 \u043B\u0456\u0446\u0435\u043D\u0437\u043E\u0432\u0430\u043D\u043E \u043D\u0430 \u0443\u043C\u043E\u0432\u0430\u0445\xA0",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("a",{rel:"license",href:"http://creativecommons.org/licenses/by-sa/4.0/"},"\u041B\u0456\u0446\u0435\u043D\u0437\u0456\u0457 Creative Commons \u0406\u0437 \u0417\u0430\u0437\u043D\u0430\u0447\u0435\u043D\u043D\u044F\u043C \u0410\u0432\u0442\u043E\u0440\u0441\u0442\u0432\u0430\xA0\u2014 \u041F\u043E\u0448\u0438\u0440\u0435\u043D\u043D\u044F \u041D\u0430 \u0422\u0438\u0445 \u0421\u0430\u043C\u0438\u0445 \u0423\u043C\u043E\u0432\u0430\u0445 4.0 \u041C\u0456\u0436\u043D\u0430\u0440\u043E\u0434\u043D\u0430"),"."));},_this.поради=function(){return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("span",null,"`",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,"\u041F\u043E\u0440\u0430\u0434\u0438 \u0434\u043E \u0433\u0440\u0438:"),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,"1. \u0412\u0438 \u043C\u043E\u0436\u0435\u0442\u0435 \u0437\u0430\u043A\u0440\u0438\u0442\u0438 \u0433\u0440\u0443 \u0431\u0443\u0434\u044C-\u044F\u043A\u043E\u0457 \u043C\u0438\u0442\u0456 \u0442\u0430 \u043F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438\u0441\u044F \u0434\u043E \u043D\u0435\u0457 \u043F\u0456\u0437\u043D\u0456\u0448\u0435. \u041A\u043E\u043B\u0438 \u0432\u0438 \u043F\u043E\u0432\u0442\u043E\u0440\u043D\u043E \u0432\u0456\u0434\u043A\u0440\u0438\u0454\u0442\u0435 \u0433\u0440\u0443 \u0432 \u0442\u043E\u043C\u0443 \u0436 \u0431\u0440\u0430\u0443\u0437\u0435\u0440\u0456, \u0432\u043E\u043D\u0430 \u043F\u043E\u0447\u043D\u0435\u0442\u044C\u0441\u044F \u0437 \u0442\u043E\u0433\u043E \u043C\u0456\u0441\u0446\u044F, \u043D\u0430 \u044F\u043A\u043E\u043C\u0443 \u0432\u0438 \u0437\u0430\u043A\u0456\u043D\u0447\u0438\u043B\u0438."),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,"2. \u0429\u043E\u0431 \u043F\u043E\u0447\u0430\u0442\u0438 \u0437\u0430\u043D\u043E\u0432\u043E, \u0430\u0431\u043E \u043D\u0430\u0442\u0438\u0441\u043D\u0456\u0442\u044C \"\xA0",__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_icons_lib_io_refresh___default.a,null),"\" (\"\u0421\u043A\u0438\u043D\u0443\u0442\u0438\") \u0443 \u043F\u0440\u0430\u0432\u043E\u043C\u0443 \u0432\u0435\u0440\u0445\u043D\u044C\u043E\u043C\u0443 \u043A\u0443\u0442\u043A\u0443, \u0430\u0431\u043E \u043F\u0435\u0440\u0435\u0439\u0434\u0456\u0442\u044C \u043D\u0430 \u0433\u043E\u043B\u043E\u0432\u043D\u0443 \u0441\u0442\u043E\u0440\u0456\u043D\u043A\u0443 \u0442\u0430 \u043D\u0430\u0442\u0438\u0441\u043D\u0456\u0442\u044C \"\u041F\u043E\u0447\u0430\u0442\u0438\"."),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,"3. \u0423 \u0433\u0440\u0438 \u043A\u0456\u043B\u044C\u043A\u0430 \u0437\u0430\u043A\u0456\u043D\u0447\u0435\u043D\u044C, \u0445\u043E\u0447 \u043B\u0438\u0448\u0435 \u0442\u0440\u0438 \u0437 \u043D\u0438\u0445\xA0\u2014 \u0445\u043E\u0440\u043E\u0448\u0456. \u0417\u0432\u0430\u0436\u0430\u0439\u0442\u0435 \u043D\u0430 \u043F\u043E\u043F\u0435\u0440\u0435\u0434\u0436\u0435\u043D\u043D\u044F, \u0449\u043E\u0431 \u043D\u0435 \u0437\u0430\u043A\u0456\u043D\u0447\u0438\u0442\u0438 \u043F\u0435\u0440\u0435\u0434\u0447\u0430\u0441\u043D\u043E."),__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("div",null,_this.md("[На головну](#main)")));},_this.примітки=function(){return"\n        **\u041E\u0431\u0435\u0440\u0435\u0436\u043D\u043E!** \u0412 \u0442\u0435\u043A\u0441\u0442\u0456 \u0454 \u0441\u043F\u043E\u0439\u043B\u0435\u0440\u0438! \u042F\u043A\u0449\u043E \u0432\u0438 \u0449\u0435 \u043D\u0435 \u043F\u0440\u043E\u0439\u0448\u043B\u0438 \u0433\u0440\u0443, \u0434\u0430\u043B\u0456 \u043D\u0435\n        \u0447\u0438\u0442\u0430\u0439\u0442\u0435.\n        \n        \u041C\u0456\u0444\u0456\u0447\u043D\u0456 \u043F\u0435\u0440\u0441\u043E\u043D\u0430\u0436\u0456 \u043E\u043F\u043E\u0432\u0456\u0434\u0430\u043D\u043D\u044F \u043F\u0440\u0438\u0439\u0448\u043B\u0438 \u0437 \u0435\u043D\u0446\u0438\u043A\u043B\u043E\u043F\u0435\u0434\u0456\u0439,\n        \u0456\u0437 \u043F\u043E\u0432\u0456\u0441\u0442\u0456 \u041C. \u041A\u043E\u0446\u044E\u0431\u0438\u043D\u0441\u044C\u043A\u043E\u0433\u043E \"\u0422\u0456\u043D\u0456 \u0437\u0430\u0431\u0443\u0442\u0438\u0445 \u043F\u0440\u0435\u0434\u043A\u0456\u0432\", \u0456 \u0449\u0435 \u0442\u0440\u043E\u0445\u0438 \u0456\u0437\n        \"\u0425\u0440\u043E\u043D\u0456\u043A \u0410\u043C\u0431\u0435\u0440\u0430\" \u0420. \u0416\u0435\u043B\u044F\u0437\u043D\u0438\xA0\u2014 \u0449\u043E, \u0437\u0432\u0456\u0441\u043D\u043E, \u0434\u043E \u0443\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u043E\u0433\u043E \u0444\u043E\u043B\u044C\u043A\u043B\u043E\u0440\u0443 \n        \u043D\u0435 \u043C\u0430\u0454 \u0436\u043E\u0434\u043D\u043E\u0433\u043E \u0441\u0442\u043E\u0441\u0443\u043D\u043A\u0443. \u0422\u0430\u043A\u043E\u0436 \u0437\u0430\u0434\u0456\u044F\u0432 \u043E\u0441\u043E\u0431\u0438\u0441\u0442\u0456 \n        \u0441\u043F\u043E\u0441\u0442\u0435\u0440\u0435\u0436\u0435\u043D\u043D\u044F \u0442\u0430 \u0443\u0437\u0430\u0433\u0430\u043B\u044C\u043D\u0435\u043D\u043D\u044F.\n        \n        \u0422\u043E\u0436 \u0440\u043E\u0437\u0446\u0456\u043D\u044E\u0439\u0442\u0435 \u0446\u0435\u0439 \u0442\u0432\u0456\u0440 \u0431\u0456\u043B\u044C\u0448 \u044F\u043A \u0445\u0443\u0434\u043E\u0436\u043D\u0456\u0439. \u041E\u0441\u044C \u043D\u0430\u0439\u0431\u0456\u043B\u044C\u0448 \n        \u0441\u0443\u0442\u0442\u0454\u0432\u0456 \u043D\u0435\u0442\u043E\u0447\u043D\u043E\u0441\u0442\u0456:\n        \n        1. \u0416\u0430\u0431\u043E\u044E, \u0441\u043A\u043E\u0440\u0456\u0448 \u0437\u0430 \u0432\u0441\u0435, \u043C\u043E\u0433\u043B\u0430 \u0431\u0443\u0442\u0438 \u0432\u0456\u0434\u044C\u043C\u0430, \u0430 \u043D\u0435 \u0431\u0456\u0441\u0438\u0446\u044F. \u0410\u043B\u0435 \u043D\u0430\n        \u0432\u0456\u0434\u044C\u043C\u0443 \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E \u0431 \u043D\u0435 \u043F\u043E\u0434\u0456\u044F\u043B\u043E, \u0431\u043E \u0432\u043E\u043D\u0430 \u043D\u0435 \u043D\u0430\u043B\u0435\u0436\u0438\u0442\u044C \u0434\u043E \u0442\u0430\u043A \u0437\u0432\u0430\u043D\u0438\u0445\n        \"\u043D\u0438\u0437\u044C\u043A\u0438\u0445 \u0434\u0443\u0445\u0456\u0432\".\n        \n        2. \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u043D\u0430\u0432\u0440\u044F\u0434 \u0447\u0438 \u0431\u0443\u0434\u0435 \u0437\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438 \u0437\u0430\u0433\u0430\u0434\u043A\u0438\xA0\u2014 \u0446\u0435 \u0431\u0456\u043B\u044C\u0448 \u043F\u0440\u0438\u0442\u0430\u043C\u0430\u043D\u043D\u0435\n        \u0433\u0440\u0430\u0439\u043B\u0438\u0432\u0438\u043C \u0434\u0443\u0445\u0430\u043C, \u0442\u0430\u043A\u0438\u043C, \u044F\u043A \u043D\u044F\u0432\u043A\u0430 \u0447\u0438 \u043B\u0456\u0441\u043E\u0432\u0438\u043A.\n        \n        [1/2 >](#\u043F\u0440\u0438\u043C\u0456\u0442\u043A\u04381)\n \n        [\u041D\u0430 \u0433\u043E\u043B\u043E\u0432\u043D\u0443](#main)\n    ";},_this.примітки1=function(){return"\n        3. \u0414\u043E\u043C\u043E\u0432\u0438\u043A \u043D\u0435 \u0442\u0430\u043A \u043B\u0435\u0433\u043A\u043E \u0439\u0434\u0435 \u043D\u0430 \u043A\u043E\u043D\u0442\u0430\u043A\u0442 \u0456 \u043D\u0435 \u043D\u0430\u0441\u0442\u0456\u043B\u044C\u043A\u0438 \u0431\u0430\u043B\u0430\u043A\u0443\u0447\u0438\u0439.\n        \n        4. \"\u0417\u043C\u0435\u0442\u0438\u043A\u0443\u0432\u0430\u0442\u0438 \u043D\u0430 \u0442\u0440\u044C\u043E\u0445\"\xA0\u2014 \u0440\u0430\u0434\u044F\u043D\u0441\u044C\u043A\u0430 \u0442\u0440\u0430\u0434\u0438\u0446\u0456\u044F, \u0456 \u0434\u043E \u0443\u043A\u0440\u0430\u0457\u043D\u0441\u044C\u043A\u043E\u0457\n        \u043A\u0443\u043B\u044C\u0442\u0443\u0440\u0438 \u0432\u0456\u0434\u043D\u043E\u0441\u0438\u0442\u044C\u0441\u044F \u043E\u043F\u043E\u0441\u0435\u0440\u0435\u0434\u043A\u043E\u0432\u0430\u043D\u043E.\n        \n        \n        \u0406\u0449\u0435, \u0445\u043E\u0442\u0456\u043B\u043E\u0441\u044F \u0431 \u0437\u0430\u0443\u0432\u0430\u0436\u0438\u0442\u0438:\n        \n        1. \u041F\u0440\u043E\u0442\u0438 \u043D\u0435\u0447\u0435\u0441\u0442\u0456 \u0434\u043E\u043F\u043E\u043C\u0430\u0433\u0430\u0454 \u043D\u0435 \u043B\u0438\u0448\u0435 \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E, \u0430 \u0439 \u0456\u043D\u0448\u0456 \u0437\u043D\u0430\u0440\u044F\u0434\u0434\u044F \u043F\u0440\u0430\u0446\u0456:\n        \u0441\u043E\u043A\u0438\u0440\u0430, \u043D\u0456\u0436, \u0431\u0430\u0442\u0456\u0433. \u0414\u043E \u0440\u0435\u0447\u0456, \u0432\u043E\u043D\u0438 \u0434\u0456\u044E\u0442\u044C \u0456 \u043D\u0430 \u0434\u043E\u0431\u0440\u0438\u0445 \u0434\u0443\u0445\u0456\u0432, \u0442\u0430\u043A\u0438\u0445 \u044F\u043A\n        \u0434\u043E\u043C\u043E\u0432\u0438\u043A \u0456 \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440.\n        \n        2. \u041E\u043F\u0438\u0440 = \u0443\u043F\u0438\u0440. \u041D\u0435 \u043F\u043B\u0443\u0442\u0430\u0442\u0438 \u0437 \u0432\u0430\u043C\u043F\u0456\u0440\u0430\u043C\u0438, \u0432\u0443\u0440\u0434\u0430\u043B\u0430\u043A\u0430\u043C\u0438 \u0456 \u0433\u0440\u0430\u0444\u043E\u043C\n        \u0414\u0440\u0430\u043A\u0443\u043B\u043E\u044E.\n\n        [< 2/2](#\u043F\u0440\u0438\u043C\u0456\u0442\u043A\u04381)\n        \n        [\u041D\u0430 \u0433\u043E\u043B\u043E\u0432\u043D\u0443](#main)\n    ";},_this.автор=function(){return"\n        \u25CF \u041F\u0456\u0434\u043F\u0438\u0441\u0430\u0442\u0438\u0441\u044F \u043D\u0430 [Facebook](https://www.facebook.com/FedorovOleksandr) \n        \u0430\u0431\u043E [Instagram](https://www.instagram.com/oleksandrfedorovblog/).\n\n        \u25CF \u0427\u0438\u0442\u0430\u0442\u0438 \u043D\u0430 [libera.store](https://libera.store/uk/author/279)\n        \u0430\u0431\u043E [\u043F\u0440\u0438\u0433\u043E\u0441\u0442\u0438\u0442\u0438 \u043A\u0430\u0432\u043E\u044E](https://libera.store/uk/author/book/34).\n\n        \u25CF \u041F\u0456\u0434\u0442\u0440\u0438\u043C\u0430\u0442\u0438 \u043D\u0430 [Patreon](https://www.patreon.com/ofedorov).\n\n        \u25CF \u0412\u0438\u0445\u0456\u0434\u043D\u0438\u0439 \u0442\u0435\u043A\u0441\u0442 \u0433\u0440\u0438 \u043D\u0430 [GitHub](https://github.com/Fedorof/hardway).\n        \n        [\u041D\u0430\u0437\u0430\u0434](#main)\n    ";},_temp),_possibleConstructorReturn(_this,_ret);}return Title;}(__WEBPACK_IMPORTED_MODULE_1__framework_quest__["a" /* MDQuest */]);
 
 /***/ }),
-/* 167 */
+/* 172 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14619,13 +14849,13 @@ function _classCallCheck(instance,Constructor){if(!(instance instanceof Construc
 function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Intro=function(_MDQuest){_inherits(Intro,_MDQuest);function Intro(){var _ref;var _temp,_this,_ret;_classCallCheck(this,Intro);for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return _ret=(_temp=(_this=_possibleConstructorReturn(this,(_ref=Intro.__proto__||Object.getPrototypeOf(Intro)).call.apply(_ref,[this].concat(args))),_this),_this.startLoc='вступ',_this.вступ=function(){return"\n       \xA0\u2014 \u0427\u043E\u0433\u043E \u0442\u0456\u043B\u044C\u043A\u0438 \u043F\u0440\u043E \u043B\u044E\u0434\u0438 \u043D\u0435 \u0431\u0435\u043B\u044C\u043A\u043E\u0447\u0443\u0442\u044C,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0441\u0442\u0430\u0440\u0438\u0439 \u043A\u043E\u0437\u0430\u043A. - \u042F\u043A\n        \u043F\u043E\u0447\u043D\u0443\u0442\u044C \u0432\u0438\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438 - \u0445\u043E\u0447 \u0432\u0443\u0445\u0430 \u0437\u0430\u043A\u043B\u0430\u0434\u0430\u0439.\n        \n        \u0412\u0456\u043D \u043F\u0456\u0434\u043D\u043E\u0441\u0438\u0442\u044C \u043B\u044E\u043B\u044C\u043A\u0443 \u0434\u043E \u0440\u043E\u0442\u0430, \u0439\u043E\u0433\u043E \u043E\u0431\u0432\u0456\u0442\u0440\u0435\u043D\u0435 \u043B\u0438\u0446\u0435 \u043E\u043A\u0443\u0442\u0443\u044E\u0442\u044C \u043A\u043B\u0443\u0431\u0438 \u0434\u0438\u043C\u0443.\n             \n       \xA0\u2014 \u041F\u0440\u0438\u043C\u0456\u0440\u043E\u043C, \u0440\u043E\u0437\u043A\u0430\u0437\u0443\u044E\u0442\u044C, \u0449\u043E \u043A\u043E\u0437\u0430\u043A\u0438, \u043C\u043E\u0432\u043B\u044F\u0432, \u043F\u043E \u043F\u043E\u044F\u0441 \u0433\u043E\u043B\u0456 \n        \u0448\u0430\u0431\u043B\u044F\u043C\u0438 \u043C\u0430\u0445\u0430\u044E\u0442\u044C, \u0430 \u043A\u043E\u0436\u0435\u043D \u0434\u0440\u0443\u0433\u0438\u0439 \u044F\u043A\u0449\u043E \u043D\u0435 \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0438\u043A, \u0442\u043E \u0456\u0437 \n        \u043D\u0435\u0447\u0438\u0441\u0442\u043E\u044E \u0441\u0438\u043B\u043E\u044E \u0437\u043D\u0430\u0454\u0442\u044C\u0441\u044F. \u0410\u043B\u0435 \u0436 \u043A\u043E\u0437\u0430\u043A\u0438\xA0\u2014 \u0440\u0438\u0446\u0430\u0440\u0456 \u0442\u0430 \u0441\u0442\u0440\u0456\u043B\u044C\u0446\u0456, \n        \u0445\u043E\u0447 \u0442\u0430\u043A - \u043D\u0430 \u0448\u0430\u0431\u043B\u044E \u0454 \u0431\u0430\u0433\u0430\u0446\u044C\u043A\u043E \u0432\u043F\u0440\u0430\u0432\u043D\u0438\u0445. \u0410 \u043E\u0442 \n        \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0438\u043A\u0456\u0432\xA0\u2014 \u0434\u043E\u0431\u0435, \u044F\u043A \u0445\u043E\u0447 \u043E\u0434\u043D\u043E\u0433\u043E \u0437\u043D\u0430\u0439\u0434\u0435\u0448. \u041D\u0435\u043F\u0440\u043E\u0441\u0442\u0430 \u0446\u0435 \u043D\u0430\u0443\u043A\u0430\u2026\n        \n        [\u0414\u0430\u043B\u0456](#\u0432\u0441\u0442\u0443\u043F0)\n    ";},_this.вступ0=function(){return"\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u043E\u0431\u0432\u043E\u0434\u0438\u0442\u044C \u043F\u043E\u0433\u043B\u044F\u0434\u043E\u043C \u0434\u043E\u0432\u043A\u043E\u043B\u0430. \u0412\u043E\u0433\u043D\u0438\u0449\u0435 \u0442\u0438\u0445\u043E \u043F\u043E\u0442\u0440\u0456\u0441\u043A\u0443\u0454, \u0436\u0430\u0440\u0438\u043D\u043A\u0438\n        \u043B\u0435\u0442\u044F\u0442\u044C \u0443\u0433\u043E\u0440\u0443 \u0434\u043E \u043D\u0456\u0447\u043D\u043E\u0433\u043E \u043D\u0435\u0431\u0430. \u041F\u0430\u0440\u0443\u0431\u043A\u0438 \u0442\u0430 \u0434\u0456\u0432\u0447\u0430\u0442\u0430 \u0441\u0438\u0434\u044F\u0442\u044C \u043A\u043E\u043B\u043E \u0432\u043E\u0433\u043D\u044E, \u0456\u0445\n        \u043F\u043E\u0433\u043B\u044F\u0434\u0438 \u043F\u0440\u0438\u043A\u0443\u0442\u0456 \u0434\u043E \u043E\u0431\u043B\u0438\u0447\u0447\u044F \u0441\u0442\u0430\u0440\u043E\u0433\u043E \u043A\u043E\u0437\u0430\u043A\u0430.\n        \n       \xA0\u2014 \u041E\u0442\u043E\u0436, - \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0432\u0456\u043D,\xA0\u2014 \u044F\u043A\u0449\u043E \u043B\u044E\u0434\u0438 \u043D\u0435\u0431\u0438\u043B\u0438\u0446\u0456 \u0433\u043E\u0432\u043E\u0440\u044F\u0442\u044C, \u0442\u043E \u044F \u0442\u0435\u0436\n        \u0440\u043E\u0437\u043A\u0430\u0436\u0443. \u0417\u043D\u0430\u0447\u0438\u0442\u044C-\u0441\u044F \u0442\u0430\u043A\u2026\n        \n        \u0421\u043B\u0443\u0445\u0430\u0447\u0456 \u043F\u0456\u0434\u0441\u0443\u0432\u0430\u044E\u0442\u044C\u0441\u044F \u0431\u043B\u0438\u0436\u0447\u0435. \u0420\u0443\u0434\u0456 \u0432\u0456\u0434\u0431\u043B\u0438\u0441\u043A\u0438 \u0432\u043E\u0433\u043D\u0438\u0449\u0430 \u0433\u0440\u0430\u044E\u0442\u044C \u043D\u0430 \u043E\u0434\u044F\u0437\u0456, \n        \u0432\u0456\u0434\u0441\u0432\u0456\u0447\u0443\u044E\u0442\u044C \u0443 \u043E\u0447\u0430\u0445.\n\n        \n       \xA0\u2014 \u041A\u043E\u043B\u0438\u0441\u044C \u043C\u043E\u043B\u043E\u0434\u043E\u0439 \u0434\u0436\u0443\u0440\u0430\xA0\u2014 \u0430 \u0431\u0443\u0432 \u0432\u0456\u043D \u043C\u043E\u043B\u043E\u0434\u0448\u0438\u043C \u043E\u0434 \u0432\u0430\u0441\xA0\u2014\n        \u043F\u043E\u0432\u0435\u0440\u0442\u0430\u0432\u0441\u044F \u043D\u0430 \u041B\u0443\u0433 \u0432\u0456\u0434 \u0441\u0456\u043C\u2019\u0457. \u0422\u0430, \u0432\u0430\u0440\u0442\u043E \u0441\u043A\u0430\u0437\u0430\u0442\u0438, \u0431\u0443\u0432 \u0446\u0435 \u043D\u0435 \u043F\u0440\u043E\u0441\u0442\u0438\u0439\n        \u043F\u0430\u0440\u0443\u0431\u043E\u043A, \u0431\u043E \u0432\u0447\u0438\u0432\u0441\u044F \u0432\u0456\u043D \u043D\u0430 \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0438\u043A\u0430.\n        \n        [\u0414\u0430\u043B\u0456](#\u0432\u0441\u0442\u0443\u043F1)\n    ";},_this.вступ1=function(){return"\n        \u0414\u043E \u0421\u0456\u0447\u0456 \u043B\u0438\u0448\u0430\u043B\u043E\u0441\u044F \u0432\u0435\u0440\u0441\u0442 \u043F\u2019\u044F\u0442\u044C, \u043A\u043E\u043B\u0438 \u0437\u0430\u0441\u0442\u0430\u043B\u0430 \u043F\u0430\u0440\u0443\u0431\u043A\u0430 \u0433\u043B\u0443\u043F\u0430 \u043D\u0456\u0447.\n        \u0414\u043E\u0431\u0440\u0435 \u0445\u043E\u0447, \u043D\u0430 \u0448\u043B\u044F\u0445\u0443 \u043F\u043E\u043F\u0430\u043B\u043E\u0441\u044F \u0441\u0435\u043B\u043E, \u0456 \u0434\u0436\u0443\u0440\u0430 \u043F\u043E\u043F\u0440\u043E\u0441\u0438\u0432\u0441\u044F \u0434\u043E \n        \u043A\u0440\u0430\u0439\u043D\u044C\u043E\u0457 \u0445\u0430\u0442\u0438\xA0\u2014 \u043F\u0435\u0440\u0435\u043D\u043E\u0447\u0443\u0432\u0430\u0442\u0438.\n        \n        \u0421\u043F\u0438\u0442\u044C \u0432\u0456\u043D, \u0456 \u0431\u0430\u0447\u0438\u0442\u044C \u0441\u043E\u043D: \u043F\u0440\u0438\u043B\u0456\u0442\u0430\u0454 \u0434\u043E \u0434\u0432\u043E\u0440\u0443 \u0447\u043E\u0440\u043D\u0438\u0439 \u0432\u043E\u0440\u043E\u043D, \u0442\u0430 \u0439 \u0445\u043E\u0434\u0438\u0442\u044C\n        \u043F\u043E\u0434\u0432\u0456\u0440\u2019\u044F\u043C. \u0420\u0430\u0437 \u043A\u0430\u0440\u043A\u043D\u0443\u0432\xA0\u2014 \u0456 \u043F\u0440\u0438\u0441\u043B\u0443\u0445\u0430\u0454\u0442\u044C\u0441\u044F. \u041A\u0430\u0440\u043A\u043D\u0443\u0432 \u0443\u0434\u0440\u0443\u0433\u0435\xA0\u2014 \u0437\u043D\u043E\u0432\u0443\n        \u043C\u043E\u0432\u0447\u0438\u0442\u044C, \u0447\u043E\u0440\u043D\u0438\u043C\u0438 \u043E\u0447\u0435\u043D\u044F\u0442\u0430\u043C\u0438-\u043D\u0430\u043C\u0438\u0441\u0442\u0438\u043D\u0430\u043C\u0438 \u0433\u043B\u0438\u043F\u0430\u0454.\n        \u041A\u0430\u0440\u043A\u043D\u0443\u0432 \u0443\u0442\u0440\u0435\u0442\u0454\xA0\u2014 \u0456 \u043F\u043E\u043B\u0435\u0442\u0456\u0432 \u0433\u0435\u0442\u044C.\n        \n        \u041F\u0440\u043E\u043A\u0438\u0434\u0430\u0454\u0442\u044C\u0441\u044F \u044E\u043D\u0430\u043A, \u0430 \u0443 \u0432\u0443\u0445\u0430\u0445 \u0449\u0435 \u0437\u0432\u0443\u0447\u0438\u0442\u044C, \u044F\u043A \u043F\u0442\u0430\u0448\u0438\u043D\u0456 \u043A\u0440\u0438\u043B\u0430 \u0448\u0443\u0440\u0445\u043E\u0442\u044F\u0442\u044C.\n        \u0417\u0440\u043E\u0437\u0443\u043C\u0456\u0432, \u0449\u043E \u0439\u043E\u0433\u043E \u043D\u0430\u0441\u0442\u0430\u0432\u043D\u0438\u043A-\u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0438\u043A \u043B\u0438\u0445\u0443 \u0437\u0432\u0456\u0441\u0442\u043A\u0443 \u043F\u0440\u0438\u0441\u043B\u0430\u0432.\n        \u0411\u0443\u043B\u0430 \u0431 \u0434\u043E\u0431\u0440\u043E\u044E, \u0431\u0456\u043B\u0438\u043C \u0433\u043E\u043B\u0443\u0431\u043E\u043C \u0431\u0438 \u0437\u2019\u044F\u0432\u0438\u043B\u0430\u0441\u044F \u0437\u0432\u0456\u0441\u0442\u043E\u0447\u043A\u0430,\n        \u0430 \u0440\u0430\u0437 \u0432\u043E\u0440\u043E\u043D \u043F\u0440\u0438\u043B\u0435\u0442\u0456\u0432, \u0442\u0440\u0435\u0431\u0430 \u0437\u0431\u0438\u0440\u0430\u0442\u0438\u0441\u044F \u0456 \u044F\u043A\u043D\u0430\u0439\u0448\u0432\u0438\u0434\u0448\u0435 \u0440\u0443\u0448\u0430\u0442\u0438 \u043D\u0430 \u0421\u0456\u0447.\n        \n        [\u0414\u0430\u043B\u0456](#\u0432\u0441\u0442\u0443\u043F2)\n    ";},_this.вступ2=function(){return"\n        \u0422\u0438\u0445\u043E, \u0449\u043E\u0431 \u043D\u0435 \u0440\u043E\u0437\u0431\u0443\u0434\u0438\u0442\u0438 \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440\u0456\u0432, \u043F\u0456\u0434\u0432\u043E\u0434\u0438\u0442\u044C\u0441\u044F \u0437 \u043F\u043E\u0441\u0442\u0456\u043B\u0456. \n        \u041C\u043E\u0441\u0442\u043D\u0438\u0446\u044F \u043B\u0435\u0434\u044C \u0441\u043A\u0440\u0438\u043F\u043D\u0443\u043B\u0430 \u043F\u0456\u0434 \u043D\u043E\u0433\u0430\u043C\u0438, \u043D\u0430\u0434\u0432\u043E\u0440\u0456 \u0449\u043E\u0441\u044C \n        \u0437\u0430\u0432\u0438\u043B\u043E\xA0\u2014 \u0447\u0438 \u0442\u043E \u0437\u0432\u0456\u0440 \u043F\u0440\u043E\u043A\u0440\u0438\u0447\u0430\u0432, \u0447\u0438 \u0434\u0438\u0442\u0438\u043D\u0430 \u0440\u043E\u0437\u043F\u043B\u0430\u043A\u0430\u043B\u0430\u0441\u044C. \u0410, \u043C\u043E\u0436\u0435,\n        \u043F\u0440\u043E\u0441\u0442\u043E \u0432\u0456\u0442\u0435\u0440 \u0433\u0443\u043B\u044F\u0454.\n        \u0417\u0430 \u0432\u0456\u043A\u043D\u043E\u043C \u043F\u0440\u043E\u043C\u0430\u0439\u043D\u0443\u043B\u0430 \u0442\u0456\u043D\u044C \u041C\u0430\u0440\u0438, \u0447\u0443\u0442\u043D\u043E \u044F\u043A \u0432\u043E\u043D\u0430 \u043A\u043B\u0438\u0447\u0435 \u0434\u0436\u0443\u0440\u0443 \u043D\u0430 \u0456\u043C\u2019\u044F.\n        \n        \u0411\u0435\u0437 \u0436\u043E\u0434\u043D\u043E\u0433\u043E \u0437\u0432\u0443\u043A\u0443 \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u043F\u0440\u043E\u0431\u0438\u0440\u0430\u0454\u0442\u044C\u0441\u044F \u0434\u043E \u0434\u0432\u0435\u0440\u0435\u0439. \n        \u041C\u0430\u0440\u0430 \u0437\u043D\u043E\u0432 \u043F\u043E\u0434\u0430\u0454 \u0433\u043E\u043B\u043E\u0441. \u0425\u043B\u043E\u043F\u0435\u0446\u044C \u043D\u0435 \u043E\u0442\u0437\u0438\u0432\u0430\u0454\u0442\u044C\u0441\u044F\xA0\u2014 \u0441\u043A\u043E\u0440\u043E \u0457\u0439 \u043D\u0430\u0431\u0440\u0438\u0434\u043D\u0435, \n        \u0456 \u0432\u043E\u043D\u0430 \u0440\u0443\u0448\u0438\u0442\u044C \u0434\u0430\u043B\u0456\xA0\u2014 \u043A\u043B\u0438\u043A\u0430\u0442\u0438, \u0442\u0430 \u043F\u0456\u0434\u0441\u0442\u0435\u0440\u0456\u0433\u0430\u0442\u0438 \u0442\u0438\u0445, \u0445\u0442\u043E \u043E\u0434\u0456\u0437\u0432\u0435\u0442\u044C\u0441\u044F.\n          \n        [\u0414\u0430\u043B\u0456](#\u0432\u0441\u0442\u0443\u043F3)\n    ";},_this.вступ3=function(){return"\n      \n        \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u043F\u0440\u043E\u0447\u0438\u043D\u044F\u0454 \u0434\u0432\u0435\u0440\u0456, \u043D\u0430 \u043F\u0456\u0434\u043B\u043E\u0433\u0443 \u043F\u0430\u0434\u0430\u0454 \u044F\u0441\u043A\u0440\u0430\u0432\u0430 \u0441\u043C\u0443\u0433\u0430 \n        \u043C\u0456\u0441\u044F\u0447\u043D\u043E\u0433\u043E \u0441\u0432\u0456\u0442\u043B\u0430. \u041D\u0430 \u043D\u0435\u0431\u0456 \u0432\u0438\u0434\u043D\u0456\u0454\u0442\u044C\u0441\u044F \u043F\u043E\u0432\u043D\u0438\u0439 \u043C\u0456\u0441\u044F\u0446\u044C\xA0\u2014 \n        \u0441\u043E\u043D\u0446\u0435 \u0443\u0441\u0456\u0454\u0457 \u043D\u0435\u0447\u0438\u0441\u0442\u0456 \u0442\u0430 \u043C\u0435\u0440\u0446\u0456\u0432.\n        \n        \u042E\u043D\u0430\u043A \u0432\u0438\u0445\u043E\u0434\u0438\u0442\u044C \u0437 \u0445\u0430\u0442\u0438, \u0447\u043E\u0431\u043E\u0442\u0438 \u0441\u0442\u0443\u043F\u0430\u044E\u0442\u044C \u043D\u0430 \u043F\u0440\u0438\u043C\u2019\u044F\u0442\u0443 \u043A\u043E\u0432\u0438\u043B\u0443. \n        \u0422\u0438\u0445\u043E \u0437\u0430\u0447\u0438\u043D\u044F\u0454 \u0434\u0432\u0435\u0440\u0456, \u043E\u0447\u0456 \u043F\u0456\u0434\u0456\u0439\u043C\u0430\u044E\u0442\u044C\u0441\u044F \u0434\u043E \u043D\u0435\u0431\u0430. \u041C\u0456\u0441\u044F\u0446\u044C \u0443 \u043F\u043E\u0432\u043D\u0456\u2026 \n        \u041E\u0445, \u043B\u0438\u0445\u0430 \u0433\u043E\u0434\u0438\u043D\u0430!\n        \n        [\u0423\u043F\u0435\u0440\u0435\u0434](#yard:\u0434\u0432\u0456\u0440)\n    ";},_temp),_possibleConstructorReturn(_this,_ret);}return Intro;}(__WEBPACK_IMPORTED_MODULE_0__framework_quest__["a" /* MDQuest */]);
 
 /***/ }),
-/* 168 */
+/* 173 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Yard; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__framework_quest__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dedent__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dedent__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_dedent___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_dedent__);
 var _templateObject=_taggedTemplateLiteral(['\n            \u0417\u0430 \u0441\u0435\u043B\u043E\u043C \u0434\u0437\u044E\u0440\u043A\u043E\u0442\u0438\u0442\u044C \u0440\u0456\u0447\u043A\u0430, \u0434\u043E\u0440\u0456\u0436\u043A\u0430 \u043F\u0440\u044F\u043C\u0443\u0454 \u0443\u0437\u0434\u043E\u0432\u0436\n            \u0431\u0435\u0440\u0435\u0433\u0430 \u0442\u0430 \u0433\u0443\u0431\u0438\u0442\u044C\u0441\u044F \u0432 \u043B\u0456\u0441\u0456.\n            '],['\n            \u0417\u0430 \u0441\u0435\u043B\u043E\u043C \u0434\u0437\u044E\u0440\u043A\u043E\u0442\u0438\u0442\u044C \u0440\u0456\u0447\u043A\u0430, \u0434\u043E\u0440\u0456\u0436\u043A\u0430 \u043F\u0440\u044F\u043C\u0443\u0454 \u0443\u0437\u0434\u043E\u0432\u0436\n            \u0431\u0435\u0440\u0435\u0433\u0430 \u0442\u0430 \u0433\u0443\u0431\u0438\u0442\u044C\u0441\u044F \u0432 \u043B\u0456\u0441\u0456.\n            ']),_templateObject2=_taggedTemplateLiteral(['\n            ','\n            \u0417\u0430 \u0441\u0435\u043B\u043E\u043C \u0434\u0437\u044E\u0440\u043A\u043E\u0442\u0438\u0442\u044C \u0440\u0456\u0447\u043A\u0430, \u043C\u0456\u0441\u044F\u0447\u043D\u0435 \u0441\u044F\u0439\u0432\u043E \u0432\u0438\u0431\u043B\u0438\u0441\u043A\u0443\u0454 \u0432 \u0457\u0457 \u0432\u043E\u0434\u0430\u0445.\n            \u0414\u043E\u0440\u0456\u0436\u043A\u0430 \u043F\u0440\u044F\u043C\u0443\u0454 \u0443\u0437\u0434\u043E\u0432\u0436 \u0440\u0456\u0447\u043A\u0438 \u0442\u0430 \u0433\u0443\u0431\u0438\u0442\u044C\u0441\u044F \u0433\u0435\u043D \u0443 \u043B\u0456\u0441\u0456, \u0447\u0443\u0442\u0438 \u044F\u043A\n            \u0448\u0443\u0440\u0445\u043E\u0442\u0438\u0442\u044C \u043B\u0438\u0441\u0442\u044F \u0442\u0430 \u0432\u0456\u0442\u0435\u0440 \u0448\u0443\u043C\u0438\u0442\u044C \u0443 \u043A\u0440\u043E\u043D\u0430\u0445.\n\n            \u0414\u043E\u0440\u0456\u0436\u043A\u0430 \u043C\u0430\u0454 \u043F\u0440\u0438\u0432\u0435\u0441\u0442\u0438 \u043D\u0430 \u0421\u0456\u0447. \u0422\u0430 \u043E\u0442 \u043C\u0456\u0441\u044F\u0446\u044C \u0443 \u043F\u043E\u0432\u043D\u0456, \u0437\u043D\u0430\u0447\u0438\u0442\u044C\n            \u0443\u0441\u0456\u043B\u044F\u043A\u0430 \u043D\u0435\u0447\u0438\u0441\u0442\u044C \u0432\u0438\u043B\u0430\u0437\u0438\u0442\u044C \u043D\u0430 \u0441\u0432\u0456\u0442 \u0411\u043E\u0436\u0438\u0439, \u043A\u0440\u0430\u0449\u0435 \u0443\u043D\u043E\u0447\u0456\n            \u0431\u0435\u0437\u0434\u0443\u043C\u043D\u043E \u043D\u0435 \u0445\u043E\u0434\u0438\u0442\u0438.\n            '],['\n            ','\n            \u0417\u0430 \u0441\u0435\u043B\u043E\u043C \u0434\u0437\u044E\u0440\u043A\u043E\u0442\u0438\u0442\u044C \u0440\u0456\u0447\u043A\u0430, \u043C\u0456\u0441\u044F\u0447\u043D\u0435 \u0441\u044F\u0439\u0432\u043E \u0432\u0438\u0431\u043B\u0438\u0441\u043A\u0443\u0454 \u0432 \u0457\u0457 \u0432\u043E\u0434\u0430\u0445.\n            \u0414\u043E\u0440\u0456\u0436\u043A\u0430 \u043F\u0440\u044F\u043C\u0443\u0454 \u0443\u0437\u0434\u043E\u0432\u0436 \u0440\u0456\u0447\u043A\u0438 \u0442\u0430 \u0433\u0443\u0431\u0438\u0442\u044C\u0441\u044F \u0433\u0435\u043D \u0443 \u043B\u0456\u0441\u0456, \u0447\u0443\u0442\u0438 \u044F\u043A\n            \u0448\u0443\u0440\u0445\u043E\u0442\u0438\u0442\u044C \u043B\u0438\u0441\u0442\u044F \u0442\u0430 \u0432\u0456\u0442\u0435\u0440 \u0448\u0443\u043C\u0438\u0442\u044C \u0443 \u043A\u0440\u043E\u043D\u0430\u0445.\n\n            \u0414\u043E\u0440\u0456\u0436\u043A\u0430 \u043C\u0430\u0454 \u043F\u0440\u0438\u0432\u0435\u0441\u0442\u0438 \u043D\u0430 \u0421\u0456\u0447. \u0422\u0430 \u043E\u0442 \u043C\u0456\u0441\u044F\u0446\u044C \u0443 \u043F\u043E\u0432\u043D\u0456, \u0437\u043D\u0430\u0447\u0438\u0442\u044C\n            \u0443\u0441\u0456\u043B\u044F\u043A\u0430 \u043D\u0435\u0447\u0438\u0441\u0442\u044C \u0432\u0438\u043B\u0430\u0437\u0438\u0442\u044C \u043D\u0430 \u0441\u0432\u0456\u0442 \u0411\u043E\u0436\u0438\u0439, \u043A\u0440\u0430\u0449\u0435 \u0443\u043D\u043E\u0447\u0456\n            \u0431\u0435\u0437\u0434\u0443\u043C\u043D\u043E \u043D\u0435 \u0445\u043E\u0434\u0438\u0442\u0438.\n            ']),_templateObject3=_taggedTemplateLiteral(['\n               \xA0\u2014 \u0414\u043E\u043F\u043E\u043C\u0456\u0433 \u0431\u0438 \u0442\u0438 \u043C\u0435\u043D\u0456,\xA0\u2014 \u0434\u043E\u0434\u0430\u0454,\xA0\u2014 \u043C\u043E\u0436\u0435 \u0439 \u043D\u0430\u0432\u0447\u0438\u0448\u0441\u044F \u0447\u043E\u043C\u0443-\u043D\u0435\u0431\u0443\u0434\u044C.\n                \u0422\u0430 \u0439 \u0441\u0438\u043B\u0443 \u0441\u0432\u043E\u044E \u043F\u0435\u0440\u0435\u0432\u0456\u0440\u0438\u0448: \u0447\u0438 \u0434\u043E \u0441\u043D\u0430\u0433\u0438 \u0442\u043E\u0431\u0456 \u0437 \u043D\u044F\u0432\u043A\u043E\u044E \u0442\u044F\u0433\u0430\u0442\u0438\u0441\u044F?\n            '],['\n               \xA0\u2014 \u0414\u043E\u043F\u043E\u043C\u0456\u0433 \u0431\u0438 \u0442\u0438 \u043C\u0435\u043D\u0456,\xA0\u2014 \u0434\u043E\u0434\u0430\u0454,\xA0\u2014 \u043C\u043E\u0436\u0435 \u0439 \u043D\u0430\u0432\u0447\u0438\u0448\u0441\u044F \u0447\u043E\u043C\u0443-\u043D\u0435\u0431\u0443\u0434\u044C.\n                \u0422\u0430 \u0439 \u0441\u0438\u043B\u0443 \u0441\u0432\u043E\u044E \u043F\u0435\u0440\u0435\u0432\u0456\u0440\u0438\u0448: \u0447\u0438 \u0434\u043E \u0441\u043D\u0430\u0433\u0438 \u0442\u043E\u0431\u0456 \u0437 \u043D\u044F\u0432\u043A\u043E\u044E \u0442\u044F\u0433\u0430\u0442\u0438\u0441\u044F?\n            ']),_templateObject4=_taggedTemplateLiteral(['\n               \xA0\u2014 \u0410\u043B\u0435 \u0442\u0438,\xA0\u2014 \u0434\u043E\u0434\u0430\u0454,\xA0\u2014 \u0436\u0430\u0431\u0443-\u043A\u043E\u0440\u0456\u0432\u043D\u0438\u0446\u044E \u043F\u043E\u0431\u043E\u0440\u043E\u0432, \u0430 \u043D\u044F\u0432\u043A\u0443\n                \u0442\u0438\u043C \u043F\u0430\u0447\u0435 \u043F\u043E\u0434\u0443\u0436\u0430\u0454\u0448!\n            '],['\n               \xA0\u2014 \u0410\u043B\u0435 \u0442\u0438,\xA0\u2014 \u0434\u043E\u0434\u0430\u0454,\xA0\u2014 \u0436\u0430\u0431\u0443-\u043A\u043E\u0440\u0456\u0432\u043D\u0438\u0446\u044E \u043F\u043E\u0431\u043E\u0440\u043E\u0432, \u0430 \u043D\u044F\u0432\u043A\u0443\n                \u0442\u0438\u043C \u043F\u0430\u0447\u0435 \u043F\u043E\u0434\u0443\u0436\u0430\u0454\u0448!\n            ']);function _taggedTemplateLiteral(strings,raw){return Object.freeze(Object.defineProperties(strings,{raw:{value:Object.freeze(raw)}}));}function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Yard=function(_MDQuest){_inherits(Yard,_MDQuest);function Yard(){var _ref;var _temp,_this,_ret;_classCallCheck(this,Yard);for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return _ret=(_temp=(_this=_possibleConstructorReturn(this,(_ref=Yard.__proto__||Object.getPrototypeOf(Yard)).call.apply(_ref,[this].concat(args))),_this),_this.startLoc='двір',_this.двір=function(){return'\n        \u041A\u0440\u0430\u0439\u043D\u0456\u0439 \u0434\u0432\u0456\u0440 \u0441\u0435\u043B\u0430.\n\n\n        \u0423 \u0445\u0430\u0442\u0456 \u0442\u0438\u0445\u043E, \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440\u0456 \u0437 \u0434\u0456\u0442\u044C\u043C\u0438 \u0441\u043F\u043B\u044F\u0442\u044C.\n        '+["Чутно, як у хліву щось виє-завиває","Чутно, як у хліву виє домовик","Із хліва лунає сміх домовика","Із хліва лунає сміх домовика"][_this.gget('статус_домовик')]+', \u0447\u0430\u0441 \u043E\u0434 \u0447\u0430\u0441\u0443 \u0444\u0438\u0440\u043A\u0430\u0454 \u043A\u0456\u043D\u044C.\n\n        '+(_this.get("двір_був")?__WEBPACK_IMPORTED_MODULE_1_dedent___default()(_templateObject):__WEBPACK_IMPORTED_MODULE_1_dedent___default()(_templateObject2,_this.set("двір_був",true)))+'\n\n        [\u0419\u0442\u0438 \u0434\u043E\u0440\u0456\u0436\u043A\u043E\u044E](#road:\u0434\u043E\u0440\u0456\u0436\u043A\u0430'+_this.gget('статус_нявка',0)+')\n\n        [\u0417\u0430\u0439\u0442\u0438 \u0443 \u0445\u043B\u0456\u0432](#\u0445\u043B\u0456\u0432'+_this.gget('статус_домовик',0)+')\n\n    ';},_this.хлів0=function(){return'\n        '+_this.gset("статус_домовик",1)+'\n\n        \u041A\u043E\u043B\u043E \u0441\u0442\u0456\u043D\u0438 \u0441\u043F\u0438\u0442\u044C \u043A\u043E\u0440\u043E\u0432\u0430, \u0442\u0440\u043E\u0445\u0438 \u0434\u0430\u043B\u0456 \u0441\u0442\u043E\u044F\u0442\u044C \u044F\u0441\u043B\u0430,\n        \u043A\u0456\u043D\u044C \u0443\u0442\u043A\u043D\u0443\u0432\u0441\u044F \u0432 \u043D\u0438\u0445 \u043C\u043E\u0440\u0434\u043E\u044E.\n\n        \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u0437\u0430\u0445\u043E\u0434\u0438\u0442\u044C \u0443 \u0445\u043B\u0456\u0432, \u043A\u0456\u043D\u044C \u043B\u0456\u043D\u0438\u0432\u043E \u043E\u0431\u0435\u0440\u0442\u0430\u0454\u0442\u044C\u0441\u044F \u043D\u0430 \u0437\u0432\u0443\u043A \u0439\u043E\u0433\u043E \u043A\u0440\u043E\u043A\u0456\u0432,\n        \u043A\u043E\u0440\u043E\u0432\u0430 \u043F\u0456\u0434\u0432\u043E\u0434\u0438\u0442\u044C\u0441\u044F \u043D\u0430 \u043D\u043E\u0433\u0438.\n\n        \u041D\u0430 \u044F\u0441\u043B\u0430\u0445 \u0441\u0442\u043E\u0457\u0442\u044C \u043C\u0430\u043B\u0435\u043D\u044C\u043A\u0438\u0439 \u0434\u0456\u0434\u043E\u043A\xA0\u2014 \u0456\u0437 \u0432\u0435\u0440\u0448\u043E\u043A \u043D\u0430 \u0437\u0440\u0456\u0441\u0442, \u043D\u0435 \u0431\u0456\u043B\u044C\u0448\u0435,\n        \u0441\u0438\u0432\u0430 \u0431\u043E\u0440\u043E\u0434\u0430 \u0441\u0442\u0435\u043B\u0435\u0442\u044C\u0441\u044F \u0437\u0435\u043C\u043B\u0435\u044E, \u0440\u0443\u043A\u0430 \u0442\u0440\u0438\u043C\u0430\u0454 \u0433\u0440\u0435\u0431\u0456\u043D\u0435\u0446\u044C. \u0414\u0456\u0434\u043E\u043A\n        \u043D\u0456\u0436\u043D\u043E \u043F\u043E\u0433\u043B\u0430\u0434\u0436\u0443\u0454 \u0448\u0438\u044E \u043A\u043E\u043D\u044F, \u0433\u0440\u0435\u0431\u0456\u043D\u0435\u0446\u044C\n        \u0440\u0430\u0437 \u0443 \u0440\u0430\u0437 \u0441\u043D\u0443\u0454 \u043F\u0438\u0448\u043D\u043E\u044E \u043A\u0456\u043D\u0441\u044C\u043A\u043E\u044E \u0433\u0440\u0438\u0432\u043E\u044E.\n\n        \u0422\u0430\u043A \u043E\u0441\u044C \u0445\u0442\u043E \u0432\u0438\u0454 \u0443 \u0445\u043B\u0456\u0432\u0443! \u0414\u043E\u043C\u043E\u0432\u0438\u043A \u0441\u043A\u043E\u0442\u0438\u043D\u0443 \u0434\u043E\u0433\u043B\u044F\u0434\u0430\u0454,\n        \u0442\u0430 \u0442\u0443\u0436\u0438\u0442\u044C-\u043F\u043E\u0431\u0438\u0432\u0430\u0454\u0442\u044C\u0441\u044F.\n\n        [\u0413\u043E\u0432\u043E\u0440\u0438\u0442\u0438 \u0437 \u0434\u043E\u043C\u043E\u0432\u0438\u043A\u043E\u043C](#\u0445\u043B\u0456\u0432_\u0433\u043E\u0432\u043E\u0440\u0438\u0442\u0438)\n\n        [\u0412\u0438\u0439\u0442\u0438](#\u0434\u0432\u0456\u0440)\n    ';},_this.хлів=function(){return'\n        \u041A\u043E\u0440\u043E\u0432\u0430 \u043F\u0440\u0438\u0442\u0443\u043B\u0438\u043B\u0430\u0441\u044F \u0434\u043E \u0441\u0442\u0456\u043D\u0438, \u043A\u0456\u043D\u044C \u043F\u043E\u0432\u043E\u043B\u0456 \u0436\u0443\u0454 \u043E\u0432\u0435\u0441 \u0456\u0437 \u044F\u0441\u0435\u043B,\n        '+_this.carousel(["домовик же йому гриву розчісує.","домовик старанно розчісує кінський хвіст.","домовик підкладає йому трави, та й промовляє: ''Їж, їж, рідненький.''","домовик узяв відро та доливає воду в поїлку.","домовик узявся за вила та підгрібає солому.","домовик зібрав кінський волос — сидить, помазки в’яже.","домовик стукає, шарудить. Хоч самого не видко, але чути, що працює.","домовик узяв жорстку щітку та чеше корові боки.","домовик узяв мішковину та натирає корові роги."])+'\n\n        '+_this["хлів_кнопки"]()+'\n    ';},_this.хлів_кнопки=function(){return'\n        '+(_this.gget("статус_нявка")===3?"[Спитати про дівчат](#домовик_дівчата)":"")+'\n        '+(_this.gget("загадка")&&!_this.get("count_домовик_загадка")?"[Спитати про загадку](#домовик_загадка)":"")+'\n        '+(_this.gget("статус_нявка")===1&&_this.get("count_хлів_говорити")&&!_this.get("count_домовик_нявка")?"[Спитати про нявку](#домовик_нявка)":"")+'\n    ';},_this.домовик_нявка=function(){return'\n       \xA0\u2014 \u0414\u0456\u0434\u0443\u0441\u044E \u0434\u043E\u043C\u043E\u0432\u0438\u043A\u0443,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u043F\u0430\u0440\u0443\u0431\u043E\u043A,\xA0\u2014 \u043D\u0430\u0432\u0447\u0438, \u043A\u0430\u043A \u043D\u044F\u0432\u043A\u0443 \u043E\u0431\u0456\u0439\u0442\u0438.\n\n        \u0410 \u0434\u043E\u043C\u043E\u0432\u0438\u043A \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454:\n\n       \xA0\u2014 \u041E\u0434\u043D\u0430 \u043D\u044F\u0432\u043A\u0430\xA0\u2014 \u043D\u0435 \u0437\u0430\u0432\u0430\u0434\u0430. \u0413\u0456\u0440\u0448\u0435, \u043A\u043E\u043B\u0438 \u0457\u0445 \u0431\u0430\u0433\u0430\u0442\u043E. \u042F\u043A \u0437\u0432\u0438\u0447\u043A\u0438 \u0457\u0445 \u0437\u043D\u0430\u0454\u0448,\n         \u043E\u0434\u043D\u0456\u0454\u0457 \u043C\u043E\u0436\u0435\u0448 \u043D\u0435 \u0441\u0442\u0440\u0430\u0448\u0438\u0442\u0438\u0441\u044F, \u0442\u0430 \u044F\u043A \u043D\u0435 \u0437\u043D\u0430\u0454\u0448\xA0\u2014 \u0437\u0430\u0432\u043E\u043B\u043E\u0447\u0435 \u0442\u0435\u0431\u0435 \u043D\u044F\u0432\u043A\u0430!\n\n        '+(_this.gget("статус_домовик")<2?__WEBPACK_IMPORTED_MODULE_1_dedent___default()(_templateObject3):__WEBPACK_IMPORTED_MODULE_1_dedent___default()(_templateObject4))+'\n\n        [\u0414\u0430\u043B\u0456](#\u0445\u043B\u0456\u0432'+_this.gget("статус_домовик",0)+')\n    ';},_this.домовик_дівчата=function(){return'\n        '+_this.gset("статус_нявка",4)+'\n       \xA0\u2014 \u0414\u0456\u0434\u0443\u0441\u044E \u0434\u043E\u043C\u043E\u0432\u0438\u043A\u0443!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\xA0\u2014 \u0427\u0438 \u043D\u0435 \u0437\u043D\u0430\u0454\u0448, \u0449\u043E \u0437\u0430 \u0434\u0456\u0432\u0447\u0430\u0442\u0430\n        \u0441\u0438\u0434\u044F\u0442\u044C \u043D\u0430 \u0431\u0435\u0440\u0435\u0436\u043A\u0443? \u0406 \u0432\u0434\u044F\u0433\u043D\u0435\u043D\u0456, \u0456 \u043A\u043E\u0441\u0438 \u0437\u0430\u043F\u043B\u0435\u0442\u0435\u043D\u0456...\n\n       \xA0\u2014 \u0422\u0430\u043A \u0442\u043E \u0436 \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u0456!\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0434\u043E\u043C\u043E\u0432\u0438\u043A.\xA0\u2014 \u0414\u0435 \u043E\u043F\u0438\u0440 \u043D\u0435 \u0446\u0430\u0440\u044E\u0454,\n        \u0442\u0430\u043C \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u0456 \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440\u044E\u044E\u0442\u044C. \u0427\u0435\u0441\u043D\u0438\u043C \u043B\u044E\u0434\u044F\u043C \u0456\u0445 \u043D\u0435 \u0432\u0430\u0440\u0442\u043E \u0431\u043E\u044F\u0442\u0438\u0441\u044F: \u0432\u043E\u043D\u0438 \u0439\n        \u0434\u043E\u043F\u043E\u043C\u043E\u0436\u0443\u0442\u044C, \u0456 \u0432\u0456\u0434 \u043B\u0438\u0445\u0430 \u0432\u0440\u044F\u0442\u0443\u044E\u0442\u044C.\n\n        [\u0414\u0430\u043B\u0456](#\u0445\u043B\u0456\u0432'+_this.gget("статус_домовик",0)+')\n    ';},_this.домовик_загадка=function(){return'\n        '+(_this.gget("статус_нявка")<4?_this.gset("статус_нявка",4):"")+'\n\n       \xA0\u2014 \u0414\u0456\u0434\u0443\u0441\u044E \u0434\u043E\u043C\u043E\u0432\u0438\u043A\u0443!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\xA0\u2014 \u0427\u0438 \u043D\u0435 \u0437\u043D\u0430\u0454\u0448 \u0442\u0438 \u0432\u0456\u0434\u043A\u0430\u0434\u043A\u0438\n        \u043D\u0430 \u0437\u0430\u0433\u0430\u0434\u043A\u0443:\n\n        "'+_this.gget("загадка")+'"\n\n       \xA0\u2014 \u0425\u0442\u043E \u0436 \u0442\u043E\u0431\u0456 \u0442\u0430\u043A\u0443 \u0437\u0430\u0433\u0430\u0434\u043A\u0443 \u0437\u0430\u0433\u0430\u0434\u0430\u0432?\xA0\u2014 \u043F\u0438\u0442\u0430\u0454\u0442\u044C\u0441\u044F \u0434\u043E\u043C\u043E\u0432\u0438\u043A.\n\n       \xA0\u2014 \u0412\u043E\u0434\u044F\u043D\u0438\u043A,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430,\xA0\u2014 \u043A\u0430\u0436\u0435: \u044F\u043A \u043D\u0435 \u0432\u0433\u0430\u0434\u0430\u044E, \u0447\u0435\u0440\u0435\u0437\n        \u0431\u0440\u0456\u0434 \u043D\u0435 \u043F\u0443\u0441\u0442\u0438\u0442\u044C.\n\n       \xA0\u2014 \u0422\u043E \u043C\u0435\u043D\u0435 \u043D\u0435 \u043F\u0438\u0442\u0430\u0439,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0434\u043E\u043C\u043E\u0432\u0438\u043A.\xA0\u2014 \u0422\u0430\u043C, \u043A\u043E\u043B\u043E \u0440\u0456\u0447\u043A\u0438,\n        \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u0456 \u0441\u0438\u0434\u044F\u0442\u044C\xA0\u2014 \u0443 \u043D\u0438\u0445 \u0456 \u043F\u0440\u043E\u0441\u0438 \u0434\u043E\u043F\u043E\u043C\u043E\u0433\u0438. \u0427\u0435\u0441\u043D\u0438\u0445 \u043B\u044E\u0434\u0435\u0439\n        \u0432\u043E\u043D\u0438 \u0437\u0430\u0432\u0436\u0434\u0438 \u0432\u0438\u0440\u0443\u0447\u0430\u044E\u0442\u044C.\n\n        [\u0414\u0430\u043B\u0456](#\u0445\u043B\u0456\u0432'+_this.gget('статус_домовик',0)+')\n    ';},_this.хлів1=function(){return'\n        '+_this["хлів"]()+'\n\n        '+(_this.get("count_хлів_говорити",false)?"[Запропонувати допомогу](#хлів_погодитись)":"[Говорити з домовиком](#хлів_говорити)")+'\n\n        [\u0412\u0438\u0439\u0442\u0438](#\u0434\u0432\u0456\u0440)\n    ';},_this.хлів2=function(){return'\n        '+_this["хлів"]()+'\n\n        [\u0412\u0438\u0439\u0442\u0438](#\u0434\u0432\u0456\u0440)\n    ';},_this.сумка=function(){return'\n        '+_this.gset("статус_домовик",3)+'\n\n        [\u0414\u0430\u043B\u0456](#\u0445\u043B\u0456\u04323)\n    ';},_this.сумка_відкрита=function(){return'\n        '+_this.set("відкрив_сумку",1)+'\n\n\n        [\u041F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438 \u0441\u0443\u043C\u043A\u0443 \u043D\u0430 \u043C\u0456\u0441\u0446\u0435](#\u0445\u043B\u0456\u0432'+_this.gget("статус_домовик",0)+')\n    ';},_this.хлів3=function(){return'\n        '+_this["хлів"]()+'\n        \u041D\u0430 \u043B\u0430\u0432\u0456 \u043B\u0435\u0436\u0438\u0442\u044C \u043F\u0435\u0440\u0435\u043C\u0435\u0442\u043D\u0430 \u0441\u0443\u043C\u043A\u0430 \u0437 \u0447\u0443\u0434\u0435\u0440\u043D\u0430\u0446\u044C\u043A\u0438\u043C \u0437\u0430\u043C\u043A\u043E\u043C.\n\n        '+(_this.get("відкрив_сумку")!==0?"[Відкрити сумку](#сумка_відкрита)":"[Відкрити сумку](#сумка_замок)")+'\n\n        [\u0412\u0438\u0439\u0442\u0438](#\u0434\u0432\u0456\u0440)\n    ';},_this.хлів_говорити=function(){return'\n       \xA0\u2014 \u0414\u043E\u0431\u0440\u043E\u0457 \u043D\u043E\u0447\u0456, \u0434\u0456\u0434\u0443\u0441\u044E,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u043F\u0430\u0440\u0443\u0431\u043E\u043A.\xA0\u2014 \u0417\u0430 \u0447\u0438\u043C \u0436\u0443\u0440\u0438\u0448\u0441\u044F?\n\n       \xA0\u2014 \u0422\u0430 \u043E\u0442,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0434\u043E\u043C\u043E\u0432\u0438\u043A,\xA0\u2014 \u043F\u0443\u0441\u0442\u0438 \u0431\u0456\u0434\u0443 \u0432 \u0434\u0432\u0456\u0440,\n        \u0442\u043E \u0437 \u0434\u0432\u043E\u0440\u0443 \u043D\u0435 \u0432\u0438\u0436\u0435\u043D\u0435\u0448. \u0416\u0430\u0431\u0430-\u043A\u043E\u0440\u0456\u0432\u043D\u0438\u0446\u044F \u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456 \u043F\u0440\u0438\u0441\u043A\u0430\u0447\u0435,\n        \u0431\u0443\u0434\u0435 \u043A\u043E\u0440\u043E\u0432\u2019\u044F\u0447\u0435 \u043C\u043E\u043B\u043E\u043A\u043E \u043F\u0438\u0442\u0438, \u0437\u043E\u0432\u0441\u0456\u043C \u043D\u0456\u043C\u0438\u043D\u0443 \u0431\u0456\u0434\u043E\u043B\u0430\u0448\u043D\u0443 \u0437\u0430\u0433\u0443\u0431\u0438\u0442\u044C.\n        \u0410 \u0431\u0435\u0437 \u043A\u043E\u0440\u043E\u0432\u0438 \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440 \u0456\u0437 \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440\u043E\u0447\u043A\u043E\u044E \u0431\u0456\u0434\u0443\u0432\u0430\u0442\u0438 \u0431\u0443\u0434\u0443\u0442\u044C...\n        \u042F\u043A \u0442\u0443\u0442 \u0437\u0430\u0440\u0430\u0434\u0438\u0448? \u041E\u0441\u044C \u0442\u0438\xA0\u2014 \u0442\u0438 \u0436 \u043A\u043E\u0437\u0430\u0446\u043A\u043E\u0433\u043E \u0440\u043E\u0434\u0443, \u0456\u0437 \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0438\u043A\u0456\u0432?\n        \u0414\u043E\u043F\u043E\u043C\u043E\u0436\u0438 \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440\u0441\u0442\u0432\u043E \u0443\u0431\u0435\u0440\u0435\u0433\u0442\u0438, \u0431\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430\u0432\u0438\u0439!\n\n        [\u0412\u0456\u0434\u043C\u043E\u0432\u0438\u0442\u0438\u0441\u044C](#\u0445\u043B\u0456\u0432_\u0432\u0456\u0434\u043C\u043E\u0432\u0438\u0442\u0438\u0441\u044C)\n\n        [\u041F\u043E\u0433\u043E\u0434\u0438\u0442\u0438\u0441\u044C](#\u0445\u043B\u0456\u0432_\u043F\u043E\u0433\u043E\u0434\u0438\u0442\u0438\u0441\u044C)\n    ';},_this.хлів_відмовитись=function(){return'\n       \xA0\u2014 \u0414\u043E\u043F\u043E\u043C\u0456\u0433 \u0431\u0438 \u044F, \u0434\u0456\u0434\u0443\u0441\u044E,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u043F\u0430\u0440\u0443\u0431\u043E\u043A,\xA0\u2014 \u0422\u0430 \u043D\u0456\u043A\u043E\u043B\u0438.\n        \u0417\u0432\u0456\u0441\u0442\u043E\u0447\u043A\u0443 \u043E\u0442\u0440\u0438\u043C\u0430\u0432 \u043D\u0435\u0434\u043E\u0431\u0440\u0443, \u043D\u0430 \u0421\u0456\u0447 \u043F\u043E\u0441\u043F\u0456\u0448\u0430\u044E.\n\n       \xA0\u2014 \u0415\u0445, \u0445\u043B\u043E\u043F\u0447\u0435!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u043E\u043C\u043E\u0432\u0438\u043A.\xA0\u2014 \u0425\u0456\u0431\u0430 \u043D\u0435 \u0437\u043D\u0430\u0454\u0448, \u0449\u043E \u043B\u044E\u0434\u0438 \u043A\u0430\u0436\u0443\u0442\u044C?\n        \u0425\u0442\u043E \u0434\u043E\u0432\u0433\u043E \u0437\u0430\u043F\u0440\u044F\u0433\u0430\u0454, \u0442\u043E\u0439 \u0448\u0432\u0438\u0434\u043A\u043E \u0457\u0434\u0435.\n\n        [\u0414\u0430\u043B\u0456](#\u0445\u043B\u0456\u0432'+_this.gget("статус_домовик",0)+')\n    ';},_this.хлів_погодитись=function(){return'\n        '+_this.gset("статус_домовик",2)+'\n       \xA0\u2014 \u0413\u0430\u0440\u0430\u0437\u0434,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u043F\u0430\u0440\u0443\u0431\u043E\u043A,\xA0\u2014 \u0434\u043E\u043F\u043E\u043C\u043E\u0436\u0443 \u0442\u043E\u0431\u0456, \u0445\u0430\u0437\u044F\u0457\u043D.\n        \u041A\u0430\u0436\u0438, \u0449\u043E \u0440\u043E\u0431\u0438\u0442\u0438?\n\n        \u0414\u043E\u043C\u043E\u0432\u0438\u043A \u044F\u043A \u043F\u043E\u0447\u0443\u0432, \u0434\u043E \u043F\u0430\u0440\u0443\u0431\u043A\u0430 \u043F\u0456\u0434\u0441\u043A\u043E\u0447\u0438\u0432, \u0443 \u0434\u043E\u043B\u043E\u043D\u0456 \u043F\u043B\u0435\u0441\u043A\u0430\u0454, \u0441\u043C\u0456\u0454\u0442\u044C\u0441\u044F -\n        \u044F\u043A \u0434\u0438\u0442\u044F \u043C\u0430\u043B\u0435.\n\n       \xA0\u2014 \u041F\u0456\u0434\u0438,\xA0\u2014 \u043A\u0430\u0436\u0435,\xA0\u2014 \u043F\u0456\u0434 \u0441\u0442\u0440\u0456\u0445\u043E\u044E \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E \u0432\u0456\u0437\u044C\u043C\u0438\xA0\u2014 \u044F \u0449\u0435 \u0432\u0434\u0435\u043D\u044C \u0437\u0430\u043F\u0440\u0438\u043C\u0456\u0442\u0438\u0432,\n        \u044F\u043A \u0439\u043E\u0433\u043E \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440\u043E\u0447\u043A\u0430 \u0442\u0443\u0434\u0438 \u0437\u0430\u0441\u0443\u043D\u0443\u043B\u0430. \u041F\u043E\u0442\u0456\u043C \u043F\u0440\u0438\u0445\u043E\u0434\u044C, \u0441\u0445\u043E\u0432\u0430\u0439\u0441\u044F \u0437\u0430 \u044F\u0441\u043B\u0430.\n        \u0422\u0430 \u043D\u0435 \u0431\u0430\u0440\u0438\u0441\u044C, \u0436\u0430\u0431\u0430 \u043E\u0441\u044C-\u043E\u0441\u044C \u043E\u0431\u2019\u044F\u0432\u0438\u0442\u044C\u0441\u044F!\n\n\n        \u0417\u0440\u043E\u0431\u0438\u0432 \u0434\u0436\u0443\u0440\u0430 \u0443\u0441\u0435, \u0449\u043E \u0434\u043E\u043C\u043E\u0432\u0438\u043A \u043F\u043E\u0440\u0430\u0434\u0438\u0432\xA0\u2014 \u0443\u0437\u044F\u0432 \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E, \u043F\u0440\u0438\u0441\u0456\u0432 \u0437\u0430 \u044F\u0441\u043B\u044F\u043C\u0438,\n        \u0447\u0435\u043A\u0430\u0454...\n\n        [\u0414\u0430\u043B\u0456](#\u0445\u043B\u0456\u0432_\u0436\u0430\u0431\u0430)\n    ';},_this.хлів_жаба=function(){return'\n        \u041D\u0435 \u0432\u0441\u0442\u0438\u0433 \u0441\u0445\u043E\u0432\u0430\u0442\u0438\u0441\u044F, \u0447\u0443\u0454\xA0\u2014 \u0433\u0443\u043F\u0430\u0454 \u0449\u043E\u0441\u044C \u0437\u0430 \u0442\u0438\u043D\u043E\u043C, \u043D\u0430 \u043F\u0435\u0440\u0435\u043B\u0430\u0437\n        \u043D\u0430\u0432\u0430\u043B\u0438\u043B\u043E\u0441\u044C\xA0\u2014 \u0447\u043E\u0440\u043D\u0435, \u0432\u0435\u043B\u0438\u043A\u0435. \u0410\u0436 \u0442\u0438\u043D \u0437\u0430\u0442\u0440\u0456\u0449\u0430\u0432. \u0411\u0443\u0445\xA0\u2014 \u0443\u0432\u0430\u043B\u0438\u043B\u043E\u0441\u044C \u0443\n        \u0434\u0432\u0456\u0440. \u0414\u0438\u0432\u0438\u0442\u044C\u0441\u044F \u043F\u0430\u0440\u0443\u0431\u043E\u043A\xA0\u2014 \u0430 \u0442\u043E \u0437\u0434\u043E\u0440\u043E\u0432\u0435\u043D\u043D\u0430 \u0440\u043E\u043F\u0443\u0445\u0430, \u043E\u0447\u0438\u0449\u0456 \u044F\u043A \u0431\u043B\u044E\u0434\u0446\u044F,\n        \u0442\u0430\u043A \u0456 \u0437\u0438\u0440\u043A\u0430\u044E\u0442\u044C \u0456\u0437 \u0431\u043E\u043A\u0443 \u0432 \u0431\u0456\u043A, \u0441\u0430\u043C\u0430 \u0436 \u044F\u043A \u0442\u0435\u043B\u044F \u0437\u0430\u0432\u0431\u0456\u043B\u044C\u0448\u043A\u0438.\n\n        \u0413\u043B\u044F\u043D\u0443\u043B\u0430 \u0440\u043E\u043F\u0443\u0445\u0430 \u0432\u043B\u0456\u0432\u043E, \u0432\u043F\u0440\u0430\u0432\u043E, \u0430 \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u0441\u0438\u0434\u0438\u0442\u044C,\n        \u043D\u0435 \u0432\u043E\u0440\u0443\u0448\u0438\u0442\u044C\u0441\u044F\xA0\u2014 \u044F\u043A \u0456\u0437 \u0442\u0430\u043A\u043E\u044E \u0433\u0440\u043E\u043C\u0430\u0434\u0438\u043D\u043E\u044E \u0431\u0438\u0442\u0438\u0441\u044F, \u0442\u0430 \u0449\u0435 \u0439 \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E\u043C?\n        \u0425\u043E\u0447 \u0456 \u0447\u0443\u0432 \u0432\u0456\u0434 \u043D\u0430\u0441\u0442\u0430\u0432\u043D\u0438\u043A\u0430, \u0449\u043E \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E \u0449\u043E\u0434\u043D\u044F \u0443 \u0440\u043E\u0431\u043E\u0442\u0456,\n        \u0442\u0440\u0443\u0434\u043E\u043C \u0442\u0430 \u0440\u0443\u043A\u0430\u043C\u0438 \u043B\u044E\u0434\u0441\u043A\u0438\u043C\u0438 \u043E\u0441\u0432\u044F\u0447\u0435\u043D\u0435, \u0442\u0430 \u043D\u0435 \u0432\u0456\u0440\u0438\u0442\u044C\u0441\u044F, \u0449\u043E \u0440\u043E\u043F\u0443\u0445\u0430 \u043F\u0435\u0440\u0435\u0434\n        \u043D\u0438\u043C \u0432\u0456\u0434\u0441\u0442\u0443\u043F\u0438\u0442\u044C.\n\n        [\u0414\u0430\u043B\u0456](#\u0445\u043B\u0456\u0432_\u0436\u0430\u0431\u04300)\n    ';},_this.хлів_жаба0=function(){return'\n        \u0410 \u0440\u043E\u043F\u0443\u0445\u0430 \u043F\u0440\u043E\u0441\u0442\u043E \u0434\u043E \u0445\u043B\u0456\u0432\u0430 \u0441\u0442\u0440\u0438\u0431\u0430\u0454\xA0\u2014 \u0437\u043D\u0430\u0454, \u0432\u0440\u0430\u0436\u0438\u043D\u0430, \u0434\u0435 \u0431\u0456\u0434\u043D\u0443 \u043A\u043E\u0440\u0456\u0432\u043A\u0443\n        \u0442\u0440\u0438\u043C\u0430\u044E\u0442\u044C. \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u0447\u0435\u043A\u0430\u0454, \u0443\u0436\u0435 \u0432 \u043D\u0456\u0441 \u0431\u043E\u043B\u043E\u0442\u043D\u0438\u043C \u0441\u043C\u043E\u0440\u043E\u0434\u043E\u043C \u0432\u0434\u0430\u0440\u0438\u043B\u043E,\n        \u0443\u0436\u0435 \u0440\u043E\u043F\u0443\u0445\u0430 \u0442\u0430\u043A \u0431\u043B\u0438\u0437\u044C\u043A\u043E, \u043E\u0442-\u043E\u0442 \u0441\u0430\u043C\u0430 \u0434\u0436\u0443\u0440\u0443 \u0437\u0430\u043F\u0440\u0438\u043C\u0456\u0442\u0438\u0442\u044C...\n\n        \u041F\u0456\u0434\u0445\u043E\u043F\u043B\u044E\u0454\u0442\u044C\u0441\u044F \u043F\u0430\u0440\u0443\u0431\u043E\u043A, \u0442\u0430 \u044F\u043A \u0443\u0434\u0430\u0440\u0438\u0442\u044C \u0440\u043E\u043F\u0443\u0445\u0443!\n        \u0422\u0430 \u043F\u0435\u0440\u0435\u043A\u0438\u043D\u0443\u043B\u0430\u0441\u044C - \u0456 \u043D\u0430 \u043F\u043E\u0434\u0432\u0456\u0440\u2019\u044F \u0432\u0456\u0434\u043B\u0435\u0442\u0456\u043B\u0430. \u0412\u0438\u0445\u043E\u0434\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430,\n        \u0434\u0438\u0432\u0438\u0442\u044C\u0441\u044F\xA0\u2014 \u043D\u0435\u043C\u0430\u0454 \u0440\u043E\u043F\u0443\u0445\u0438, \u043F\u043E\u0441\u0435\u0440\u0435\u0434 \u0434\u0432\u043E\u0440\u0443 \u0441\u0442\u0430\u0440\u0430 \u0431\u0430\u0431\u0430 \u043B\u0435\u0436\u0438\u0442\u044C,\n        \u0434\u0443\u0445 \u0432\u0438\u043F\u0443\u0441\u043A\u0430\u0454. \u0417\u043C\u0435\u0442\u0438\u043A\u0443\u0432\u0430\u0432, \u0449\u043E \u043D\u0435 \u0440\u043E\u043F\u0443\u0445\u0443\xA0\u2014 \u0431\u0456\u0441\u0438\u0446\u044E \u0432 \u043B\u0438\u0447\u0438\u043D\u0456 \u0440\u043E\u043F\u0443\u0445\u0438\n        \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E\u043C \u0441\u0442\u0443\u043A\u043D\u0443\u0432.\n\n       \xA0\u2014 \u041E\u0445,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0441\u0442\u0430\u0440\u0430,\xA0\u2014 \u0432\u0434\u0430\u0440 \u0456\u0449\u0435!\n\n        [\u0414\u0430\u043B\u0456](#\u0445\u043B\u0456\u0432_\u0436\u0430\u0431\u04301)\n    ';},_this.хлів_жаба1=function(){return'\n        \u0422\u0443\u0442 \u0441\u0442\u0430\u0440\u044B\u0439 \u043A\u043E\u0437\u0430\u043A \u043F\u0435\u0440\u0435\u0440\u0438\u0432\u0430\u0454\u0442\u044C\u0441\u044F.\n\n       \xA0\u2014 \u0429\u043E \u0434\u0443\u043C\u0430\u0454\u0442\u0435, \u0433\u0440\u043E\u043C\u0430\u0434\u043E? \u0427\u0438 \u0432\u0430\u0440\u0442\u043E \u0434\u0436\u0443\u0440\u0456 \u0434\u043E\u0431\u0438\u0442\u0438 \u043D\u0435\u0447\u0438\u0441\u0442\u0443, \u0447\u0438 \u0442\u0430\u043A \u043B\u0438\u0448\u0438\u0442\u0438?\n\n        [\u0414\u043E\u0431\u0438\u0442\u0438](#\u0436\u0430\u0431\u0430_\u0434\u043E\u0431\u0438\u0442\u0438)\n\n        [\u0417\u0430\u043B\u0438\u0448\u0438\u0442\u0438](#\u0436\u0430\u0431\u0430_\u043B\u0438\u0448\u0438\u0442\u0438)\n    ';},_this.жаба_лишити=function(){return'\n       \xA0\u2014 \u0417\u0430\u043B\u0438\u0448\u0438\u0442\u0438,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u044F\u0442\u044C \u0441\u043B\u0443\u0445\u0430\u0447\u0456,\xA0\u2014 \u0445\u0430\u0439 \u0441\u0430\u043C\u0430 \u0434\u043E\u0445\u043E\u0434\u0438\u0442\u044C.\n\n       \xA0\u2014 \u0417\u0432\u0456\u0441\u043D\u043E, \u0449\u043E \u043B\u0438\u0448\u0438\u0442\u0438!\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u043A\u043E\u0437\u0430\u043A.\xA0\u2014 \u0417 \u0447\u043E\u0433\u043E \u0431 \u0457\u0439 \u043F\u0440\u043E\u0441\u0438\u0442\u0438 \u0434\u0440\u0443\u0433\u043E\u0433\u043E\n        \u0443\u0434\u0430\u0440\u0443? \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u043E\u0434\u0440\u0430\u0437\u0443 \u0432\u0442\u043E\u0440\u043E\u043F\u0430\u0432: \u044F\u043A \u0432\u0434\u0430\u0440\u0438\u0442\u044C \u0449\u0435, \u0442\u043E \u0439\u043E\u043C\u0443, \u0430 \u043D\u0435 \u0431\u0456\u0441\u0438\u0446\u0456,\n        \u043A\u0456\u043D\u0435\u0446\u044C \u043F\u0440\u0438\u0439\u0434\u0435.\n\n        [\u0414\u0430\u043B\u0456](#\u0436\u0430\u0431\u0430_\u043B\u0438\u0448\u0438\u0442\u04381)\n    ';},_this.жаба_добити=function(){return'\n       \xA0\u2014 \u0414\u043E\u0431\u0438\u0442\u0438,\xA0\u2014 \u0437\u0430\u0433\u0443\u0434\u0456\u043B\u0438 \u0441\u043B\u0443\u0445\u0430\u0447\u0456,\xA0\u2014 \u0434\u043E\u0431\u0438\u0442\u0438 \u0432\u0440\u0430\u0436\u0438\u043D\u0443!\n\n       \xA0\u2014 \u041E\u0442\u043E\u0436 \u0431\u043E \u0439 \u0434\u0436\u0443\u0440\u0430 \u0442\u0430\u043A \u0432\u0438\u0440\u0456\u0448\u0438\u0432,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0434\u0456\u0434.\xA0\u2014 \u041D\u0435\u043C\u0430 \u0449\u043E\u0431 \u043F\u043E\u0434\u0443\u043C\u0430\u0442\u0438:\n        \u0447\u043E\u0433\u043E \u0431 \u0446\u0435 \u0431\u0456\u0441\u0438\u0446\u044F \u0441\u0430\u043C\u0430 \u043F\u0440\u043E\u0441\u0438\u043B\u0430, \u0449\u043E\u0431 \u0434\u0436\u0443\u0440\u0430 \u0457\u0457 \u0432\u0434\u0430\u0440\u0438\u0432? \u0410 \u0442\u043E\u043C\u0443, \u0449\u043E \u0434\u0440\u0443\u0433\u0438\u0439\n        \u0443\u0434\u0430\u0440 \u0432\u0456\u0434\u043C\u0456\u043D\u044F\u0454 \u043F\u0435\u0440\u0448\u0438\u0439. \u0412\u0434\u0430\u0440\u0438\u0432 \u0457\u0457 \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u0443\u0434\u0440\u0443\u0433\u0435, \u0431\u0456\u0441\u0438\u0446\u044F \u043D\u0430 \u043D\u044C\u043E\u0433\u043E\n        \u0439 \u043D\u0430\u043A\u0438\u043D\u0443\u043B\u0430\u0441\u044C. \u0423\u0440\u0430\u043D\u0446\u0456 \u043D\u0430\u0432\u0456\u0442\u044C \u043A\u0456\u0441\u0442\u043E\u0447\u043E\u043A \u043D\u0435 \u0437\u043D\u0430\u0439\u0448\u043B\u0438...\n\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u043F\u0435\u0440\u0435\u0432\u0435\u0440\u0442\u0430\u0454 \u043B\u044E\u043B\u044C\u043A\u0443, \u0441\u0438\u0432\u0438\u0439 \u043F\u043E\u043F\u0456\u043B \u043F\u0430\u0434\u0430\u0454 \u043F\u0456\u0434 \u043D\u043E\u0433\u0438. \u041A\u043E\u0437\u0430\u043A\n        \u0440\u043E\u0437\u043F\u0440\u0430\u0432\u043B\u044F\u0454 \u043F\u043B\u0435\u0447\u0456, \u0441\u0442\u0430\u0440\u0456 \u0441\u0443\u0433\u043B\u043E\u0431\u0438 \u0442\u0440\u0456\u0449\u0430\u0442\u044C, \u043D\u0435\u043C\u043E\u0432 \u0441\u0443\u0445\u0456 \u0433\u0456\u043B\u043A\u0438.\n\n       \xA0\u2014 \u0421\u0442\u0440\u0438\u0432\u0430\u0439\u0442\u0435,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u043E\u0434\u0438\u043D \u043F\u0430\u0440\u0443\u0431\u043E\u043A,\xA0\u2014 \u043D\u0435\u0432\u0436\u0435 \u0442\u0430\u043A \u0432\u0441\u0435 \u0439 \u0431\u0443\u043B\u043E?\n\n       \xA0\u2014 \u041C\u043E\u0436\u0435 \u0439 \u0442\u0430\u043A, \u043C\u043E\u0436\u0435 \u0439 \u0456\u043D\u0430\u043A,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0456\u0434.\xA0\u2014 \u0410 \u0432\u0430\u043C -\n        \u043D\u0430\u0443\u043A\u0430: \u0434\u043E \u0431\u0443\u043B\u0430\u0432\u0438\xA0\u2014 \u0442\u0440\u0435\u0431\u0430 \u0433\u043E\u043B\u043E\u0432\u0438.\n\n        [\u0414\u0430\u043B\u0456](#\u0436\u0430\u0431\u0430_\u0434\u043E\u0431\u0438\u0442\u04381)\n    ';},_this.жаба_добити1=function(){return'\n        \u041F\u0430\u0440\u0443\u0431\u043A\u0438 \u043F\u0435\u0440\u0435\u0433\u043B\u044F\u0434\u0430\u044E\u0442\u044C\u0441\u044F \u043C\u0456\u0436 \u0441\u043E\u0431\u043E\u044E, \u0434\u0456\u0432\u0447\u0430\u0442\u0430 \u043E\u043F\u0443\u0441\u043A\u0430\u044E\u0442\u044C \u043E\u0447\u0456.\n        \u0410 \u0441\u0442\u0430\u0440\u0438\u0439 \u043D\u0430 \u043D\u0438\u0445 \u0434\u0438\u0432\u0438\u0442\u044C\u0441\u044F, \u043F\u043E\u0433\u043B\u044F\u0434 \u043B\u0443\u043A\u0430\u0432\u0438\u0439, \u043B\u0438\u0446\u0435 \u0432\u0441\u043C\u0456\u0445\u043D\u0435\u043D\u0435.\n\n       \xA0\u2014 \u0410, \u0449\u043E,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454,\xA0\u2014 \u0437\u0430\u043A\u043E\u0440\u043E\u0442\u043A\u0430 \u0432\u0438\u0439\u0448\u043B\u0430 \u0431\u0430\u0439\u043A\u0430? \u0422\u043E, \u043C\u043E\u0436\u0435, \u043F\u0440\u0430\u0432\u0434\u0443\n        \u0433\u043E\u0432\u043E\u0440\u044F\u0442\u044C: \u0456 \u043B\u044E\u0434\u0435\u0439 \u043F\u0438\u0442\u0430\u0439, \u0456 \u0441\u0432\u043E\u044E \u0433\u043E\u043B\u043E\u0432\u0443 \u043C\u0430\u0439? \u0411\u043E, \u044F\u043A \u0431\u0456\u0434\u0430, \u043D\u0435 \u0447\u0443\u0436\u0443, \u0430\n        \u0441\u0432\u043E\u044E \u0433\u043E\u043B\u043E\u0432\u0443 \u0441\u043A\u043B\u0430\u0434\u0435\u0448.\n\n        \u0421\u043B\u0443\u0445\u0430\u0447\u0456 \u043F\u0456\u0434\u0432\u043E\u0434\u044F\u0442\u044C \u043F\u043E\u0433\u043B\u044F\u0434\u0438, \u0430 \u043A\u043E\u0437\u0430\u043A \u0449\u0435 \u0448\u0438\u0440\u0448\u0435 \u0432\u0441\u043C\u0456\u0445\u0430\u0454\u0442\u044C\u0441\u044F.\n\n       \xA0\u2014 \u0413\u0430\u0440\u0430\u0437\u0434,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u0456\u043D,\xA0\u2014 \u0449\u0435 \u0442\u0440\u043E\u0445\u0438 \u0432\u0430\u043C \u043F\u0440\u043E \u0434\u0436\u0443\u0440\u0443 \u043E\u043F\u043E\u0432\u0456\u043C. \u0421\u043B\u0443\u0445\u0430\u0439\u0442\u0435,\n        \u044F\u043A \u0434\u0430\u043B\u0456 \u0431\u0443\u043B\u043E...\n\n        [\u0414\u0430\u043B\u0456](#\u0436\u0430\u0431\u0430_\u043B\u0438\u0448\u0438\u0442\u04381)\n    ';},_this.жаба_лишити1=function(){return'\n        \u041D\u0435 \u0441\u0442\u0430\u0432 \u0434\u0436\u0443\u0440\u0430 \u0441\u0442\u0430\u0440\u0443 \u0434\u043E\u0431\u0438\u0432\u0430\u0442\u0438, \u0432\u043E\u043D\u0430 \u0456 \u0437\u0433\u0438\u043D\u0443\u043B\u0430.\n\n        \u041F\u0456\u0434\u0441\u043A\u043E\u0447\u0438\u0432 \u0442\u0443\u0442 \u0434\u043E\u043C\u043E\u0432\u0438\u043A, \u0432 \u0434\u043E\u043B\u043E\u043D\u0456 \u043F\u043B\u0435\u0441\u043A\u0430\u0454, \u043F\u0440\u0438\u0442\u0430\u043D\u0446\u044C\u043E\u0432\u0443\u0454.\n\n       \xA0\u2014 \u041E\u0442 \u043F\u0456\u0434\u0441\u043E\u0431\u0438\u0432!\xA0\u2014 \u043A\u0430\u0436\u0435.\xA0\u2014 \u0421\u043F\u0430\u0441\u0438\u0431\u0456, \u043A\u043E\u0437\u0430\u0447\u0435! \u0410 \u0442\u043E \u0431\u0430\u0447, \u043D\u0435\u0447\u0438\u0441\u0442\u0456\n        \u0440\u043E\u0437\u043F\u0435\u0440\u0435\u0437\u0430\u043B\u0438\u0441\u044F! \u0414\u043E\u043A\u0438 \u0441\u0442\u0430\u0440\u0438\u0439 \u043E\u043F\u0438\u0440 \u0431\u0443\u0432 \u0436\u0438\u0432\u0438\u043C, \u043C\u0456\u0433 \u0457\u043C \u0445\u0432\u043E\u0441\u0442\u0430 \u0432\u043A\u0440\u0443\u0442\u0438\u0442\u0438,\n        \u0430 \u044F\u043A \u043F\u043E\u043C\u0435\u0440, \u0441\u0442\u0430\u0432 \u043A\u0430\u0432\u0435\u0440\u0437\u0438 \u043F\u043B\u0435\u0441\u0442\u0438: \u0443\u0441\u044F\u043A\u0430 \u043D\u0435\u0447\u0438\u0441\u0442\u044C \u0441\u0435\u0440\u0435\u0434 \u0431\u0456\u043B\u043E\u0433\u043E \u0434\u043D\u044F\n        \u0443 \u0434\u0432\u0456\u0440 \u0442\u0430\u043A \u0456 \u043B\u0456\u0437\u0435, \u043B\u0456\u0441\u043E\u0432\u0430 \u0430\u0436 \u0443 \u0432\u0456\u043A\u043D\u0430 \u0437\u0430\u0437\u0438\u0440\u0430\u0454. \u0410 \u043D\u043E\u0432\u0438\u0439 \u043E\u043F\u0438\u0440 \u0442\u0456\u043B\u044C\u043A\u0438\n        \u0437\u2019\u044F\u0432\u0438\u0432\u0441\u044F, \u043D\u0435 \u043C\u043E\u0436\u0435\u0442 \u0432\u0456\u043D \u0441\u0442\u0430\u0440\u043E\u0433\u043E \u0432\u0442\u0438\u0445\u043E\u043C\u0438\u0440\u0438\u0442\u0438.\n\n        [\u0414\u0430\u043B\u0456](#\u0436\u0430\u0431\u0430_\u043B\u0438\u0448\u0438\u0442\u04382)\n    ';},_this.жаба_лишити2=function(){return'\n       \xA0\u2014 \u0422\u0430\u043A \u0449\u043E \u0441\u0442\u0443\u043F\u0430\u0439 \u043E\u0431\u0435\u0440\u0435\u0436\u043D\u043E,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u043E\u043C\u043E\u0432\u0438\u043A.\xA0\u2014 \u0423\u0437\u0434\u043E\u0432\u0436 \u0440\u0456\u0447\u043A\u0438 \u043D\u0435 \u0439\u0434\u0438 -\n        \u043A\u043E\u043B\u043E \u0431\u0435\u0440\u0435\u0433\u0430 \u043D\u0430 \u043B\u0456\u0441\u043D\u0456\u0439 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0456 \u043D\u044F\u0432\u043A\u0438 \u0433\u0443\u043B\u044F\u044E\u0442\u044C, \u0445\u043E\u0440\u043E\u0432\u043E\u0434\u0438 \u0432\u043E\u0434\u044F\u0442\u044C.\n        \u041F\u043E\u0442\u0440\u0430\u043F\u0438\u0448 \u0432 \u0457\u0445 \u043B\u0430\u043F\u0438\xA0\u2014 \u043A\u0456\u0441\u0442\u043E\u0447\u043E\u043A \u043D\u0435 \u0437\u0431\u0435\u0440\u0435\u0448. \u0417\u0430 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u043E\u044E \u0431\u0440\u0456\u0434 \u0454,\n        \u0430\u043B\u0435 \u0442\u0438 \u043D\u0435 \u043D\u0430\u0432\u043F\u0440\u043E\u0441\u0442\u0435\u0446\u044C \u0456\u0434\u0438, \u0430 \u0447\u0435\u0440\u0435\u0437 \u043B\u0456\u0441\xA0\u2014 \u0442\u0430\u043A \u0441\u043F\u043E\u043A\u0456\u0439\u043D\u0456\u0448\u0435.\n\n        \u0412\u043A\u043B\u043E\u043D\u0438\u0432\u0441\u044F \u0434\u0436\u0443\u0440\u0430 \u0434\u043E\u043C\u043E\u0432\u0438\u043A\u0443.\n       \xA0\u2014 \u0414\u044F\u043A\u0443\u044E \u0442\u043E\u0431\u0456, \u0434\u0456\u0434\u0443\u0441\u044E.\n\n       \xA0\u2014 \u0422\u0430 \u0449\u043E \u0442\u0430\u043C, \u0442\u043E\u0431\u0456 \u044F \u0434\u044F\u043A\u0443\u044E!\n\n        \u0420\u043E\u0437\u0441\u043C\u0456\u044F\u0432\u0441\u044F \u0434\u043E\u043C\u043E\u0432\u0438\u043A, \u0456 \u0434\u043E \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440\u0441\u0442\u0432\u0430 \u0441\u0432\u043E\u0433\u043E \u043F\u043E\u0432\u0435\u0440\u043D\u0443\u0432\u0441\u044F\xA0\u2014 \u0439\u0434\u0435,\n        \u043F\u0456\u0441\u043D\u0456 \u0432\u0438\u0441\u0432\u0438\u0441\u0442\u0443\u0454. \u0410 \u0434\u043E\u043C\u043E\u0432\u0438\u043A\u0438 \u0436-\u0431\u043E \u043B\u044E\u0431\u043B\u044F\u0442\u044C \u0441\u0432\u0438\u0441\u0442\u0456\u0442\u0438! \u041D\u0435 \u0434\u0430\u0440\u043C\u0430 \u0441\u0442\u0430\u0440\u0456 \u043B\u044E\u0434\u0438\n        \u0433\u043E\u0432\u043E\u0440\u044F\u0442\u044C: \u043D\u0435 \u0441\u0432\u0438\u0441\u0442\u0438 \u0432 \u0434\u043E\u043C\u0456 - \u0434\u043E\u043C\u043E\u0432\u0438\u043A \u043F\u043E\u0434\u0443\u043C\u0430\u0454, \u0449\u043E \u043F\u0435\u0440\u0435\u0434\u0440\u0430\u0436\u043D\u044E\u0454\u0448,\n        \u0456 \u043E\u0431\u0440\u0430\u0437\u0438\u0442\u044C\u0441\u044F.\n\n        [\u0414\u0430\u043B\u0456](#\u0434\u0432\u0456\u0440)\n    ';},_temp),_possibleConstructorReturn(_this,_ret);}/*
     хлів2 = () => `
@@ -14640,7 +14870,7 @@ var _templateObject=_taggedTemplateLiteral(['\n            \u0417\u0430 \u0441\u
 */return Yard;}(__WEBPACK_IMPORTED_MODULE_0__framework_quest__["a" /* MDQuest */]);
 
 /***/ }),
-/* 169 */
+/* 174 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14649,7 +14879,7 @@ var _templateObject=_taggedTemplateLiteral(['\n            \u0417\u0430 \u0441\u
 function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Road=function(_MDQuest){_inherits(Road,_MDQuest);function Road(){var _ref;var _temp,_this,_ret;_classCallCheck(this,Road);for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return _ret=(_temp=(_this=_possibleConstructorReturn(this,(_ref=Road.__proto__||Object.getPrototypeOf(Road)).call.apply(_ref,[this].concat(args))),_this),_this.startLoc='доріжка0',_this.доріжка0=function(){return"\n        \u0414\u0436\u0443\u0440\u0430 \u0441\u0442\u0443\u043F\u0430\u0454 \u0441\u0442\u0435\u0436\u043A\u043E\u044E. \u041D\u0430\u0434 \u0433\u043E\u043B\u043E\u0432\u043E\u044E \u0441\u0432\u0456\u0442\u0438\u0442\u044C \u043C\u0456\u0441\u044F\u0446\u044C, \u0442\u0438\u0445\u043E \u0434\u0437\u044E\u0440\u0447\u0438\u0442\u044C \u0440\u0456\u0447\u043A\u0430.\n        \u0412 \u044F\u0441\u043A\u0440\u0430\u0432\u043E\u043C\u0443 \u043C\u0456\u0441\u044F\u0447\u043D\u043E\u043C\u0443 \u0441\u0432\u0456\u0442\u043B\u0456 \u0434\u043E\u0440\u043E\u0433\u0443 \u0432\u0438\u0434\u043D\u043E, \u043D\u0456\u0431\u0438 \u0432\u0434\u0435\u043D\u044C.\n\n        \u041F\u043B\u0435\u0441\u043A\u043E\u0442\u044F\u0442\u044C \u0445\u0432\u0438\u043B\u0456, \u0441\u0435\u0440\u0435\u0434 \u0440\u0456\u0447\u043A\u0438 \u0437\u2019\u044F\u0432\u043B\u044F\u044E\u0442\u044C\u0441\u044F \u0434\u0432\u0456 \u0442\u0456\u043D\u0456. \u0411\u0430, \u0442\u0430 \u0442\u043E \u0436 \u0440\u0456\u0447\u043A\u043E\u0432\u0456\n        \u0447\u043E\u0440\u0442\u0438! \u042F\u043A \u0441\u043F\u0440\u0430\u0432\u0434\u0435\u0448\u043D\u0456 \u0432\u0435\u0440\u0448\u043D\u0438\u043A\u0438, \u0433\u0430\u0440\u0446\u044E\u044E\u0442\u044C \u043D\u0430 \u0437\u0434\u043E\u0440\u043E\u0432\u0435\u0437\u043D\u0438\u0445 \u0441\u043E\u043C\u0430\u0445.\n        \u0421\u043A\u0430\u0437\u0430\u043D\u043E \u0436\xA0\u2014 \u043D\u0435 \u0440\u0438\u0431\u0430, \u0430 \u0447\u043E\u0440\u0442\u0456\u0432 \u043A\u0456\u043D\u044C.\n\n        \u0421\u043E\u043C\u0438 \u043F\u0456\u0434\u043F\u043B\u0438\u0432\u0430\u044E\u0442\u044C \u0434\u043E \u043D\u0435\u0432\u0435\u043B\u0438\u0447\u043A\u043E\u0433\u043E \u043E\u0441\u0442\u0440\u0456\u0432\u0446\u044F, \u0447\u043E\u0440\u0442\u0438 \u043F\u0440\u0438\u0442\u0440\u0438\u043C\u0443\u044E\u0442\u044C \u0457\u0445 \u0437\u0430\n        \u0432\u0443\u0441\u0430, \u044F\u043A \u0437\u0430 \u0432\u0443\u0437\u0434\u0435\u0447\u043A\u0443. \u0420\u0438\u0431\u0438\u043D\u0438 \u043A\u0440\u0443\u0442\u043E \u043F\u043E\u0432\u0435\u0440\u0442\u0430\u044E\u0442\u044C \u0442\u0430 \u0441\u043F\u0443\u0441\u043A\u0430\u044E\u0442\u044C\u0441\u044F \u043F\u0456\u0434 \u0432\u043E\u0434\u0443\n        \u0440\u0430\u0437\u043E\u043C \u0456\u0437 \u0432\u0435\u0440\u0448\u043D\u0438\u043A\u0430\u043C\u0438, \u0448\u0438\u0440\u043E\u0447\u0435\u043D\u043D\u0456 \u0445\u0432\u0438\u043B\u0456 \u0431\u2019\u044E\u0442\u044C \u043E\u0431 \u0431\u0435\u0440\u0435\u0433.\n\n        \u0429\u0435 \u043C\u0438\u0442\u044C\xA0\u2014 \u0456 \u0440\u0456\u0447\u043A\u0430 \u0441\u0442\u0430\u0454 \u0441\u043F\u043E\u043A\u0456\u0439\u043D\u043E\u044E.\n\n        [\u0414\u0430\u043B\u0456](#\u0434\u043E\u0440\u0456\u0436\u043A\u0430_\u043D\u044F\u0432\u043A\u0430)\n    ";},_this.доріжка_нявка=function(){return"\n        "+_this.gset("статус_нявка",1)+"\n        "+_this.set("нявка","дівка")+"\n        \u041D\u0435 \u0432\u0441\u0442\u0438\u0433 \u0434\u0436\u0443\u0440\u0430 \u0456 \u043F\u0430\u0440\u0438 \u043A\u0440\u043E\u043A\u0456\u0432 \u0441\u0442\u0443\u043F\u0438\u0442\u0438, \u044F\u043A \u0437\u0430\u043B\u0443\u043D\u0430\u0432 \u0434\u0437\u0432\u0456\u043D\u043A\u0438\u0439 \u0441\u043C\u0456\u0445. \u041D\u0430\n        \u043D\u0430 \u0431\u0435\u0440\u0435\u0437\u0456 \u0437\u2019\u044F\u0432\u043B\u044F\u0454\u0442\u044C\u0441\u044F \u0434\u0456\u0432\u043E\u0447\u0430 \u043F\u043E\u0441\u0442\u0430\u0442\u044C\xA0\u2014 \u043F\u0440\u043E\u0441\u0442\u043E\u0432\u043E\u043B\u043E\u0441\u0430, \u043D\u0430\u0433\u0430,\n        \u0432\u043E\u043B\u043E\u0441\u0441\u044F \u0440\u043E\u0441\u043F\u0443\u0441\u0442\u0438\u043B\u0430, \u044F\u043A \u0434\u0456\u0432\u043A\u0430 \u0456\u0437 \u0448\u0438\u043D\u043A\u0430. \u0414\u0436\u0443\u0440\u0430 \u0457\u0439:\n        \n       \xA0\u2014 \u0422\u0438 \u0445\u0442\u043E?!\n\n        \u0410 \u0442\u0430 \u043F\u0435\u0440\u0435\u0434\u0440\u0430\u0436\u043D\u044E\u0454:\n        \n       \xA0\u2014 \u0422\u0438 \u0445\u0442\u043E! \u0422\u0438 \u0445\u0442\u043E? \u0422\u0438 \u0445\u0442\u043E!\n\n        \u0417\u043D\u0430\u0439 \u0441\u043E\u0431\u0456, \u0434\u0440\u0430\u0436\u043D\u0438\u0442\u044C\u0441\u044F, \u0442\u0430 \u0434\u043E \u0434\u0436\u0443\u0440\u0438 \u043F\u0456\u0434\u0431\u0438\u0440\u0430\u0454\u0442\u044C\u0441\u044F. \u0410 \u0437\u0430 \u043D\u0435\u044E\xA0\u2014 \u043D\u0456 \u0441\u043B\u0456\u0434\u0443,\n        \u043D\u0456 \u0442\u0456\u043D\u0456...\n\n        [\u0420\u0443\u0448\u0438\u0442\u0438 \u0434\u0430\u043B\u0456](#\u0434\u043E\u0440\u0456\u0436\u043A\u0430_\u043D\u044F\u0432\u043A\u04300)\n\n        [\u041F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438\u0441\u044F](#\u0434\u043E\u0440\u0456\u0436\u043A\u0430_\u0434\u0432\u0456\u0440)\n    ";},_this.доріжка_двір=function(){return"\n        \u0417\u043C\u0435\u0442\u0438\u043A\u0443\u0432\u0430\u0432 \u0434\u0436\u0443\u0440\u0430, \u0449\u043E \u0434\u043E \u0447\u043E\u0433\u043E, \u0442\u0430 \u0439 \u043F\u043E\u0432\u0435\u0440\u0442\u0430\u0454 \u0443 \u0434\u0432\u0456\u0440.\n\n        \u0414\u0438\u0432\u0438\u0442\u044C\u0441\u044F \u043A\u0440\u0430\u0454\u043C \u043E\u043A\u0430\xA0\u2014 \u0434\u0456\u0432\u043A\u0430 \u0437\u0430 \u043D\u0438\u043C \u0431\u0456\u0436\u0438\u0442\u044C. \u0414\u0436\u0443\u0440\u0430 \u0448\u0432\u0438\u0434\u0448\u0435, \u0430 \u0432\u043E\u043D\u0430\n        \u043D\u0435 \u0432\u0456\u0434\u0441\u0442\u0430\u0454. \u0422\u0430 \u0442\u0430\u043A \u043F\u0440\u0438\u043F\u0443\u0441\u0442\u0438\u043B\u0430\u0441\u044F, \u0449\u043E \u0439 \u043A\u043E\u043D\u0435\u043C \u043D\u0435 \u043E\u0431\u0441\u043A\u0430\u0447\u0435\u0448.\n\n        \u0421\u0442\u0440\u0438\u0431\u043D\u0443\u0432 \u0434\u0436\u0443\u0440\u0430 \u0447\u0435\u0440\u0435\u0437 \u043F\u0435\u0440\u0435\u043B\u0430\u0437, \u043E\u0431\u0435\u0440\u0442\u0430\u0454\u0442\u044C\u0441\u044F\xA0\u2014 \u0430 \u0434\u0456\u0432\u043A\u0438 \u044F\u043A \u043D\u0435 \u0431\u0443\u0432\u0430\u043B\u043E.\n        \u041D\u0435 \u043D\u0430\u0432\u0430\u0436\u0438\u043B\u0430\u0441\u044C, \u043B\u0438\u0431\u043E\u043D\u044C, \u0443 \u0434\u043E\u043C\u043E\u0432\u0438\u043A\u043E\u0432\u0435 \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440\u0441\u0442\u0432\u043E \u043B\u0456\u0437\u0442\u0438.\n\n        \u0417\u0440\u043E\u0437\u0443\u043C\u0456\u0432 \u0434\u0436\u0443\u0440\u0430, \u0449\u043E \u0442\u043E \u043D\u0435 \u0434\u0456\u0432\u043A\u0430 \u0434\u043E \u043D\u044C\u043E\u0433\u043E \u043F\u0440\u0438\u0447\u0435\u043F\u0438\u043B\u0430\u0441\u044F, \u0430 \u043D\u044F\u0432\u043A\u0430.\n        "+_this.set("нявка","нявка")+"\n        [\u0414\u0430\u043B\u0456](#yard:\u0434\u0432\u0456\u0440)\n    ";},_this.доріжка1=function(){return"\n        \u0412\u0438\u0445\u043E\u0434\u0438\u0442\u044C \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u043D\u0430 \u0441\u0442\u0435\u0436\u043A\u0443, \u0430 \u043D\u044F\u0432\u043A\u0430 \u0432\u0436\u0435 \u0439\u043E\u0433\u043E \u043F\u0456\u0434\u0441\u0442\u0435\u0440\u0456\u0433\u0430\u0454, \u0441\u043C\u0456\u0454\u0442\u044C\u0441\u044F \u0442\u0430\n        \u0434\u0440\u0430\u0436\u043D\u0438\u0442\u044C\u0441\u044F.\n\n       \xA0\u2014 \u0419\u0434\u0438-\u043D\u043E \u0441\u044E\u0434\u0438,\xA0\u2014 \u043A\u0430\u0436\u0435,\xA0\u2014 \u044F \u0442\u0435\u0431\u0435 \u0437\u0456\u0433\u0440\u0456\u044E, \u043E\u0431\u0456\u0439\u043C\u0443 \u0437\u0430 \u0448\u0438\u044E!\n\n         \u0419\u0434\u0435, \u0430 \u0437 \u0432\u043E\u043B\u043E\u0441\u0441\u044F \u043D\u0430 \u0437\u0435\u043C\u043B\u044E \u0432\u043E\u0434\u0430 \u043B\u043B\u0454\u0442\u044C\u0441\u044F.\n\n        [\u0420\u0443\u0448\u0438\u0442\u0438 \u0434\u0430\u043B\u0456](#\u0434\u043E\u0440\u0456\u0436\u043A\u0430_\u043D\u044F\u0432\u043A\u04300)\n\n        [\u041F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438\u0441\u044F](#yard:\u0434\u0432\u0456\u0440)\n    ";},_this.доріжка_нявка0=function(){return"\n        \u0421\u0442\u0443\u043F\u0438\u0432 \u0434\u0436\u0443\u0440\u0430 \u0449\u0435 \u043A\u0440\u043E\u043A, \u0430 "+_this.get("нявка",'та')+" \u0434\u043E \u043D\u044C\u043E\u0433\u043E\n        \u043F\u0456\u0434\u0441\u043A\u0430\u043A\u0443\u0454, \u0442\u0430 \u044F\u043A \u0441\u0445\u043E\u043F\u0438\u0442\u044C!\n\n       \xA0\u2014 \u041A\u0440\u0456\u043F \u0447\u0438 \u043F\u0435\u0442\u0440\u0443\u0448\u043A\u0430?!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C.\n\n        \u0421\u0456\u043F\u043D\u0443\u0432\u0441\u044F \u0434\u0436\u0443\u0440\u0430 \u0432 \u043E\u0434\u0438\u043D \u0431\u0456\u043A, \u0443 \u0456\u043D\u0448\u0438\u0439\xA0\u2014 \u043D\u0435 \u0432\u0438\u0440\u0432\u0430\u0442\u0438\u0441\u044C.\n        "+(_this.get("count_доріжка1")===0?"Зрозумів, що не до кого-небудь, а до нявки у лапи потрапив.":"")+"\n\n        [\u041B\u044E\u0431\u0438\u0441\u0442\u043E\u043A](#\u043B\u044E\u0431\u0438\u0441\u0442\u043E\u043A)\n\n        [\u041F\u0435\u0442\u0440\u0443\u0448\u043A\u0430](#\u043F\u0435\u0442\u0440\u0443\u0448\u043A\u0430)\n\n        "+(_this.gget("статус_домовик")>1?"[Веретено](#веретено)":"")+"\n    ";},_this.петрушка=function(){return"\n       \xA0\u2014 \u041F\u0435\u0442\u0440\u0443\u0448\u043A\u0430!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\n\n       \xA0\u2014 \u041E\u0445 \u0442\u0438 \u043C\u043E\u044F \u0434\u0443\u0448\u043A\u0430!\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u043D\u044F\u0432\u043A\u0430.\n\n        \u0417\u0440\u043E\u0437\u0443\u043C\u0456\u0432 \u0442\u0443\u0442 \u0434\u0436\u0443\u0440\u0430, \u0449\u043E \u043D\u0435 \u0442\u0456 \u0441\u043B\u043E\u0432\u0430 \u0441\u043A\u0430\u0437\u0430\u0432...\n\n        [...](#ending:parsley)\n    ";},_this.любисток=function(){return"\n       \xA0\u2014 \u041B\u044E\u0431\u0438\u0441\u0442\u043E\u043A!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\n\n        \u0422\u0443\u0442-\u0442\u043E \u043D\u044F\u0432\u043A\u0430 \u0441\u043A\u0440\u0438\u0432\u0438\u043B\u0430\u0441\u044F, \u0440\u0443\u043A\u0438 \u043F\u043E\u0441\u043B\u0430\u0431\u0448\u0430\u043B\u0438. \u0414\u0436\u0443\u0440\u0430 \u0439 \u043E\u043A\u043E\u043C \u043D\u0435 \u0432\u0441\u0442\u0438\u0433\n        \u043A\u043B\u0456\u043F\u043D\u0443\u0442\u0438, \u044F\u043A \u0443\u0442\u0435\u043A\u043B\u0430\xA0\u2014 \u0442\u0430 \u0442\u0430\u043A \u0445\u0443\u0442\u043A\u043E, \u0449\u043E \u0439 \u0441\u0442\u0440\u0456\u043B\u0430 \u043D\u0435 \u0434\u043E\u0436\u0435\u043D\u0435.\n\n        \u041B\u0438\u0448 \u0431\u0456\u043B\u044F \u0431\u0435\u0440\u0435\u0433\u0430 \u043E\u0431\u0435\u0440\u043D\u0443\u043B\u0430\u0441\u044F.\n        \n       \xA0\u2014 \u0417\u0430\u0442\u043A\u043D\u0443\u0432 \u0431\u0438 \u0442\u0438 \u0441\u0432\u0456\u0439 \u043F\u0438\u0441\u043E\u043A!\xA0\u2014 \u043A\u0440\u0438\u0447\u0438\u0442\u044C.\n\n        \u041C\u0438\u0442\u044C\xA0\u2014 \u0456 \u0437\u043D\u0438\u043A\u043B\u0430 \u0443 \u0432\u043E\u0434\u0456.\n\n        [\u0414\u0430\u043B\u0456](#\u0434\u043E\u0440\u0456\u0436\u043A\u0430_\u043D\u044F\u0432\u043A\u0438)\n    ";},_this.веретено=function(){return"\n       \xA0\u2014 \u0410 \u043E\u0441\u044C \u0449\u043E,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\n\n        \u0422\u0430 \u044F\u043A \u0442\u043A\u043D\u0435 \u0457\u0457 \u0432\u0435\u0440\u0435\u0442\u0435\u043D\u043E\u043C, \u043D\u044F\u0432\u043A\u0430 \u0456 \u0437\u0433\u0438\u043D\u0443\u043B\u0430\xA0\u2014 \u043B\u0438\u0448 \u043C\u043E\u043A\u0440\u0435 \u043C\u0456\u0441\u0446\u0435 \u043B\u0438\u0448\u0438\u043B\u043E\u0441\u044F.\n\n        [\u0414\u0430\u043B\u0456](#\u0434\u043E\u0440\u0456\u0436\u043A\u0430_\u043D\u044F\u0432\u043A\u0438)\n    ";},_this.доріжка_нявки=function(){return"\n        "+_this.gset("статус_нявка",2)+"\n        \u041F\u0456\u0434\u0445\u043E\u0434\u0438\u0442\u044C \u044E\u043D\u0430\u043A \u0434\u043E \u043B\u0456\u0441\u0443.\n\n        \u0420\u0456\u0447\u043A\u0430 \u0442\u0443\u0442 \u0432\u0438\u0433\u0438\u043D\u0430\u0454\u0442\u044C\u0441\u044F, \u0432\u0435\u0434\u0435 \u043A\u0440\u0443\u0442\u043E \u0443\u0431\u0456\u043A, \u0456 \u0434\u043E\u0440\u0456\u0436\u043A\u0430 \u0443\u0441\u043B\u0456\u0434 \u0437\u0430 \u043D\u0435\u044E.\n        \u0410 \u0434\u0436\u0443\u0440\u0456-\u0442\u043E \u043D\u0430\u0432\u043F\u0440\u043E\u0441\u0442\u0435\u0446\u044C \u0442\u0440\u0435\u0431\u0430!\n\n        \u0414\u043E \u0442\u0443\u0440\u0431\u043E\u0442, \u0442\u0430 \u0449\u0435 \u0439 \u043B\u0438\u0445\u043E: \u043D\u0430 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0456, \u0449\u043E \u043A\u043E\u043B\u043E \u0440\u0456\u0447\u043A\u0438, \u043D\u044F\u0432\u043A\u0438 \u0437\u0456\u0431\u0440\u0430\u043B\u0438\u0441\u044C.\n        \u041A\u043E\u0442\u0440\u0456 \u0442\u0430\u043D\u043A\u0438\u0301 \u0432\u043E\u0434\u044F\u0442\u044C \u0442\u0430 \u0433\u0430\u0457\u0432\u043A\u0438 \u0432\u0438\u0441\u043F\u0456\u0432\u0443\u044E\u0442\u044C, \u0456\u043D\u0448\u0456 \u043F\u043E \u0434\u0435\u0440\u0435\u0432\u0430\u0445 \u043D\u0430 \u0433\u0456\u043B\u043A\u0430\u0445\n        \u0441\u0438\u0434\u044F\u0442\u044C, \u0432\u043E\u043B\u043E\u0441\u0441\u044F \u0440\u043E\u0437\u0447\u0456\u0441\u0443\u044E\u0442\u044C\xA0\u2014 \u0432\u043E\u0434\u0430 \u0442\u0430\u043A \u0456 \u0442\u0435\u0447\u0435. \u0410 \u0434\u0435\u043A\u043E\u0442\u0440\u0456 \u043A\u0432\u0456\u0442\u0438 \u0437\u0431\u0438\u0440\u0430\u044E\u0442\u044C\n        \u0442\u0430 \u0432\u0456\u043D\u043A\u0438 \u043F\u043B\u0435\u0442\u0443\u0442\u044C.\n\n        \u041C\u0430\u0439\u043D\u0443\u043B\u0430 \u0443 \u0434\u0436\u0443\u0440\u0438 \u0434\u0443\u043C\u043A\u0430, \u0449\u043E \u0442\u0430\u043A\u0456 \u044F\u043A \u043D\u0430\u043A\u0438\u043D\u0443\u0442\u044C\u0441\u044F\xA0\u2014 \u043D\u0435 \u0441\u043F\u0438\u0442\u0430\u044E\u0442\u044C \u0456 \u044F\u043A \u0437\u0432\u0430\u043B\u0438!\n\n        [\u041D\u0430 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0443](#\u043D\u044F\u0432\u043A\u0438)\n\n        [\u041F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438\u0441\u044F \u0443 \u0434\u0432\u0456\u0440](#yard:\u0434\u0432\u0456\u0440)\n\n        "+(_this.gget("статус_домовик")>1?"[\u0414\u043E \u043B\u0456\u0441\u0443](#forest:\u043B\u0456\u0441"+_this.gget("статус_ліс",0)+")":"")+"\n    ";},_this.нявки=function(){return"\n        \u0421\u0442\u0443\u043F\u0430\u0454 \u0434\u0436\u0443\u0440\u0430 \u043D\u0430 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0443, \u0442\u0430\u043A \u043D\u044F\u0432\u043A\u0438 \u043E\u0434\u0440\u0430\u0437\u0443 \u0436 \u0441\u0432\u043E\u0457 \u0441\u043F\u0440\u0430\u0432\u0438 \u043F\u043E\u043B\u0438\u0448\u0430\u044E\u0442\u044C.\n\n       \xA0\u2014 \u0424\u0443,\xA0\u2014 \u043A\u0430\u0436\u0435 \u043E\u0434\u043D\u0430,\xA0\u2014 \u0436\u0438\u0432\u0438\u043C\u0438 \u043F\u0430\u0445\u043D\u0435, \u0447\u0438 \u0449\u043E?\n\n       \xA0\u2014 \u0422\u0430 \u043D\u0456, \u0441\u0435\u0441\u0442\u0440\u043E,\xA0\u2014 \u043A\u0430\u0436\u0435 \u0434\u0440\u0443\u0433\u0430,\xA0\u2014 \u0442\u043E \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u043D\u0435 \u043C\u0438\u0432\u0441\u044F \u0434\u0430\u0432\u043D\u043E.\n        \u0417\u0430\u0442\u044F\u0433\u043D\u0456\u043C\u043E \u0439\u043E\u0433\u043E \u0443 \u0432\u043E\u0434\u0443, \u0445\u0430\u0439 \u043F\u043E\u043A\u0438\u0441\u043D\u0435!\n\n       \xA0\u2014 \u041A\u0440\u0430\u0449\u0435 \u043F\u043E\u043B\u043E\u0441\u043A\u043E\u0447\u0456\u043C\u043E \u0439\u043E\u0433\u043E,\xA0\u2014 \u043A\u0430\u0436\u0435 \u0442\u0440\u0435\u0442\u044C\u044F.\xA0\u2014 \u0420\u043E\u0437\u0441\u043C\u0456\u0454\u0442\u044C\u0441\u044F -\n        \u0436\u0438\u0432\u0438\u0439. \u0410 \u044F\u043A \u0432\u0456\u0434\u0441\u043C\u0456\u0454\u0442\u044C\u0441\u044F\xA0\u2014 \u043D\u0435 \u0436\u0438\u0432\u0438\u0439, \u0437\u043D\u0430\u0447\u0438\u0442\u044C...\n\n        [...](#ending:niavki)\n    ";},_this.доріжка2=function(){return"\n        \u0414\u043E\u0440\u0456\u0436\u043A\u0430 \u0439\u0434\u0435 \u0447\u0435\u0440\u0435\u0437 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0443, \u0434\u0435 \u043D\u044F\u0432\u043A\u0438 \u0432\u043E\u0434\u044F\u0442\u044C \u0445\u043E\u0440\u043E\u0432\u043E\u0434\u0438. \u0422\u0430\u043C \u0431\u0438 \u0434\u0436\u0443\u0440\u0456\n        \u0456 \u043F\u0440\u043E\u0439\u0442\u0438, \u0442\u0430 \u043B\u043E\u0441\u043A\u043E\u0442\u0443\u0445\u0438 \u0436\u0438\u0432\u0438\u0445 \u043D\u0430 \u0434\u0443\u0445 \u043D\u0435 \u043F\u0435\u0440\u0435\u043D\u043E\u0441\u044F\u0442\u044C.\n\n        [\u041D\u0430 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0443](#\u043D\u044F\u0432\u043A\u0438)\n\n        [\u041F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438\u0441\u044F \u0443 \u0434\u0432\u0456\u0440](#yard:\u0434\u0432\u0456\u0440)\n\n        "+(_this.gget("статус_домовик")>1?"[\u0414\u043E \u043B\u0456\u0441\u0443](#forest:\u043B\u0456\u0441"+_this.gget("статус_ліс",0)+")":"")+"\n    ";},_this._btn_галявина=function(skip_beregini){return"\n        "+(_this.get("count_чугайстер_танцювати")?"":"[Повернутися у двір](#yard:двір)")+"\n\n        "+(_this.get("count_чугайстер_танцювати")&&!_this.get("count_втомився_двір")?"[Повернутися у двір](#втомився_двір)":"")+"\n\n        "+(_this.gget("статус_берегині")!==0&&!skip_beregini?"[До берегинь](#берегині1)":"[До дівчат](#берегині0)")+"\n\n        [\u0414\u043E \u0431\u0440\u043E\u0434\u0443](#ford:\u0431\u0440\u0456\u0434"+_this.gget("статус_брід",0)+")\n    ";},_this.доріжка3=function(){return"\n        \u041D\u0430 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0456, \u0449\u043E \u043A\u043E\u043B\u043E \u0440\u0456\u0447\u043A\u0438, \u0442\u0438\u0445\u043E \u0439 \u0441\u043F\u043E\u043A\u0456\u0439\u043D\u043E, \u0430\u043D\u0456 \u0441\u043B\u0456\u0434\u0443 \u0432\u0456\u0434 \u043D\u044F\u0432\u043E\u043A.\n        \u041D\u0443, \u0432\u043E\u043D\u0438-\u0442\u043E \u0441\u043B\u0456\u0434\u0456\u0432 \u043D\u0456\u043A\u043E\u043B\u0438 \u043D\u0435 \u043B\u0438\u0448\u0430\u044E\u0442\u044C.\n\n        \u0414\u0430\u043B\u0456 \u043D\u0430 \u0431\u0435\u0440\u0435\u0436\u043A\u0443 \u0441\u0438\u0434\u0438\u0442\u044C \u0442\u0440\u043E\u0454 \u0434\u0456\u0432\u0447\u0430\u0442. \u041D\u0430 \u043D\u044F\u0432\u043E\u043A \u043D\u0435 \u0441\u0445\u043E\u0436\u0456: \u0432\u0434\u044F\u0433\u043D\u0435\u043D\u0456 \u0443\n        \u0441\u043E\u0440\u043E\u0447\u043A\u0438-\u0432\u0438\u0448\u0438\u0432\u0430\u043D\u043A\u0438, \u0432\u043E\u043B\u043E\u0441\u0441\u044F \u0443 \u043A\u043E\u0441\u0438 \u0437\u0430\u043F\u043B\u0435\u0442\u0435\u043D\u0435. \u0421\u0438\u0434\u044F\u0442\u044C, \u0432\u0456\u043D\u043A\u0438 \u043F\u043B\u0435\u0442\u0443\u0442\u044C \u0442\u0430\n        \u0440\u043E\u0437\u043C\u043E\u0432\u0438 \u0432\u0435\u0434\u0443\u0442\u044C.\n\n        "+_this["_btn_галявина"]()+"\n    ";},_this.доріжка_від_водяника=function(){return"\n        \u2014 \u0422\u0443\u0442 \u043F\u043E\u0434\u0443\u043C\u0430\u0442\u0438 \u0442\u0440\u0435\u0431\u0430,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430 \u0442\u0430 \u0439 \u043D\u0430\u0437\u0430\u0434 \u043F\u043E\u0432\u0435\u0440\u0442\u0430\u0454.\n        \n        "+_this["доріжка4"]()+"\n    ";},_this.доріжка4=function(){return"\n        "+_this.gset("статус_берегині",1)+"\n        \u0421\u0442\u0435\u0436\u0438\u043D\u0430 \u0439\u0434\u0435 \u043C\u0456\u0436 \u043B\u0456\u0441\u043E\u043C \u0442\u0430 \u0440\u0456\u0447\u043A\u043E\u044E. \u041D\u0430 \u0431\u0435\u0440\u0435\u0436\u043A\u0443 \u0441\u0438\u0434\u044F\u0442\u044C \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u0456 \u0442\u0430 \u0442\u0438\u0445\u043E\n        \u0431\u0435\u0441\u0456\u0434\u0443\u044E\u0442\u044C.\n\n        "+(_this.get("count_брід",false)?_this.set("десь_далі","Десь далі має бути брід"):_this.set("десь_далі","Далі — брід і водяник"))+"\n\n        "+_this.get("десь_далі",'')+". \u041B\u0438\u0448\u0438\u043B\u043E\u0441\u044F \u0440\u0456\u0447\u043A\u0443 \u043F\u0435\u0440\u0435\u0439\u0442\u0438, \u0430 \u0442\u0430\u043C \u0434\u043E\n        \u0421\u0456\u0447\u0456 \u0440\u0443\u043A\u043E\u044E \u043C\u0430\u0445\u043D\u0443\u0442\u0438.\n\n        "+_this["_btn_галявина"]()+"\n    ";},_this.втомився_двір=function(){return"\n        \u0413\u043B\u044F\u043D\u0443\u0432 \u0434\u0436\u0443\u0440\u0430 \u043D\u0430 \u0441\u0442\u0435\u0436\u043A\u0443, \u0449\u043E \u043F\u0440\u043E\u0441\u0442\u044F\u0433\u0430\u0454\u0442\u044C\u0441\u044F \u0434\u043E \u0441\u0435\u043B\u0430, \u0456 \u0442\u0430\u043A\u043E\u044E \u0432\u043E\u043D\u0430 \u0439\u043E\u043C\u0443\n        \u0434\u043E\u0432\u0433\u043E\u044E \u0437\u0434\u0430\u043B\u0430\u0441\u044F! \u041D\u043E\u0433\u0438 \u0436-\u0431\u043E \u0432\u0442\u043E\u043C\u0438\u043B\u0438\u0441\u044F \u0432\u0456\u0434 \u0442\u0430\u043D\u0446\u044E. \u0425\u043E\u0447 \u0431\u0438 \u0434\u043E \u0421\u0456\u0447\u0456\n        \u0434\u043E\u0448\u043A\u0430\u043D\u0434\u0438\u0431\u0430\u0442\u0438, \u0430 \u044F\u043A \u0434\u043E \u0441\u0435\u043B\u0430 \u0439\u0442\u0438, \u0442\u0430 \u043F\u043E\u0432\u0435\u0440\u0442\u0430\u0442\u0438\u0441\u044F\xA0\u2014 \u0436\u043E\u0434\u043D\u0438\u0445 \u0441\u0438\u043B\n        \u043D\u0435 \u0432\u0438\u0441\u0442\u0430\u0447\u0438\u0442\u044C!\n\n        "+_this["_btn_галявина"]()+"\n    ";},_this.берегині0=function(){return"\n         \u041F\u0456\u0434\u0445\u043E\u0434\u0438\u0442\u044C \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u0434\u043E \u0434\u0456\u0432\u0447\u0430\u0442.\n\n       \xA0\u2014 \u0417\u0434\u0440\u0430\u0441\u0442\u0443\u0439\u0442\u0435, \u0441\u0435\u0441\u0442\u0440\u0438,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C.\xA0\u2014 \u0427\u0438 \u043D\u0435\u043C\u0430\u0454 \u0442\u0443\u0442 \u043D\u044F\u0432\u043E\u043A?\n\n       \xA0\u2014 \u0406 \u0442\u043E\u0431\u0456 \u0434\u043E\u0431\u0440\u043E\u0433\u043E \u0437\u0434\u043E\u0440\u043E\u0432\u2019\u044F\u0447\u043A\u0430,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u043E\u0434\u043D\u0430 \u0434\u0456\u0432\u0447\u0438\u043D\u0430.\n\n       \xA0\u2014 \u041D\u0435\u043C\u0430 \u043D\u044F\u0432\u043E\u043A,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0440\u0443\u0433\u0430.\xA0\u2014 \u0411\u0443\u043B\u0438\xA0\u2014 \u0442\u0430 \u0439 \u0437\u0430\u0433\u0443\u043B\u0438. \u0422\u0438\u0445, \u0449\u043E \u043D\u0430\n        \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0456 \u0437\u0431\u0438\u0440\u0430\u043B\u0438\u0441\u044C, \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440 \u0440\u043E\u0437\u0456\u0433\u043D\u0430\u0432. \u0410 \u043A\u043E\u0442\u0440\u0456 \u0432\u0442\u0435\u043A\u0442\u0438 \u043D\u0435 \u0432\u0441\u0442\u0438\u0433\u043B\u0438,\n        \u0442\u0438\u0445 \u0440\u043E\u0437\u0456\u0440\u0432\u0430\u0432 \u043D\u0430 \u0448\u043C\u0430\u0442\u043E\u0447\u043A\u0438.\n\n       \xA0\u2014 \u0410 \u0442\u0443\u0442, \u043D\u0430 \u043D\u0430\u0448\u043E\u043C\u0443 \u0431\u0435\u0440\u0435\u0436\u043A\u0443,\xA0\u2014 \u043A\u0430\u0436\u0435 \u0442\u0440\u0435\u0442\u044F,\xA0\u2014 \u043D\u044F\u0432\u043E\u043A \u0437\u0440\u043E\u0434\u0443 \u043D\u0435 \u0431\u0443\u043B\u043E.\n\n        [\u0414\u0430\u043B\u0456](#\u0431\u0435\u0440\u0435\u0433\u0438\u043D\u0456_\u0433\u043E\u0432\u043E\u0440\u0438\u0442\u0438)\n    ";},_this.берегині_говорити=function(){return"\n        "+_this.gset("статус_нявка",4)+"\n       \xA0\u2014 \u0410 \u0445\u0442\u043E \u0436 \u0432\u0438 \u0442\u0430\u043A\u0456?\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\n\n       \xA0\u2014 \u041D\u0435 \u0432\u043F\u0456\u0437\u043D\u0430\u0432, \u043B\u0438\u0431\u043E\u043D\u044C? \u0411\u0435\u0440\u0435\u0433\u0438\u043D\u0456 \u043C\u0438!\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u043F\u0435\u0440\u0448\u0430.\n\n       \xA0\u2014 \u041D\u0430 \u0431\u0435\u0440\u0435\u0436\u043A\u0443 \u0441\u0438\u0434\u0438\u043C\u043E, \u0449\u043E\u0431 \u0442\u0430\u043A\u0438\u0445, \u044F\u043A \u0442\u0438, \u0456\u0437 \u0432\u043E\u0434\u0438 \u0432\u0438\u0442\u044F\u0433\u0430\u0442\u0438,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C\n        \u0434\u0440\u0443\u0433\u0430.\n\n       \xA0\u2014 \u041F\u0456\u0434 \u0441\u0435\u043B\u043E\u043C\xA0\u2014 \u043E\u043F\u0438\u0440\u0435\u0432\u0430 \u0432\u043E\u0442\u0447\u0438\u043D\u0430, \u0430 \u0442\u0443\u0442 \u043D\u0430\u0448\u0456 \u0437\u0435\u043C\u043B\u0456 \u043F\u043E\u0447\u0438\u043D\u0430\u044E\u0442\u044C\u0441\u044F, -\n        \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0442\u0440\u0435\u0442\u044F.\n\n        \u0422\u0443\u0442 \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u0432\u043A\u043B\u043E\u043D\u0438\u0432\u0441\u044F \u0457\u043C.\n\n       \xA0\u2014 \u041C\u0438\u0440 \u0432\u0430\u043C, \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u0456!\n\n       \xA0\u2014 \u0406 \u0442\u043E\u0431\u0456,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u044F\u0442\u044C,\xA0\u2014 \u0434\u0436\u0443\u0440\u0430, \u0443\u0447\u0435\u043D\u044C \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0438\u043A\u0430. \u0429\u0430\u0441\u0442\u0438 \u0442\u043E\u0431\u0456 \u043D\u0430 \u0448\u043B\u044F\u0445\u0443.\n\n        [\u0414\u0430\u043B\u0456](#\u0434\u043E\u0440\u0456\u0436\u043A\u04304)\n    ";},_this.берегині1=function(){return"\n        \u041F\u0456\u0434\u0445\u043E\u0434\u0438\u0442\u044C \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u0434\u043E \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u044C, \u043A\u043B\u0430\u043D\u044F\u0454\u0442\u044C\u0441\u044F.\n\n       \xA0\u2014 \u041C\u0438\u0440 \u0432\u0430\u043C, \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u0456!\n\n         \u0410 \u0442\u0456 \u0439\u043E\u043C\u0443 \u043A\u0438\u0432\u0430\u044E\u0442\u044C.\n\n       \xA0\u2014 \u0406 \u0442\u043E\u0431\u0456, \u0434\u0436\u0443\u0440\u0430, \u0443\u0447\u0435\u043D\u044C \u0445\u0430\u0440\u0430\u043A\u0442\u0435\u0440\u043D\u0438\u043A\u0430,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u044F\u0442\u044C.\n\n        "+(!_this.get("count_берегині_загадка")&&_this.gget("загадка")?"[Спитати про загадку](#берегині_загадка)":"")+"\n\n        [\u0414\u0430\u043B\u0456](#\u0434\u043E\u0440\u0456\u0436\u043A\u04304)\n    ";},_this.берегині_загадка=function(){return"\n        "+_this.gset("берегині_загадка",true)+"\n       \xA0\u2014 \u0421\u0435\u0441\u0442\u0440\u0438 \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u0456!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\xA0\u2014 \u0414\u043E\u043F\u043E\u043C\u043E\u0436\u0456\u0442\u044C, \u0431\u0443\u0434\u044C \u043B\u0430\u0441\u043A\u0430, \u0437\u0430\u0433\u0430\u0434\u043A\u0443\n        \u0440\u043E\u0437\u0433\u0430\u0434\u0430\u0442\u0438:\n\n        "+_this.gget("загадка")+"\n\n       \xA0\u2014 \u0429\u043E \u0436 \u0446\u0435 \u0442\u0438 \u043D\u0430\u0434\u0443\u043C\u0430\u0432 \u0437\u0430\u0433\u0430\u0434\u043A\u0438 \u0437\u0430\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438?\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u043E\u0434\u043D\u0430 \u0437 \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u044C.\n\n       \xA0\u2014 \u0426\u0435 \u043C\u0435\u043D\u0456 \u0432\u043E\u0434\u044F\u043D\u0438\u043A \u0437\u0430\u0434\u0430\u0432,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u043F\u0430\u0440\u0443\u0431\u043E\u043A,\xA0\u2014 \u0449\u043E\u0431 \u0434\u043E\u0437\u0432\u043E\u043B\u0438\u0432\n        \u0431\u0440\u0456\u0434 \u043F\u0435\u0440\u0435\u0439\u0442\u0438.\n\n       \xA0\u2014 \u0422\u043E \u0439\u0434\u0438 \u0434\u043E \u0432\u043E\u0434\u044F\u043D\u0438\u043A\u0430,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0440\u0443\u0433\u0430 \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u044F,\xA0\u2014 \u0456 \u0441\u043A\u0430\u0436\u0438, \u0449\u043E \u044F\u043A\n        \u043D\u0435 \u043F\u0443\u0441\u043A\u0430\u0442\u0438\u043C\u0435 \u0447\u0435\u0441\u043D\u0438\u0445 \u043B\u044E\u0434\u0435\u0439 \u043D\u0430 \u0431\u0440\u0456\u0434, \u043C\u0438 \u0439\u043E\u043C\u0443 \u0432\u0441\u0456 \u0432\u0438\u0440\u0438 \u043C\u0443\u043B\u043E\u043C \u0437\u0430\u0441\u0438\u043F\u0435\u043C\u043E,\n        \u0432\u0441\u0456 \u043D\u0435\u0432\u043E\u0434\u0438 \u043F\u043E\u0440\u0432\u0435\u043C\u043E, \u043E\u0442\u0430\u0440\u0443 \u0439\u043E\u0433\u043E \u0432\u043E\u0434\u044F\u043D\u0443 \u0430\u0436 \u0443 \u0414\u043D\u0456\u043F\u0440\u043E \u0432\u0456\u0434\u0436\u0435\u043D\u0435\u043C\u043E!\n\n       \xA0\u2014 \u0422\u0430\u043A \u0456 \u043F\u0435\u0440\u0435\u0434\u0430\u0439,\xA0\u2014 \u0434\u043E\u0434\u0430\u0454 \u0442\u0440\u0435\u0442\u044F.\n\n        "+_this["_btn_галявина"](true)+"\n    ";},_temp),_possibleConstructorReturn(_this,_ret);}return Road;}(__WEBPACK_IMPORTED_MODULE_0__framework_quest__["a" /* MDQuest */]);
 
 /***/ }),
-/* 170 */
+/* 175 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14658,7 +14888,7 @@ function _classCallCheck(instance,Constructor){if(!(instance instanceof Construc
 function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Forest=function(_MDQuest){_inherits(Forest,_MDQuest);function Forest(){var _ref;var _temp,_this,_ret;_classCallCheck(this,Forest);for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return _ret=(_temp=(_this=_possibleConstructorReturn(this,(_ref=Forest.__proto__||Object.getPrototypeOf(Forest)).call.apply(_ref,[this].concat(args))),_this),_this.startLoc='ліс0',_this.ліс0=function(){return"\n        "+_this.gset("статус_ліс",1)+"\n        \u0417\u0430\u0445\u043E\u0434\u0438\u0442\u044C, \u0437\u043D\u0430\u0447\u0438\u0442\u044C, \u0434\u0436\u0443\u0440\u0430 \u0434\u043E \u043B\u0456\u0441\u0443.\n\n        \u0427\u0443\u0442\u043D\u043E, \u044F\u043A \u043B\u0456\u0441\u043E\u043C \u0445\u043E\u0434\u0438\u0442\u044C \u043D\u0435\u0432\u0438\u0434\u0438\u043C\u0430 \u0441\u043E\u043A\u0438\u0440\u0430, \u043F\u043E \u0434\u0435\u0440\u0435\u0432\u0430\u043C \u0441\u0442\u0443\u043A\u0430\u0454 \u0442\u0430\n        \u0432\u0442\u043E\u043C\u043B\u0435\u043D\u043E \u0437\u0456\u0442\u0445\u0430\u0454.\n\n        \u0412\u0456\u0442\u0435\u0440 \u043F\u0456\u0434\u0456\u0439\u043C\u0430\u0454\u0442\u044C\u0441\u044F, \u0448\u0443\u043C\u0438\u0442\u044C \u043B\u0438\u0441\u0442\u044F, \u0432\u0435\u043B\u0438\u0447\u0435\u0437\u043D\u0430 \u0442\u0456\u043D\u044C \u043A\u0440\u043E\u043A\u0443\u0454 \u043C\u0456\u0436 \u0434\u0435\u0440\u0435\u0432\u0430\u043C\u0438\xA0\u2014\n        \u0442\u0430 \u0442\u0430\u043A\u0430 \u0432\u0438\u0441\u043E\u0447\u0435\u043D\u043D\u0430, \u0449\u043E \u0434\u0456\u0441\u0442\u0430\u0454 \u0434\u043E \u0432\u0435\u0440\u0445\u0456\u0432\u043E\u043A \u0434\u0435\u0440\u0435\u0432.\n        \u0426\u0435 \u043B\u0456\u0441\u043E\u0432\u0438\u043A \u0437\u0432\u0456\u0440\u0456\u0432 \u0432\u0438\u043F\u0430\u0441\u0430\u0454 \u0442\u0430 \u0433\u043E\u0441\u043F\u043E\u0434\u0430\u0440\u0441\u0442\u0432\u043E \u043E\u0433\u043B\u044F\u0434\u0430\u0454. \u041E\u0442 \u0434\u0435\u0440\u0435\u0432\u0430 \u043F\u0456\u0448\u043B\u0438\n        \u043D\u0438\u0436\u0447\u0438\u043C\u0438, \u0456 \u0442\u0456\u043D\u044C \u0437\u043C\u0435\u043D\u0448\u0438\u043B\u0430\u0441\u044C.\n\n        [\u041D\u0430\u0437\u0430\u0434](#\u0434\u043E\u0440\u0456\u0436\u043A\u04302)\n\n        [\u0414\u0430\u043B\u0456](#\u043B\u0456\u04411)\n    ";},_this.ліс1=function(){return"\n        "+_this.gset("статус_ліс",2)+"\n        "+_this.gset("статус_нявка",3)+"\n\n        "+_this.switch(['блуд0','блуд1','блуд2','блуд3','блуд_кінець'])+"\n    ";},_this.блуд0=function(){return"\n        \u0414\u0436\u0443\u0440\u0430 \u043A\u0440\u043E\u043A\u0443\u0454 \u043B\u0456\u0441\u043E\u043C. \u041D\u0430\u0434 \u0433\u043E\u043B\u043E\u0432\u043E\u044E \u0433\u0456\u043B\u043A\u0438 \u043F\u043E\u0442\u0440\u0456\u0441\u043A\u0443\u044E\u0442\u044C, \u043C\u0456\u0436 \u043B\u0438\u0441\u0442\u044F\u043C \u0448\u0443\u0440\u0445\u043E\u0442\u0438\u0442\u044C,\n        \u0447\u0443\u0442\u043D\u043E \u044F\u043A \u0449\u043E\u0441\u044C \u0433\u0443\u043B\u043A\u043E \u043A\u0440\u0438\u0447\u0438\u0442\u044C\xA0\u2014 \u0447\u0438 \u0442\u043E \u043B\u0456\u0441\u043E\u0432\u0456 \u0437\u0432\u0456\u0440\u0456 \u0431\u0430\u0432\u043B\u044F\u0442\u044C\u0441\u044F,\n        \u0447\u0438 \u0442\u043E \u044F\u043A\u0430\u0441\u044C \u0430\u0433\u0443\u043A\u0430 \u0441\u043B\u0456\u0434\u043A\u0443\u0454 \u0437 \u0433\u0456\u043B\u043E\u043A \u0437\u0430 \u043F\u0430\u0440\u0443\u0431\u043A\u043E\u043C.\n        \n        \u0414\u0438\u0432\u0438\u0442\u044C\u0441\u044F \u0434\u0436\u0443\u0440\u0430\xA0\u2014 \u043F\u0440\u043E\u043F\u0430\u043B\u0430 \u0434\u043E\u0440\u0456\u0436\u043A\u0430. \u0429\u043E\u0439\u043D\u043E \u0431\u0443\u043B\u0430, \u0432\u0438\u043B\u0430\u0441\u044C \u043F\u0456\u0434 \u043D\u043E\u0433\u0430\u043C\u0438, \u0456 \u043E\u0442\n        \u043D\u0435\u043C\u0430. \u041E\u0437\u0438\u0440\u043D\u0443\u0440\u043D\u0443\u0432\u0441\u044F, \u043F\u043E\u043A\u0440\u0443\u0442\u0438\u0432\u0441\u044F\xA0\u2014 \u0432\u0436\u0435 \u043D\u0435 \u0432\u0438\u0434\u043D\u043E, \u043A\u0443\u0434\u0438 \u0439\u0448\u043E\u0432 \u0456 \u0437\u0432\u0456\u0434\u043A\u0438\n        \u043F\u0440\u0438\u0439\u0448\u043E\u0432.\n\n        "+_this['блуд_кнопки']()+"\n     ";},_this.блуд1=function(){return"\n        \u0412\u0438\u0439\u0448\u043E\u0432 \u043D\u0430 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0443. \u041F\u043E\u0441\u0435\u0440\u0435\u0434 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0438 \u0434\u0443\u0431 \u0441\u0442\u043E\u0457\u0442\u044C, \u0437\u0434\u043E\u0440\u043E\u0432\u0435\u0437\u043D\u0456\n        \u043A\u043E\u0440\u0456\u043D\u043D\u044F\u043A\u0438 \u0456\u0437 \u0437\u0435\u043C\u043B\u0456 \u0441\u0442\u0438\u0440\u0447\u0430\u0442\u044C, \u0433\u0456\u043B\u043A\u0438 \u043D\u0435\u0431\u043E \u043F\u0456\u0434\u043F\u0438\u0440\u0430\u044E\u0442\u044C. \n        \u041D\u0430\u0432\u043A\u0440\u0443\u0433 \u0431\u0435\u0437\u043B\u0456\u0447 \u0434\u0443\u0431\u043A\u0456\u0432 \u0456 \u0434\u0443\u0431\u043E\u0447\u043A\u0456\u0432 \u0440\u043E\u0441\u0442\u0435, \u0430 \u0434\u0430\u043B\u0456 \u0442\u0430\u043A\u0456 \u043D\u0435\u043F\u0440\u043E\u043B\u0430\u0437\u043D\u0456 \u0445\u0430\u0449\u0456, \n        \u0449\u043E \u043D\u0435 \u043F\u0440\u043E\u0439\u0442\u0438, \u043D\u0435 \u043F\u0440\u043E\u043B\u0456\u0437\u0442\u0438.\n\n        "+_this['блуд_кнопки']()+"\n     ";},_this.блуд2=function(){return"\n        \u0419\u0434\u0435 \u0434\u0436\u0443\u0440\u0430 \u043B\u0456\u0441\u043E\u043C, \u043F\u0440\u043E\u0431\u0438\u0440\u0430\u0454\u0442\u044C\u0441\u044F. \u0425\u0430\u0448\u0456 \u0442\u0430\u043A\u0456 \u0433\u0443\u0441\u0442\u0456, \u0449\u043E \u043D\u0430\u0432\u0456\u0442\u044C \u0442\u0456\u0441\u043D\u043E, \n        \u0439\u0442\u0438 \u0442\u0430\u043A \u0432\u0430\u0436\u043A\u043E, \u043D\u0456\u0431\u0438 \u043F\u043E \u043F\u2019\u044F\u0442\u044C \u043F\u0443\u0434\u0456\u0432 \u043D\u0430 \u043F\u043B\u0435\u0447\u0456 \u043F\u043E\u043A\u043B\u0430\u043B\u0438, \n        \u0430\u0436 \u0443 \u043E\u0447\u0430\u0445 \u043F\u043E\u0442\u0435\u043C\u043D\u0456\u043B\u043E.\n\n        "+_this['блуд_кнопки']()+"\n     ";},_this.блуд3=function(){return"\n        \u0429\u0435 \u043A\u0440\u043E\u043A \u0440\u043E\u0431\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430, \u043D\u043E\u0433\u0438 \u0441\u043F\u043E\u0442\u0438\u043A\u0430\u044E\u0442\u044C\u0441\u044F \u043E\u0431 \u043A\u043E\u0440\u0456\u043D\u043D\u044F, \n        \u0433\u0456\u043B\u043A\u0438 \u0431\u2019\u044E\u0442\u044C \u043F\u043E \u043E\u0431\u043B\u0438\u0447\u0447\u044E. \u0425\u0430\u0449\u0430\u043C \u043D\u0435 \u0432\u0438\u0434\u043D\u043E \u043A\u0456\u043D\u0446\u044F \u0439 \u043A\u0440\u0430\u044E, \n        \u043B\u0438\u0441\u0442\u0432\u0430 \u0442\u0430\u043A\u0430 \u0433\u0443\u0441\u0442\u0430, \u0449\u043E \u043D\u0456 \u043C\u0456\u0441\u044F\u0446\u044F, \u043D\u0456 \u043D\u0435\u0431\u0430 \u043D\u0435 \u0432\u0438\u0434\u043D\u043E.\n\n        "+_this['блуд_кнопки']()+"\n     ";},_this.блуд_кнопки=function(){return"\n        [\u0419\u0442\u0438 \u0432\u043F\u0435\u0440\u0435\u0434](#\u043B\u0456\u04411)\n        \n        [\u041F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438 \u043D\u0430\u0437\u0430\u0434](#\u043B\u0456\u04411)\n        \n        [\u041F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438 \u0432\u043B\u0456\u0432\u043E](#\u043B\u0456\u04411)\n        \n        [\u041F\u043E\u0432\u0435\u0440\u043D\u0443\u0442\u0438 \u0432\u043F\u0440\u0430\u0432\u043E](#\u043B\u0456\u04411)\n     ";},_this.блуд_кінець=function(){return"\n        \u0429\u043E\u0441\u044C \u0431\u043B\u0456\u0434\u0435 \u0442\u0430 \u0445\u0443\u0434\u0435 \u0432\u0438\u0441\u0442\u0440\u0438\u0431\u0443\u0454 \u043F\u043E\u043F\u0435\u0440\u0435\u0434 \u0445\u043B\u043E\u043F\u0446\u044F, \u0442\u0430 \u043C\u0447\u0438\u0442\u044C \u0433\u0435\u0442\u044C. \n        \u0417\u0430 \u0441\u043F\u0438\u043D\u043E\u044E \u0442\u0440\u0456\u0449\u0438\u0442\u044C \u0433\u0456\u043B\u043B\u044F, \u0434\u0436\u0443\u0440\u0430 \u043E\u0431\u0435\u0440\u0442\u0430\u0454\u0442\u044C\u0441\u044F. \u0412\u0435\u043B\u0438\u0447\u0435\u0437\u043D\u0438\u0439\n        \u0434\u0456\u0434\u0443\u0433\u0430\u043D \u0437\u2019\u044F\u0432\u043B\u044F\u0454\u0442\u044C\u0441\u044F \u0456\u0437 \u0445\u0430\u0449\u0456\xA0\u2014 \u0431\u043E\u0440\u043E\u0434\u0430\u0442\u0438\u0439, \u0443\u0432\u0435\u0441\u044C \u0437\u0430\u0440\u0456\u0441, \u0443 \u043C\u0456\u0445\u043E\u0432\u0456\u0439 \u0448\u0443\u0431\u0456\xA0\u2014\n        \u0434\u0430\u043C\u0430, \u0449\u043E \u043B\u0456\u0442\u043E.\n\n       \xA0\u2014 \u0422\u0443\u0442 \u0448\u0442\u0456\u0439!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C.\n\n        \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u043D\u0435 \u0432\u0441\u0442\u0438\u0433 \u0456 \u0441\u043B\u043E\u0432\u043E \u0441\u043A\u0430\u0437\u0430\u0442\u0438, \u044F\u043A \u0434\u0456\u0434\u0443\u0433\u0430\u043D \u0437\u043D\u0438\u043A \u0437\u0430 \u0434\u0435\u0440\u0435\u0432\u0430\u043C\u0438.\n        \u0420\u043E\u0437\u043F\u0440\u0430\u0432\u043B\u044F\u0454 \u0434\u0436\u0443\u0440\u0430 \u043F\u043B\u0435\u0447\u0456, \u0456 \u0442\u0430\u043A \u043B\u0435\u0433\u043A\u043E \u0439\u043E\u043C\u0443, \u043D\u0456\u0431\u0438 \u0449\u043E\u0439\u043D\u043E \u043D\u0430 \u043F\u043B\u0435\u0447\u0430\u0445 \u0445\u0442\u043E\u0441\u044C\n        \u0441\u0438\u0434\u0456\u0432, \u0430 \u0442\u0435\u043F\u0435\u0440 \u0437\u0456\u0441\u043A\u043E\u0447\u0438\u0432. \u0412 \u043E\u0447\u0430\u0445 \u044F\u0441\u043D\u043E, \u043D\u0456\u0431\u0438 \u0449\u043E\u0441\u044C \u0457\u0445 \u0437\u0430\u043A\u0440\u0438\u0432\u0430\u043B\u043E, \u0430\n        \u0442\u0435\u043F\u0435\u0440 \u0437\u043D\u0438\u043A\u043B\u043E.\n        \n        \u0417\u0431\u0430\u0433\u043D\u0443\u0432 \u0434\u0436\u0443\u0440\u0430, \u0449\u043E \u043D\u0435 \"\u0445\u0442\u043E\u0441\u044C\" \u0456 \u043D\u0435 \"\u0449\u043E\u0441\u044C\"\xA0\u2014 \u0431\u043B\u0443\u0434 \u0441\u0438\u0434\u0456\u0432 \u0443 \u043D\u044C\u043E\u0433\u043E \u043D\u0430\n        \u043F\u043B\u0435\u0447\u0430\u0445 \u0442\u0430 \u0434\u043E\u0440\u043E\u0433\u0443 \u0437\u0430\u0442\u0443\u043B\u044F\u0432. \u0410 \u0434\u0456\u0434\u0443\u0433\u0430\u043D, \u043B\u0438\u0431\u043E\u043D\u044C, \u043D\u0430\u043B\u044F\u043A\u0430\u0432 \u0431\u043B\u0443\u0434\u0430.\n\n        [\u0414\u0430\u043B\u0456](#\u0447\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440)\n     ";},_this.чугайстер=function(){return"\n        \u0421\u0442\u043E\u0457\u0442\u044C \u043F\u0430\u0440\u0443\u0431\u043E\u043A, \u0447\u0435\u043A\u0430\u0454, \u0449\u043E-\u0442\u043E \u0434\u0430\u043B\u0456 \u0431\u0443\u0434\u0435.\n\n        \u0410 \u0434\u0456\u0434\u0443\u0433\u0430\u043D \u0442\u043E\u0439 \u0456\u0437 \u0445\u0430\u0449\u0456 \u0432\u0438\u0445\u043E\u0434\u0438\u0442\u044C. \u0406\u0434\u0435, \u0440\u0435\u0433\u043E\u0447\u0435.\n\n       \xA0\u2014 \u041D\u0443, \u043F\u043E\u0449\u0430\u0448\u0442\u0438\u043B\u043E \u0442\u043E\u0431\u0456,\xA0\u2014 \u043A\u0430\u0436\u0435,\xA0\u2014 \u0449\u043E \u044F \u0442\u0443\u0442 \u0432\u0435\u0448\u0442\u0430\u0432\u0448\u044F. \n        \u042F\u043A\u0431\u0438 \u043D\u0435 \u044F\xA0\u2014 \u0436\u0433\u0438\u043D\u0443\u0432 \u0431\u0438 \u0442\u0438 \u0432 \u043B\u0456\u0448\u0456.\n\n        \u0406 \u0432\u0441\u043C\u0456\u0445\u0430\u0454\u0442\u044C\u0441\u044F \u0431\u0435\u0437\u0437\u0443\u0431\u0438\u043C \u0440\u043E\u0442\u043E\u043C.\n\n        [\u0414\u0430\u043B\u0456](#\u0447\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u04401)\n     ";},_this.чугайстер1=function(){return"\n        \u041F\u0440\u0438\u0434\u0438\u0432\u0438\u0432\u0441\u044F \u0434\u0436\u0443\u0440\u0430: \u043D\u0435 \u0432 \u0448\u0443\u0431\u0456 \u0434\u0456\u0434\u0443\u0433\u0430\u043D\xA0\u2014 \u0433\u043E\u043B\u0438\u0439, \u0432\u0441\u0435 \u0442\u0456\u043B\u043E \u0448\u0435\u0440\u0441\u0442\u044E \u0433\u0443\u0441\u0442\u043E\u044E\n        \u0437\u0430\u0440\u043E\u0441\u043B\u043E. \u0422\u0430 \u0439 \u044F\u043A\u0438\u0439 \u0446\u0435 \u0434\u0456\u0434? \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440!\n\n       \xA0\u2014 \u0421\u043F\u0430\u0441\u0438\u0431\u0456, \u0434\u044F\u0434\u044C\u043A\u0443,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u043F\u0430\u0440\u0443\u0431\u043E\u043A,\xA0\u2014 \u0449\u043E \u0432\u0440\u044F\u0442\u0443\u0432\u0430\u043B\u0438 \u043C\u0435\u043D\u0435.\n\n       \xA0\u2014 \u0422\u0430 \u0449\u043E \u043C\u0435\u043D\u0456 \u0442\u0432\u043E\u0454 \u0448\u043F\u0430\u0448\u0438\u0431\u0456,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440.\xA0\u2014\n        \u041D\u0443\u043C\u043E \u043A\u0440\u0430\u0449\u0435 \u0436\u0430\u0442\u0430\u043D\u0448\u044E\u0439\u043C\u043E!\n\n        \u0410 \u0441\u0430\u043C \u0443 \u0434\u043E\u043B\u043E\u043D\u0456 \u043F\u043B\u0435\u0441\u043A\u0430\u0454, \u0442\u0430 \u043A\u0440\u0443\u0433 \u0445\u043B\u043E\u043F\u0446\u044F \u043F\u0440\u0438\u0442\u0430\u043D\u0446\u044C\u043E\u0432\u0443\u0454.\n\n        [\u0412\u0456\u0434\u043C\u043E\u0432\u0438\u0442\u0438\u0441\u044C](#\u0447\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440_\u0432\u0456\u0434\u043C\u043E\u0432\u0438\u0442\u0438\u0441\u044C)\n\n        [\u0422\u0430\u043D\u0446\u044E\u0432\u0430\u0442\u0438](#\u0447\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440_\u0442\u0430\u043D\u0446\u044E\u0432\u0430\u0442\u0438)\n    ";},_this.чугайстер_танцювати=function(){return"\n        \u0417\u0430\u0442\u0456\u044F\u043B\u0438 \u0432\u043E\u043D\u0438 \u0442\u0430\u043D\u043E\u043A \u043D\u0430 \u043B\u0456\u0441\u043E\u0432\u0456\u0439 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0456. \u0414\u0436\u0443\u0440\u0430 \u0445\u043E\u0447 \u0456 \u0431\u0443\u0432 \u043F\u0430\u0440\u0443\u0431\u043A\u043E\u043C\n        \u043C\u0456\u0446\u043D\u0438\u043C\xA0\u2014 \u043D\u0456\u0448\u0438\u0445 \u043D\u0430 \u0421\u0456\u0447 \u043D\u0435 \u0431\u0440\u0430\u043B\u0438\xA0\u2014 \u0437\u0430 \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0440\u043E\u043C \u043B\u0435\u0434\u044C \u043F\u043E\u0441\u043F\u0456\u0432\u0430\u0454.\n        \u0414\u0436\u0443\u0440\u0430 \u043A\u0440\u043E\u043A \u0441\u0442\u0443\u043F\u0430\u0454, \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440\xA0\u2014 \u0434\u0435\u0441\u044F\u0442\u044C, \u0434\u0436\u0443\u0440\u0430 \u0440\u0430\u0437 \u043F\u043E\u0432\u0435\u0440\u043D\u0435\u0442\u044C\u0441\u044F\xA0\u2014\n        \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440 \u0432\u0438\u0445\u043E\u0440\u043E\u043C \u0437\u0430\u043A\u0440\u0443\u0442\u0438\u0442\u044C\u0441\u044F, \u0442\u0430 \u0432\u0441\u0435 \u0432 \u0434\u043E\u043B\u043E\u043D\u0456 \u043F\u043B\u0435\u0441\u043A\u0430\u0454 \u0442\u0430 \u043F\u0440\u0438\u043C\u043E\u0432\u043B\u044F\u0454:\n\n       \xA0\u2014 \u041E\u0448\u044C \u0442\u0430\u043A, \u043E\u0448\u044C \u0442\u0430\u043A! \u041C\u0438 \u0439 \u0448\u043F\u0456\u0432\u0430\u0442\u0438, \u0439 \u0442\u0430\u043D\u0448\u044E\u0432\u0430\u0442\u0438, \u0439 \u043D\u0430 \u0448\u043E\u043F\u0456\u043B\u0448\u0456 \u043C\u043E\u0436\u0435\u043C \u0433\u0440\u0430\u0442\u0438!\n\n        [\u0422\u0430\u043D\u0446\u044E\u0432\u0430\u0442\u0438](#\u0447\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440_\u0442\u0430\u043D\u0446\u044E\u0432\u0430\u0442\u04381)\n    ";},_this.чугайстер_танцювати1=function(){return"\n\n        \u0428\u0432\u0438\u0434\u0448\u0435 \u0442\u0430 \u0448\u0432\u0438\u0434\u0448\u0435 \u0442\u0430\u043D\u043E\u043A \u0456\u0434\u0435, \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440 \u0432\u0436\u0435 \u0432\u0456\u0442\u0440\u043E\u043C \u043A\u0440\u0443\u0442\u0438\u0442\u044C\u0441\u044F \u043D\u0430\u0432\u043A\u0440\u0443\u0433\n        \u0445\u043B\u043E\u043F\u0446\u044F. \u0412\u0456\u0434\u0447\u0443\u0432\u0430\u0454 \u0432\u0436\u0435 \u043F\u0430\u0440\u0443\u0431\u043E\u043A, \u0449\u043E \u0441\u0438\u043B\u0438 \u043F\u043E\u043B\u0438\u0448\u0430\u044E\u0442\u044C. \u0410\u0436 \u0440\u0430\u0437\xA0\u2014\n        \u0437\u0443\u043F\u0438\u043D\u0438\u0432\u0441\u044F \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440. \u0414\u0436\u0443\u0440\u0430 \u044F\u043A \u0441\u0442\u043E\u044F\u0432\xA0\u2014 \u0442\u0430\u043A \u0456 \u0433\u0435\u043F\u043D\u0443\u0432\u0441\u044F \u043D\u0430 \u0437\u0435\u043C\u043B\u044E.\n\n       \xA0\u2014 \u041D\u0443, \u0448\u043B\u0430\u0432\u043D\u043E \u043F\u043E\u0442\u0430\u043D\u0447\u044E\u0432\u0430\u043B\u0438!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440.\xA0\u2014\n        \u042F\u043A \u0432\u0456\u0442\u0442\u044F\u0447\u0438\u0442\u0438 \u0442\u043E\u0431\u0456, \u0449\u043E \u0440\u043E\u0436\u0432\u0430\u0436\u0438\u0432 \u043C\u0435\u043D\u0435?\n\n       \xA0\u2014 \u0429\u0435 \u0445\u0432\u0438\u043B\u044C\u043A\u0443\xA0\u2014 \u043A\u0430\u0436\u0435 \u0434\u0436\u0443\u0440\u0430.\xA0\u2014 \u0414\u0430\u0439\u0442\u0435, \u0434\u044F\u0434\u044C\u043A\u0443, \u043B\u0438\u0448 \u0434\u0443\u0445 \u043F\u0435\u0440\u0435\u0432\u0435\u0441\u0442\u0438.\n\n        [\u0414\u0430\u043B\u0456](#\u0447\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440_\u0442\u0430\u043D\u0446\u044E\u0432\u0430\u0442\u04382)\n    ";},_this.чугайстер_танцювати2=function(){return"\n       \xA0\u2014 \u042F "+_this["чугайстер_прохання"]()+"\n\n        \u0414\u0436\u0443\u0440\u0430 \u043F\u0456\u0434\u0432\u0456\u0432\u0441\u044F \u0456 \u043F\u043E\u043F\u043B\u0435\u043D\u0442\u0430\u0432\u0441\u044F \u0437\u0430 \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0440\u043E\u043C.\n\n        [\u0414\u0430\u043B\u0456](#\u0432\u0438\u0439\u0442\u0438)\n    ";},_this.чугайстер_відмовитись=function(){return"\n       \xA0\u2014 \u041D\u0456\u043A\u043E\u043B\u0438, \u0434\u044F\u0434\u044C\u043A\u0443\xA0\u2014 "+_this["чугайстер_прохання"]()+"\n\n        [\u0414\u0430\u043B\u0456](#\u0432\u0438\u0439\u0442\u0438)\n    ";},_this.чугайстер_прохання=function(){return"\n        \u043D\u0430 \u0421\u0456\u0447 \u043F\u043E\u0441\u043F\u0456\u0448\u0430\u044E,\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430,\u2014 \u0442\u0430 \u043E\u0442 \u043D\u044F\u0432\u043A\u0438 \u043D\u0435 \u043F\u0443\u0441\u043A\u0430\u044E\u0442\u044C.\n\n       \xA0\u2014 \u0422\u0435 \u0436 \u0442\u0438 \u043D\u044F\u0432\u043E\u043A \u0436\u043D\u0430\u0439\u0448\u043E\u0432?\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440.\n\n       \xA0\u2014 \u041D\u0430 \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0456, \u043A\u043E\u043B\u043E \u0440\u0456\u0447\u043A\u0438...\n\n       \xA0\u2014 \u041D\u0443 \u0442\u0430\u043A \u0439\u0442\u0438 \u0436\u0430 \u043C\u043D\u043E\u044E,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0427\u0443\u0433\u0430\u0439\u0441\u0442\u0435\u0440.\xA0\u2014 \u041F\u0440\u0438\u0439\u0442\u0435\u0448 \u043D\u0430\n        \u0433\u0430\u043B\u044F\u0432\u0438\u043D\u0443\xA0\u2014 \u043D\u0435 \u0431\u0443\u0442\u0435 \u0442\u0432\u043E\u0457\u0445 \u043D\u044F\u0432\u043E\u043A!\n\n        \u0421\u043A\u0430\u0437\u0430\u0432\xA0\u2014 \u0456 \u0437\u043D\u0438\u043A, \u043D\u0456\u0431\u0438 \u0439 \u043D\u0435 \u0431\u0443\u043B\u043E!\n    ";},_this.вийти=function(){return"\n       \xA0\u0414\u0436\u0443\u0440\u0430 \u0432\u0438\u0445\u043E\u0434\u0438\u0442\u044C \u0437 \u043B\u0456\u0441\u0443. \u041C\u0456\u0441\u044F\u0446\u044C \u043F\u0456\u0434\u043D\u044F\u0432\u0441\u044F \u043F\u0456\u0434 \u0441\u0430\u043C\u0435 \u043D\u0435\u0431\u043E, \u0442\u0440\u0430\u0432\u0430 \u0431\u0456\u043B\u0430,\n        \u043D\u0456\u0431\u0438 \u043C\u043E\u043B\u043E\u043A\u043E\u043C \u0437\u0430\u043B\u0438\u043B\u0438, \u0443\u0437\u0434\u043E\u0432\u0436 \u0440\u0456\u0447\u043A\u0438 \u0442\u0443\u043C\u0430\u043D \u0441\u0442\u0435\u043B\u0438\u0442\u044C\u0441\u044F. \u041D\u0435\u0431\u043E \u0447\u0438\u0441\u0442\u0435, \u0442\u0435\u043C\u043D\u0435,\n        \u044F\u0441\u043A\u0440\u0430\u0432\u0456 \u0437\u0456\u0440\u043A\u0438-\u043D\u0430\u043C\u0438\u0441\u0442\u0438\u043D\u0438 \u0441\u044F\u044E\u0442\u044C \u0442\u0430 \u043F\u0456\u0434\u043C\u043E\u0440\u0433\u0443\u044E\u0442\u044C \u043E\u0434\u043D\u0430 \u043E\u0434\u043D\u0456\u0439.\n        \n        \u0421\u0442\u0430\u0454 \u0442\u0435\u043C\u043D\u043E, \u043D\u0456\u0431\u0438 \u043C\u0456\u0441\u044F\u0446\u044C \u0456\u0437 \u0437\u0456\u0440\u043A\u0430\u043C\u0438 \u043D\u0430\u043A\u0440\u0438\u043B\u043E \u0432\u0435\u043B\u0438\u0447\u0435\u0437\u043D\u043E\u044E \u0442\u0456\u043D\u043D\u044E. \u0421\u043F\u0438\u043D\u043E\u044E\n        \u043F\u0440\u043E\u0431\u0456\u0433\u0430\u0454 \u0445\u043E\u043B\u043E\u0434\u043E\u043A. \u0414\u0436\u0443\u0440\u0430 \u043E\u0437\u0438\u0440\u0430\u0454\u0442\u044C\u0441\u044F.\n        \n        \u0421\u0445\u043E\u0436\u0435, \u043E\u043F\u0438\u0440 \u043A\u0438\u043D\u0443\u0432 \u043F\u043E\u0433\u043B\u044F\u0434 \u043D\u0430 \u0445\u043B\u043E\u043F\u0446\u044F. \u0417\u043D\u0430\u0442\u0438 \u0431, \u0449\u043E \u043D\u0430\u0434\u0443\u043C\u0430\u0432: \u0447\u0438\n        \u043D\u0430 \u0442\u043E\u0439 \u0441\u0432\u0456\u0442 \u0437\u0430\u0432\u043E\u0434\u0438\u0442\u044C, \u0447\u0438 \u043D\u0430 \u0446\u0435\u0439\xA0\u2014 \u0432\u0438\u0432\u043E\u0434\u0438\u0442\u044C. \n\n        [\u0414\u0430\u043B\u0456](#road:\u0434\u043E\u0440\u0456\u0436\u043A\u04303)\n    ";},_temp),_possibleConstructorReturn(_this,_ret);}return Forest;}(__WEBPACK_IMPORTED_MODULE_0__framework_quest__["a" /* MDQuest */]);
 
 /***/ }),
-/* 171 */
+/* 176 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14667,7 +14897,7 @@ function _classCallCheck(instance,Constructor){if(!(instance instanceof Construc
 function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var Ending=function(_MDQuest){_inherits(Ending,_MDQuest);function Ending(){var _ref;var _temp,_this,_ret;_classCallCheck(this,Ending);for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return _ret=(_temp=(_this=_possibleConstructorReturn(this,(_ref=Ending.__proto__||Object.getPrototypeOf(Ending)).call.apply(_ref,[this].concat(args))),_this),_this.startLoc="frog",_this.parsley=function(){return"\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u043A\u043E\u0437\u0430\u043A \u0441\u0443\u043F\u0438\u0442\u044C \u0431\u0440\u043E\u0432\u0438\xA0\u2014 \u0437\u0430\u043A\u043E\u0440\u043E\u0442\u043A\u043E\u044E \u0432\u0438\u0439\u0448\u043B\u0430 \u0456\u0441\u0442\u043E\u0440\u0456\u044F.\n\n       \xA0\u2014 \u041D\u0435 \u0434\u0456\u0439\u0448\u043E\u0432 \u0434\u0436\u0443\u0440\u0430 \u0434\u043E \u0421\u0456\u0447\u0456,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u0456\u043D.\xA0\u2014 \u0417\u0430\u043B\u043E\u0441\u043A\u043E\u0442\u0430\u043B\u0430 \u043D\u044F\u0432\u043A\u0430\n        \u0434\u043E \u0441\u043C\u0435\u0440\u0442\u0456. \u0414\u043E\u0440\u043E\u0433\u0430-\u0434\u043E\u0440\u043E\u0433\u043E\u044E, \u0430 \u0441\u043B\u043E\u0432\u0430 \u043D\u0430\u0440\u043E\u0434\u043D\u0456 \u0442\u0440\u0435\u0431\u0430 \u043F\u0430\u043C\u2019\u044F\u0442\u0430\u0442\u0438:\n        \u043B\u044E\u0431\u0438\u0441\u0442\u043A\u043E\u043C \u0442\u0430 \u043F\u043E\u043B\u0438\u043D\u043D\u044E \u0437\u0434\u0430\u0432\u043D\u0430 \u043D\u0435\u0447\u0438\u0441\u0442\u0443 \u0441\u0438\u043B\u0443 \u0432\u0456\u0434\u0433\u0430\u043D\u044F\u043B\u0438.\n\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u043F\u0456\u0434\u0432\u043E\u0434\u0438\u0442\u044C\u0441\u044F, \u0443 \u0441\u0432\u0456\u0442\u043B\u0456 \u0431\u0430\u0433\u0430\u0442\u0442\u044F \u0439\u043E\u0433\u043E \u0437\u043C\u043E\u0440\u0448\u043A\u0438 \u0437\u0434\u0430\u044E\u0442\u044C\u0441\u044F\n        \u0449\u0435 \u0431\u0456\u043B\u044C\u0448 \u0433\u043B\u0438\u0431\u043E\u043A\u0438\u043C\u0438. \u041A\u043E\u0437\u0430\u043A \u0443\u043A\u043B\u043E\u043D\u044F\u0454\u0442\u044C\u0441\u044F.\n\n       \xA0\u2014 \u0421\u043F\u0430\u0441\u0438\u0431\u0456 \u0432\u0430\u043C, \u043F\u0430\u043D\u043E\u0432\u0435, \u0445\u043E\u0440\u043E\u0448\u0456 \u0432\u0438 \u0441\u043B\u0443\u0445\u0430\u0447\u0456.\n\n       \xA0\u2014 \u0427\u0435\u043A\u0430\u0439\u0442\u0435,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u043E\u0434\u0438\u043D \u0456\u0437 \u043F\u0430\u0440\u0443\u0431\u043A\u0456\u0432.\xA0\u2014 \u0425\u0456\u0431\u0430 \u0442\u0430\u043A \u0432\u0441\u0435 \u0431\u0443\u043B\u043E?\n\n       \xA0\u2014 \u041C\u043E\u0436\u0435 \u0439 \u0442\u0430\u043A,\xA0\u2014 \u043A\u0430\u0436\u0435 \u0434\u0456\u0434,\xA0\u2014 \u0430 \u043C\u043E\u0436\u0435 \u0439 \u0456\u043D\u0430\u043A. \u0410 \u0434\u043B\u044F \u0432\u0430\u0441 -\n        \u043D\u0430\u0443\u043A\u0430: \u043D\u0435 \u0437\u043D\u0430\u0454\u0448 \u0431\u0440\u043E\u0434\u0443\xA0\u2014 \u043D\u0435 \u043B\u0456\u0437\u044C \u0443 \u0432\u043E\u0434\u0443.\n    ";},_this.niavki=function(){return"\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u043A\u043E\u0437\u0430\u043A \u0445\u043C\u0443\u0440\u0438\u0442\u044C\u0441\u044F\xA0\u2014 \u043D\u0435 \u0432 \u0442\u043E\u0439 \u0441\u0442\u0435\u043F \u0437\u0430\u0439\u0448\u043B\u0430 \u0456\u0441\u0442\u043E\u0440\u0456\u044F, \u0430 \u043F\u043E\u0432\u0435\u0440\u0442\u0430\u0442\u0438\n        \u043F\u0456\u0437\u043D\u043E.\n\n       \xA0\u2014 \u041D\u0430\u043A\u0438\u043D\u0443\u043B\u0438\u0441\u044C \u043D\u0430 \u043D\u044C\u043E\u0433\u043E \u043D\u044F\u0432\u043A\u0438,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C,\xA0\u2014 \u0440\u043E\u0437\u0456\u0440\u0432\u0430\u043B\u0438.\n        \u0422\u0430\u043A \u0456 \u043D\u0435 \u0434\u043E\u0447\u0435\u043A\u0430\u043B\u0438\u0441\u044C \u043D\u0430 \u0421\u0456\u0447\u0456 \u043F\u0430\u0440\u0443\u0431\u043A\u0430.\n\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u043F\u0456\u0434\u0432\u043E\u0434\u0438\u0442\u044C \u043F\u043E\u0433\u043B\u044F\u0434, \u0441\u0432\u0456\u0442\u043B\u043E \u0431\u0430\u0433\u0430\u0442\u0442\u044F \u0456\u0441\u043A\u0440\u0430\u043C\u0438 \u0432\u0456\u0434\u0431\u043B\u0438\u0441\u043A\u0443\u0454 \u0432 \u0439\u043E\u0433\u043E \u043E\u0447\u0430\u0445.\n\n       \xA0\u2014 \u041E\u0434\u043D\u0430\u043A \u044F \u0437\u0430\u0441\u0438\u0434\u0456\u0432\u0441\u044F,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u0456\u043D.\xA0\u2014 \u0411\u0430\u0439\u043A\u0438-\u0431\u0430\u0439\u043A\u0430\u043C\u0438, \u0430 \u0447\u0430\u0441 \u0432\u0436\u0435\n        \u0434\u043E \u0441\u043D\u0443 \u0439\u0442\u0438.\n\n       \xA0\u2014 \u0421\u0442\u0456\u0439\u0442\u0435-\u0441\u0442\u0456\u0439\u0442\u0435!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u043E\u0434\u0438\u043D \u0437 \u043F\u0430\u0440\u0443\u0431\u043A\u0456\u0432.\xA0\u2014 \u0406 \u0449\u043E,\n        \u0432\u0441\u0435 \u0442\u0430\u043A \u0434\u0456\u0439\u0441\u043D\u043E \u0439 \u0431\u0443\u043B\u043E?\n\n       \xA0\u2014 \u041C\u043E\u0436\u0435 \u0439 \u0442\u0430\u043A, \u0430 \u043C\u043E\u0436\u0435 \u0439 \u0456\u043D\u0430\u043A,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0441\u0442\u0430\u0440\u0438\u0439 \u043A\u043E\u0437\u0430\u043A.\xA0\u2014\n        \u0410 \u0432\u0430\u043C\xA0\u2014 \u043D\u0430\u0443\u043A\u0430: \u043D\u0435 \u0439\u0434\u0438 \u043D\u0430 \u0433\u043B\u0438\u0431\u043E\u043A\u0435, \u043A\u043E\u043B\u0438 \u043D\u0430 \u043C\u0456\u043B\u043A\u043E\u043C\u0443 \u0442\u043E\u043D\u0435\u0448.\n    ";},_this.puzzle=function(){return"\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u043A\u043E\u0437\u0430\u043A \u0443\u0441\u043C\u0456\u0445\u0430\u0454\u0442\u044C\u0441\u044F\xA0\u2014 \u0433\u0430\u0440\u043D\u0430 \u0432\u0438\u0439\u0448\u043B\u0430 \u0456\u0441\u0442\u043E\u0440\u0456\u044F.\n\n       \xA0\u2014 \u041F\u0443\u0441\u0442\u0438\u0432 \u0432\u043E\u0434\u044F\u043D\u0438\u043A \u0434\u0436\u0443\u0440\u0443,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C,\xA0\u2014 \u0456 \u0432\u0436\u0435 \u043F\u0456\u0434 \u0440\u0430\u043D\u043E\u043A\n        \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u0431\u0443\u0432 \u043D\u0430 \u0421\u0456\u0447\u0456.\n\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u043F\u043E\u043F\u0440\u0430\u0432\u043B\u044F\u0454 \u0433\u0443\u0441\u0442\u0456 \u0431\u0456\u043B\u0456 \u0432\u0443\u0441\u0430. \u041B\u044E\u043B\u044C\u043A\u0430 \u0434\u0430\u0432\u043D\u043E \u0437\u0433\u0430\u0441\u043B\u0430, \u0432\u043E\u0433\u043D\u0438\u0449\u0435\n        \u0434\u043E\u0440\u043E\u0433\u0430\u0454. \u0421\u043B\u0443\u0445\u0430\u0447\u0456 \u043F\u0440\u0438\u0442\u0438\u0445\u043B\u0438, \u043F\u0435\u0440\u0435\u0433\u043B\u044F\u0434\u0430\u044E\u0442\u044C\u0441\u044F.\n\n       \xA0\u2014 \u041D\u0435\u0432\u0436\u0435 \u0432\u0441\u0435 \u0442\u0430\u043A \u0456 \u0431\u0443\u043B\u043E?\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u043E\u0434\u043D\u0430 \u0437 \u0434\u0456\u0432\u0447\u0430\u0442.\n\n       \xA0\u2014 \u041C\u043E\u0436\u0435 \u0439 \u0442\u0430\u043A, \u0430 \u043C\u043E\u0436\u0435 \u0439 \u0456\u043D\u0430\u043A. \u0410 \u0434\u043B\u044F \u0432\u0430\u0441\xA0\u2014 \u043D\u0430\u0443\u043A\u0430: \u0443 \u0442\u0440\u0443\u0434\u043D\u043E\u0449\u0430\u0445\n        \u043F\u0435\u0440\u0435\u043C\u0430\u0433\u0430\u0439 \u0443\u043C\u043E\u043C, \u0430 \u0432 \u043D\u0435\u0431\u0435\u0437\u043F\u0435\u0446\u0456\xA0\u2014 \u0434\u043E\u0441\u0432\u0456\u0434\u043E\u043C.\n\n        \u041A\u0406\u041D\u0415\u0426\u042C\n    ";},_this.let_go=function(){return"\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u043A\u043E\u0437\u0430\u043A \u043A\u0438\u0434\u0430\u0454 \u0445\u0438\u0442\u0440\u0438\u0439 \u043F\u043E\u0433\u043B\u044F\u0434\xA0\u2014 \u043B\u0438\u0431\u043E\u043D\u044C, \u0432\u0434\u0430\u043B\u0430\u0441\u044F \u043E\u043F\u043E\u0432\u0456\u0434\u043A\u0430.\n\n       \xA0\u2014 \u041F\u0435\u0440\u0435\u0434\u0430\u0432 \u0434\u0436\u0443\u0440\u0430 \u0443\u0441\u0435, \u0449\u043E \u0431\u0435\u0440\u0435\u0433\u0438\u043D\u0456 \u043A\u0430\u0437\u0430\u043B\u0438,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0432\u0456\u043D.\n       \xA0\u2014 \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u043D\u0430\u0441\u0443\u043F\u0438\u0432\u0441\u044F, \u043F\u043E\u0431\u0443\u0440\u0447\u0430\u0432, \u0442\u0430 \u0439 \u043F\u0440\u043E\u043F\u0443\u0441\u0442\u0438\u0432 \u0445\u043B\u043E\u043F\u0446\u044F. \u0412\u0436\u0435\n        \u043F\u0456\u0434 \u0440\u0430\u043D\u043E\u043A \u0431\u0443\u0432 \u043F\u0430\u0440\u0443\u0431\u043E\u043A \u043D\u0430 \u0421\u0456\u0447\u0456. \u041E\u0442 \u0456 \u0432\u0441\u044F \u043A\u0430\u0437\u043A\u0430.\n\n        \u0421\u0442\u0430\u0440\u0438\u0439 \u0440\u043E\u0437\u043F\u0440\u0430\u0432\u043B\u044F\u0454 \u043F\u043B\u0435\u0447\u0456, \u043D\u0430 \u043E\u0431\u043B\u0438\u0447\u0447\u0456 \u0437\u2019\u044F\u0432\u043B\u044F\u0454\u0442\u044C\u0441\u044F \u043F\u043E\u0441\u043C\u0456\u0448\u043A\u0430, \u0432\u0438\u0434\u043D\u043E \u0440\u0456\u0434\u043A\u0456\n        \u0436\u043E\u0432\u0442\u0456 \u0437\u0443\u0431\u0438.\n\n       \xA0\u2014 \u0422\u043E \u0449\u043E,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u043E\u0434\u043D\u0430 \u0437 \u0434\u0456\u0432\u0447\u0430\u0442,\xA0\u2014 \u0432\u0441\u0435 \u0442\u0430\u043A \u043D\u0430\u0441\u043F\u0440\u0430\u0432\u0434\u0456 \u0439 \u0431\u0443\u043B\u043E?\n\n       \xA0\u2014 \u041C\u043E\u0436\u0435 \u0439 \u0442\u0430\u043A, \u0430 \u043C\u043E\u0436\u0435 \u0439 \u0456\u043D\u0430\u043A. \u0410 \u0434\u043B\u044F \u0432\u0430\u0441\xA0\u2014 \u043D\u0430\u0443\u043A\u0430: \u043D\u0435 \u0441\u0442\u0438\u0434\u0430\u0439\u0441\u044C\n        \u043D\u0435 \u0437\u043D\u0430\u0442\u0438, \u0441\u0442\u0438\u0434\u0430\u0439\u0441\u044F \u043D\u0435 \u043F\u0438\u0442\u0430\u0442\u0438.\n\n        \u041A\u0406\u041D\u0415\u0426\u042C\n    ";},_temp),_possibleConstructorReturn(_this,_ret);}return Ending;}(__WEBPACK_IMPORTED_MODULE_0__framework_quest__["a" /* MDQuest */]);
 
 /***/ }),
-/* 172 */
+/* 177 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14676,7 +14906,7 @@ function _classCallCheck(instance,Constructor){if(!(instance instanceof Construc
 var _slicedToArray=function(){function sliceIterator(arr,i){var _arr=[];var _n=true;var _d=false;var _e=undefined;try{for(var _i=arr[Symbol.iterator](),_s;!(_n=(_s=_i.next()).done);_n=true){_arr.push(_s.value);if(i&&_arr.length===i)break;}}catch(err){_d=true;_e=err;}finally{try{if(!_n&&_i["return"])_i["return"]();}finally{if(_d)throw _e;}}return _arr;}return function(arr,i){if(Array.isArray(arr)){return arr;}else if(Symbol.iterator in Object(arr)){return sliceIterator(arr,i);}else{throw new TypeError("Invalid attempt to destructure non-iterable instance");}};}();var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||false;descriptor.configurable=true;if("value"in descriptor)descriptor.writable=true;Object.defineProperty(target,descriptor.key,descriptor);}}return function(Constructor,protoProps,staticProps){if(protoProps)defineProperties(Constructor.prototype,protoProps);if(staticProps)defineProperties(Constructor,staticProps);return Constructor;};}();var _get=function get(object,property,receiver){if(object===null)object=Function.prototype;var desc=Object.getOwnPropertyDescriptor(object,property);if(desc===undefined){var parent=Object.getPrototypeOf(object);if(parent===null){return undefined;}else{return get(parent,property,receiver);}}else if("value"in desc){return desc.value;}else{var getter=desc.get;if(getter===undefined){return undefined;}return getter.call(receiver);}};function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor)){throw new TypeError("Cannot call a class as a function");}}function _possibleConstructorReturn(self,call){if(!self){throw new ReferenceError("this hasn't been initialised - super() hasn't been called");}return call&&(typeof call==="object"||typeof call==="function")?call:self;}function _inherits(subClass,superClass){if(typeof superClass!=="function"&&superClass!==null){throw new TypeError("Super expression must either be null or a function, not "+typeof superClass);}subClass.prototype=Object.create(superClass&&superClass.prototype,{constructor:{value:subClass,enumerable:false,writable:true,configurable:true}});if(superClass)Object.setPrototypeOf?Object.setPrototypeOf(subClass,superClass):subClass.__proto__=superClass;}var shuffleArray=function shuffleArray(arr){return arr.sort(function(){return Math.random()-0.5;});};var QUESTION_NUM_NAME=["першу","другу","третю","четверту","п’яту","шосту","сьому"];var QUESTIONS=[["Дітей годує, а сама не їсть.","ложка"],["Сімсот соколят на одній подушці сплять, та все на сонце дивляться.","соняшник"],["Сидить баба на грядках, вся в жупанах і хустках.","капуста"],["Що дістане зубами потилиці?","гребінець"],["У воді водиться, хвостатим родиться, коли виростає, хвіст пропадає.","жаба"],["Із землі з’явився, в воді народився, у вогні хрестився.","глечик"],["Що то за діжка на чотирьох ніжках, спереду коле, іззаду замітає.","корова"],["Їхала пані у срібнім жупані, а на тім жупані латка на латці.","риба"],["Що то за дорога, що півроку із конем їздять, а півроку без коня?","річка"],["Їсть — не наїдається, а води поп’є — одразу помре.","вогонь"],["Кружечок сиру на хаті лежить. Собаки виють, дістати не можуть.","місяць"],["У казанок чорним, із казанка — червоним.","рак"],["Влітку в шубі, взимку в шапці.","дерево"],["Від хати до хати йде, а в дім не заходить.","стежка"],["По синьому морю білі гусаки пливуть.","хмари"],["Скажи-но, від чого качка пливе?","берег"]];var Ford=function(_MDQuest){_inherits(Ford,_MDQuest);function Ford(){var _ref;var _temp,_this,_ret;_classCallCheck(this,Ford);for(var _len=arguments.length,args=Array(_len),_key=0;_key<_len;_key++){args[_key]=arguments[_key];}return _ret=(_temp=(_this=_possibleConstructorReturn(this,(_ref=Ford.__proto__||Object.getPrototypeOf(Ford)).call.apply(_ref,[this].concat(args))),_this),_this.startLoc='брід0',_this.getQuestion=function(){var questions=_this.get('questions');var questionNum=_this.get("номер_загадки");return questions[questionNum];},_this.checkAnswer=function(){var answer=_this.get('answer');_this.set("номер_загадки",_this.get('count_checkAnswer')-1);var _this$getQuestion=_this.getQuestion(),_this$getQuestion2=_slicedToArray(_this$getQuestion,2),correctAnswer=_this$getQuestion2[1];_this.set("номер_загадки",_this.get('count_checkAnswer'));var locName=answer===correctAnswer?'вірно':'невірно';var countName='count_'+locName;_this.set(countName,_this.get(countName)+1);return _this[locName](answer);},_this.брід0=function(){var questions=shuffleArray(shuffleArray(QUESTIONS));_this.set('questions',questions);_this.gset("статус_брід",1);_this.set("номер_загадки",0);return"\n            \u041E\u0441\u044C \u0456 \u0431\u0440\u0456\u0434, \u043F\u0440\u043E \u044F\u043A\u0438\u0439 \u0434\u043E\u043C\u043E\u0432\u0438\u043A \u0440\u043E\u0437\u043A\u0430\u0437\u0443\u0432\u0430\u0432. \u0410 \u043A\u043E\u043B\u043E \u0431\u0440\u043E\u0434\u0443 \u0432\u043E\u0434\u044F\u043D\u0438\u043A \u043B\u0435\u0436\u0438\u0442\u044C,\n            \u0441\u043E\u0445\u043D\u0435. \u0413\u0440\u043E\u043C\u0430\u0434\u043D\u0438\u0439, \u043A\u0430\u043A \u0432\u0456\u043B. \u041F\u0443\u0437\u043E \u0432\u0438\u0432\u0430\u043B\u0438\u0432, \u043E\u0447\u0438\u0449\u0456 \u0432\u0438\u0442\u0440\u0456\u0449\u0438\u0432, \u0443\u0432\u0435\u0441\u044C \u0443 \u043C\u0443\u043B\u0456\n            \u0442\u0430 \u0432\u043E\u0434\u043E\u0440\u043E\u0441\u0442\u044F\u0445, \u0440\u0438\u0431\u2019\u044F\u0447\u0438\u0439 \u0445\u0432\u0456\u0441\u0442 \u043F\u043E \u0437\u0435\u043C\u043B\u0456 \u0441\u0442\u0435\u043B\u0435\u0442\u044C\u0441\u044F.\n    \n           \xA0\u2014 \u0412\u0456\u0442\u0430\u044E, \u0445\u0430\u0437\u044F\u0457\u043D\u0435 \u0432\u043E\u0434,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\u2014 \u0427\u0438 \u0434\u043E\u0437\u0432\u043E\u043B\u0438\u0448 \u0431\u0440\u0456\u0434 \u043F\u0435\u0440\u0435\u0439\u0442\u0438?\n    \n            \u0412\u0434\u0430\u0440\u0438\u0432 \u0432\u043E\u0434\u044F\u043D\u0438\u043A \u043F\u043E \u0432\u043E\u0434\u0456 \u0445\u0432\u043E\u0441\u0442\u043E\u043C, \u0430\u0436 \u043B\u0443\u043D\u0430 \u043F\u0456\u0448\u043B\u0430.\n    \n           \xA0\u2014 \u0425\u043E\u0434\u044F\u0442\u044C \u0442\u0443\u0442 \u0443\u0441\u044F\u043A\u0456,\xA0\u2014 \u043A\u0430\u0436\u0435,\xA0\u2014 \u0442\u0456\u043B\u044C\u043A\u0438 \u043D\u0430\u0431\u0440\u0438\u0434\u0430\u044E\u0442\u044C. \u0417 \u0447\u043E\u0433\u043E \u043C\u0435\u043D\u0456 \u0442\u0435\u0431\u0435\n            \u043F\u0443\u0441\u043A\u0430\u0442\u0438? \u0425\u043E\u0447\u0435\u0448 \u043F\u0440\u043E\u0439\u0442\u0438\xA0\u2014 \u043F\u043E\u0432\u0435\u0441\u0435\u043B\u0438 \u043C\u0435\u043D\u0435! \u0412\u0456\u0434\u0433\u0430\u0434\u0430\u0454\u0448 \u0442\u0440\u0438 \u0437\u0430\u0433\u0430\u0434\u043A\u0438\xA0\u2014 \u043F\u0443\u0449\u0443,\n            \u0430 \u044F\u043A \u043D\u0456\xA0\u2014 \u044F\u043A \u0437\u043D\u0430\u0435\u0448, \u0442\u0430\u043A \u0456 \u043F\u0435\u0440\u0435\u0431\u0438\u0440\u0430\u0439\u0441\u044F!\n    \n           \xA0\u2014 \u0410 \u0447\u043E\u0433\u043E \u0436 \u043D\u0435 \u0432\u0456\u0434\u0433\u0430\u0434\u0430\u0442\u0438? \u0417\u0430\u0433\u0430\u0434\u0443\u0439!\n           \n            [\u0414\u0430\u043B\u0456](#\u0437\u0430\u0433\u0430\u0434\u043A\u0430)\n        ";},_this.брід1=function(){return"\n        \u2014 \u041D\u0443 \u0449\u043E?\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u0413\u043E\u0442\u043E\u0432\u0438\u0439 \u0432\u0456\u0434\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438?\n        \n        [\u0413\u043E\u0442\u043E\u0432\u0438\u0439](#\u0437\u0430\u0433\u0430\u0434\u043A\u0430)\n        \n        [\u041D\u0435 \u0433\u043E\u0442\u043E\u0432\u0438\u0439](#road:\u0434\u043E\u0440\u0456\u0436\u043A\u0430_\u0432\u0456\u0434_\u0432\u043E\u0434\u044F\u043D\u0438\u043A\u0430)\n        \n        "+(_this.gget("берегині_загадка")?"[Передати слова берегинь](#ending:let_go)":"")+"\n    ";},_this.загадка=function(){var _this$getQuestion3=_this.getQuestion(),_this$getQuestion4=_slicedToArray(_this$getQuestion3,1),question=_this$getQuestion4[0];_this.gset("загадка",question);return"\n            \u2014 \u0421\u043B\u0443\u0445\u0430\u0439 \u043C\u043E\u044E "+QUESTION_NUM_NAME[_this.get('номер_загадки')]+" \n            \u0437\u0430\u0433\u0430\u0434\u043A\u0443,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \""+question+"\"\n            \n            \u041F\u043E\u0432\u0456\u0432 \u0434\u0436\u0443\u0440\u0430 \u043F\u043E\u0433\u043B\u044F\u0434\u043E\u043C \u0434\u043E\u0432\u043A\u043E\u043B\u0430. \u041D\u0430\u0434 \u0433\u043E\u043B\u043E\u0432\u043E\u044E [\u0434\u0435\u0440\u0435\u0432\u0430](#\u0434\u0435\u0440\u0435\u0432\u043E)\n            \u0448\u0443\u043C\u043B\u044F\u0442\u044C, \u0443 [\u0440\u0456\u0447\u0446\u0456](#\u0440\u0456\u0447\u043A\u0430) [\u0436\u0430\u0431\u0438](#\u0436\u0430\u0431\u0430) \u043A\u0443\u043C\u043A\u0430\u044E\u0442\u044C, \u043F\u043B\u0435\u0441\u043A\u0430\u044E\u0442\u044C \n            [\u0440\u0438\u0431\u0438](#\u0440\u0438\u0431\u0430), \u043E\u043D \u0434\u0440\u0456\u0431\u043D\u0438\u0439 [\u0440\u0430\u043A](#\u0440\u0430\u043A) \u0432\u0438\u0437\u0438\u0440\u043D\u0443\u0432 \u0456\u0437 \u0432\u043E\u0434\u0438. \n            [\u0421\u0442\u0435\u0436\u0438\u043D\u0430](#\u0441\u0442\u0435\u0436\u043A\u0430) \u0441\u0442\u0435\u043B\u0435\u0442\u044C\u0441\u044F \u0443\u0437\u0434\u043E\u0432\u0436 [\u0431\u0435\u0440\u0435\u0433\u0430](#\u0431\u0435\u0440\u0435\u0433) \u0430\u0436 \u0434\u043E \n            [\u0441\u0435\u043B\u0430](#\u0441\u0435\u043B\u043E), \u0434\u0435-\u043D\u0435-\u0434\u0435 \u0443 [\u0432\u0456\u043A\u043D\u0430\u0445](#\u0432\u0456\u043A\u043D\u043E) \n            \u0433\u043E\u0440\u0438\u0442\u044C [\u0432\u043E\u0433\u043E\u043D\u044C](#\u0432\u043E\u0433\u043E\u043D\u044C). \n            \n            \u041D\u0430 [\u0442\u0438\u043D\u0443](#\u0442\u0438\u043D) \u043A\u043E\u043B\u043E \u043A\u0440\u0430\u0439\u043D\u044C\u043E\u0457 [\u0445\u0430\u0442\u0438](#\u0445\u0430\u0442\u0430)\n            \u0441\u043E\u0445\u043D\u0443\u0442\u044C [\u043B\u043E\u0436\u043A\u0438](#\u043B\u043E\u0436\u043A\u0430) \u0442\u0430 [\u0433\u043B\u0435\u0447\u0438\u043A\u0438](#\u0433\u043B\u0435\u0447\u0438\u043A), \u0443 [\u0445\u043B\u0456\u0432\u0443](#\u0445\u043B\u0456\u0432)\n            [\u043A\u0456\u043D\u044C](#\u043A\u0456\u043D\u044C) \u0434\u0440\u0456\u043C\u0430\u0454, \u0434\u043E\u043C\u043E\u0432\u0438\u043A \u0440\u043E\u0437\u0447\u0456\u0441\u0443\u0454 \u0439\u043E\u0433\u043E \n            [\u0433\u0440\u0435\u0431\u0456\u043D\u0446\u0435\u043C](#\u0433\u0440\u0435\u0431\u0456\u043D\u0435\u0446\u044C), [\u043A\u043E\u0440\u043E\u0432\u0430](#\u043A\u043E\u0440\u043E\u0432\u0430) \u0432\u0438\u0433\u043B\u044F\u0434\u0430\u0454 \u0437-\u0437\u0430\n            [\u0434\u0432\u0435\u0440\u0435\u0439](#\u0434\u0432\u0435\u0440\u0456). \u0414\u043E [\u0445\u0430\u0442\u0438](#\u0445\u0430\u0442\u0430) \u043F\u043E\u0445\u0438\u043B\u0438\u043B\u0438\u0441\u044C\n            [\u0441\u043E\u043D\u044F\u0448\u043D\u0438\u043A\u0438](#\u0441\u043E\u043D\u044F\u0448\u043D\u0438\u043A), \u0434\u0430\u043B\u0456 \u043D\u0430 [\u0433\u0440\u044F\u0434\u0446\u0456](#\u0433\u0440\u044F\u0434\u043A\u0430) \u0440\u043E\u0441\u0442\u0435 \n            [\u0433\u043E\u0440\u043E\u0445](#\u0433\u043E\u0440\u043E\u0445) \u0442\u0430 [\u043A\u0430\u043F\u0443\u0441\u0442\u0430](#\u043A\u0430\u043F\u0443\u0441\u0442\u0430).\n            \n            \u0410 \u043D\u0430\u0434 \u0433\u043E\u043B\u043E\u0432\u043E\u044E \u0441\u0432\u0456\u0442\u0438\u0442\u044C [\u043C\u0456\u0441\u044F\u0446\u044C](#\u043C\u0456\u0441\u044F\u0446\u044C), \u043F\u043B\u0438\u0432\u0443\u0442\u044C \u0434\u0440\u0456\u0431\u043D\u0456 \n            [\u0445\u043C\u0430\u0440\u0438\u043D\u043A\u0438](#\u0445\u043C\u0430\u0440\u0430).\n            \n            [\u0419\u0442\u0438 \u0433\u0435\u0442\u044C](#road:\u0434\u043E\u0440\u0456\u0436\u043A\u0430_\u0432\u0456\u0434_\u0432\u043E\u0434\u044F\u043D\u0438\u043A\u0430)\n        ";},_this.вірно=function(answer){return"\n        \u2014 \u041C\u043E\u044F \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C: "+answer+",\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\n        \n        "+_this.switch(['вірно1','вірно2','вірно3'])+"\n    ";},_this.вірно1=function(){return"\n        \u2014 \u0412\u0456\u0440\u043D\u043E,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u041F\u0440\u043E\u0441\u0442\u043E \u0432\u0433\u0430\u0434\u0430\u0432, \u0447\u0438 \u044F\u043A? \u041F\u043E\u0433\u043B\u044F\u043D\u044C\u043C\u043E,\n        \u0447\u0438 \u0449\u0435 \u0432\u0433\u0430\u0434\u0430\u0454\u0448.\n        \n        [\u0414\u0430\u043B\u0456](#\u0437\u0430\u0433\u0430\u0434\u043A\u0430)\n    ";},_this.вірно2=function(){return"\n        \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u0430\u0436 \u043E\u0447\u0456 \u0432\u0438\u0442\u0440\u0456\u0449\u0438\u0432.\n    \n        \u2014 \u0417\u043D\u043E\u0432 \u0432\u0433\u0430\u0434\u0430\u0432!\xA0\u2014 \u043A\u0430\u0436\u0435.\xA0\u2014 \u041D\u0435 \u0442\u0430\u043A\u0438\u0439 \u0442\u0438 \u0456 \u0434\u0443\u0440\u043D\u0438\u0439, \u044F\u043A \u0437\u0434\u0430\u0454\u0448\u0441\u044F... \u0413\u0430\u0440\u0430\u0437\u0434,\n        \u0456\u0449\u0435 \u043E\u0434\u043D\u0443 \u0432\u0433\u0430\u0434\u0430\u0454\u0448\xA0\u2014 \u043F\u0443\u0449\u0443.\n        \n        [\u0414\u0430\u043B\u0456](#\u0437\u0430\u0433\u0430\u0434\u043A\u0430)\n    ";},_this.вірно3=function(){return"\n        \u2014 \u0422\u0438 \u0431\u0430, \u044F\u043A\u0438\u0439 \u0440\u043E\u0437\u0443\u043C\u043D\u0438\u0439,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u0413\u0430\u0440\u0430\u0437\u0434, \u0456\u0434\u0438, \n        \u0449\u043E\u0431 \u044F \u0442\u0435\u0431\u0435 \u043D\u0435 \u0431\u0430\u0447\u0438\u0432!\n        \n        [\u0414\u0430\u043B\u0456](#ending:puzzle)\n    ";},_this.невірно=function(answer){return"\n        \u2014 \u041C\u043E\u044F \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C: "+answer+",\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0434\u0436\u0443\u0440\u0430.\n        \n        "+_this.switch(['невірно1','невірно2','невірно3'])+"\n    ";},_this.невірно1=function(){return"\n        \u2014 \u041D\u0456!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u0411\u0430\u0447\u0438\u0448? \u041D\u0435 \u0433\u0456\u0434\u043D\u0438\u0439 \u0442\u0438 \u0437\u0456 \u043C\u043D\u043E\u044E \n        \u0443 \u0440\u043E\u0437\u0443\u043C\u0456 \u0442\u044F\u0433\u0430\u0442\u0438\u0441\u044F!\n        \n        \u2014 \u0414\u044F\u0434\u044C\u043A\u0443 \u0432\u043E\u0434\u044F\u043D\u0438\u043A,\xA0\u2014 \u043A\u0430\u0436\u0435 \u044E\u043D\u0430\u043A,\xA0\u2014 \u0432\u0438 \u0442\u0430\u043A \u0434\u043E\u0431\u0440\u0435 \u0437\u0430\u0433\u0430\u0434\u043A\u0438 \u0437\u0430\u0433\u0430\u0434\u0443\u0454\u0442\u0435. \u041C\u043E\u0436\u0435\n        \u0449\u0435 \u0439 \u0456\u043D\u0448\u0443 \u0437\u043D\u0430\u0454\u0442\u0435, \u0431\u0456\u043B\u044C\u0448 \u043F\u0440\u043E\u0441\u0442\u0443?\n        \n        \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u0441\u0443\u043F\u0438\u0442\u044C\u0441\u044F.\n        \n        \u2014 \u041A\u0443\u0434\u0438 \u0432\u0436\u0435 \u043F\u0440\u043E\u0441\u0442\u0456\u0448\u0435!\xA0\u041F\u043E\u0433\u043B\u044F\u043D\u044C\u043C\u043E, \u044F\u043A \u0442\u0438 \u0437 \u0456\u043D\u0448\u0438\u043C\u0438 \u0432\u043F\u043E\u0440\u0430\u0454\u0448\u0441\u044F. \u0410\u043B\u0435 \u0437\u0430\u0440\u0443\u0431\u0430\u0439\n        \u043D\u0430 \u043D\u043E\u0441\u0456: \u0442\u0440\u0438\u0447\u0456 \u043F\u043E\u0441\u0442\u0443\u043F\u043B\u044E\u0441\u044F, \u0431\u0456\u043B\u044C\u0448\u0435 \u043D\u0435 \u043F\u0440\u043E\u0441\u0438!\n        \n        [\u0414\u0430\u043B\u0456](#\u0437\u0430\u0433\u0430\u0434\u043A\u0430)\n    ";},_this.невірно2=function(){return"\n        \u2014 \u041D\u0435 \u0432\u0456\u0440\u043D\u043E!\n        \n        \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u043B\u044F\u0441\u043A\u0430\u0454 \u0445\u0432\u043E\u0441\u0442\u043E\u043C \u043F\u043E \u0432\u043E\u0434\u0456, \u0449\u043E \u0430\u0436 \u043B\u0443\u043D\u0430 \u0439\u0434\u0435.\n        \n        \u2014 \u042F\u043A\u0443 \u0432\u0438, \u0434\u044F\u0434\u044C\u043A\u0443, \u0437\u0430\u0433\u0430\u0434\u043A\u0443 \u0445\u043E\u0440\u043E\u0448\u0443 \u0437\u0430\u0433\u0430\u0434\u0430\u043B\u0438,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \n        \u043F\u0430\u0440\u0443\u0431\u043E\u043A.\xA0\u2014 \u0410 \u0447\u0438 \u043D\u0435 \u0437\u0430\u0433\u0430\u0434\u0430\u0454\u0442\u0435 \u0449\u0435 \u043E\u0434\u043D\u0443?\n        \n        \u2014 \u0413\u0430\u0440\u0430\u0437\u0434,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0432\u043E\u0434\u044F\u043D\u0438\u043A,\xA0\u2014 \u0434\u043E\u0431\u0440\u0438\u0439 \u044F \u0441\u044C\u043E\u0433\u043E\u0434\u043D\u0456. \u0410\u043B\u0435 \u043F\u043E\u0447\u043D\u0435\u0448\n        \u043D\u0430\u0445\u0430\u0431\u043D\u0456\u0442\u0438\xA0\u2014 \u0441\u043A\u0456\u043D\u0447\u0438\u0442\u044C\u0441\u044F \u043C\u043E\u044F \u0434\u043E\u0431\u0440\u043E\u0442\u0430!\n        \n        [\u0414\u0430\u043B\u0456](#\u0437\u0430\u0433\u0430\u0434\u043A\u0430)\n    ";},_this.невірно3=function(){return"\n        \u2014 \u0417\u043D\u043E\u0432 \u043D\u0456!\xA0\u2014 \u043A\u0430\u0436\u0435 \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u0422\u043E \u0449\u043E, \u043F\u043E\u0432\u0435\u0440\u0442\u0430\u0442\u0438\u043C\u0435\u0448, \u0437\u0432\u0456\u0434\u043A\u0438 \u043F\u0440\u0438\u0439\u0448\u043E\u0432?\n        \u0411\u0430\u0447\u0438\u0448, \u0449\u043E \u043D\u0435 \u0440\u0456\u0432\u043D\u044F \u0442\u0438 \u043C\u0435\u043D\u0456?!\n        \n        \u2014 \u0422\u0430\u043A\u0456 \u0437\u0430\u0433\u0430\u0434\u043A\u0438 \u0432\u0430\u0436\u043A\u0456,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0434\u0436\u0443\u0440\u0430.\xA0\u2014 \u041C\u043E\u0436\u0435 \u0431 \u0432\u0438, \u0434\u044F\u0434\u044C\u043A\u0443, \u0437\u0430\u0433\u0430\u0434\u0430\u043B\u0438\n        \u0442\u0430\u043A\u0443, \u0449\u043E \u044F \u0431 \u0443\u0442\u043E\u0440\u043E\u043F\u0430\u0432?\n        \n        \u2014 \u0429\u043E\u0441\u044C \u043D\u0435 \u0432\u0456\u0440\u0438\u0442\u044C\u0441\u044F,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A,\xA0\u2014 \u0449\u043E \u0454 \u0442\u0430\u043A\u0430 \u0437\u0430\u0433\u0430\u0434\u043A\u0430. \n        \u0412\u043E\u0441\u0442\u0430\u043D\u043D\u0454 \u043F\u043E\u0441\u0442\u0443\u043F\u043B\u044E\u0441\u044F! \u0411\u0456\u043B\u044C\u0448\u0435 \u043D\u0435 \u043F\u0440\u043E\u0441\u0438.\n        \n        [\u0414\u0430\u043B\u0456](#\u043E\u0441\u0442\u0430\u043D\u043D\u044F_\u0437\u0430\u0433\u0430\u0434\u043A\u0430)\n    ";},_this.остання_загадка=function(){return"\n        \u2014 \u0421\u043B\u0443\u0445\u0430\u0439 \u043C\u043E\u044E \u043E\u0441\u0442\u0430\u043D\u043D\u044E \u0437\u0430\u0433\u0430\u0434\u043A\u0443: \"\u0425\u0442\u043E \u0432\u0440\u0430\u043D\u0446\u0456 \u0445\u043E\u0434\u0438\u0442\u044C \u043D\u0430 \u0447\u043E\u0442\u0438\u0440\u044C\u043E\u0445,\n        \u0443\u0434\u0435\u043D\u044C \u043D\u0430 \u0434\u0432\u043E\u0445, \u0430 \u0432\u0432\u0435\u0447\u0435\u0440\u0456 \u043D\u0430 \u0442\u0440\u043E\u044C\u043E\u0445?\"\n        \n        [\u0414\u044F\u0434\u044C\u043A\u043E \u0412\u0430\u0441\u0438\u043B\u044C](#\u0434\u044F\u0434\u044C\u043A\u043E_\u0432\u0430\u0441\u0438\u043B\u044C)\n        \n        [\u0426\u0438\u0440\u043A\u043E\u0432\u0438\u0439 \u043A\u0456\u043D\u044C](#\u0446\u0438\u0440\u043A\u043E\u0432\u0438\u0439_\u043A\u0456\u043D\u044C)\n        \n        [\u041F\u0435\u0440\u0435\u0432\u0435\u0440\u0442\u0435\u043D\u044C](#\u043F\u0435\u0440\u0435\u0432\u0435\u0440\u0442\u0435\u043D\u044C)\n    ";},_this.дядько_василь=function(){return"\n        \u2014 \u0417\u0430\u043F\u0440\u043E\u0441\u0442\u043E!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u044E\u043D\u0430\u043A.\xA0\u2014 \u0426\u0435 \u0434\u044F\u0434\u044C\u043A\u043E \u0412\u0430\u0441\u0438\u043B\u044C. \u0412\u0456\u043D \u044F\u043A \u0437\u0432\u0435\u0447\u043E\u0440\u0430 \u043F\u043E\u0447\u043D\u0435\n        \u043F\u0438\u044F\u0447\u0438\u0442\u0438, \u043F\u0456\u0434 \u0440\u0430\u043D\u043E\u043A \u0434\u043E\u0434\u043E\u043C\u0443 \u043D\u0430 \u043A\u0430\u0440\u0430\u0447\u043A\u0430\u0445 \u043F\u0440\u0438\u043F\u043E\u0432\u0437\u0430\u0454.\n        \n        \u2014 \u0410 \u0432\u0434\u0435\u043D\u044C \u043D\u0430 \u0434\u0432\u043E\u0445 \u0445\u043E\u0434\u0438\u0442\u044C?\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u044F\u0454 \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\n        \n        \u2014 \u0410\u0432\u0436\u0435\u0436 \u043D\u0430 \u0434\u0432\u043E\u0445. \u041D\u0430 \u0431\u0440\u043E\u0432\u0430\u0445.\n        \n        \u2014 \u0410 \u0449\u043E \u0436 \u0443\u0432\u0435\u0447\u0435\u0440\u0456?\n        \n        \u2014 \u0423\u0432\u0435\u0447\u0435\u0440\u0456 \u0445\u043E\u0434\u0438\u0442\u044C \u043D\u0430 \u0442\u0440\u044C\u043E\u0445,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0434\u0436\u0443\u0440\u0430.\xA0\u2014 \u041C\u0430\u044E \u043D\u0430 \u0443\u0432\u0430\u0437\u0456\xA0\u2014 \u043D\u0430 \u0442\u0440\u044C\u043E\u0445\n        \u0437\u043C\u0435\u0442\u0438\u043A\u0443\u0432\u0430\u0442\u0438.\n            \n        \u2014 \u041D\u0456, \u043D\u0435\u043F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u043E,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u0412\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C \u043D\u0430 \n        \u0437\u0430\u0433\u0430\u0434\u043A\u0443\xA0\u2014 \"\u043B\u044E\u0434\u0438\u043D\u0430\".\n\n        [\u0414\u0430\u043B\u0456](#\u0434\u044F\u0434\u044C\u043A\u043E_\u0432\u0430\u0441\u0438\u043B\u044C_\u043B\u044E\u0434\u0438\u043D\u0430)\n    ";},_this.дядько_василь_людина=function(){return"        \n        \u2014 \u0417\u0432\u0456\u0441\u043D\u043E, \u0434\u044F\u0434\u044C\u043A\u043E \u0412\u0430\u0441\u0438\u043B\u044C\xA0\u2014 \u043B\u044E\u0434\u0438\u043D\u0430,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430,\xA0\u2014 \n        \u0445\u043E\u0447 \u0436\u0456\u043D\u043A\u0430 \u0439\u043E\u0433\u043E \u043A\u0430\u0436\u0435, \u0449\u043E \u0442\u0430\u043A\u0438 \u0441\u0432\u0438\u043D\u044F.\n        \n        \u2014 \u0422\u0430 \u043D\u0456,\xA0\u2014 \u043A\u0430\u0436\u0435 \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u0412\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C \u043D\u0430 \u0437\u0430\u0433\u0430\u0434\u043A\u0443: \"\u043B\u044E\u0434\u0438\u043D\u0430\". \u0411\u0443\u0434\u044C-\u044F\u043A\u0430.\n        \n        \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u0447\u0443\u0445\u0430\u0454 \u043F\u043E\u0442\u0438\u043B\u0438\u0446\u044E.\n        \n        \u2014 \u0429\u043E\u0441\u044C \u0432\u0438 \u043D\u0435 \u0442\u0435, \u0434\u044F\u0434\u044C\u043A\u0443, \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u0435. \u042F, \u043F\u0440\u0438\u043C\u0456\u0440\u043E\u043C, \u0442\u0435\u0436 \u043B\u044E\u0434\u0438\u043D\u0430. \u0410\u043B\u0435\n        \u0434\u043E\u0441\u0442\u0435\u043C\u0435\u043D\u043D\u043E \u0437\u043D\u0430\u044E, \u0449\u043E \u0432\u0440\u0430\u043D\u0446\u0456 \u0445\u043E\u0434\u0438\u0432 \u043D\u0430 \u0434\u0432\u043E\u0445.\n            \n        [\u0414\u0430\u043B\u0456](#\u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430_\u043B\u044E\u0434\u0438\u043D\u0430)\n    ";},_this.цирковий_кінь=function(){return"\n        \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u0432\u0434\u043E\u0432\u043E\u043B\u0435\u043D\u043E \u043F\u043E\u0441\u043C\u0456\u0445\u0430\u0454\u0442\u044C\u0441\u044F.\n    \n        \u2014 \u0426\u0435 \u043B\u0435\u0433\u043A\u043E,\xA0\u2014 \u043A\u0430\u0436\u0435.\xA0\u2014 \u0412\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C: \u0446\u0438\u0440\u043A\u043E\u0432\u0438\u0439 \u043A\u0456\u043D\u044C. \n        \u0412\u0440\u0430\u043D\u0446\u0456 \u043F\u0440\u0438\u0432\u043E\u0434\u044F\u0442\u044C \u043D\u0430 \u044F\u0440\u043C\u0430\u0440\u043E\u043A, \u043D\u0430 \u0447\u043E\u0442\u0438\u0440\u044C\u043E\u0445. \u0423\u0434\u0435\u043D\u044C \u0432\u0438\u0441\u0442\u0443\u043F\u0430\u0454, \n        \u0442\u0440\u044E\u043A\u0438 \u043F\u043E\u043A\u0430\u0437\u0443\u0454, \u043D\u0430 \u0437\u0430\u0434\u043D\u0456\u0445 \u043D\u043E\u0433\u0430\u0445 \u0445\u043E\u0434\u0438\u0442\u044C. \u0410 \u0432\u0432\u0435\u0447\u0435\u0440\u0456 \u043F\u0430\u0441\u0435\u0442\u044C\u0441\u044F \u0437\u0442\u0440\u0438\u043D\u043E\u0436\u0435\u043D\u0438\u0439.\n        \u0417-\u0442\u0440\u0438-\u043D\u043E\u0436\u0435\u043D\u0438\u0439.\n\n        \u2014 \u0417\u043D\u043E\u0432 \u043D\u0456!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u041F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0430 \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C: \u043B\u044E\u0434\u0438\u043D\u0430.\n        \n        \u2014 \u0429\u043E \u0436 \u0432\u0438, \u0434\u044F\u0434\u044C\u043A\u0443,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u043F\u0430\u0440\u0443\u0431\u043E\u043A\xA0\u2014 \u0414\u0435 \u0432\u0438 \u0431\u0430\u0447\u0438\u043B\u0438 \u043B\u044E\u0434\u0435\u0439 \u0437 \u0447\u043E\u0442\u0438\u0440\u043C\u0430\n        \u043D\u043E\u0433\u0430\u043C\u0438?\n            \n        [\u0414\u0430\u043B\u0456](#\u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430_\u043B\u044E\u0434\u0438\u043D\u0430)\n    ";},_this.перевертень=function(){return"\n        \u2014 \u0426\u044E \u044F \u0437\u043D\u0430\u044E!\xA0\u2014 \u043A\u0430\u0436\u0435 \u044E\u043D\u0430\u043A.\xA0\u2014 \u0426\u0435 \u043F\u0435\u0440\u0435\u0432\u0435\u0440\u0442\u0435\u043D\u044C. \u0412\u0440\u0430\u043D\u0446\u0456 \u0432 \u0442\u0432\u0430\u0440\u0438\u043D\u043D\u0456\u0439 \u043F\u043E\u0434\u043E\u0431\u0456,\n        \u043D\u0430 \u0447\u043E\u0442\u0438\u0440\u044C\u043E\u0445. \u0423\u0434\u0435\u043D\u044C \u0432 \u043B\u044E\u0434\u0441\u044C\u043A\u0456\u0439\xA0\u2014 \u043D\u0430 \u0434\u0432\u043E\u0445.\n        \n        \u2014 \u0410 \u0432\u0432\u0435\u0447\u0435\u0440\u0456?\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u041D\u0430 \u0442\u0440\u044C\u043E\u0445\xA0\u2014 \u0446\u0435 \u044F\u043A?\n        \n        \u0425\u043B\u043E\u043F\u0435\u0446\u044C \u0437\u043D\u0438\u0437\u0443\u0454 \u043F\u043B\u0435\u0447\u0438\u043C\u0430.\n        \n        \u2014 \u0425\u0442\u043E \u0457\u0445, \u043F\u0435\u0440\u0435\u0432\u0435\u0440\u0442\u043D\u0456\u0432, \u0440\u043E\u0437\u0431\u0435\u0440\u0435. \u041C\u043E\u0436\u0435, \u043F\u0435\u0440\u0435\u043A\u0438\u0434\u0430\u0432\u0441\u044F \u0439 \u043D\u0435 \u0434\u043E \u043A\u0456\u043D\u0446\u044F\n        \u043F\u0435\u0440\u0435\u043A\u0438\u043D\u0443\u0432\u0441\u044F. \u0410, \u043C\u043E\u0436\u0435, \u043D\u043E\u0433\u0430 \u0432 \u043A\u0430\u043F\u043A\u0430\u043D \u043F\u043E\u043F\u0430\u043B\u0430, \u0456 \u0442\u0435\u043F\u0435\u0440 \u0448\u043A\u0443\u0442\u0438\u043B\u044C\u0433\u0430\u0454.\n            \n        [\u0414\u0430\u043B\u0456](#\u043F\u0435\u0440\u0435\u0432\u0435\u0440\u0442\u0435\u043D\u044C_\u043B\u044E\u0434\u0438\u043D\u0430)\n    ";},_this.перевертень_людина=function(){return"\n        \u2014 \u041D\u0456, \u043D\u0435 \u0442\u0430\u043A!\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u0412\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C \u043D\u0430 \u0437\u0430\u0433\u0430\u0434\u043A\u0443: \"\u043B\u044E\u0434\u0438\u043D\u0430\".\n        \n        \u2014 \u0426\u0435 \u044F\u043A \u043F\u043E\u0434\u0438\u0432\u0438\u0442\u0438\u0441\u044C,\xA0\u2014 \u043A\u0430\u0436\u0435 \u044E\u043D\u0430\u043A.\xA0\u2014 \u042F\u043A \u043B\u044E\u0434\u0438\u043D\u0430 \u043D\u0430\u0432\u0447\u0438\u043B\u0430\u0441\u044C \u0443 \u0437\u0432\u0456\u0440\u0430\n        \u043F\u0435\u0440\u0435\u043A\u0438\u0434\u0430\u0442\u0438\u0441\u044C\xA0\u2014 \u0442\u043E\u0434\u0456 \u043B\u044E\u0434\u0438\u043D\u0430. \u0410\u043B\u0435 \u044F \u0437\u043D\u0430\u0432\u0430\u0432 \u043E\u0434\u043D\u043E\u0433\u043E \u043B\u0438\u0441\u0430, \u0449\u043E \u043D\u0430\u0432\u0447\u0438\u0432\u0441\u044F\n        \u0440\u043E\u0431\u0438\u0442\u0438\u0441\u044C \u043B\u044E\u0434\u0438\u043D\u043E\u044E. \u0412\u0456\u043D \u0443 \u043D\u0435\u0431\u0435\u0441\u043D\u043E\u043C\u0443 \u043C\u0456\u0441\u0442\u0456 \u043D\u044E\u0445\u0430\u0447\u0435\u043C \u0441\u043B\u0443\u0436\u0438\u0442\u044C.\n        \n        \u2014 \u0422\u0430 \u043D\u0456 \u0436,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \"\u041B\u044E\u0434\u0438\u043D\u0430\"\xA0\u2014 \u0446\u0435 \u0432\u0441\u044F \u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430. \u041D\u0435 \u044F\u043A\u0430\u0441\u044C\n        \u043B\u044E\u0434\u0438\u043D\u0430, \u0430 \u0432\u0437\u0430\u0433\u0430\u043B\u0456.\n        \n        \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u0445\u0438\u0442\u0430\u0454 \u0433\u043E\u043B\u043E\u0432\u043E\u044E.\n        \n        \u2014 \u0422\u0430\u043A\u0435 \u0441\u043A\u0430\u0436\u0435\u0442\u0435! \u042F, \u043E\u0441\u044C\xA0\u2014 \u043B\u044E\u0434\u0438\u043D\u0430, \u0430\u043B\u0435 \u043D\u0430 \u0437\u0432\u0456\u0440\u0430 \u043F\u0435\u0440\u0435\u043A\u0438\u043D\u0443\u0442\u0438\u0441\u044C \u043D\u0435 \u043C\u043E\u0436\u0443.\n        \u0421\u0442\u0430\u0440\u0448\u0456 \u043D\u0435 \u0434\u043E\u0437\u0432\u043E\u043B\u044F\u044E\u0442\u044C.\n            \n        [\u0414\u0430\u043B\u0456](#\u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430_\u043B\u044E\u0434\u0438\u043D\u0430)\n    ";},_this.відгадка_людина=function(){return"\n        \u2014 \u0412\u0438\u0434\u043D\u043E, \u0449\u043E \u0434\u0443\u0440\u043D\u0438\u0439!\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u0421\u043B\u0443\u0445\u0430\u0439: \u0432\u0440\u0430\u043D\u0446\u0456\xA0\u2014 \u0446\u0435 \u043A\u043E\u043B\u0438 \n        \u043B\u044E\u0434\u0438\u043D\u0430 \u0449\u0435 \u043C\u0430\u043B\u0430, \u043F\u043E\u0432\u0437\u0430\u0454 \u043D\u0430 \u0447\u043E\u0442\u0438\u0440\u044C\u043E\u0445...\n        \n        \u0414\u0436\u0443\u0440\u0430 \u0441\u0442\u0443\u043F\u0430\u0454 \u0437\u0430 \u0441\u043F\u0438\u043D\u0443 \u0432\u043E\u0434\u044F\u043D\u0438\u043A\u0430.\n        \n        \u2014 \u0429\u043E \u0436 \u0446\u0435 \u0432\u0438\u0445\u043E\u0434\u0438\u0442\u044C,\xA0\u2014 \u043A\u0430\u0436\u0435.\xA0\u2014 \u0412\u0436\u0435 \u0443 \u0432\u0430\u0448\u0456\u0439 \u0437\u0430\u0433\u0430\u0434\u0446\u0456 \u0439 \u0440\u0430\u043D\u043E\u043A \u043D\u0435 \u0440\u0430\u043D\u043E\u043A,\n        \u0456 \u043D\u0435 \u0445\u043E\u0434\u0438\u0442\u044C, \u0430 \u043F\u043E\u0432\u0437\u0430\u0454. \u041C\u043E\u044F \u0432\u0456\u0434\u043F\u043E\u0432\u0456\u0434\u044C \u0431\u0443\u043B\u0430 \u0442\u043E\u0447\u043D\u0456\u0448\u043E\u044E!\n        \n        \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u043F\u043E\u0432\u0435\u0440\u0442\u0430\u0454\u0442\u044C\u0441\u044F \u0437\u0430 \u043F\u0430\u0440\u0443\u0431\u043A\u043E\u043C.\n        \n        \u2014 \u0406 \u0432\u0441\u0435 \u0436,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u0456\u043D,\xA0\u2014 \u041F\u0440\u0430\u0432\u0438\u043B\u044C\u043D\u0430 \u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430: \"\u043B\u044E\u0434\u0438\u043D\u0430\".\n        \n        \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u043F\u0440\u043E\u0431\u0443\u0454 \u043D\u043E\u0433\u043E\u044E \u0432\u043E\u0434\u0443.\n        \n        \u2014 \u0412\u0456\u0440\u043D\u0430\xA0\u2014 \u0446\u0435 \u044F\u043A\u0449\u043E \u0437\u0430\u0433\u0430\u0434\u043A\u0443 \u043F\u0435\u0440\u0435\u043A\u0440\u0443\u0447\u0443\u0432\u0430\u0442\u0438! \u0412\u0438 \u0449\u0435 \u0441\u043A\u0430\u0436\u0456\u0442\u044C,\n        \u0449\u043E \"\u0442\u0440\u0438\"\xA0\u2014 \u0446\u0435 \"\u0434\u0432\u0430\"!\n            \n        [\u0414\u0430\u043B\u0456](#\u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430_\u043B\u044E\u0434\u0438\u043D\u04301)\n    ";},_this.відгадка_людина1=function(){return"\n        \u2014 \u041D\u0435 \u0441\u043A\u0430\u0436\u0443,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0432\u043E\u0434\u044F\u043D\u0438\u043A.\xA0\u2014 \u0417 \u0447\u043E\u0433\u043E \u0446\u0435 \"\u0442\u0440\u0438\" \u043E\u0437\u043D\u0430\u0447\u0430\u0442\u0438\u043C\u0435 \"\u0434\u0432\u0430\"?..\n        \n        \u0414\u0436\u0443\u0440\u0430 \u043F\u0440\u043E\u0431\u0443\u0454 \u0441\u0442\u0443\u043F\u0438\u0442\u0438 \u043D\u0430 \u043A\u0430\u043C\u0456\u043D\u044C, \u0437 \u044F\u043A\u043E\u0433\u043E \u043F\u043E\u0447\u0438\u043D\u0430\u0454\u0442\u044C\u0441\u044F \u0431\u0440\u0456\u0434.\n        \n        \u2014 \u0410 \u043E\u0442 \u0441\u043A\u0430\u0436\u0456\u0442\u044C,\xA0\u2014 \u043A\u0430\u0436\u0435,\xA0\u2014 \u0434\u044F\u0434\u044C\u043A\u0443: \u0443\u0432\u0435\u0447\u0435\u0440\u0456 \u043B\u044E\u0434\u0438\u043D\u0430 \u043D\u0430 \u0434\u0432\u043E\u0445 \u0445\u043E\u0434\u0438\u0442\u044C, \u0447\u0438 \u043D\u0430\n        \u0442\u0440\u044C\u043E\u0445?\n        \n        \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u0441\u043A\u043E\u0441\u0430 \u043F\u043E\u0433\u043B\u044F\u0434\u0430\u0454 \u043D\u0430 \u0434\u0436\u0443\u0440\u0443.\n        \n        \u2014 \u041D\u0430 \u0442\u0440\u044C\u043E\u0445,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454.\xA0\u2014 \u0425\u043E\u0434\u0438\u0442\u044C \u043D\u0430 \u0434\u0432\u043E\u0445 \u043D\u043E\u0433\u0430\u0445, \u043D\u0430 \u0446\u0456\u043F\u043E\u043A \u0441\u043F\u0438\u0440\u0430\u0454\u0442\u044C\u0441\u044F...\n        \n        \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u0441\u0442\u0430\u0454 \u043D\u0430 \u043A\u0430\u043C\u0456\u043D\u044C \u043E\u0431\u043E\u043C\u0430 \u043D\u043E\u0433\u0430\u043C\u0438.\n        \n        \u2014 \u0410\u0433\u0430!\xA0\u0417\u043D\u0430\u0447\u0438\u0442\u044C, \u0442\u0430\u043A\u0438 \u043D\u0430 \u0434\u0432\u043E\u0445 \u0445\u043E\u0434\u0438\u0442\u044C! \u0410 \u0412\u0438 \u043A\u0430\u0437\u0430\u043B\u0438\xA0\u2014 \u043D\u0430 \u0442\u0440\u044C\u043E\u0445.\n            \n        [\u0414\u0430\u043B\u0456](#\u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430_\u043B\u044E\u0434\u0438\u043D\u04302)\n    ";},_this.відгадка_людина2=function(){return"\n        \u2014 \u0422\u043E \u044F\u043A \u044F \u043C\u043E\u0436\u0443 \u0440\u043E\u0437\u0433\u0430\u0434\u0443\u0432\u0430\u0442\u0438 \u0412\u0430\u0448\u0456 \u0437\u0430\u0433\u0430\u0434\u043A\u0438,\xA0\u2014 \u043A\u0430\u0436\u0435 \u0434\u0436\u0443\u0440\u0430,\xA0\u2014 \n        \u043A\u043E\u043B\u0438 \u0432 \u0437\u0430\u0433\u0430\u0434\u0446\u0456\xA0\u2014 \u043E\u0434\u043D\u0435, \u0430 \u0443 \u0432\u0456\u0434\u0433\u0430\u0434\u0446\u0456\xA0\u2014 \u0456\u043D\u0448\u0435. \u0426\u044E \u0437\u0430\u0433\u0430\u0434\u043A\u0443 \u0442\u0440\u0435\u0431\u0430 \u043F\u043E-\u0456\u043D\u0448\u043E\u043C\u0443\n        \u043A\u0430\u0437\u0430\u0442\u0438...\n        \n        \u0425\u043B\u043E\u043F\u0435\u0446\u044C \u043F\u0440\u0438\u043A\u0438\u0434\u0430\u0454 \u043E\u043A\u043E\u043C \u043D\u0430 \u0432\u0456\u0434\u0441\u0442\u0430\u043D\u044C \u0434\u043E \u0456\u043D\u0448\u043E\u0433\u043E \u0431\u0435\u0440\u0435\u0433\u0430.\n        \n        \u2014 \u041D\u0430\u043F\u0440\u0438\u043A\u043B\u0430\u0434,\xA0\u2014 \u0434\u043E\u0434\u0430\u0454 \u0432\u0456\u043D. - \"\u0425\u0442\u043E \u043D\u0430 \u043F\u043E\u0447\u0430\u0442\u043A\u0443 \u0436\u0438\u0442\u0442\u044F \u043F\u043E\u0432\u0437\u0430\u0454 \n        \u043D\u0430 \u0447\u043E\u0442\u0438\u0440\u044C\u043E\u0445, \u0443 \u0437\u0440\u0456\u043B\u043E\u043C\u0443 \u0432\u0456\u0446\u0456 \u0445\u043E\u0434\u0438\u0442\u044C \u043D\u0430 \u0434\u0432\u043E\u0445, \u0430 \u0432 \u0441\u0442\u0430\u0440\u043E\u0441\u0442\u0456 \u0445\u043E\u0434\u0438\u0442\u044C \u043D\u0430\n        \u0434\u0432\u043E\u0445 \u0456 \u0441\u043F\u0438\u0440\u0430\u0454\u0442\u044C\u0441\u044F \u043D\u0430 \u0446\u0456\u043F\u043E\u043A?\"\n        \n        \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u0441\u0443\u043F\u0438\u0442\u044C \u0431\u0440\u043E\u0432\u0438.\n        \n        \u2014 \u0426\u0435 \u0436 \u043D\u0435\u0446\u0456\u043A\u0430\u0432\u0430 \u0437\u0430\u0433\u0430\u0434\u043A\u0430 \u0431\u0443\u0434\u0435,\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0432\u0456\u043D.\n        \n        \u2014 \u0406 \u044F \u043F\u0440\u043E \u0442\u0435!\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0434\u0436\u0443\u0440\u0430.\xA0\u2014 \u0414\u0430\u0439\u0442\u0435-\u043D\u043E, \u044F \u0446\u0456\u043A\u0430\u0432\u0456\u0448\u0443 \u0437\u0430\u0433\u0430\u0434\u0430\u044E...\n            \n        [\u0414\u0430\u043B\u0456](#\u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430_\u043B\u044E\u0434\u0438\u043D\u04303)\n    ";},_this.відгадка_людина3=function(){return"\n        \u041F\u0430\u0440\u0443\u0431\u043E\u043A \u0441\u0442\u0443\u043F\u0430\u0454 \u0449\u0435 \u043A\u0440\u043E\u043A \u0434\u043E \u043F\u0440\u043E\u0442\u0438\u043B\u0435\u0436\u043D\u043E\u0433\u043E \u0431\u0435\u0440\u0435\u0433\u0430.\n    \n        \u2014 \u0429\u043E \u0446\u0435 \u0442\u0430\u043A\u0435,\xA0\u2014 \u043A\u0430\u0436\u0435 \u0434\u0436\u0443\u0440\u0430,\xA0\u2014 \u0417\u0435\u043B\u0435\u043D\u0435, \u0430 \u043F\u043E\u0442\u0456\u043C\xA0\u2014 \u0445\u0440\u0443\u0441\u044C\xA0\u2014 \u0456 \u0447\u0435\u0440\u0432\u043E\u043D\u0435?\n        \n        \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u0442\u0440\u0435 \u043B\u043E\u0431\u0430, \u043E\u0447\u0456 \u0432\u0438\u0442\u0440\u0456\u0449\u0438\u0432, \u0434\u043C\u0435\u0442\u044C\u0441\u044F.\n        \n        \u2014 \u041A\u0430\u0432\u0443\u043D?\n        \n        \u2014 \u041D\u0456.\n        \n        \u2014 \u041F\u043E\u0440\u0456\u0447\u043A\u0430?\n        \n        \u2014 \u041D\u0456-\u043D\u0456.\n             \n        [\u0414\u0430\u043B\u0456](#\u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430_\u043B\u044E\u0434\u0438\u043D\u04304)\n    ";},_this.відгадка_людина4=function(){return"     \n        \u0414\u0436\u0443\u0440\u0430 \u0449\u0435 \u0442\u0440\u043E\u0445\u0438 \u0441\u0442\u0443\u043F\u0430\u0454.\n        \n        \u2014 \u0413\u0430\u0440\u0430\u0437\u0434,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A. - \u041A\u0430\u0436\u0438, \u0449\u043E \u0446\u0435.\n        \n        \u2014 \u041E\u0441\u044C \u0436\u0435 \u0432\u043E\u043D\u0430, \u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430!\n       \n        \u0414\u0436\u0443\u0440\u0430 \u043D\u0430\u0445\u0438\u043B\u044F\u0454\u0442\u044C\u0441\u044F \u0434\u043E \u0432\u043E\u0434\u0438. \u041F\u0456\u0434\u0432\u043E\u0434\u0438\u0442\u044C\u0441\u044F, \u0447\u0443\u0445\u0430\u0454 \u043F\u043E\u0442\u0438\u043B\u0438\u0446\u044E, \u043F\u043E\u0433\u043B\u044F\u0434 \u0441\u043D\u0443\u0454\n        \u043F\u043E \u0432\u043E\u0434\u0456. \u042E\u043D\u0430\u043A \u0441\u0442\u0440\u0438\u0431\u0430\u0454 \u0434\u0430\u043B\u0456 \u0431\u0440\u043E\u0434\u043E\u043C.\n        \n        \u2014 \u041D\u0456, \u043E\u0441\u044C! \u0425\u043E\u0447\u0430... \u041E\u0441\u044C!\n            \n        [\u0414\u0430\u043B\u0456](#\u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430_\u043B\u044E\u0434\u0438\u043D\u04305)\n    ";},_this.відгадка_людина5=function(){return"     \n        \u0425\u043B\u043E\u043F\u0435\u0446\u044C \u043F\u0456\u0434\u0432\u043E\u0434\u0438\u0442\u044C\u0441\u044F, \u0434\u043E\u043B\u043E\u043D\u0456 \u0441\u0442\u0438\u0441\u043A\u0430\u044E\u0442\u044C \u0436\u0430\u0431\u0443.\n        \n        \u2014 \u041E\u0441\u044C \u0432\u043E\u043D\u0430, \u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430\xA0\u2014 \u0437\u0435\u043B\u0435\u043D\u0430 \u0436\u0430\u0431\u0430!\n        \n        \u0414\u0436\u0443\u0440\u0430 \u0440\u043E\u0437\u043A\u0440\u0438\u0432\u0430\u0454 \u0440\u0443\u043A\u0438, \u0436\u0430\u0431\u0430 \u0441\u0442\u0440\u0438\u0431\u0430\u0454 \u0433\u0435\u0442\u044C \u0443 \u0432\u043E\u0434\u0443. \u0412\u043E\u0434\u044F\u043D\u0438\u043A \u043F\u0440\u043E\u0432\u043E\u0434\u0436\u0430\u0454\n        \u0457\u0457 \u043F\u043E\u0433\u043B\u044F\u0434\u043E\u043C. \u0414\u0436\u0443\u0440\u0430 \u0441\u0442\u0443\u043F\u0430\u0454 \u0434\u0430\u043B\u0456.\n        \n        \u2014 \u0406 \u0441\u043F\u0440\u0430\u0432\u0434\u0456, \u0437\u0435\u043B\u0435\u043D\u0430!\xA0\u2014 \u043F\u0440\u043E\u043C\u043E\u0432\u043B\u044F\u0454 \u0432\u043E\u0434\u044F\u043D\u0438\u043A. - \u0421\u0442\u0440\u0438\u0432\u0430\u0439!..\n            \n        [\u0414\u0430\u043B\u0456](#\u0432\u0456\u0434\u0433\u0430\u0434\u043A\u0430_\u043B\u044E\u0434\u0438\u043D\u04306)\n    ";},_this.відгадка_людина6=function(){return"\n        \u2014 \u0421\u0442\u0440\u0438\u0432\u0430\u0439!\xA0\u2014 \u0433\u0443\u043A\u0430\u0454 \u0432\u043E\u0434\u044F\u043D\u0438\u043A \u0434\u0436\u0443\u0440\u0456.\xA0\u2014 \u0410 \u0447\u043E\u043C\u0443 \u0447\u0435\u0440\u0432\u043E\u043D\u0430?!\n        \n        \u2014 \u0413\u0430?\xA0\u2014 \u043A\u0430\u0436\u0435 \u044E\u043D\u0430\u043A.\n        \n        \u0412\u0456\u043D \u043E\u0431\u0435\u0440\u0442\u0430\u0454\u0442\u044C\u0441\u044F, \u043D\u043E\u0433\u0430 \u043E\u043F\u0443\u0441\u043A\u0430\u0454\u0442\u044C\u0441\u044F \u043D\u0430 \u043D\u0430\u0441\u0442\u0443\u043F\u043D\u0438\u0439 \u043A\u0430\u043C\u0456\u043D\u044C.\n        \n        \u2014 \u041A\u0430\u0436\u0443,\xA0\u2014 \u0433\u043E\u0432\u043E\u0440\u0438\u0442\u044C \u0432\u043E\u0434\u044F\u043D\u0438\u043A, - \u0436\u0430\u0431\u0430 \u0437\u0435\u043B\u0435\u043D\u0430. \n        \u0410 \u0447\u043E\u043C\u0443 \u0432\u043E\u043D\u0430 \"\u0445\u0440\u0443\u0441\u044C\xA0\u2014 \u0456 \u0447\u0435\u0440\u0432\u043E\u043D\u0430\"?!\n        \n        \u042E\u043D\u0430\u043A \u0441\u0442\u0440\u0438\u0431\u0430\u0454 \u043D\u0430 \u043F\u0440\u043E\u0442\u0438\u043B\u0435\u0436\u043D\u0438\u0439 \u0431\u0435\u0440\u0435\u0433.\n        \n        \u2014 \u0411\u043E \u0443 \u043C\u043B\u0438\u043D \u043F\u043E\u0442\u0440\u0430\u043F\u0438\u043B\u0430. \u0411\u0443\u0432\u0430\u0439\u0442\u0435 \u0437\u0434\u043E\u0440\u043E\u0432\u0456, \u0434\u044F\u0434\u044C\u043A\u0443!\n        \n        \u0420\u0443\u0448\u0438\u0432 \u0434\u0436\u0443\u0440\u0430 \u0434\u0430\u043B\u0456, \u0456 \u0432\u0436\u0435 \u043F\u0456\u0434 \u0440\u0430\u043D\u043E\u043A \u0431\u0443\u0432 \u043D\u0430 \u0421\u0456\u0447\u0456.\n        \n        \u041A\u0406\u041D\u0415\u0426\u042C\n    ";},_temp),_possibleConstructorReturn(_this,_ret);}_createClass(Ford,[{key:"goTo",value:function goTo(name,skipCount){if(this[name]===undefined){this.set('answer',name);_get(Ford.prototype.__proto__||Object.getPrototypeOf(Ford.prototype),"goTo",this).call(this,'checkAnswer',skipCount);}else{_get(Ford.prototype.__proto__||Object.getPrototypeOf(Ford.prototype),"goTo",this).call(this,name,skipCount);}}}]);return Ford;}(__WEBPACK_IMPORTED_MODULE_0__framework_quest__["a" /* MDQuest */]);
 
 /***/ }),
-/* 173 */
+/* 178 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14687,13 +14917,13 @@ var _createClass=function(){function defineProperties(target,props){for(var i=0;
      * @returns QuestInterface*/value:function getQuest(){}}]);function Controller(){_classCallCheck(this,Controller);var _this=_possibleConstructorReturn(this,(Controller.__proto__||Object.getPrototypeOf(Controller)).call(this));_this.quest=_this.getQuest();return _this;}_createClass(Controller,[{key:'render',value:function render(){this.updateLocName();return this.getLocation();}},{key:'getLocation',value:function getLocation(){return this.quest.getLocation();}},{key:'updateLocName',value:function updateLocName(){if(this.props.location.state!==undefined){var locName=this.props.location.state.locName;this.quest.goTo(locName);}}}]);return Controller;}(__WEBPACK_IMPORTED_MODULE_0_react__["Component"]);
 
 /***/ }),
-/* 174 */
+/* 179 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 175 */
+/* 180 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14731,4 +14961,4 @@ registerValidSW(swUrl);}}).catch(function(){console.log('No internet connection 
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.e0703307.js.map
+//# sourceMappingURL=main.f2c64b7f.js.map
