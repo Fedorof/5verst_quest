@@ -3,6 +3,10 @@ import ReactMarkdown from 'react-markdown';
 import Store from "es6-store/src/Store";
 import dedent from "dedent";
 import {Link} from "react-router-dom";
+import IoHome from "react-icons/lib/io/home";
+import IoRefresh from "react-icons/lib/io/refresh";
+import IoPlusCircled from "react-icons/lib/io/plus-circled";
+import IoMinusCircled from "react-icons/lib/io/minus-circled";
 
 
 class QuestInterface {
@@ -33,11 +37,12 @@ class QuestInterface {
         }
     }
 
-    linkRenderer(props) {
+    link(props) {
         if (props.href[0] === '#') {
             return <Link to={{
                 pathname: this.basePath,
-                state: {locName: props.href.slice(1)}
+                state: {locName: props.href.slice(1)},
+                title: props.title
             }}>{ props.children[0] }</Link>
         } else {
             return <a href={ props.href } target="_blank">{ props.children[0] }</a>
@@ -45,7 +50,7 @@ class QuestInterface {
     }
 
     md(source) {
-        return <ReactMarkdown source={ dedent(source) } renderers={{ link: this.linkRenderer.bind(this) }}/>
+        return <ReactMarkdown source={ dedent(source) } renderers={{ link: this.link.bind(this) }}/>
     }
 
     safeMd(source) {
@@ -106,9 +111,10 @@ export class QuestWord extends QuestInterface {
             loc = this.err404()
         }
 
-        let zoom = `scale(${ this.store.get('__zoom', 1) })`;
-        let rootStyle = document.getElementsByTagName('body')[0].style;
-        rootStyle.transform = zoom;
+        let zoom = this.store.get('__zoom', 1);
+        let rootStyle = document.getElementById('root').style;
+        rootStyle.transform = `scale(${ zoom })`;
+        rootStyle.width = (100 / zoom).toString() + '%';
 
         return (
             <div className={`contents ${curQuest} prev-${prevLocQuest}`}>
@@ -122,13 +128,23 @@ export class QuestWord extends QuestInterface {
         )
     }
 
-    getToolbar(main = 'Main', reset='Reset') {
-        return `${
-            this.startQuestName !== this.store.get('__cur_quest', this.startQuestName)
-                ? `[${ main }](#__main) &nbsp;`
-                : ""
-            }
-        [A+](#__font_up) &nbsp;[A-](#__font_down) &nbsp;[${ reset }](#__reset)`;
+    getToolbar(main = 'Main', reset='Reset', zoomUp='Zoom Up', zoomDown='Zoom Down') {
+        let homeLink;
+        let resetLink = this.link({'href': '#__reset', 'title': reset, 'children': [<IoRefresh/>]});
+        let zoomUpLink = this.link({'href': '#__font_up', 'title': zoomUp, 'children': [<IoPlusCircled/>]});
+        let zoomDownLink = this.link({'href': '#__font_down', 'title': zoomDown, 'children': [<IoMinusCircled/>]});
+
+        if (this.startQuestName === this.store.get('__cur_quest', this.startQuestName)) {
+            homeLink = '';
+        } else {
+            homeLink = this.link({'href': '#__main', 'title': main, 'children': [<IoHome/>]})
+        }
+
+        return (
+            <span>
+                { homeLink } { zoomUpLink } {zoomDownLink} { resetLink }
+            </span>
+        );
     }
 
     reset() {

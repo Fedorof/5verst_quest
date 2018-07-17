@@ -9,6 +9,10 @@ html, body, #root {
   font-family: 'Caveat', cursive;
 }
 
+#root {
+  transform-origin: top left;
+}
+
 p {
   margin: 0;
 }
