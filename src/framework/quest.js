@@ -59,6 +59,10 @@ class QuestInterface {
 
 
 export class QuestWord extends QuestInterface {
+    maxZoom = 1.5;
+    minZoom = 0.3;
+    zoomStep = 0.1;
+
     /** @abstract
      * @returns string */
     get startQuestName() {
@@ -102,6 +106,10 @@ export class QuestWord extends QuestInterface {
             loc = this.err404()
         }
 
+        let zoom = `scale(${ this.store.get('__zoom', 1) })`;
+        let rootStyle = document.getElementsByTagName('body')[0].style;
+        rootStyle.transform = zoom;
+
         return (
             <div className={`contents ${curQuest} prev-${prevLocQuest}`}>
                 <div className="toolbar">
@@ -114,13 +122,13 @@ export class QuestWord extends QuestInterface {
         )
     }
 
-    getToolbar() {
+    getToolbar(main = 'Main', reset='Reset') {
         return `${
             this.startQuestName !== this.store.get('__cur_quest', this.startQuestName)
-                ? "[Main](#__main)"
+                ? `[${ main }](#__main) &nbsp;`
                 : ""
-        }
-        [Reset](#__reset)`;
+            }
+        [A+](#__font_up) &nbsp;[A-](#__font_down) &nbsp;[${ reset }](#__reset)`;
     }
 
     reset() {
@@ -151,6 +159,14 @@ export class QuestWord extends QuestInterface {
         }
         if (name === '__main') {
             this.goToMain();
+            return
+        }
+        if (name === '__font_up') {
+            this.changeFont();
+            return
+        }
+        if (name === '__font_down') {
+            this.changeFont(false);
             return
         }
 
@@ -189,6 +205,18 @@ export class QuestWord extends QuestInterface {
         `)
     }
 
+    changeFont(up=true) {
+        let zoom = this.store.get('__zoom', 1);
+
+        zoom = zoom + (up? this.zoomStep: -this.zoomStep);
+        this.store.set(
+            '__zoom',
+            Math.max(
+                this.minZoom,
+                Math.min(zoom, this.maxZoom)
+            )
+        );
+    }
 }
 
 

@@ -26,11 +26,6 @@ export class Quest extends QuestWord {
     }
 
     getToolbar() {
-        return `${
-            this.startQuestName !== this.store.get('__cur_quest', this.startQuestName)
-                ? "[На головну](#__main)"
-                : ""
-            } &nbsp;
-        [Скинути](#__reset)`;
+        return super.getToolbar("На головну", "Скинути")
     }
 }
