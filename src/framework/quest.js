@@ -142,7 +142,9 @@ export class QuestWord extends QuestInterface {
 
         return (
             <span>
-                { homeLink } { zoomUpLink } {zoomDownLink} { resetLink }
+                <span className='left'>{ zoomUpLink } {zoomDownLink}</span>
+                <span>&nbsp;</span>
+                <span className='right'>{ homeLink } { resetLink }</span>
             </span>
         );
     }

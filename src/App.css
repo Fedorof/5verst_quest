@@ -84,12 +84,20 @@ a:active {
   padding: 5px 5px 0;
 }
 
-.toolbar p {
-  padding-bottom: 5px
+.toolbar span {
+  padding-bottom: 3em
+}
+
+.right{
+  float:right;
+}
+
+.left{
+  float:left;
 }
 
 .location {
-  margin: auto;
+  margin: 10px;
   text-align: center;
   max-width: 40em;
   font-size: 24pt;
