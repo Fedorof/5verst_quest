@@ -265,10 +265,14 @@ export class MDQuest extends QuestInterface {
         return this.safeMd(loc);
     }
 
-    switch(locations) {
+    switch(locations, name) {
+        if (name === undefined) {
+            let locName = this.store.get('__location', '');
+            name = "count_"+locName;
+        }
+
         let locName;
-        let name = this.store.get('__location', '');
-        let num = this.store.get("count_"+name, 1) - 1;
+        let num = this.store.get(name, 1) - 1;
 
         if (num < locations.length) {
             locName = locations[num];

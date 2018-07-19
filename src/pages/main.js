@@ -28,4 +28,13 @@ export class Quest extends QuestWord {
     getToolbar() {
         return super.getToolbar("На головну", "Скинути")
     }
+
+    goTo(name, skipCount) {
+        if (name === 'intro:вступ') {
+            let zoom = this.store.get('__zoom', 1);
+            this.reset();
+            this.store.set('__zoom', zoom);
+        }
+        super.goTo(name, skipCount)
+    }
 }
