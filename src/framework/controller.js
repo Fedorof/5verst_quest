@@ -10,6 +10,7 @@ export class Controller extends Component {
     constructor() {
         super();
         this.quest = this.getQuest();
+        this.onKeyDown = this.onKeyDown.bind(this);
     }
 
     render() {
@@ -26,5 +27,17 @@ export class Controller extends Component {
             let locName = this.props.location.state.locName;
             this.quest.goTo(locName);
         }
+    };
+
+    onKeyDown(event){
+        if(event.keyCode === 27 && window.origin === 'http://localhost:3000') {
+            this.quest.goTo(this.quest.startQuestName + ':debug');
+        }
+    }
+    componentDidMount(){
+        document.addEventListener("keydown", this.onKeyDown, false);
+    }
+    componentWillUnmount(){
+        document.removeEventListener("keydown", this.onKeyDown, false);
     }
 }

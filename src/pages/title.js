@@ -6,6 +6,18 @@ import IoRefresh from "react-icons/lib/io/refresh";
 export class Title extends MDQuest {
     startLoc = 'main';
 
+    debug = () => {
+        this.store.set("статус_домовик", 2);
+        this.store.set("статус_нявка", 3);
+
+        return `
+        [двір](#yard:двір)
+        [ліс](#forest:ліс0)
+        [доріжка](#road:доріжка3)
+        [брід](#ford:брід0)
+        `
+    };
+
     main = () => {
         let resumeLink = "";
         let resumeLoc = this.gget('__resume_loc', null);
@@ -21,7 +33,7 @@ export class Title extends MDQuest {
                 <div className="title-name"><b>Лиха Година</b></div>
                 <div className="buttons">
                     <div>
-                        { this.md( "[Почати](#intro:вступ)" ) }
+                        { this.md( `[Почати${ resumeLink? " наново": "" }](#intro:вступ)` ) }
                     </div>
                     { resumeLink }
                     <div>
@@ -46,7 +58,6 @@ export class Title extends MDQuest {
                 </div>
             </div>);
     };
-
 
 
     поради = () => (<span>`
