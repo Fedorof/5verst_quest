@@ -54,7 +54,7 @@ a:active {
 }
 
 .buttons {
-  min-height: calc(100vh - 12em);
+  min-height: calc(100vh - 25rem);
 }
 
 .license {
@@ -105,4 +105,8 @@ a:active {
 
 .toolbar a {
   border: 2px;
+}
+
+.share {
+  font-size: 14pt;
 }

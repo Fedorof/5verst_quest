@@ -1,6 +1,7 @@
 import React from "react";
 import {MDQuest} from "../framework/quest";
 import IoRefresh from "react-icons/lib/io/refresh";
+import {share} from "./common";
 
 
 export class Title extends MDQuest {
@@ -45,6 +46,8 @@ export class Title extends MDQuest {
                     <div>
                         { this.md( "[Примітки (Спойлери!)](#примітки)" ) }
                     </div>
+                    <div>&nbsp;</div>
+                    { share() }
                 </div>
                 <div className="license">
                     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">

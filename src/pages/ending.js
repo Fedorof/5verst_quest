@@ -1,28 +1,38 @@
 import React from "react";
 import {MDQuest} from "../framework/quest";
-import IoSocialFacebook from "react-icons/lib/io/social-facebook";
-
-const goodEndings = new Set(['puzzle', 'let_go', 'ford']);
+import {share} from "./common";
 
 
 export class Ending extends MDQuest {
     startLoc = "frog";
 
     getLocation() {
-        let loc = super.getLocation();
-
-        if (goodEndings.has(this.get('__location'))) {
-            loc = <div>{loc} { this.footer() }</div>
+        let locName = this.get('__location');
+        switch (locName) {
+            case 'puzzle':
+                return this.getLocationWithShareButton(
+                    'Мені вдалося відгадати всі загадки в інтерактивному оповіданні "Лиха Година"'
+                );
+            case 'let_go':
+                return this.getLocationWithShareButton(
+                    'Мені вдалося домовитись - і пройти інтерактивне оповідання "Лиха Година"'
+                );
+            case 'ford':
+                return this.getLocationWithShareButton(
+                    'Мені вдалося не відгадати жодної загадки, і все одно пройти інтерактивне оповідання "Лиха Година"'
+                );
+            default:
+                return super.getLocation();
         }
-        return loc;
+
     }
 
-    footer = () => (
-        <a href={ 'https://www.facebook.com/sharer/sharer.php?u=' + window.location.href}
-           target="_blank">
-            Поділитися <IoSocialFacebook/>
-        </a>
-    );
+    getLocationWithShareButton(text) {
+        return <div>
+            { super.getLocation() }
+            { share(text, 'Поділитися перемогою') }
+        </div>;
+    }
 
     parsley = () => `
         Старий козак супить брови — закороткою вийшла історія.
