@@ -15,7 +15,7 @@ export class Ending extends MDQuest {
                 );
             case 'let_go':
                 return this.getLocationWithShareButton(
-                    'Мені вдалося домовитись - і пройти інтерактивне оповідання "Лиха Година"'
+                    'Вищі сили допомогли мені пройти інтерактивне оповідання "Лиха Година"'
                 );
             case 'ford':
                 return this.getLocationWithShareButton(
