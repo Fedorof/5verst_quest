@@ -51,7 +51,7 @@ export class Title extends MDQuest {
                 </div>
                 <div className="license">
                     <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
-                        <img alt="Ліцензія Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+                        <img alt="Ліцензія Creative Commons" src="cc-by-sa.png" />
                     </a>
                     <br />
                     Цей твір ліцензовано на умовах&nbsp;
