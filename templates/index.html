@@ -19,7 +19,7 @@
         FBInstant.initializeAsync().then(function () {
             function loadScript() {
                 return new Promise(function (resolve, reject) {
-                    var s;
+                    let s;
                     s = document.createElement('script');
                     s.src = "static/js/${js_file}";
                     s.onload = resolve;
