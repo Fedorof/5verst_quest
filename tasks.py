@@ -23,6 +23,9 @@ ARCHIVE = ROOT / 'build.zip'
 
 @task
 def build(ctx):
+    if APP_ID is None:
+        sys.exit(f'error: {APP_ID_VAR_NAME} is not set')
+
     ctx.run('yarn build', warn=True)
 
     files = {}
@@ -40,6 +43,7 @@ def build(ctx):
             template.substitute(
                 css_file=files['.css'],
                 js_file=files['.js'],
+                app_id=APP_ID,
             )
         )
 
@@ -63,3 +67,11 @@ def deploy(ctx):
                       comment='Graph API upload'),
         )
     print(resp.status_code, resp.text)
+    if resp.status_code == 200:
+        print(f'Promote the build: https://developers.facebook.com/apps/{APP_ID}/instant-games/hosting/')
+        print(f'Check the game: https://developers.facebook.com/apps/{APP_ID}/app-details/details/')
+
+
+@task(build, deploy)
+def release(ctx):
+    """Build and deploy the code"""
