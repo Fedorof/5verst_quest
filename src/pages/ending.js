@@ -1,6 +1,6 @@
 import React from "react";
 import {MDQuest} from "../framework/quest";
-import {share} from "./common";
+import {isFB, share} from "./common";
 
 
 export class Ending extends MDQuest {
@@ -11,20 +11,22 @@ export class Ending extends MDQuest {
         switch (locName) {
             case 'puzzle':
                 return this.getLocationWithShareButton(
-                    'Мені вдалося відгадати всі загадки в інтерактивному оповіданні "Лиха Година"'
+                    'Мені вдалося відгадати всі загадки '
+                    + (isFB()? '\nі дістатися фіналу історії.': 'в інтерактивному оповіданні "Лиха Година"')
                 );
             case 'let_go':
                 return this.getLocationWithShareButton(
-                    'Вищі сили допомогли мені пройти інтерактивне оповідання "Лиха Година"'
+                    'Вищі сили допомогли мені '
+                    + (isFB()? '\nпройти цю історію до кінця.': 'пройти інтерактивне оповідання "Лиха Година"')
                 );
             case 'ford':
                 return this.getLocationWithShareButton(
-                    'Мені вдалося не відгадати жодної загадки, і все одно пройти інтерактивне оповідання "Лиха Година"'
+                    'Мені вдалося не відгадати жодної загадки, і все одно '
+                    + (isFB()? '\nдійти до фіналу історії.': 'пройти інтерактивне оповідання "Лиха Година"')
                 );
             default:
                 return super.getLocation();
         }
-
     }
 
     getLocationWithShareButton(text) {

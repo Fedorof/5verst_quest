@@ -57,6 +57,9 @@ def deploy(ctx):
     token = os.environ.get(TOKEN_VAR_NAME)
     if token is None or APP_ID is None:
         sys.exit(f'error: {TOKEN_VAR_NAME}/{APP_ID_VAR_NAME} is not set')
+    if not ARCHIVE.exists():
+        sys.exit(f'error: file {ARCHIVE.relative_to(ROOT)} does not exist, '
+                 f'run "inv build" to create it')
 
     with ARCHIVE.open('rb') as f:
         resp = requests.post(
