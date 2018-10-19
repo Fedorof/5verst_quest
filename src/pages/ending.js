@@ -8,21 +8,20 @@ export class Ending extends MDQuest {
 
     getLocation() {
         let locName = this.get('__location');
+        let n = isFB()? '\n': '';
+
         switch (locName) {
             case 'puzzle':
                 return this.getLocationWithShareButton(
-                    'Мені вдалося відгадати всі загадки '
-                    + (isFB()? '\nі дістатися фіналу історії.': 'в інтерактивному оповіданні "Лиха Година"')
+                    `Мені вдалося відгадати всі загадки ${n}і дістатися фіналу історії.`
                 );
             case 'let_go':
                 return this.getLocationWithShareButton(
-                    'Вищі сили допомогли мені '
-                    + (isFB()? '\nпройти цю історію до кінця.': 'пройти інтерактивне оповідання "Лиха Година"')
+                    `Вищі сили допомогли мені ${n}пройти цю історію до кінця.`
                 );
             case 'ford':
                 return this.getLocationWithShareButton(
-                    'Мені вдалося не відгадати жодної загадки, і все одно '
-                    + (isFB()? '\nдійти до фіналу історії.': 'пройти інтерактивне оповідання "Лиха Година"')
+                    `Мені вдалося не відгадати жодної загадки, і все одно ${n}дійти до кінця в цій історії.`
                 );
             default:
                 return super.getLocation();
