@@ -43,7 +43,6 @@ def build(ctx):
             template.substitute(
                 css_file=files['.css'],
                 js_file=files['.js'],
-                app_id=APP_ID,
             )
         )
 
