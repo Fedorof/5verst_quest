@@ -1,6 +1,13 @@
 {
-  "main.css": "static/css/main.422942c1.css",
-  "main.css.map": "static/css/main.422942c1.css.map",
-  "main.js": "static/js/main.e2d77b5b.js",
-  "main.js.map": "static/js/main.e2d77b5b.js.map"
+  "main.css": "/hardway/static/css/main.6828902e.chunk.css",
+  "main.js": "/hardway/static/js/main.3bd8a2b2.chunk.js",
+  "main.js.map": "/hardway/static/js/main.3bd8a2b2.chunk.js.map",
+  "static/js/1.1de2eb30.chunk.js": "/hardway/static/js/1.1de2eb30.chunk.js",
+  "static/js/1.1de2eb30.chunk.js.map": "/hardway/static/js/1.1de2eb30.chunk.js.map",
+  "runtime~main.js": "/hardway/static/js/runtime~main.315982d9.js",
+  "runtime~main.js.map": "/hardway/static/js/runtime~main.315982d9.js.map",
+  "static/css/main.6828902e.chunk.css.map": "/hardway/static/css/main.6828902e.chunk.css.map",
+  "index.html": "/hardway/index.html",
+  "precache-manifest.a3d547a381d11389263f3a1b88517fbf.js": "/hardway/precache-manifest.a3d547a381d11389263f3a1b88517fbf.js",
+  "service-worker.js": "/hardway/service-worker.js"
 }
