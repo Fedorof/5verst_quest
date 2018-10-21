@@ -6,11 +6,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 You can find the most recent version of development guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 # Publish to GitHub pages
-The minification does not work for "es6-store" package, so `npm` fails to
-build the app.  Workaround is to use `yarn`.  It still fails to minify the
-app, but at least the build passes.
+If you have `invoke` installed (see the next section) simply run
+`inv gh-release`.
 
-Run following commands:
+Alternatively run following commands:
 
 ```
 rm rf ./build

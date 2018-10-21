@@ -45,7 +45,7 @@ class QuestInterface {
                 title: props.title
             }}>{ props.children[0] }</Link>
         } else {
-            return <a href={ props.href } target="_blank">{ props.children[0] }</a>
+            return <a href={ props.href } target="_blank" rel="noopener noreferrer">{ props.children[0] }</a>
         }
     }
 
@@ -71,6 +71,7 @@ export class QuestWord extends QuestInterface {
     /** @abstract
      * @returns string */
     get startQuestName() {
+        return 'quest';
     };
 
     /** @abstract

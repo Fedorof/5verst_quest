@@ -21,12 +21,13 @@ INDEX = BUILD / 'index.html'
 ARCHIVE = ROOT / 'build.zip'
 
 
-@task
-def build(ctx):
-    if APP_ID is None:
-        sys.exit(f'error: {APP_ID_VAR_NAME} is not set')
-
-    ctx.run('yarn build', warn=True)
+@task(help=dict(fb="build it for Facebook Instant Games, default is Yes"))
+def build(ctx, fb=True):
+    """Build the app, default is to build it for Facebook Instant Games"""
+    ctx.run("rm rf ./build")
+    ctx.run('yarn build')
+    if not fb:
+        return
 
     files = {}
     for file in STATIC_FILES.glob('**/*.*'):
@@ -53,6 +54,7 @@ def build(ctx):
 
 @task
 def deploy(ctx):
+    """Deploy a pre-built package to Facebook Instant Games"""
     token = os.environ.get(TOKEN_VAR_NAME)
     if token is None or APP_ID is None:
         sys.exit(f'error: {TOKEN_VAR_NAME}/{APP_ID_VAR_NAME} is not set')
@@ -76,4 +78,12 @@ def deploy(ctx):
 
 @task(build, deploy)
 def release(ctx):
-    """Build and deploy the code"""
+    """Build and deploy the code to Facebook Instant Games"""
+
+
+@task
+def gp_release(ctx):
+    """Build and deploy the code to Github Pages"""
+    ctx.run("rm rf ./build")
+    ctx.run("yarn build")
+    ctx.run("yarn deploy")

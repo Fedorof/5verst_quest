@@ -40,9 +40,9 @@ export const share = (text, label='Поділитися') => {
         return (
             <div className="share">
                 {label}:
-                <a onClick={ () => {fbShare(text, label)} } title={label}>
+                <button onClick={ () => {fbShare(text, label)} } title={label}>
                     <IoSocialFacebook/>
-                </a>
+                </button>
             </div>
         );
     } else {
@@ -61,12 +61,14 @@ export const share = (text, label='Поділитися') => {
                 {label}:
                 <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(link)}&quote=${encodeURIComponent(text)}`}
                    target="_blank"
-                   title="Facebook">
+                   title="Facebook"
+                   rel="noopener noreferrer">
                     <IoSocialFacebook/>
                 </a>
                 <a href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(twitterText)}&source=${encodeURIComponent(link)}`}
                    target="_blank"
-                   title="Twitter">
+                   title="Twitter"
+                   rel="noopener noreferrer">
                     <IoSocialTwitter/>
                 </a>
             </div>
