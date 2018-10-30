@@ -13,6 +13,15 @@ html, body, #root {
   transform-origin: top left;
 }
 
+button {
+  background:none!important;
+  color:inherit;
+  border:none;
+  padding:0!important;
+  font: inherit;
+  cursor: pointer;
+}
+
 p {
   margin: 0;
 }
@@ -25,17 +34,17 @@ p {
   margin-bottom: 0;
 }
 
-body, a {
+body, a, button {
   background-color: lightgray;
   color: black;
 }
 
-a:hover {
+a:hover, button:hover {
   border: dashed;
   border-radius: 0.5em;
 }
 
-a:active {
+a:active, button:active {
   border: dotted;
   border-radius: 0.5em;
 }

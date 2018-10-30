@@ -21,20 +21,31 @@ INDEX = BUILD / 'index.html'
 ARCHIVE = ROOT / 'build.zip'
 
 
-@task(help=dict(fb="build it for Facebook Instant Games, default is Yes"))
+@task
+def archive(ctx):
+    """Create an archive of the build folder"""
+    print('Making an archive')
+    shutil.make_archive(ARCHIVE.parent / ARCHIVE.stem, 'zip', BUILD)
+    print('Done')
+
+
+@task(help=dict(fb="build it for Facebook Instant Games, default is Yes"),
+      post=[archive])
 def build(ctx, fb=True):
     """Build the app, default is to build it for Facebook Instant Games"""
-    ctx.run("rm rf ./build")
+    ctx.run("rm -rf ./build")
     ctx.run('yarn build')
     if not fb:
         return
 
     files = {}
     for file in STATIC_FILES.glob('**/*.*'):
-        files[file.suffix] = file.name
+        prefix, *_, suffix = file.name.split('.')
+        files[f'{prefix}.{suffix}'] = file.name
 
-    if '.js' not in files or '.css' not in files:
-        sys.exit('error: no static .css or .js file was found')
+    if ('1.js' not in files or 'main.js' not in files
+            or 'main.css' not in files):
+        sys.exit('error: not all static .css or .js files were found')
 
     with TEMPLATE_FILE.open() as f:
         template = Template(f.read())
@@ -42,14 +53,11 @@ def build(ctx, fb=True):
     with INDEX.open(mode='w') as f:
         f.write(
             template.substitute(
-                css_file=files['.css'],
-                js_file=files['.js'],
+                css_file=files['main.css'],
+                vendor_js=files['1.js'],
+                main_js=files['main.js'],
             )
         )
-
-    print('Making an archive')
-    shutil.make_archive(ARCHIVE.parent / ARCHIVE.stem, 'zip', BUILD)
-    print('Done')
 
 
 @task
@@ -84,6 +92,6 @@ def release(ctx):
 @task
 def gp_release(ctx):
     """Build and deploy the code to Github Pages"""
-    ctx.run("rm rf ./build")
+    ctx.run("rm -rf ./build")
     ctx.run("yarn build")
     ctx.run("yarn deploy")
